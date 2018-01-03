@@ -6,11 +6,10 @@
 
   <link rel="canonical" href="{{ url('/') }}">
   <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
   <link rel="alternate" type="application/rss+xml" title="{{ trans('marketing.xml_feed_description') }}" href="{{ url("/feed.xml") }}">
   <meta name="description" content="{{ trans('marketing.description') }}">
   <link rel="author" href="https://twitter.com/djaiss">
-  <link rel="shortcut icon" href="/assets/img/favicon.png">
+  <link rel="shortcut icon" href="{{ url('/img/favicon.png') }}">
 
   <!-- Facebook -->
 

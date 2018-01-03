@@ -4,6 +4,7 @@
   @include('partials.header')
 
   <body class="sans-serif">
+    @include ('partials.menu')
 
     @yield('content')
 

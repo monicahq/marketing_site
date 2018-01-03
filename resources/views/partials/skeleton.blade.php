@@ -3,7 +3,7 @@
 
   @include('partials.header')
 
-  <body>
+  <body class="sans-serif">
 
     @yield('content')
 

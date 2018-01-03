@@ -1,2 +1,19 @@
 // Tachyons
 @import "~tachyons/css/tachyons.min";
+
+.homepage-button {
+  border-color: rgba(0,0,0,0.15);
+  border: 1px solid #bfbfbf;
+  border-bottom-width: 2px;
+  text-decoration: none;
+  color: #283c46;
+  line-height: 1.5;
+  white-space: normal;
+  vertical-align: middle;
+  transition: box-shadow 0.15s ease-in-out;
+  box-sizing: border-box;
+}
+
+.homepage-statistics {
+  background-color: #f7f7f7;
+}

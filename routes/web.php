@@ -34,3 +34,6 @@ Route::get('/terms', function () {
 Route::get('/blog', 'BlogController@index');
 Route::get('/blog/{slug}', 'BlogController@post');
 Route::get('/blog/category/{slug}', 'BlogController@category');
+
+Route::get('/api', 'ApiController@index');
+Route::get('/api/{category}', 'ApiController@category');

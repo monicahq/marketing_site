@@ -10,7 +10,7 @@
       <div class="dtc v-mid tr pa3">
         <a class="f6 fw4 dn dib-ns pv2 ph3" href="/" >Features</a>
         <a class="f6 fw4 dn dib-ns pv2 ph3" href="{{ url('/pricing') }}" >Pricing</a>
-        <a class="f6 fw4 dn dib-l pv2 ph3" href="/" >API documentation</a>
+        <a class="f6 fw4 dn dib-l pv2 ph3" href="{{ url('/api') }}" >API documentation</a>
         <a class="f6 fw4 dn dib-l pv2 ph3" href="{{ url('/blog') }}" >Blog</a>
         <a class="f6 fw4 dib ml2 pv2 ph3 homepage-button br3" href="https://app.monicahq.com/register" >Sign Up</a>
       </div>

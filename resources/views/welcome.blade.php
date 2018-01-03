@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="mw9 center ph3">
+<div class="mw8 center ph3">
   <div class="cf">
     <div class="fl w-100 tc mb5">
       <h1 class="f2 normal lh-copy">Personal Relationship Management done right.</h1>
@@ -18,7 +18,7 @@
 </div>
 
 <div class="homepage-statistics bb b--black-10 mb5">
-  <div class="mw9 center ph3">
+  <div class="mw8 center ph3">
     <div class="cf">
       <div class="fl w-25-ns w-50">
         <div class="flex justify-center">
@@ -96,7 +96,7 @@
   </div>
 </div>
 
-<div class="mw9 center ph3">
+<div class="mw8 center ph3">
   <div class="cf mb6-ns mb2">
     <div class="fl w-50-ns w-100 pl5-ns mb3 mb0-ns">
       <h2 class="normal">What is Monica?</h2>

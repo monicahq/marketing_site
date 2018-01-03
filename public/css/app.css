@@ -9471,6 +9471,10 @@ code {
   }
 }
 
+.b--gray-monica {
+  border-color: #dde2e9;
+}
+
 body {
   color: #293c45;
 }
@@ -9504,5 +9508,18 @@ body {
   background: url("/img/sketch_underline.svg") bottom left no-repeat;
   background-size: 100% 0.75rem;
   padding-bottom: 0.6rem;
+}
+
+article {
+  line-height: 1.5;
+}
+
+article img {
+  margin: 0 auto;
+  padding: 5px;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #dde2e9;
 }
 

@@ -1,4 +1,4 @@
-<div class="mw9 center ph3 mb4">
+<div class="mw8 center ph3 mb4">
   <div class="cf">
     <div class="fl w-20-ns w-100">
       <p class="fw5">Features</p>

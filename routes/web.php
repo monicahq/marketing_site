@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/pricing', function () {
     return view('pricing');
 });
+
+Route::get('/blog', 'BlogController@index');
+Route::get('/blog/{slug}', 'BlogController@post');
+Route::get('/blog/category/{slug}', 'BlogController@category');

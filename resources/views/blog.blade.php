@@ -6,7 +6,7 @@
   <div class="mw8 center">
     <div class="cf ph3">
       <div class="fl w-100">
-        <p class="pv2">The Monica Blog</p>
+        <p class="pv2 fw6">The Monica Blog</p>
       </div>
     </div>
   </div>

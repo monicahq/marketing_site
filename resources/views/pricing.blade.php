@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="mw9 center ph3">
+<div class="mw8 center ph3">
   <div class="cf">
     <div class="fl w-100 tc mb5">
       <h1 class="f2 normal lh-copy">How much does Monica cost?</h1>
@@ -11,7 +11,7 @@
   </div>
 </div>
 
-<div class="mw9 center ph3 mb3">
+<div class="mw8 center ph3 mb3">
   <div class="flex justify-center mb3">
     <div class="ba mw7 tc pa3 br3 bw2 b--dark-blue ph5">
       <a href="https://app.monicahq.com/register" class="no-underline" style="color: #293C45;">
@@ -26,7 +26,7 @@
   </div>
 </div>
 
-<div class="mw9 center ph3">
+<div class="mw8 center ph3">
   <div class="cf">
     <div class="fl w-100">
       <h2 class="tc-ns">Common questions</h2>

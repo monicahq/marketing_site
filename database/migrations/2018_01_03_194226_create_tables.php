@@ -28,6 +28,7 @@ class CreateTables extends Migration
             $table->string('slug');
             $table->text('post');
             $table->integer('category_id');
+            $table->string('c');
             $table->timestamps();
         });
 

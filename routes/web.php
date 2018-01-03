@@ -15,8 +15,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/team', function () {
+    return view('team');
+});
+
 Route::get('/pricing', function () {
     return view('pricing');
+});
+
+Route::get('/privacy', function () {
+    return view('privacy');
+});
+
+Route::get('/terms', function () {
+    return view('terms');
 });
 
 Route::get('/blog', 'BlogController@index');

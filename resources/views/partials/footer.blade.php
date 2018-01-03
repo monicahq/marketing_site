@@ -1,71 +1,44 @@
-<div class="mw9 center ph3-ns mb4">
-  <div class="cf ph2-ns">
-    <div class="fl w-20">
+<div class="mw9 center ph3 mb4">
+  <div class="cf">
+    <div class="fl w-20-ns w-100">
       <p class="fw5">Features</p>
       <ul class="pl0 list">
-        <li class="mb2 f6"><a href="" class="">Contact management</a></li>
-        <li class="mb2 f6"><a href="" class="">Reminders</a></li>
-        <li class="mb2 f6"><a href="" class="">Journal</a></li>
+        <li class="mb2 f6"><a href="" class="muted-link no-underline">Contact management</a></li>
+        <li class="mb2 f6"><a href="" class="muted-link no-underline">Reminders</a></li>
+        <li class="mb2 f6"><a href="" class="muted-link no-underline">Journal</a></li>
       </ul>
     </div>
-    <div class="fl w-20">
+    <div class="fl w-20-ns w-100">
       <p class="fw5">Company</p>
       <ul class="pl0 list">
-        <li class="mb2 f6"><a href="" class="">Team</a></li>
-        <li class="mb2 f6"><a href="" class="">Blog</a></li>
-        <li class="mb2 f6"><a href="" class="">Press</a></li>
-        <li class="mb2 f6"><a href="" class="">Newsletter</a></li>
+        <li class="mb2 f6"><a href="" class="muted-link no-underline">Team</a></li>
+        <li class="mb2 f6"><a href="" class="muted-link no-underline">Blog</a></li>
+        <li class="mb2 f6"><a href="" class="muted-link no-underline">Press</a></li>
+        <li class="mb2 f6"><a href="" class="muted-link no-underline">Newsletter</a></li>
       </ul>
     </div>
-    <div class="fl w-20">
+    <div class="fl w-20-ns w-100">
       <p class="fw5">Community</p>
       <ul class="pl0 list">
-        <li class="mb2 f6"><a href="" class="">Changelog</a></li>
-        <li class="mb2 f6"><a href="" class="">Roadmap</a></li>
-        <li class="mb2 f6"><a href="" class="">Source code on GitHub</a></li>
-        <li class="mb2 f6"><a href="" class="">Issue tracker</a></li>
-        <li class="mb2 f6"><a href="" class="">Facebook</a></li>
-        <li class="mb2 f6"><a href="" class="">Twitter</a></li>
+        <li class="mb2 f6"><a href="" class="muted-link no-underline">Changelog</a></li>
+        <li class="mb2 f6"><a href="" class="muted-link no-underline">Roadmap</a></li>
+        <li class="mb2 f6"><a href="" class="muted-link no-underline">Source code on GitHub</a></li>
+        <li class="mb2 f6"><a href="" class="muted-link no-underline">Issue tracker</a></li>
+        <li class="mb2 f6"><a href="" class="muted-link no-underline">Facebook</a></li>
+        <li class="mb2 f6"><a href="" class="muted-link no-underline">Twitter</a></li>
       </ul>
     </div>
-    <div class="fl w-20">
+    <div class="fl w-20-ns w-100">
       <p class="fw5">Resources</p>
       <ul class="pl0 list">
-        <li class="mb2 f6"><a href="" class="">Terms</a></li>
-        <li class="mb2 f6"><a href="" class="">Privacy</a></li>
-        <li class="mb2 f6"><a href="" class="">Security</a></li>
-        <li class="mb2 f6"><a href="" class="">Contact</a></li>
+        <li class="mb2 f6"><a href="" class="muted-link no-underline">Terms</a></li>
+        <li class="mb2 f6"><a href="" class="muted-link no-underline">Privacy</a></li>
+        <li class="mb2 f6"><a href="" class="muted-link no-underline">Security</a></li>
+        <li class="mb2 f6"><a href="" class="muted-link no-underline">Contact</a></li>
       </ul>
     </div>
-    <div class="fl w-20">
-      <svg class="mt3" width="149px" height="28px" viewBox="0 0 149 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <defs></defs>
-          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-              <g id="Artboard" transform="translate(-23.000000, -156.000000)">
-                  <g id="Group-3" transform="translate(23.000000, 156.000000)">
-                      <text id="MONICA" font-family="Trykker-Regular, Trykker" font-size="21" font-weight="normal" letter-spacing="2.27999997" fill="#1E1E1E">
-                          <tspan x="42.5756348" y="23">MONIC</tspan>
-                          <tspan x="132.684619" y="23">A</tspan>
-                      </text>
-                      <g id="Group-2">
-                          <path d="M15.3959115,28 C22.4891288,28 30.3595981,23.3439934 29.3644315,14.3888889 C28.3692649,5.43378436 22.4891288,0.777777778 15.3959115,0.777777778 C8.30269421,0.777777778 2.46861538,4.85940754 0.9470797,14.3888889 C-0.574455981,23.9183702 8.30269421,28 15.3959115,28 Z" id="Oval" fill="#2C2B29"></path>
-                          <path d="M15.7297931,25.6666667 C21.4810504,25.6666667 27.862512,21.9418614 27.0556201,14.7777778 C26.2487283,7.61369415 21.4810504,3.88888889 15.7297931,3.88888889 C9.97853585,3.88888889 5.24820166,7.1541927 4.01452408,14.7777778 C2.7808465,22.4013629 9.97853585,25.6666667 15.7297931,25.6666667 Z" id="Oval" fill="#FFFFFF"></path>
-                          <path d="M4.12106702,10.1111093 C4.90114523,10.1136387 5.24002024,7.39612046 6.63311351,6.15884205 C7.91198049,5.02301394 10.85,4.63355498 10.85,3.32037349 C10.85,0.57671932 7.79485421,-1.42108547e-14 5.09709829,-1.42108547e-14 C2.39934237,-1.42108547e-14 0,2.7828898 0,5.52654397 C0,8.27019815 2.62487288,10.106258 4.12106702,10.1111093 Z" id="Oval-2" fill="#2C2B29"></path>
-                          <path d="M24.271067,10.1111093 C25.0511452,10.1136387 25.3900202,7.39612046 26.7831135,6.15884205 C28.0619805,5.02301394 31,4.63355498 31,3.32037349 C31,0.57671932 27.9448542,-1.42108547e-14 25.2470983,-1.42108547e-14 C22.5493424,-1.42108547e-14 20.15,2.7828898 20.15,5.52654397 C20.15,8.27019815 22.7748729,10.106258 24.271067,10.1111093 Z" id="Oval-2" fill="#2C2B29" transform="translate(25.575000, 5.055556) scale(-1, 1) translate(-25.575000, -5.055556) "></path>
-                          <g id="Group" transform="translate(17.050000, 10.111111)">
-                              <path d="M4.53993443,9.99348015 C6.65842634,9.49290459 7.541762,8.61006709 7.541762,5.75726289 C7.541762,2.90445869 6.19226991,0.00794223656 3.86872907,0.00794223656 C1.54518823,0.00794223656 0.00227050781,2.06784066 0.00227050781,4.92064486 C0.00227050781,7.77344906 2.42144252,10.4940557 4.53993443,9.99348015 Z" id="Oval-4" fill="#2B2A28"></path>
-                              <path d="M3.76428571,6.37439614 C4.34077044,6.37439614 4.51223828,6.22857585 4.77282366,5.90118909 C5.06502672,5.53407943 5.28293108,5.10825337 5.21168039,4.22870433 C5.0926278,2.75906834 4.46758002,2.08301253 3.24466378,2.08301253 C2.02174755,2.08301253 1.78321359,3.0147451 1.78321359,4.22870433 C1.78321359,5.44266357 2.54136948,6.37439614 3.76428571,6.37439614 Z" id="Oval-3" fill="#FFFFFF"></path>
-                          </g>
-                          <g id="Group" transform="translate(9.950000, 15.611111) scale(-1, 1) translate(-9.950000, -15.611111) translate(5.950000, 10.111111)">
-                              <path d="M4.53993443,9.99348015 C6.65842634,9.49290459 7.541762,8.61006709 7.541762,5.75726289 C7.541762,2.90445869 6.19226991,0.00794223656 3.86872907,0.00794223656 C1.54518823,0.00794223656 0.00227050781,2.06784066 0.00227050781,4.92064486 C0.00227050781,7.77344906 2.42144252,10.4940557 4.53993443,9.99348015 Z" id="Oval-4" fill="#2B2A28"></path>
-                              <path d="M3.76428571,6.37439614 C4.34077044,6.37439614 4.51223828,6.22857585 4.77282366,5.90118909 C5.06502672,5.53407943 5.28293108,5.10825337 5.21168039,4.22870433 C5.0926278,2.75906834 4.46758002,2.08301253 3.24466378,2.08301253 C2.02174755,2.08301253 1.78321359,3.0147451 1.78321359,4.22870433 C1.78321359,5.44266357 2.54136948,6.37439614 3.76428571,6.37439614 Z" id="Oval-3" fill="#FFFFFF"></path>
-                          </g>
-                          <path d="M15.5169031,21.7777778 C16.6887001,21.7777778 17.825,20.1634069 17.825,19.4710709 C17.825,18.7787349 16.671797,18.6666667 15.5,18.6666667 C14.328203,18.6666667 13.175,18.7787349 13.175,19.4710709 C13.175,20.1634069 14.3451062,21.7777778 15.5169031,21.7777778 Z" id="Oval-5" fill="#2C2B29"></path>
-                      </g>
-                  </g>
-              </g>
-          </g>
-      </svg>
+    <div class="fl w-20-ns w-100 tc tl-ns">
+      <img src="{{ url('/img/logo_vertical.png') }}" class="mw-none" style="width: 130px;">
       <p class="mt2 f6">© 2018</p>
     </div>
   </div>

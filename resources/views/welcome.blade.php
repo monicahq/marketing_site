@@ -1,26 +1,26 @@
-@extends('partials.skeleton')
+@extends('partials.skeleton', ['pageTitle' => 'Monica'])
 
 @section('content')
 
-<div class="mw9 center ph3-ns">
-  <div class="cf ph2-ns">
+<div class="mw9 center ph3">
+  <div class="cf">
     <div class="fl w-100 tc mb5">
-      <h1 class="f2 normal">Personal Relationship Management done right.</h1>
-      <h2 class="normal">Monica helps you organize the social interactions with your loved ones.</h2>
-      <p>It's like your social memory. Organize. Follow-up. <span class="sketch-underline">Strengthen your relationships</span>.</p>
+      <h1 class="f2 normal lh-copy">Personal Relationship Management done right.</h1>
+      <h2 class="normal lh-copy">Monica helps you organize the social interactions with your loved ones.</h2>
+      <p class="lh-copy">It's like your social memory. Organize. Follow-up. <span class="sketch-underline">Strengthen your relationships</span>.</p>
     </div>
 
     <div class="fl w-100 tc mb5">
-      <a href="" class="homepage-button br3 pv3 ph4 mb2 dib fw5">Signup for free</a>
+      <a href="https://app.monicahq.com/register" class="homepage-button br3 pv3 ph4 mb2 dib fw5">Signup for free</a>
       <p class="f6">No obligations. No credit card required.</p>
     </div>
   </div>
 </div>
 
 <div class="homepage-statistics bb b--black-10 mb5">
-  <div class="mw9 center ph3-ns">
-    <div class="cf ph2-ns">
-      <div class="fl w-25">
+  <div class="mw9 center ph3">
+    <div class="cf">
+      <div class="fl w-25-ns w-50">
         <div class="flex justify-center">
           <div class="mr3 mt3">
             <svg width="50px" height="39px" viewBox="0 0 50 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -34,11 +34,11 @@
           </div>
           <div class="">
             <h2 class="mb0 normal mt3">10,302</h2>
-            <p class="mt1 f6 black-60">users registered</p>
+            <p class="mt1 f6-ns f7 black-60">users registered</p>
           </div>
         </div>
       </div>
-      <div class="fl w-25">
+      <div class="fl w-25-ns w-50">
         <div class="flex justify-center">
           <div class="mr3 mt3">
             <svg width="39px" height="41px" viewBox="0 0 39 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -52,11 +52,11 @@
           </div>
           <div class="">
             <h2 class="mb0 normal mt3">98,321</h2>
-            <p class="mt1 f6 black-60">contacts managed</p>
+            <p class="mt1 f6-ns f7 black-60">contacts managed</p>
           </div>
         </div>
       </div>
-      <div class="fl w-25">
+      <div class="fl w-25-ns w-50">
         <div class="flex justify-center">
           <div class="mr3 mt3">
             <svg width="34px" height="45px" viewBox="0 0 34 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -70,11 +70,11 @@
           </div>
           <div class="">
             <h2 class="mb0 normal mt3">1283</h2>
-            <p class="mt1 f6 black-60">activities logged</p>
+            <p class="mt1 f6-ns f7 black-60">activities logged</p>
           </div>
         </div>
       </div>
-      <div class="fl w-25">
+      <div class="fl w-25-ns w-50">
         <div class="flex justify-center">
           <div class="mr3 mt3">
             <svg width="38px" height="40px" viewBox="0 0 38 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -88,7 +88,7 @@
           </div>
           <div class="">
             <h2 class="mb0 normal mt3">109013</h2>
-            <p class="mt1 f6 black-60">asflj sljl</p>
+            <p class="mt1 f6-ns f7 black-60">reminders set</p>
           </div>
         </div>
       </div>
@@ -96,16 +96,16 @@
   </div>
 </div>
 
-<div class="mw9 center ph3-ns">
-  <div class="cf ph2-ns mb6">
-    <div class="fl w-50-ns w-100 pl5">
+<div class="mw9 center ph3">
+  <div class="cf mb6-ns mb2">
+    <div class="fl w-50-ns w-100 pl5-ns mb3 mb0-ns">
       <h2 class="normal">What is Monica?</h2>
       <p class="measure lh-copy">Can you remember the names of the children of all your friends? Can you remember the wedding anniversary of your brother? Can you tell the last time you called your grand mother and what you talked about?</p>
       <p class="measure lh-copy">Monica lets you quickly and easily log all those information so you can be a <span class="sketch-underline"><strong>better friend</strong>, <strong>family member</strong> or <strong>spouse</strong></span>.</p>
     </div>
     <div class="fl w-50-ns w-100 tc">
       {{-- Man who doesn't know --}}
-      <svg width="180px" height="251px" viewBox="0 0 180 251" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <svg width="180px" height="251px" viewBox="0 0 180 251" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="dn dib-ns">
         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g id="Artboard" transform="translate(-643.000000, -717.000000)">
             <g id="Group" transform="translate(643.000000, 717.000000)">
@@ -148,10 +148,10 @@
       </svg>
     </div>
   </div>
-  <div class="cf ph2-ns mb4">
+  <div class="cf mb4-ns mb2">
     <div class="fl w-50-ns w-100 tc">
       {{-- Rolodex --}}
-      <svg width="355px" height="325px" viewBox="0 0 355 325" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <svg width="355px" height="325px" viewBox="0 0 355 325" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="mw-100">
         <defs>
           <rect id="path-1" x="113" y="134" width="45" height="45" rx="3"></rect>
           <rect id="path-2" x="0" y="0" width="49" height="49" rx="5"></rect>
@@ -303,7 +303,7 @@
         </g>
       </svg>
     </div>
-    <div class="fl w-50-ns w-100 pr4">
+    <div class="fl w-50-ns w-100 pr4-ns">
       <h2 class="normal">Your personal rolodex</h2>
       <h3>Everything in one place</h3>
       <p class="measure lh-copy">The more information you put in Monica, the easier it will be to remember everything. Monica provides an easy-to-use interface to store everything you know about your loved ones.</p>
@@ -418,17 +418,17 @@
       </div>
     </div>
   </div>
-  <div class="cf ph2-ns">
-    <div class="fl w-100 tc mb6">
-      <h2 class="f2 normal">Monica powers people who want to be better</h2>
-      <p class="measure lh-copy center">Monica is for people who have jobs, a family, and are busy trying to find a good work/life balance. So busy, that they don’t have time anymore to remember to call a friend, say happy birthday to a nephew, or remember to invite someone special for dinner next week. The older we get, the more life gets in the way. It’s sad, but it’s the reality.</p>
+  <div class="cf">
+    <div class="fl w-100 mb6-ns mb2">
+      <h2 class="f2 normal tc-ns">Monica powers people who want to be better</h2>
+      <p class="measure lh-copy center-ns">Monica is for people who have jobs, a family, and are busy trying to find a good work/life balance. So busy, that they don’t have time anymore to remember to call a friend, say happy birthday to a nephew, or remember to invite someone special for dinner next week. The older we get, the more life gets in the way. It’s sad, but it’s the reality.</p>
       <p class="measure lh-copy center">I created Monica to help these people.</p>
     </div>
-    <div class="fl w-50 mb6 pl6">
+    <div class="fl w-50-ns w-100 mb6-ns mb2 pl6-ns">
       <h3>Built for people. With people.</h3>
       <p class="measure lh-copy">Monica is open source. That means the code is publicly available, scrutinized by thousands. Dozens of people have already contributed to the project. That level of transparency ensures both the security of the application, and your peace of mind concerning what we do with your data (nothing, in fact).</p>
     </div>
-    <div class="fl w-50 tc">
+    <div class="fl w-50-ns w-100 mb2 mb0-ns tc">
       <svg width="209px" height="186px" viewBox="0 0 209 186" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs></defs>
         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

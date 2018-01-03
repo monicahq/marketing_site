@@ -9471,6 +9471,10 @@ code {
   }
 }
 
+body {
+  color: #293c45;
+}
+
 .homepage-button {
   border-color: rgba(0, 0, 0, 0.15);
   border: 1px solid #bfbfbf;
@@ -9488,7 +9492,17 @@ code {
           box-sizing: border-box;
 }
 
+.homepage-button:hover {
+  background-color: #f5f6f9;
+}
+
 .homepage-statistics {
   background-color: #f7f7f7;
+}
+
+.sketch-underline {
+  background: url("/img/sketch_underline.svg") bottom left no-repeat;
+  background-size: 100% 0.75rem;
+  padding-bottom: 0.6rem;
 }
 

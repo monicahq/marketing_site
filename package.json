@@ -16,5 +16,8 @@
         "lodash": "^4.17.4",
         "tachyons": "^4.9.0",
         "vue": "^2.5.7"
+    },
+    "dependencies": {
+        "highlight.js": "^9.12.0"
     }
 }

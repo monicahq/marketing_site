@@ -28,7 +28,7 @@ class CreateTables extends Migration
             $table->string('slug');
             $table->text('post');
             $table->integer('category_id');
-            $table->string('c');
+            $table->string('social_media_description');
             $table->timestamps();
         });
 

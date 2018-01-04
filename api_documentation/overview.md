@@ -22,7 +22,7 @@ JSON.
 If you do have a custom instance of Monica, replace the URL above with the URL
 of your instance. The endpoint will always be <url>YOUR_URL/api</url>.
 
-{% highlight bash %}
+<pre><code class="bash">
 Server: nginx/1.11.9
 Content-Type: application/json
 Transfer-Encoding: chunked
@@ -31,7 +31,7 @@ Cache-Control: no-cache, private
 Date: Thu, 14 Sep 2017 02:24:19 GMT
 X-RateLimit-Limit: 60
 X-RateLimit-Remaining: 58
-{% endhighlight %}
+</code></pre>
 
 All timestamps return in ISO 8601 format:
 

@@ -238,8 +238,6 @@ template {
 .border-box,
 a,
 article,
-aside,
-blockquote,
 body,
 code,
 dd,
@@ -247,8 +245,6 @@ div,
 dl,
 dt,
 fieldset,
-figcaption,
-figure,
 footer,
 form,
 h1,
@@ -268,7 +264,6 @@ input[type=url],
 legend,
 li,
 main,
-nav,
 ol,
 p,
 pre,
@@ -3822,7 +3817,7 @@ code {
   margin-bottom: 0;
 }
 
-.nested-copy-separator p + p {
+.nested-copy-seperator p + p {
   margin-top: 1.5em;
 }
 

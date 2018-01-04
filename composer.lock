@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f4b21d23cb0c9b98983af69ae2b4e98b",
+    "content-hash": "8b10819e1fcbcf5ac179c6c470940ec9",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1394,6 +1394,61 @@
                 "uuid"
             ],
             "time": "2017-09-22T20:46:04+00:00"
+        },
+        {
+            "name": "scrivo/highlight.php",
+            "version": "v9.12.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/scrivo/highlight.php.git",
+                "reference": "a4930dde24bf6b9064fb52c22d71211144567e7f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/scrivo/highlight.php/zipball/a4930dde24bf6b9064fb52c22d71211144567e7f",
+                "reference": "a4930dde24bf6b9064fb52c22d71211144567e7f",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8",
+                "symfony/finder": "^2.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Highlight\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Geert Bergman",
+                    "homepage": "http://www.scrivo.org/",
+                    "role": "Project Author"
+                },
+                {
+                    "name": "Vladimir Jimenez",
+                    "homepage": "https://allejo.io",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Martin Folkers",
+                    "homepage": "https://twobrain.io",
+                    "role": "Contributor"
+                }
+            ],
+            "description": "Server side syntax highlighter that supports 176 languages. It's a PHP port of highlight.js",
+            "keywords": [
+                "code",
+                "highlight",
+                "highlight.js",
+                "highlight.php",
+                "syntax"
+            ],
+            "time": "2017-12-24T23:01:41+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

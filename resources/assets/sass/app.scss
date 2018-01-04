@@ -1,5 +1,7 @@
 // Tachyons
 @import "~tachyons/css/tachyons.min";
+@import "~highlight.js/styles/github";
+@import "~highlight.js/styles/default";
 
 .b--gray-monica {
   border-color: #dde2e9;
@@ -45,5 +47,53 @@ article {
     border-radius: 3px;
     box-sizing: border-box;
     border: 1px solid #dde2e9;
+  }
+}
+
+.markdown {
+  line-height: 1.5;
+
+  code {
+    font-size: 13px;
+  }
+
+  h2 {
+    border-bottom: 1px solid #d9d9d9;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    padding-bottom: 5px;
+  }
+
+  h3 {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+
+  .url {
+    background-color: #444;
+    border: 1px solid #d9d9d9;
+    border-radius: 3px;
+    color: #fff;
+    display: block;
+    font-family: Source Code Pro,Courier New,Courier,monospace;
+    font-size: 14px;
+    margin: 10px 0;
+    padding: 5px 10px;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid rgba(0,0,0,.1);
+
+    tbody tr:nth-child(odd) {
+      background-color: #eee;
+    }
+
+    th, td {
+      padding: .5rem 1rem;
+    }
   }
 }

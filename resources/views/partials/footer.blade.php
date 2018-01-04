@@ -1,7 +1,7 @@
 <div class="mw8 center ph3 mb4">
   <div class="cf">
     <div class="fl w-20-ns w-100">
-      <p class="fw5">Features</p>
+      <p class="fw5 mt0">Features</p>
       <ul class="pl0 list">
         <li class="mb2 f6"><a href="" class="muted-link no-underline">Contact management</a></li>
         <li class="mb2 f6"><a href="" class="muted-link no-underline">Reminders</a></li>
@@ -9,7 +9,7 @@
       </ul>
     </div>
     <div class="fl w-20-ns w-100">
-      <p class="fw5">Company</p>
+      <p class="fw5 mt0">Company</p>
       <ul class="pl0 list">
         <li class="mb2 f6"><a href="{{ url('/team') }}" class="muted-link no-underline">Team</a></li>
         <li class="mb2 f6"><a href="{{ url('/blog') }}" class="muted-link no-underline">Blog</a></li>
@@ -18,7 +18,7 @@
       </ul>
     </div>
     <div class="fl w-20-ns w-100">
-      <p class="fw5">Community</p>
+      <p class="fw5 mt0">Community</p>
       <ul class="pl0 list">
         <li class="mb2 f6"><a href="{{ url('/changelog') }}" class="muted-link no-underline">Changelog</a></li>
         <li class="mb2 f6"><a href="https://github.com/monicahq/monica/projects/1" class="muted-link no-underline">Roadmap</a></li>
@@ -29,7 +29,7 @@
       </ul>
     </div>
     <div class="fl w-20-ns w-100">
-      <p class="fw5">Resources</p>
+      <p class="fw5 mt0">Resources</p>
       <ul class="pl0 list">
         <li class="mb2 f6"><a href="{{ url('/terms') }}" class="muted-link no-underline">Terms</a></li>
         <li class="mb2 f6"><a href="{{ url('/privacy') }}" class="muted-link no-underline">Privacy</a></li>

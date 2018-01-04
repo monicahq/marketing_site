@@ -10,20 +10,19 @@ and don't be a jerk.
 
 ## Current version
 
-By default, all requests to <url>https://app.monicahq.com/api</url> receive the
+By default, all requests to <span>https://app.monicahq.com/api</span> receive the
 v1 version of the API.
 
 ## Schema
 
 All API access is over HTTPS, and accessed from the
-<url>https://app.monicahq.com/api</url> URL. All data is sent and received as
+<span>https://app.monicahq.com/api</span> URL. All data is sent and received as
 JSON.
 
 If you do have a custom instance of Monica, replace the URL above with the URL
-of your instance. The endpoint will always be <url>YOUR_URL/api</url>.
+of your instance. The endpoint will always be <span>YOUR_URL/api</span>.
 
-<pre><code class="bash">
-Server: nginx/1.11.9
+<pre><code class="bash hljs">Server: nginx/1.11.9
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -35,9 +34,9 @@ X-RateLimit-Remaining: 58
 
 All timestamps return in ISO 8601 format:
 
-<url>
+<span class="url">
 YYYY-MM-DDTHH:MM:SSZ
-</url>
+</span>
 
 ### Summary Representations
 
@@ -64,14 +63,13 @@ Monica tries to use the appropriate HTTP verbs wherever it can. Note that the
 
 Sending an invalid JSON during a POST or a PUT will result in a error.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "error": {
     "message": "Problems parsing JSON",
     "error_code": 37
   }
-}
-{% endhighlight %}
+}</code>
+</pre>
 
 ### All custom errors
 
@@ -92,9 +90,9 @@ There are several ways to authenticate to the API. All requests to the API requi
 
 ### OAuth 2 Token (sent in a header)
 
-<url>
+<span class="url">
   curl -H "Authorization: Bearer OAUTH-TOKEN" https://monicahq.com/api
-</url>
+</span>
 
 ### OAuth2 Key/Secret
 
@@ -109,19 +107,17 @@ You can specify further pages with the `?page` parameter. For some resources,
 you can also set a custom page size up to 100 with the `?limit` parameter.
 Omitting the `?page` parameter will return the first page.
 
-<url>
+<span class="url">
 curl 'https://app.monicahq.com/api/contacts?page=2&limit=100'
-</url>
+</span>
 
 ## Rate limiting
 
 The returned HTTP headers of any API request show your current rate limit status:
 
-{% highlight bash %}
-Date: Thu, 14 Sep 2017 02:24:19 GMT
+<pre><code class="bash">Date: Thu, 14 Sep 2017 02:24:19 GMT
 X-RateLimit-Limit: 60
-X-RateLimit-Remaining: 58
-{% endhighlight %}
+X-RateLimit-Remaining: 58</code></pre>
 
 | Header name | Description |
 | ----------- | ----------- |
@@ -130,17 +126,13 @@ X-RateLimit-Remaining: 58
 
 If you exceed the rate limit, an `429` error response returns with a JSON:
 
-{% highlight bash %}
-X-RateLimit-Limit   60
+<pre><code class="bash hljs">X-RateLimit-Limit   60
 X-RateLimit-Remaining   0
-Retry-After 55
-{% endhighlight %}
+Retry-After 55</code></pre>
 
-{% highlight json %}
-{
+<pre><code class="json hljs">{
     "error": {
         "message": "Too many attempts, please slow down the request.",
         "error_code": 34
     }
-}
-{% endhighlight %}
+}</code></pre>

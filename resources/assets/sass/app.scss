@@ -11,6 +11,10 @@ body {
   color: #293c45;
 }
 
+a {
+  color: #0366d6;
+}
+
 .homepage-button {
   border-color: rgba(0,0,0,0.15);
   border: 1px solid #bfbfbf;
@@ -22,9 +26,13 @@ body {
   vertical-align: middle;
   transition: box-shadow 0.15s ease-in-out;
   box-sizing: border-box;
+  transition: all 0.2s;
 
   &:hover {
-    background-color: #f5f6f9;
+    background-color: #3cb371;
+    border-color: #3cb371;
+    border-bottom-color: rgba(0,0,0,0.15);
+    color: #fff;
   }
 }
 

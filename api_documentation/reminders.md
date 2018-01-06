@@ -1,3 +1,20 @@
+# Reminders
+
+<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
+<!-- Simply install the plugin, then press Save, and it does it magic -->
+<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+
+* [Overview](#overview)
+* [List all the reminders in your account](#list-all-the-reminders-in-your-account)
+* [List all the reminders of a specific contact](#list-all-the-reminders-of-a-specific-contact)
+* [Get a specific reminder](#get-a-specific-reminder)
+* [Create a reminder](#create-a-reminder)
+* [Update a reminder](#update-a-reminder)
+* [Delete a reminder](#delete-a-reminder)
+
+<!-- /MarkdownTOC -->
+
+<a name="overview"></a>
 ## Overview
 
 The Reminder object allows to add reminders about your contacts.
@@ -20,11 +37,12 @@ automatically to the user with the reminder as its content.
 When retrieving a reminder, we always also return some basic information about the
 related contact.
 
+<a name="list-all-the-reminders-in-your-account"></a>
 ## List all the reminders in your account
 
-<url>
+<span class="url">
   GET /reminders/
-</url>
+</span>
 
 ### Parameters
 
@@ -35,8 +53,7 @@ related contact.
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": [
     {
       "id": 2,
@@ -404,19 +421,18 @@ related contact.
     "to": 10,
     "total": 22
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="list-all-the-reminders-of-a-specific-contact"></a>
 ## List all the reminders of a specific contact
 
-<url>
+<span class="url">
   GET /contacts/:id/reminders
-</url>
+</span>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": [
     {
       "id": 2,
@@ -469,19 +485,18 @@ related contact.
     "to": 1,
     "total": 1
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="get-a-specific-reminder"></a>
 ## Get a specific reminder
 
-<url>
+<span class="url">
   GET /reminders/:id
-</url>
+</span>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 2,
     "object": "reminder",
@@ -517,14 +532,14 @@ related contact.
     "created_at": "2016-10-07T11:53:43Z",
     "updated_at": "2017-06-16T19:04:54Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="create-a-reminder"></a>
 ## Create a reminder
 
-<url>
+<span class="url">
   POST /reminder/
-</url>
+</span>
 
 ### Input
 
@@ -539,23 +554,20 @@ related contact.
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "title": "Call to make sure everything's fine",
   "description": "I want to make sure that everything is ok about him and his wedding.",
   "next_expected_date": "2018-09-09",
   "frequency_type": "day",
   "frequency_number": 3,
   "contact_id": 1
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
 The API call returns a Reminder object if the call succeeds.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 2,
     "object": "reminder",
@@ -591,14 +603,14 @@ The API call returns a Reminder object if the call succeeds.
     "created_at": "2016-10-07T11:53:43Z",
     "updated_at": "2017-06-16T19:04:54Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="update-a-reminder"></a>
 ## Update a reminder
 
-<url>
+<span class="url">
   PUT /reminders/:id
-</url>
+</span>
 
 ### Input
 
@@ -613,21 +625,18 @@ The API call returns a Reminder object if the call succeeds.
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "title": "Call to make sure everything's fine",
   "description": "I want to make sure that everything is ok about him and his wedding.",
   "next_expected_date": "2018-09-09",
   "frequency_type": "day",
   "frequency_number": 3,
   "contact_id": 3
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 2,
     "object": "reminder",
@@ -663,22 +672,20 @@ The API call returns a Reminder object if the call succeeds.
     "created_at": "2016-10-07T11:53:43Z",
     "updated_at": "2017-06-16T19:04:54Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="delete-a-reminder"></a>
 ## Delete a reminder
 
-<url>
+<span class="url">
   DELETE /reminders/:id
-</url>
+</span>
 
 ### Response
 
 The response sends back the id that was just deleted.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "deleted": true,
   "id": 31
-}
-{% endhighlight %}
+}</code></pre>

@@ -1,3 +1,21 @@
+# Contacts
+
+<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
+<!-- Simply install the plugin, then press Save, and it does it magic -->
+<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+
+* [Overview](#overview)
+* [List all your contacts](#list-all-your-contacts)
+* [Get a specific contact](#get-a-specific-contact)
+* [Create a contact](#create-a-contact)
+* [Update a contact](#update-a-contact)
+* [Delete a contact](#delete-a-contact)
+* [Partners](#partners)
+* [Children](#children)
+
+<!-- /MarkdownTOC -->
+
+<a name="overview"></a>
 ## Overview
 
 The Contact object is the core of what Monica is all about. The API allows you
@@ -41,13 +59,12 @@ Those dates are special because they can be based on different factors:
 
 When you retrieve one of these dates, here is what you get:
 
-{% highlight json %}
+<pre><code class="json">{
 "birthdate": {
   "is_age_based": false,
   "is_year_unknown": false,
   "date": "1994-01-27T00:00:00Z"
-}
-{% endhighlight %}
+}</code></pre>
 
 * If the `date` field is present and not null, that means we know a date for the birthdate of the contact.
 * `is_age_based`: this indicates whether the date is based on the age provided by the user or not. When it is, `date` is set with the right year, but the month and the day should be set to `01`. We can't set a reminder to a date that is age-based.
@@ -60,92 +77,89 @@ Below is a summary of the different use-cases. We assume the current year is 201
 **I don't know the date of birth of a contact**
 
 Query:
-{% highlight json %}
+<pre><code class="json">{
 ...
 "birthdate": null,
 "birthdate_is_age_based": false,
 "birthdate_is_year_unknown": false,
 "birthdate_age": null,
 ...
-{% endhighlight %}
+</code></pre>
 
 Response:
-{% highlight json %}
+<pre><code class="json">{
 "birthdate": {
   "is_age_based": false,
   "is_year_unknown": false,
   "date": null
-}
-{% endhighlight %}
+}</code></pre>
 
 **I only know the age of a contact**
 
 Query:
-{% highlight json %}
+<pre><code class="json">{
 ...
 "birthdate": null,
 "birthdate_is_age_based": true,
 "birthdate_is_year_unknown": false,
 "birthdate_age": 29,
 ...
-{% endhighlight %}
+</code></pre>
 
 Response:
-{% highlight json %}
+<pre><code class="json">{
 "birthdate": {
   "is_age_based": true,
   "is_year_unknown": false,
   "date": "1994-01-01T00:00:00Z"
-}
-{% endhighlight %}
+}</code></pre>
 
 **I know the day and month of birth of a contact**
 
 Query:
-{% highlight json %}
+<pre><code class="json">{
 ...
 "birthdate": "2017-10-29 00:00:00",
 "birthdate_is_age_based": false,
 "birthdate_is_year_unknown": true,
 "birthdate_age": null,
 ...
-{% endhighlight %}
+</code></pre>
 
 Response:
-{% highlight json %}
+<pre><code class="json">{
 "birthdate": {
   "is_age_based": false,
   "is_year_unknown": true,
   "date": "2017-10-29T00:00:00Z"
-}
-{% endhighlight %}
+}</code></pre>
 
 **I know the day, month and year of birth of a contact**
 
 Query:
-{% highlight json %}
+<pre><code class="json">{
 ...
 "birthdate": "1994-03-21 00:00:00",
 "birthdate_is_age_based": false,
 "birthdate_is_year_unknown": false,
 "birthdate_age": null,
 ...
-{% endhighlight %}
+</code></pre>
 
 Response:
-{% highlight json %}
+<pre><code class="json">{
 "birthdate": {
   "is_age_based": false,
   "is_year_unknown": false,
   "date": "1994-03-21T00:00:00Z"
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="list-all-your-contacts"></a>
 ## List all your contacts
 
-<url>
+<span class="url">
   GET /contacts/
-</url>
+</span>
 
 ### Parameters
 
@@ -156,8 +170,7 @@ Response:
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": [
     {
       "id": 1,
@@ -439,19 +452,18 @@ Response:
     "to": 2,
     "total": 208
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="get-a-specific-contact"></a>
 ## Get a specific contact
 
 ### Get a `real` contact
 
-<url>
+<span class="url">
   GET /contacts/:id
-</url>
+</span>
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 1,
     "object": "contact",
@@ -625,19 +637,17 @@ Response:
     "created_at": "2017-12-12T09:57:15Z",
     "updated_at": "2017-12-12T09:57:15Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Get a `partial` contact
 
 Partial contacts are partners or children.
 
-<url>
+<span class="url">
   GET /contacts/:id
-</url>
+</span>
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 10,
     "object": "contact",
@@ -666,14 +676,14 @@ Partial contacts are partners or children.
     "created_at": "2017-12-12T09:57:16Z",
     "updated_at": "2017-12-12T09:57:16Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="create-a-contact"></a>
 ## Create a contact
 
-<url>
+<span class="url">
   POST /contacts/
-</url>
+</span>
 
 ### Input
 
@@ -708,8 +718,7 @@ If a field is not required, you can send the `null` value as the content of the 
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "first_name":"henri",
   "last_name":"troyat",
   "gender":"male",
@@ -736,15 +745,13 @@ If a field is not required, you can send the `null` value as the content of the 
   "deceased_date_is_year_unknown": true,
   "deceased_date_age": null,
   "avatar_url": "https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-1/p160x160/23561695_738743569647668_3975953680386408_n.jpg?oh=c32aa5f5c6c8d2ca927cbd2fcaa3&oe=5AA2632F"
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
 The API call returns a contact object if the call succeeds.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 383,
     "object": "contact",
@@ -818,14 +825,14 @@ The API call returns a contact object if the call succeeds.
     "created_at": "2017-12-12T11:03:17Z",
     "updated_at": "2017-12-12T11:03:17Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="update-a-contact"></a>
 ## Update a contact
 
-<url>
+<span class="url">
   PUT /contacts/:id
-</url>
+</span>
 
 ### Input
 
@@ -858,8 +865,7 @@ The API call returns a contact object if the call succeeds.
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "first_name":"henri",
   "last_name":"troyat",
   "gender":"male",
@@ -886,13 +892,11 @@ The API call returns a contact object if the call succeeds.
   "deceased_date_is_year_unknown": false,
   "deceased_date_age": 98,
   "avatar_url": "https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-1/p160x160/23561695_738743569647668_3975953680386408_n.jpg?oh=c32aa5f5c6c8d2ca927cbd2fcaa3&oe=5AA2632F"
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 388,
     "object": "contact",
@@ -966,26 +970,25 @@ The API call returns a contact object if the call succeeds.
     "created_at": "2017-12-12T11:13:12Z",
     "updated_at": "2017-12-12T11:18:40Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="delete-a-contact"></a>
 ## Delete a contact
 
-<url>
+<span class="url">
   DELETE /contacts/:id
-</url>
+</span>
 
 ### Response
 
 The response sends back the id that was just deleted.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "deleted": true,
   "id": 93135
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="partners"></a>
 ## Partners
 
 Each contact can have one or multiple partners (even if polygamy is somewhat
@@ -999,9 +1002,9 @@ contacts together.
 
 ### Link a partner with a contact
 
-<url>
+<span class="url">
   POST /contacts/:id/partners
-</url>
+</span>
 
 #### Input
 
@@ -1009,19 +1012,17 @@ contacts together.
 | ---- | ----------- | ----------- |
 | partner_id | integer | <strong>Required</strong>. The ID of the contact ID that will be set as the partner of the given contact. |
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "partner_id":2
-}
-{% endhighlight %}
+}</code></pre>
 
 This call returns a standard Contact object.
 
 ### Unlink a partner and a contact
 
-<url>
+<span class="url">
   POST /contacts/:id/partners/unset
-</url>
+</span>
 
 #### Input
 
@@ -1029,14 +1030,13 @@ This call returns a standard Contact object.
 | ---- | ----------- | ----------- |
 | partner_id | integer | <strong>Required</strong>. The ID of the contact ID that needs to be unset. |
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "partner_id":2
-}
-{% endhighlight %}
+}</code></pre>
 
 This call returns a standard Contact object.
 
+<a name="children"></a>
 ## Children
 
 Each contact can have one or multiple children. A child can be either a `real` contact
@@ -1049,9 +1049,9 @@ contacts together.
 
 ### Link a child to a contact
 
-<url>
+<span class="url">
   POST /contacts/:id/kids
-</url>
+</span>
 
 #### Input
 
@@ -1059,19 +1059,17 @@ contacts together.
 | ---- | ----------- | ----------- |
 | child_id | integer | <strong>Required</strong>. The ID of the contact ID that will be set as the partner of the given contact. |
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "child_id":2
-}
-{% endhighlight %}
+}</code></pre>
 
 This call returns a standard Contact object.
 
 ### Unlink a child and a contact
 
-<url>
+<span class="url">
   POST /contacts/:id/kids/unset
-</url>
+</span>
 
 #### Input
 
@@ -1079,10 +1077,8 @@ This call returns a standard Contact object.
 | ---- | ----------- | ----------- |
 | child_id | integer | <strong>Required</strong>. The ID of the contact ID that needs to be unset. |
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "child_id":2
-}
-{% endhighlight %}
+}</code></pre>
 
 This call returns a standard Contact object.

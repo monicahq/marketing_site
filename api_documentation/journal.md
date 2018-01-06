@@ -1,14 +1,31 @@
+# Journal
+
+<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
+<!-- Simply install the plugin, then press Save, and it does it magic -->
+<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+
+* [Overview](#overview)
+* [List all the entries in your journal](#list-all-the-entries-in-your-journal)
+* [Get a specific journal entry](#get-a-specific-journal-entry)
+* [Create a journal entry](#create-a-journal-entry)
+* [Update a journal entry](#update-a-journal-entry)
+* [Delete a journal entry](#delete-a-journal-entry)
+
+<!-- /MarkdownTOC -->
+
+<a name="overview"></a>
 ## Overview
 
 The Journal object allows to enter information that are not linked to a specific
 contact. You can use this to store general notes, or to use it like a personal
 diary.
 
+<a name="list-all-the-entries-in-your-journal"></a>
 ## List all the entries in your journal
 
-<url>
+<span class="url">
   GET /journal/
-</url>
+</span>
 
 ### Parameters
 
@@ -19,8 +36,7 @@ diary.
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": [
     {
       "id": 1470,
@@ -60,19 +76,18 @@ diary.
     "to": 2,
     "total": 2
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="get-a-specific-journal-entry"></a>
 ## Get a specific journal entry
 
-<url>
+<span class="url">
   GET /journal/:id
-</url>
+</span>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 1470,
     "object": "entry",
@@ -84,14 +99,14 @@ diary.
     "created_at": "2017-10-21T16:35:17Z",
     "updated_at": "2017-10-21T16:35:17Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="create-a-journal-entry"></a>
 ## Create a journal entry
 
-<url>
+<span class="url">
   POST /journal/
-</url>
+</span>
 
 ### Input
 
@@ -102,19 +117,16 @@ diary.
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "title":"Amd there we go again",
   "post":"The birthday party got cancelled. My boyfriend felt the invitees had enough time to respond. They did not. So he cancelled it. I thought he jumped the gun, but it was not all in my hands. My son got some lizards instead. I did not really like that idea either, but it was his birthday. His grandfather still has to get him something. And my parents also have a gift for him."
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
 The API call returns a journal entry object if the call succeeds.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 1471,
     "object": "entry",
@@ -126,14 +138,14 @@ The API call returns a journal entry object if the call succeeds.
     "created_at": "2017-10-21T16:37:09Z",
     "updated_at": "2017-10-21T16:37:09Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="update-a-journal-entry"></a>
 ## Update a journal entry
 
-<url>
+<span class="url">
   PUT /journal/:id
-</url>
+</span>
 
 ### Input
 
@@ -144,17 +156,14 @@ The API call returns a journal entry object if the call succeeds.
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "title":"Amd there we go again",
   "post":"The birthday party got cancelled. My boyfriend felt the invitees had enough time to respond. They did not. So he cancelled it. I thought he jumped the gun, but it was not all in my hands. My son got some lizards instead. I did not really like that idea either, but it was his birthday. His grandfather still has to get him something. And my parents also have a gift for him."
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 1471,
     "object": "entry",
@@ -166,22 +175,20 @@ The API call returns a journal entry object if the call succeeds.
     "created_at": "2017-10-21T16:37:09Z",
     "updated_at": "2017-10-21T16:37:09Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="delete-a-journal-entry"></a>
 ## Delete a journal entry
 
-<url>
+<span class="url">
   DELETE /calls/:id
-</url>
+</span>
 
 ### Response
 
 The response sends back the id that was just deleted.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "deleted": true,
   "id": 31
-}
-{% endhighlight %}
+}</code></pre>

@@ -1,3 +1,15 @@
+# Countries
+
+<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
+<!-- Simply install the plugin, then press Save, and it does it magic -->
+<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+
+* [Overview](#overview)
+* [List all the countries](#list-all-the-countries)
+
+<!-- /MarkdownTOC -->
+
+<a name="overview"></a>
 ## Overview
 
 The Country object is used in collaboration with the Address object. It
@@ -6,18 +18,18 @@ there are not many new countries that are created every day. When you create an
 address and need to indicate a country, use the Country object to retrieve the
 `country_id` that you need for the address.
 
+<a name="list-all-the-countries"></a>
 ## List all the countries
 
 Countries are order alphabetically.
 
-<url>
+<span class="url">
   GET /countries/
-</url>
+</span>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": [
     {
       "id": 63,
@@ -45,5 +57,4 @@ Countries are order alphabetically.
       "iso": "zw"
     }
   ]
-}
-{% endhighlight %}
+}</code></pre>

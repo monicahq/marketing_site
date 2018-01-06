@@ -1,13 +1,30 @@
+# Tags
+
+<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
+<!-- Simply install the plugin, then press Save, and it does it magic -->
+<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+
+* [Overview](#overview)
+* [List all your tags](#list-all-your-tags)
+* [Get a specific tag](#get-a-specific-tag)
+* [Create a tag](#create-a-tag)
+* [Update a tag](#update-a-tag)
+* [Delete a tag](#delete-a-tag)
+
+<!-- /MarkdownTOC -->
+
+<a name="overview"></a>
 ## Overview
 
 The Tag object allows to tag contacts. Think of tags as labels, or folders, with
 which you can group contacts who belong together.
 
+<a name="list-all-your-tags"></a>
 ## List all your tags
 
-<url>
+<span class="url">
   GET /tags/
-</url>
+</span>
 
 ### Parameters
 
@@ -18,8 +35,7 @@ which you can group contacts who belong together.
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": [
     {
       "id": 325,
@@ -92,17 +108,16 @@ which you can group contacts who belong together.
     "to": 5,
     "total": 5
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="get-a-specific-tag"></a>
 ## Get a specific tag
 
-<url>
+<span class="url">
   GET /tags/:id
-</url>
+</span>
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 1,
     "object": "tag",
@@ -114,14 +129,14 @@ which you can group contacts who belong together.
     "created_at": "2017-07-04T22:15:03Z",
     "updated_at": "2017-07-04T22:15:03Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="create-a-tag"></a>
 ## Create a tag
 
-<url>
+<span class="url">
   POST /tags/
-</url>
+</span>
 
 ### Input
 
@@ -133,18 +148,15 @@ If a field is not required, you can send the `null` value as the content of the 
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "name":"friends"
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
 The API call returns a tag object if the call succeeds.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 1,
     "object": "tag",
@@ -156,14 +168,14 @@ The API call returns a tag object if the call succeeds.
     "created_at": "2017-07-04T22:15:03Z",
     "updated_at": "2017-07-04T22:15:03Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="update-a-tag"></a>
 ## Update a tag
 
-<url>
+<span class="url">
   PUT /tags/:id
-</url>
+</span>
 
 ### Input
 
@@ -173,16 +185,13 @@ The API call returns a tag object if the call succeeds.
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "name":"prison"
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 1,
     "object": "tag",
@@ -194,22 +203,20 @@ The API call returns a tag object if the call succeeds.
     "created_at": "2017-07-04T22:15:03Z",
     "updated_at": "2017-07-04T22:15:03Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="delete-a-tag"></a>
 ## Delete a tag
 
-<url>
+<span class="url">
   DELETE /tags/:id
-</url>
+</span>
 
 ### Response
 
 The response sends back the id that was just deleted.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "deleted": true,
   "id": 31
-}
-{% endhighlight %}
+}</code></pre>

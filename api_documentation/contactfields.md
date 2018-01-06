@@ -1,19 +1,35 @@
+# Contact fields
+
+<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
+<!-- Simply install the plugin, then press Save, and it does it magic -->
+<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+
+* [Overview](#overview)
+* [List all the contact fields of a specific contact](#list-all-the-contact-fields-of-a-specific-contact)
+* [Get a specific contact field](#get-a-specific-contact-field)
+* [Create a contact field](#create-a-contact-field)
+* [Update a contact field](#update-a-contact-field)
+* [Delete a contact field](#delete-a-contact-field)
+
+<!-- /MarkdownTOC -->
+
+<a name="overview"></a>
 ## Overview
 
 A contact can be contacted in multiple ways. It can be a phone number, an email address, a Twitter profile, a Telegram nickname, etc... We call these a contact field.
 
 When retrieving a contact field, we always also return some basic information about the related contact.
 
+<a name="list-all-the-contact-fields-of-a-specific-contact"></a>
 ## List all the contact fields of a specific contact
 
-<url>
+<span class="url">
   GET /contact/:id/contactfields
-</url>
+</span>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": [
     {
       "id": 1,
@@ -261,19 +277,18 @@ When retrieving a contact field, we always also return some basic information ab
     "to": 5,
     "total": 5
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="get-a-specific-contact-field"></a>
 ## Get a specific contact field
 
-<url>
+<span class="url">
   GET /contactfields/:id
-</url>
+</span>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "id": 1,
   "object": "contactfield",
   "data": "jim@dundermifflin.com",
@@ -318,14 +333,14 @@ When retrieving a contact field, we always also return some basic information ab
   },
   "created_at": "2017-11-24T11:19:18Z",
   "updated_at": null
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="create-a-contact-field"></a>
 ## Create a contact field
 
-<url>
+<span class="url">
   POST /contactfields/
-</url>
+</span>
 
 ### Input
 
@@ -337,20 +352,17 @@ When retrieving a contact field, we always also return some basic information ab
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "contact_field_type_id": 1,
   "data": "123456",
   "contact_id": 8
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
 The API call returns a Contact Field object if the call succeeds.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "id": 62795,
   "object": "contactfield",
   "data": "123456",
@@ -395,14 +407,14 @@ The API call returns a Contact Field object if the call succeeds.
   },
   "created_at": "2017-11-25T08:42:36Z",
   "updated_at": "2017-11-25T08:42:36Z"
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="update-a-contact-field"></a>
 ## Update a contact field
 
-<url>
+<span class="url">
   PUT /contactfields/:id
-</url>
+</span>
 
 ### Input
 
@@ -414,18 +426,15 @@ The API call returns a Contact Field object if the call succeeds.
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "contact_field_type_id": 1,
   "data": "456778",
   "contact_id": 8
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "id": 62795,
   "object": "contactfield",
   "data": "456778",
@@ -470,22 +479,20 @@ The API call returns a Contact Field object if the call succeeds.
   },
   "created_at": "2017-11-25T08:42:36Z",
   "updated_at": "2017-11-25T08:43:47Z"
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="delete-a-contact-field"></a>
 ## Delete a contact field
 
-<url>
+<span class="url">
   DELETE /contactfields/:id
-</url>
+</span>
 
 ### Response
 
 The response sends back the id that was just deleted.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "deleted": true,
   "id": 31
-}
-{% endhighlight %}
+}</code></pre>

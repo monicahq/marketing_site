@@ -1,3 +1,5 @@
+# Changelog
+
 The changelog is mostly a list of backwards-incompatible updates in the API.
 
 ### v1.3.0

@@ -1,3 +1,20 @@
+# Notes
+
+<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
+<!-- Simply install the plugin, then press Save, and it does it magic -->
+<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+
+* [Overview](#overview)
+* [List all the notes in your account](#list-all-the-notes-in-your-account)
+* [List all the notes of a specific contact](#list-all-the-notes-of-a-specific-contact)
+* [Get a specific note](#get-a-specific-note)
+* [Create a note](#create-a-note)
+* [Update a note](#update-a-note)
+* [Delete a note](#delete-a-note)
+
+<!-- /MarkdownTOC -->
+
+<a name="overview"></a>
 ## Overview
 
 The Note object allows to associate notes to contacts. A note has to be
@@ -9,11 +26,12 @@ inside the application.
 When retrieving a note, we always also return some basic information about the
 related contact.
 
+<a name="list-all-the-notes-in-your-account"></a>
 ## List all the notes in your account
 
-<url>
+<span class="url">
   GET /notes/
-</url>
+</span>
 
 ### Parameters
 
@@ -24,8 +42,7 @@ related contact.
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": [
     {
       "id": 4724,
@@ -107,19 +124,18 @@ related contact.
     "to": 2,
     "total": 2
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="list-all-the-notes-of-a-specific-contact"></a>
 ## List all the notes of a specific contact
 
-<url>
+<span class="url">
   GET /contacts/:id/notes
-</url>
+</span>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": [
     {
       "id": 4724,
@@ -201,19 +217,18 @@ related contact.
     "to": 2,
     "total": 2
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="get-a-specific-note"></a>
 ## Get a specific note
 
-<url>
+<span class="url">
   GET /notes/:id
-</url>
+</span>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 4724,
     "object": "note",
@@ -246,14 +261,14 @@ related contact.
     "created_at": "2017-10-07T09:00:35Z",
     "updated_at": "2017-10-07T09:00:35Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="create-a-note"></a>
 ## Create a note
 
-<url>
+<span class="url">
   POST /notes/
-</url>
+</span>
 
 ### Input
 
@@ -265,20 +280,17 @@ related contact.
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "body": "This is a sample of a note.",
   "contact_id": 1,
   "is_favorited": 0
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
 The API call returns a note object if the call succeeds.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 4724,
     "object": "note",
@@ -311,14 +323,14 @@ The API call returns a note object if the call succeeds.
     "created_at": "2017-10-07T09:00:35Z",
     "updated_at": "2017-10-07T09:00:35Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="update-a-note"></a>
 ## Update a note
 
-<url>
+<span class="url">
   PUT /notes/:id
-</url>
+</span>
 
 ### Input
 
@@ -330,17 +342,14 @@ The API call returns a note object if the call succeeds.
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "body": "This is a test that is updated",
   "contact_id": 3
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 4724,
     "object": "note",
@@ -373,22 +382,20 @@ The API call returns a note object if the call succeeds.
     "created_at": "2017-10-07T09:00:35Z",
     "updated_at": "2017-10-07T09:00:35Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="delete-a-note"></a>
 ## Delete a note
 
-<url>
+<span class="url">
   DELETE /notes/:id
-</url>
+</span>
 
 ### Response
 
 The response sends back the id that was just deleted.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "deleted": true,
   "id": 31
-}
-{% endhighlight %}
+}</code></pre>

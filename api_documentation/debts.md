@@ -1,3 +1,19 @@
+# Debts
+
+<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
+<!-- Simply install the plugin, then press Save, and it does it magic -->
+<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+
+* [Overview](#overview)
+* [List all your debts](#list-all-your-debts)
+* [Get a specific debt](#get-a-specific-debt)
+* [Create a debt](#create-a-debt)
+* [Update a debt](#update-a-debt)
+* [Delete a debt](#delete-a-debt)
+
+<!-- /MarkdownTOC -->
+
+<a name="overview"></a>
 ## Overview
 
 The Debt object allows to record that you own to contacts, or what your contacts
@@ -8,11 +24,12 @@ A debt has to be linked to a contact, always.
 If the user owns money to the contact, the `in_debt` will be `yes`. If the
 contact owns money to the user, `in_debt` will be `no`.
 
+<a name="list-all-your-debts"></a>
 ## List all your debts
 
-<url>
+<span class="url">
   GET /debts/
-</url>
+</span>
 
 ### Parameters
 
@@ -23,8 +40,7 @@ contact owns money to the user, `in_debt` will be `no`.
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": [
     {
       "id": 428,
@@ -141,17 +157,16 @@ contact owns money to the user, `in_debt` will be `no`.
     "to": 3,
     "total": 3
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="get-a-specific-debt"></a>
 ## Get a specific debt
 
-<url>
+<span class="url">
   GET /debts/:id
-</url>
+</span>
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 832,
     "object": "debt",
@@ -185,14 +200,14 @@ contact owns money to the user, `in_debt` will be `no`.
     "created_at": "2017-10-21T16:04:08Z",
     "updated_at": "2017-10-21T16:04:08Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="create-a-debt"></a>
 ## Create a debt
 
-<url>
+<span class="url">
   POST /debts/
-</url>
+</span>
 
 ### Input
 
@@ -208,22 +223,19 @@ If a field is not required, you can send the `null` value as the content of the 
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "in_debt":"yes",
   "status":"inprogress",
   "amount":325,
   "reason":"He bought half the pizza",
   "contact_id": 1
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
 The API call returns a debt object if the call succeeds.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 835,
     "object": "debt",
@@ -257,14 +269,14 @@ The API call returns a debt object if the call succeeds.
     "created_at": "2017-10-21T16:16:26Z",
     "updated_at": "2017-10-21T16:16:26Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="update-a-debt"></a>
 ## Update a debt
 
-<url>
+<span class="url">
   PUT /debts/:id
-</url>
+</span>
 
 ### Input
 
@@ -278,20 +290,17 @@ The API call returns a debt object if the call succeeds.
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "in_debt":"yes",
   "status":"inprogress",
   "amount":23,
   "reason":"He bought half the pizza",
   "contact_id": 1
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 835,
     "object": "debt",
@@ -325,22 +334,20 @@ The API call returns a debt object if the call succeeds.
     "created_at": "2017-10-21T16:16:26Z",
     "updated_at": "2017-10-21T16:19:54Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="delete-a-debt"></a>
 ## Delete a debt
 
-<url>
+<span class="url">
   DELETE /debts/:id
-</url>
+</span>
 
 ### Response
 
 The response sends back the id that was just deleted.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "deleted": true,
   "id": 31
-}
-{% endhighlight %}
+}</code></pre>

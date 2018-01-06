@@ -1,3 +1,20 @@
+# Gifts
+
+<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
+<!-- Simply install the plugin, then press Save, and it does it magic -->
+<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+
+* [Overview](#overview)
+* [List all the gifts in your account](#list-all-the-gifts-in-your-account)
+* [List all the gifts of a specific contact](#list-all-the-gifts-of-a-specific-contact)
+* [Get a specific gift](#get-a-specific-gift)
+* [Create a gift](#create-a-gift)
+* [Update a gift](#update-a-gift)
+* [Delete a gift](#delete-a-gift)
+
+<!-- /MarkdownTOC -->
+
+<a name="overview"></a>
 ## Overview
 
 The Gift object allows to record gifts you have offered, or wish to offer to
@@ -10,11 +27,12 @@ a child of the given contact. This is defined by the `is_for` tab.
 When retrieving a gift, we always also return some basic information about the
 related contact.
 
+<a name="list-all-the-gifts-in-your-account"></a>
 ## List all the gifts in your account
 
-<url>
+<span class="url">
   GET /gifts/
-</url>
+</span>
 
 ### Parameters
 
@@ -25,8 +43,7 @@ related contact.
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": [
     {
       "id": 1,
@@ -174,19 +191,18 @@ related contact.
     "to": 3,
     "total": 3
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="list-all-the-gifts-of-a-specific-contact"></a>
 ## List all the gifts of a specific contact
 
-<url>
+<span class="url">
   GET /contacts/:id/gifts
-</url>
+</span>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": [
     {
       "id": 2,
@@ -297,19 +313,18 @@ related contact.
     "to": 2,
     "total": 2
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="get-a-specific-gift"></a>
 ## Get a specific gift
 
-<url>
+<span class="url">
   GET /gifts/:id
-</url>
+</span>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 2,
     "object": "gift",
@@ -347,14 +362,14 @@ related contact.
     "created_at": "2017-10-17T16:41:27Z",
     "updated_at": "2017-10-17T16:41:27Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="create-a-gift"></a>
 ## Create a gift
 
-<url>
+<span class="url">
   POST /gifts/
-</url>
+</span>
 
 ### Input
 
@@ -372,8 +387,7 @@ related contact.
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "is_for": 1,
   "name":"For my friend Ron Swanson",
   "comment":"This is going to be so awesome",
@@ -383,15 +397,13 @@ related contact.
   "has_been_offered":1,
   "date_offered":"2015-02-24",
   "contact_id": 3
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
 The API gift returns a gift object if the gift succeeds.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 676,
     "object": "gift",
@@ -452,14 +464,14 @@ The API gift returns a gift object if the gift succeeds.
     "created_at": "2017-10-19T21:51:15Z",
     "updated_at": "2017-10-19T21:51:15Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="update-a-gift"></a>
 ## Update a gift
 
-<url>
+<span class="url">
   PUT /gifts/:id
-</url>
+</span>
 
 ### Input
 
@@ -477,8 +489,7 @@ The API gift returns a gift object if the gift succeeds.
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "is_for": null,
   "name":"For my friend Ron Swanson",
   "comment":"This is going to be so awesome",
@@ -488,13 +499,11 @@ The API gift returns a gift object if the gift succeeds.
   "has_been_offered":1,
   "date_offered":"2015-02-24",
   "contact_id": 3
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 678,
     "object": "gift",
@@ -536,22 +545,20 @@ The API gift returns a gift object if the gift succeeds.
     "created_at": "2017-10-19T21:52:53Z",
     "updated_at": "2017-10-19T21:52:53Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="delete-a-gift"></a>
 ## Delete a gift
 
-<url>
+<span class="url">
   DELETE /gifts/:id
-</url>
+</span>
 
 ### Response
 
 The response sends back the id that was just deleted.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "deleted": true,
   "id": 31
-}
-{% endhighlight %}
+}</code></pre>

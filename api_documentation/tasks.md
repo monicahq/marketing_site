@@ -1,3 +1,20 @@
+# Tasks
+
+<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
+<!-- Simply install the plugin, then press Save, and it does it magic -->
+<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+
+* [Overview](#overview)
+* [List all the tasks in your account](#list-all-the-tasks-in-your-account)
+* [List all the tasks of a specific contact](#list-all-the-tasks-of-a-specific-contact)
+* [Get a specific task](#get-a-specific-task)
+* [Create a task](#create-a-task)
+* [Update a task](#update-a-task)
+* [Delete a task](#delete-a-task)
+
+<!-- /MarkdownTOC -->
+
+<a name="overview"></a>
 ## Overview
 
 The Task object allows to add tasks about your contacts.
@@ -5,11 +22,12 @@ The Task object allows to add tasks about your contacts.
 When retrieving a task, we always also return some basic information about the
 related contact.
 
+<a name="list-all-the-tasks-in-your-account"></a>
 ## List all the tasks in your account
 
-<url>
+<span class="url">
   GET /tasks/
-</url>
+</span>
 
 ### Parameters
 
@@ -20,8 +38,7 @@ related contact.
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": [
     {
       "id": 809,
@@ -105,19 +122,18 @@ related contact.
     "to": 2,
     "total": 2
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="list-all-the-tasks-of-a-specific-contact"></a>
 ## List all the tasks of a specific contact
 
-<url>
+<span class="url">
   GET /contacts/:id/tasks
-</url>
+</span>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": [
     {
       "id": 809,
@@ -201,19 +217,18 @@ related contact.
     "to": 2,
     "total": 2
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="get-a-specific-task"></a>
 ## Get a specific task
 
-<url>
+<span class="url">
   GET /tasks/:id
-</url>
+</span>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 809,
     "object": "task",
@@ -247,14 +262,14 @@ related contact.
     "created_at": "2017-10-13T21:58:40Z",
     "updated_at": "2017-10-13T21:58:40Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="create-a-task"></a>
 ## Create a task
 
-<url>
+<span class="url">
   POST /task/
-</url>
+</span>
 
 ### Input
 
@@ -268,21 +283,18 @@ related contact.
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "title": "Bring back the table",
   "description": "I borrowed a table a while ago.",
   "completed": 0,
   "contact_id": 1
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
 The API call returns a task object if the call succeeds.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 811,
     "object": "task",
@@ -316,14 +328,14 @@ The API call returns a task object if the call succeeds.
     "created_at": "2017-10-13T22:12:05Z",
     "updated_at": "2017-10-13T22:12:05Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="update-a-task"></a>
 ## Update a task
 
-<url>
+<span class="url">
   PUT /tasks/:id
-</url>
+</span>
 
 ### Input
 
@@ -337,20 +349,17 @@ The API call returns a task object if the call succeeds.
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "title": "Bring back the table",
   "description": "I borrowed a table a while ago.",
   "completed": 1,
   "completed_at": "1970-03-03",
   "contact_id": 1
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 811,
     "object": "task",
@@ -384,22 +393,20 @@ The API call returns a task object if the call succeeds.
     "created_at": "2017-10-13T22:12:05Z",
     "updated_at": "2017-10-13T22:14:33Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="delete-a-task"></a>
 ## Delete a task
 
-<url>
+<span class="url">
   DELETE /tasks/:id
-</url>
+</span>
 
 ### Response
 
 The response sends back the id that was just deleted.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "deleted": true,
   "id": 31
-}
-{% endhighlight %}
+}</code></pre>

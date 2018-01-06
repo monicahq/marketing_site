@@ -1,3 +1,21 @@
+# Activities
+
+<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
+<!-- Simply install the plugin, then press Save, and it does it magic -->
+<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+
+* [Overview](#overview)
+* [List all the activities in your account](#list-all-the-activities-in-your-account)
+* [List all the activities of a specific contact](#list-all-the-activities-of-a-specific-contact)
+* [Get a specific activity](#get-a-specific-activity)
+* [Create an activity](#create-an-activity)
+* [Update an activity](#update-an-activity)
+* [Delete an activity](#delete-an-activity)
+* [List of all activity types](#list-of-all-activity-types)
+
+<!-- /MarkdownTOC -->
+
+<a name="overview"></a>
 ## Overview
 
 The Activity object represents activities made with one or more contacts. Use it
@@ -7,11 +25,12 @@ linked to at least one contact.
 When retrieving an activity, we always also return some basic information about
 the related contact(s).
 
+<a name="list-all-the-activities-in-your-account"></a>
 ## List all the activities in your account
 
-<url>
+<span class="url">
   GET /activities/
-</url>
+</span>
 
 ### Parameters
 
@@ -22,8 +41,7 @@ the related contact(s).
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": [
     {
       "id": 1,
@@ -303,19 +321,18 @@ the related contact(s).
     "to": 5,
     "total": 5
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="list-all-the-activities-of-a-specific-contact"></a>
 ## List all the activities of a specific contact
 
-<url>
+<span class="url">
   GET /contacts/:id/activities
-</url>
+</span>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": [
     {
       "id": 2,
@@ -379,19 +396,18 @@ the related contact(s).
     "to": 1,
     "total": 1
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="get-a-specific-activity"></a>
 ## Get a specific activity
 
-<url>
+<span class="url">
   GET /activities/:id
-</url>
+</span>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 2,
     "object": "activity",
@@ -438,14 +454,14 @@ the related contact(s).
     "created_at": "2016-10-18T23:58:18Z",
     "updated_at": "2017-06-07T13:09:47Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="create-an-activity"></a>
 ## Create an activity
 
-<url>
+<span class="url">
   POST /activities/
-</url>
+</span>
 
 ### Input
 
@@ -459,22 +475,19 @@ the related contact(s).
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "summary": "We ate at an awesome restaurant.",
   "description": "We ate way too much, we had fun and we promised we'd see each other again in a couple of weeks.",
   "date_it_happened": "2018-02-02",
   "activity_type_id": 2,
   "contacts": [1,3,5]
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
 The API call returns an Activity object if the call succeeds.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 4670,
     "object": "activity",
@@ -561,14 +574,14 @@ The API call returns an Activity object if the call succeeds.
     "created_at": "2017-10-25T12:46:55Z",
     "updated_at": "2017-10-25T12:46:55Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="update-an-activity"></a>
 ## Update an activity
 
-<url>
+<span class="url">
   PUT /activities/:id
-</url>
+</span>
 
 ### Input
 
@@ -582,20 +595,17 @@ The API call returns an Activity object if the call succeeds.
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "summary": "We ate at an awesome restaurant.",
   "description": "We ate way too much, we had fun and we promised we'd see each other again in a couple of weeks.",
   "date_it_happened": "2018-02-02",
   "activity_type_id": 2,
   "contacts": [1,3]
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 4670,
     "object": "activity",
@@ -662,26 +672,25 @@ The API call returns an Activity object if the call succeeds.
     "created_at": "2017-10-25T12:46:55Z",
     "updated_at": "2017-10-25T12:46:55Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="delete-an-activity"></a>
 ## Delete an activity
 
-<url>
+<span class="url">
   DELETE /activities/:id
-</url>
+</span>
 
 ### Response
 
 The response sends back the id that was just deleted.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "deleted": true,
   "id": 31
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="list-of-all-activity-types"></a>
 ## List of all activity types
 
 An activity can optionally be associated with an activity type, like
@@ -690,14 +699,13 @@ custom activity types, but this feature will eventually be implemented. Activity
 types are a bit useless at the moment, but we'll use them to display to a user
 what kind of activities he's doing with his contacts.
 
-<url>
+<span class="url">
   GET /activitytypes
-</url>
+</span>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": [
     {
       "id": 1,
@@ -817,5 +825,4 @@ what kind of activities he's doing with his contacts.
       "updated_at": "2017-01-17T17:06:34Z"
     }
   ]
-}
-{% endhighlight %}
+}</code></pre>

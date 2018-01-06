@@ -15,7 +15,7 @@
 <div class="mw8 center ph3 mb5">
   <div class="cf">
     <div class="fl w-20-ns w-100 mb4 mb0-ns">
-      <ul class="list pl0">
+      <ul class="list pl0 mt0">
         <li class="mb2">
           <a class="no-underline" href="{{ url('/api/overview') }}">Overview</a>
         </li>

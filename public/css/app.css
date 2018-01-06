@@ -9735,6 +9735,13 @@ article img {
   font-size: 13px;
 }
 
+.markdown h1 {
+  margin-top: 0;
+  font-weight: 400;
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
 .markdown h2 {
   border-bottom: 1px solid #d9d9d9;
   font-size: 18px;

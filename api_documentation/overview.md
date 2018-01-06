@@ -1,18 +1,34 @@
+# Overview
+
+<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
+<!-- Simply install the plugin, then press Save, and it does it magic -->
+<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+
+* [Current version](#current-version)
+* [Schema](#schema)
+* [HTTP verbs](#http-verbs)
+* [Client errors](#client-errors)
+* [Authentication](#authentication)
+* [Pagination](#pagination)
+* [Rate limiting](#rate-limiting)
+
+<!-- /MarkdownTOC -->
+
 Note: the API is in alpha mode at the moment. It's not considered to be production
 ready and we will stabilize it over the next months.
-
-## Overview
 
 This document describes how to use Monica's API. This document is heavily
 inspired by [GitHub's](https://developer.github.com/v3) and
 [Stripe's](https://stripe.com/docs/api) API. Please use the API in a nice way
 and don't be a jerk.
 
+<a name="current-version"></a>
 ## Current version
 
 By default, all requests to <span>https://app.monicahq.com/api</span> receive the
 v1 version of the API.
 
+<a name="schema"></a>
 ## Schema
 
 All API access is over HTTPS, and accessed from the
@@ -45,6 +61,7 @@ always get a subset of a contact attached to it, giving you just enough
 information so you don't need to fetch the full information of the contact to do
 something with it.
 
+<a name="http-verbs"></a>
 ## HTTP verbs
 
 Monica tries to use the appropriate HTTP verbs wherever it can. Note that the
@@ -57,6 +74,7 @@ Monica tries to use the appropriate HTTP verbs wherever it can. Note that the
 | PUT | Used for replacing resources or collections. |
 | DELETE | Used for deleting resources. |
 
+<a name="client-errors"></a>
 ## Client errors
 
 ### Invalid JSON
@@ -84,6 +102,7 @@ Sending an invalid JSON during a POST or a PUT will result in a error.
 | 36 | You can't set a partner or a child to a partial contact. | |
 | 37 | Problems parsing JSON. | When doing a `PUT` or a `POST`, returns an error if the JSON is not a valid JSON or badly formatted. |
 
+<a name="authentication"></a>
 ## Authentication
 
 There are several ways to authenticate to the API. All requests to the API require authentication.
@@ -100,6 +119,7 @@ This is meant to be used in server to server scenarios. Never reveal your OAuth
 application's client secret to your users. To use this authentication method,
 you need to first register an application in your Monica's instance.
 
+<a name="pagination"></a>
 ## Pagination
 
 Requests that return multiple items will be paginated to 10 items by default.
@@ -111,6 +131,7 @@ Omitting the `?page` parameter will return the first page.
 curl 'https://app.monicahq.com/api/contacts?page=2&limit=100'
 </span>
 
+<a name="rate-limiting"></a>
 ## Rate limiting
 
 The returned HTTP headers of any API request show your current rate limit status:

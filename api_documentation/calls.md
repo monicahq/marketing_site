@@ -1,3 +1,20 @@
+# Calls
+
+<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
+<!-- Simply install the plugin, then press Save, and it does it magic -->
+<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+
+* [Overview](#overview)
+* [List all the calls in your account](#list-all-the-calls-in-your-account)
+* [List all the calls of a specific contact](#list-all-the-calls-of-a-specific-contact)
+* [Get a specific call](#get-a-specific-call)
+* [Create a call](#create-a-call)
+* [Update a call](#update-a-call)
+* [Delete a call](#delete-a-call)
+
+<!-- /MarkdownTOC -->
+
+<a name="overview"></a>
 ## Overview
 
 The Call object allows to record phone calls made with contacts. A call has to be
@@ -10,11 +27,12 @@ function.
 When retrieving a call, we always also return some basic information about the
 related contact.
 
+<a name="list-all-the-calls-in-your-account"></a>
 ## List all the calls in your account
 
-<url>
+<span class="url">
   GET /calls/
-</url>
+</span>
 
 ### Parameters
 
@@ -25,8 +43,7 @@ related contact.
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": [
     {
       "id": 3,
@@ -168,19 +185,18 @@ related contact.
     "to": 4,
     "total": 4
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="list-all-the-calls-of-a-specific-contact"></a>
 ## List all the calls of a specific contact
 
-<url>
+<span class="url">
   GET /contacts/:id/calls
-</url>
+</span>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": [
     {
       "id": 3,
@@ -260,19 +276,18 @@ related contact.
     "to": 2,
     "total": 2
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="get-a-specific-call"></a>
 ## Get a specific call
 
-<url>
+<span class="url">
   GET /calls/:id
-</url>
+</span>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 1,
     "object": "call",
@@ -304,14 +319,14 @@ related contact.
     "created_at": "2017-10-07T21:00:56Z",
     "updated_at": "2017-10-07T21:00:56Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="create-a-call"></a>
 ## Create a call
 
-<url>
+<span class="url">
   POST /calls/
-</url>
+</span>
 
 ### Input
 
@@ -323,20 +338,17 @@ related contact.
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "content": "He called, we had fun.",
   "contact_id": 3,
   "called_at": "2018-02-02"
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
 The API call returns a Call object if the call succeeds.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 5,
     "object": "call",
@@ -368,14 +380,14 @@ The API call returns a Call object if the call succeeds.
     "created_at": "2017-10-07T22:29:21Z",
     "updated_at": "2017-10-07T22:29:21Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="update-a-call"></a>
 ## Update a call
 
-<url>
+<span class="url">
   PUT /calls/:id
-</url>
+</span>
 
 ### Input
 
@@ -387,18 +399,15 @@ The API call returns a Call object if the call succeeds.
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "content": "He called, we had fun and really awesome.",
   "contact_id": 3,
   "called_at": "2018-02-02"
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 5,
     "object": "call",
@@ -430,22 +439,20 @@ The API call returns a Call object if the call succeeds.
     "created_at": "2017-10-07T22:29:21Z",
     "updated_at": "2017-10-07T22:29:56Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="delete-a-call"></a>
 ## Delete a call
 
-<url>
+<span class="url">
   DELETE /calls/:id
-</url>
+</span>
 
 ### Response
 
 The response sends back the id that was just deleted.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "deleted": true,
   "id": 31
-}
-{% endhighlight %}
+}</code></pre>

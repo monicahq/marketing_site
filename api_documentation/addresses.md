@@ -1,3 +1,19 @@
+# Addresses
+
+<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
+<!-- Simply install the plugin, then press Save, and it does it magic -->
+<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+
+* [Overview](#overview)
+* [List all the addresses of a specific contact](#list-all-the-addresses-of-a-specific-contact)
+* [Get a specific address](#get-a-specific-address)
+* [Create an address](#create-an-address)
+* [Update an address](#update-an-address)
+* [Delete an address](#delete-an-address)
+
+<!-- /MarkdownTOC -->
+
+<a name="overview"></a>
 ## Overview
 
 The Address object represents an address of a contact. A contact can have as
@@ -7,16 +23,16 @@ at least one contact.
 When retrieving an address, we always also return some basic information about
 the related contact(s).
 
+<a name="list-all-the-addresses-of-a-specific-contact"></a>
 ## List all the addresses of a specific contact
 
-<url>
+<span class="url">
   GET /contacts/:id/addresses
-</url>
+</span>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": [
     {
       "id": 3,
@@ -118,19 +134,18 @@ the related contact(s).
     "to": 2,
     "total": 2
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="get-a-specific-address"></a>
 ## Get a specific address
 
-<url>
+<span class="url">
   GET /addresses/:id
-</url>
+</span>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 11163,
     "object": "address",
@@ -173,14 +188,14 @@ the related contact(s).
     "created_at": "2017-11-23T08:28:47Z",
     "updated_at": "2017-11-23T08:33:07Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="create-an-address"></a>
 ## Create an address
 
-<url>
+<span class="url">
   POST /addresses/
-</url>
+</span>
 
 ### Input
 
@@ -196,8 +211,7 @@ the related contact(s).
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "name": "Work",
   "street": "1725 Slough Avenue",
   "city": "Scranton",
@@ -205,15 +219,13 @@ the related contact(s).
   "postal_code": null,
   "country_id": 1,
   "contact_id": 8
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
 The API call returns an address object if the call succeeds.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 11164,
     "object": "address",
@@ -256,14 +268,14 @@ The API call returns an address object if the call succeeds.
     "created_at": "2017-11-23T09:26:54Z",
     "updated_at": "2017-11-23T09:26:54Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="update-an-address"></a>
 ## Update an address
 
-<url>
+<span class="url">
   PUT /addresses/:id
-</url>
+</span>
 
 ### Input
 
@@ -279,8 +291,7 @@ The API call returns an address object if the call succeeds.
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "name": "Work (The Office)",
   "street": "1725 Slough Avenue",
   "city": "Scranton",
@@ -288,13 +299,11 @@ The API call returns an address object if the call succeeds.
   "postal_code": null,
   "country_id": 1,
   "contact_id": 8
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 11163,
     "object": "address",
@@ -337,22 +346,20 @@ The API call returns an address object if the call succeeds.
     "created_at": "2017-11-23T08:28:47Z",
     "updated_at": "2017-11-23T08:33:07Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="delete-an-address"></a>
 ## Delete an address
 
-<url>
+<span class="url">
   DELETE /addresses/:id
-</url>
+</span>
 
 ### Response
 
 The response sends back the id that was just deleted.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "deleted": true,
   "id": 31
-}
-{% endhighlight %}
+}</code></pre>

@@ -1,3 +1,19 @@
+# Contact field types
+
+<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
+<!-- Simply install the plugin, then press Save, and it does it magic -->
+<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+
+* [Overview](#overview)
+* [List all the contact field types in an account](#list-all-the-contact-field-types-in-an-account)
+* [Get a specific contact type field](#get-a-specific-contact-type-field)
+* [Create a contact field type](#create-a-contact-field-type)
+* [Update a contact field type](#update-a-contact-field-type)
+* [Delete a contact field type](#delete-a-contact-field-type)
+
+<!-- /MarkdownTOC -->
+
+<a name="overview"></a>
 ## Overview
 
 A contact can have as many <a href="{{ "/api/contactfields" | prepend: site.baseurl | prepend: site.url }}">contact fields</a>
@@ -27,16 +43,16 @@ vCard assumes you have a phone number and an email address fields. Moreover, as
 the name of a contact field type can change, the `type` column is there to
 indicate the type of contact field.
 
+<a name="list-all-the-contact-field-types-in-an-account"></a>
 ## List all the contact field types in an account
 
-<url>
+<span class="url">
   GET /contactfieldtypes/
-</url>
+</span>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": [
     {
       "id": 1,
@@ -96,19 +112,18 @@ indicate the type of contact field.
     "to": 3,
     "total": 3
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="get-a-specific-contact-type-field"></a>
 ## Get a specific contact type field
 
-<url>
+<span class="url">
   GET /contactfieldtypes/:id
-</url>
+</span>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 1,
     "object": "contactfieldtype",
@@ -123,14 +138,14 @@ indicate the type of contact field.
     "created_at": "2017-11-22T12:51:10Z",
     "updated_at": "2017-11-22T12:51:10Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="create-a-contact-field-type"></a>
 ## Create a contact field type
 
-<url>
+<span class="url">
   POST /contactfieldtypes/
-</url>
+</span>
 
 ### Input
 
@@ -144,22 +159,19 @@ indicate the type of contact field.
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "name": "Telegram",
   "fontawesome_icon": "fa fa-bath",
   "protocol": "telegram:",
   "delible": 1,
   "type": null
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
 The API call returns a contact field type object if the call succeeds.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 37305,
     "object": "contactfieldtype",
@@ -174,14 +186,14 @@ The API call returns a contact field type object if the call succeeds.
     "created_at": "2017-11-24T09:24:31Z",
     "updated_at": "2017-11-24T09:24:31Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="update-a-contact-field-type"></a>
 ## Update a contact field type
 
-<url>
+<span class="url">
   PUT /contactfieldtypes/:id
-</url>
+</span>
 
 ### Input
 
@@ -195,20 +207,17 @@ The API call returns a contact field type object if the call succeeds.
 
 ### Example
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "name": "Telegram",
   "fontawesome_icon": "fa fa-bath",
   "protocol": "telegram:",
   "delible": 0,
   "type": "telegram"
-}
-{% endhighlight %}
+}</code></pre>
 
 ### Response
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "data": {
     "id": 37305,
     "object": "contactfieldtype",
@@ -223,22 +232,20 @@ The API call returns a contact field type object if the call succeeds.
     "created_at": "2017-11-24T09:24:31Z",
     "updated_at": "2017-11-24T10:16:19Z"
   }
-}
-{% endhighlight %}
+}</code></pre>
 
+<a name="delete-a-contact-field-type"></a>
 ## Delete a contact field type
 
-<url>
+<span class="url">
   DELETE /contactfieldtypes/:id
-</url>
+</span>
 
 ### Response
 
 The response sends back the id that was just deleted.
 
-{% highlight json %}
-{
+<pre><code class="json">{
   "deleted": true,
   "id": 31
-}
-{% endhighlight %}
+}</code></pre>

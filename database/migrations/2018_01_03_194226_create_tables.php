@@ -32,6 +32,30 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
+        Schema::connection('mysqlMkg')->create('releases', function($table)
+        {
+            $table->increments('id');
+            $table->string('release_number')->unique();
+            $table->text('description');
+            $table->string('github_release_url');
+            $table->date('released_on');
+            $table->timestamps();
+        });
+
+        Schema::connection('mysqlMkg')->create('release_items', function($table)
+        {
+            $table->increments('id');
+            $table->string('release_id');
+            $table->text('description');
+            $table->integer('github_pull_request_number')->nullable();
+            $table->string('github_pull_request_url')->nullable();
+            $table->string('github_author_name')->nullable();
+            $table->string('github_author_url')->nullable();
+            $table->string('screenshot_url')->nullable();
+            $table->string('category');
+            $table->timestamps();
+        });
+
         DB::connection('mysqlMkg')->table('categories')->insert(['name' => 'New features', 'slug' => 'new-feature']);
         DB::connection('mysqlMkg')->table('categories')->insert(['name' => 'Growing a company', 'slug' => 'growing']);
     }

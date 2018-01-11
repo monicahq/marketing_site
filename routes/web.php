@@ -43,6 +43,10 @@ Route::get('/privacy', function () {
     return view('privacy');
 });
 
+Route::get('/changelog', function () {
+    return view('changelog');
+});
+
 Route::get('/terms', function () {
     return view('terms');
 });
@@ -53,3 +57,7 @@ Route::get('/blog/category/{slug}', 'BlogController@category');
 
 Route::get('/api', 'ApiController@index');
 Route::get('/api/{category}', 'ApiController@category');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

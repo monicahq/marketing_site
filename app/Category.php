@@ -8,8 +8,6 @@ class Category extends Model
 {
     protected $table = 'categories';
 
-    protected $connection = 'mysqlMkg';
-
     /**
      * Get the posts with that category.
      */

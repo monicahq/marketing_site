@@ -13,7 +13,7 @@ class CreateTables extends Migration
      */
     public function up()
     {
-        Schema::connection('mysqlMkg')->create('categories', function($table)
+        Schema::create('categories', function($table)
         {
             $table->increments('id');
             $table->string('name');
@@ -21,7 +21,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::connection('mysqlMkg')->create('posts', function($table)
+        Schema::create('posts', function($table)
         {
             $table->increments('id');
             $table->string('title');
@@ -32,7 +32,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::connection('mysqlMkg')->create('releases', function($table)
+        Schema::create('releases', function($table)
         {
             $table->increments('id');
             $table->string('release_number')->unique();
@@ -42,7 +42,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::connection('mysqlMkg')->create('release_items', function($table)
+        Schema::create('release_items', function($table)
         {
             $table->increments('id');
             $table->string('release_id');
@@ -56,7 +56,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        DB::connection('mysqlMkg')->table('categories')->insert(['name' => 'New features', 'slug' => 'new-feature']);
-        DB::connection('mysqlMkg')->table('categories')->insert(['name' => 'Growing a company', 'slug' => 'growing']);
+        DB::table('categories')->insert(['name' => 'New features', 'slug' => 'new-feature']);
+        DB::table('categories')->insert(['name' => 'Growing a company', 'slug' => 'growing']);
     }
 }

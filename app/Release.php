@@ -2,15 +2,14 @@
 
 namespace App;
 
-use League\CommonMark\Converter;
-use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class Release extends Model
 {
     protected $dates = [
         'created_at',
         'updated_at',
+        'released_on',
     ];
 
     /**

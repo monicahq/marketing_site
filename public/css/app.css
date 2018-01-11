@@ -9678,7 +9678,18 @@ a {
   color: #0366d6;
 }
 
-.homepage-button {
+.primary-button {
+  background-color: #3cb371;
+  border: 1px solid #3cb371;
+  border-bottom-color: rgba(0, 0, 0, 0.15);
+  color: #fff;
+  text-decoration: none;
+  border-bottom-width: 2px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.secondary-button {
   border-color: rgba(0, 0, 0, 0.15);
   border: 1px solid #bfbfbf;
   border-bottom-width: 2px;
@@ -9697,7 +9708,7 @@ a {
   transition: all 0.2s;
 }
 
-.homepage-button:hover {
+.secondary-button:hover {
   background-color: #3cb371;
   border-color: #3cb371;
   border-bottom-color: rgba(0, 0, 0, 0.15);

@@ -14,7 +14,7 @@
 
 <div class="mw8 center ph3">
   <div class="cf">
-    <div class="fl w-70-ns w-100">
+    <div class="fl w-70-ns w-100 mb4">
       @foreach ($posts as $post)
       <article class="mb5">
         <h2 class="mt0 mb0"><a href="{{ url('/blog/'.$post->slug) }}">{{ $post->title }}</a></h2>

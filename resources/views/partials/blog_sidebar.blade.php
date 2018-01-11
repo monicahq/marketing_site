@@ -9,5 +9,5 @@
 <div class="b--gray-monica ba br3 pa3 tc">
   <img src="{{ url('/img/upgrade_account.png') }}">
   <p class="lh-copy">Strenghten the personal relationships with your friends and family.</p>
-  <p><a href="https://app.monicahq.com" class="homepage-button br3 pv2 ph3 dib fw5">Sign up</a></p>
+  <p><a href="https://app.monicahq.com" class="secondary-button br3 pv2 ph3 dib fw5">Sign up</a></p>
 </div>

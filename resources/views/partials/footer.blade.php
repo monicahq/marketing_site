@@ -3,9 +3,9 @@
     <div class="fl w-20-ns w-100">
       <p class="fw5 mt0">Features</p>
       <ul class="pl0 list">
-        <li class="mb2 f6"><a href="" class="muted-link no-underline">Contact management</a></li>
-        <li class="mb2 f6"><a href="" class="muted-link no-underline">Reminders</a></li>
-        <li class="mb2 f6"><a href="" class="muted-link no-underline">Journal</a></li>
+        <li class="mb2 f6"><a href="{{ url('/features/') }}" class="muted-link no-underline">Contact management</a></li>
+        <li class="mb2 f6"><a href="{{ url('/features/dashboard') }}" class="muted-link no-underline">Powerful dashboard</a></li>
+        <li class="mb2 f6"><a href="{{ url('/features/journal') }}" class="muted-link no-underline">Journal</a></li>
       </ul>
     </div>
     <div class="fl w-20-ns w-100">
@@ -13,7 +13,6 @@
       <ul class="pl0 list">
         <li class="mb2 f6"><a href="{{ url('/team') }}" class="muted-link no-underline">Team</a></li>
         <li class="mb2 f6"><a href="{{ url('/blog') }}" class="muted-link no-underline">Blog</a></li>
-        <li class="mb2 f6"><a href="{{ url('/press') }}" class="muted-link no-underline">Press</a></li>
         <li class="mb2 f6"><a href="https://tinyletter.com/monicahq" class="muted-link no-underline">Newsletter</a></li>
       </ul>
     </div>
@@ -33,8 +32,8 @@
       <ul class="pl0 list">
         <li class="mb2 f6"><a href="{{ url('/terms') }}" class="muted-link no-underline">Terms</a></li>
         <li class="mb2 f6"><a href="{{ url('/privacy') }}" class="muted-link no-underline">Privacy</a></li>
-        <li class="mb2 f6"><a href="{{ url('/security') }}" class="muted-link no-underline">Security</a></li>
-        <li class="mb2 f6"><a href="{{ url('/contact') }}" class="muted-link no-underline">Contact</a></li>
+        <li class="mb2 f6">
+          <a href="javascript:location='mailto:\u0072\u0065\u0067\u0069\u0073\u0040\u006d\u006f\u006e\u0069\u0063\u0061\u0068\u0071\u002e\u0063\u006f\u006d';void 0" class="muted-link no-underline">Contact</a></li>
       </ul>
     </div>
     <div class="fl w-20-ns w-100 tc tl-ns">

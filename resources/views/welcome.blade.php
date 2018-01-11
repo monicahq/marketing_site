@@ -11,7 +11,7 @@
     </div>
 
     <div class="fl w-100 tc mb5">
-      <a href="https://app.monicahq.com/register" class="homepage-button br3 pv3 ph4 mb2 dib fw5">Signup for free</a>
+      <a href="https://app.monicahq.com/register" class="primary-button br3 pv3 ph4 mb2 dib fw5">Signup for free</a>
       <p class="f6">No obligations. No credit card required.</p>
     </div>
   </div>
@@ -426,7 +426,7 @@
     </div>
     <div class="fl w-50-ns w-100 mb6-ns mb2 pl6-ns">
       <h3>Built for people. With people.</h3>
-      <p class="measure lh-copy">Monica is open source. That means the code is publicly available, scrutinized by thousands. Dozens of people have already contributed to the project. That level of transparency ensures both the security of the application, and your peace of mind concerning what we do with your data (nothing, in fact).</p>
+      <p class="measure lh-copy">Monica is open source. That means the code is <a href="https://github.com/monicahq/monica">publicly available</a>, scrutinized by thousands. Dozens of people have already contributed to the project. That level of transparency ensures both the security of the application, and your peace of mind concerning what we do with your data (nothing, in fact).</p>
     </div>
     <div class="fl w-50-ns w-100 mb2 mb0-ns tc">
       <svg width="209px" height="186px" viewBox="0 0 209 186" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

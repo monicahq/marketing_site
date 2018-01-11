@@ -15,6 +15,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/features', function () {
+    return view('features');
+});
+
+Route::get('/features/dashboard', function () {
+    return view('features.dashboard');
+});
+
+Route::get('/features/reminders', function () {
+    return view('features.reminders');
+});
+
+Route::get('/features/journal', function () {
+    return view('features.journal');
+});
+
 Route::get('/team', function () {
     return view('team');
 });

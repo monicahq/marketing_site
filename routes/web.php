@@ -60,4 +60,8 @@ Route::get('/api/{category}', 'ApiController@category');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', 'DashboardController@index');
+    Route::get('/release/add', 'ReleaseController@add');
+    Route::post('/release/store', 'ReleaseController@store');
+});

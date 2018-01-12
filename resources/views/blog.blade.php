@@ -18,7 +18,7 @@
       @foreach ($posts as $post)
       <article class="mb5">
         <h2 class="mt0 mb0"><a href="{{ secure_url('/blog/'.$post->slug) }}">{{ $post->title }}</a></h2>
-        <ul class="pl0 f6 black-60">
+        <ul class="pl0 f6 black-60 article-metadata">
           <li class="di mr3">
             <svg class="mw0 relative" width="16px" height="17px" viewBox="0 0 38 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="top: 3px; margin-right: 3px">
               <defs></defs>

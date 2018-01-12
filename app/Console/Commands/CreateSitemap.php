@@ -38,6 +38,6 @@ class CreateSitemap extends Command
      */
     public function handle()
     {
-        SitemapGenerator::create('https://monicahq.com')->writeToFile(public_path('sitemap/sitemap.xml'));
+        SitemapGenerator::create('https://www.monicahq.com')->writeToFile(public_path('sitemap/sitemap.xml'));
     }
 }

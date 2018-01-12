@@ -6,17 +6,17 @@
   <div class="mw8 center ph3">
     <div class="flex justify-center">
       <div class="mt4 mr2">
-        <a href="{{ url('/features') }}" class="db link no-underline dark-gray f5 f4-ns lh-copy pt2 pb2 pl3 pr3 dib relative z-1 b--dark-green bb bw2">
+        <a href="{{ secure_url('/features') }}" class="db link no-underline dark-gray f5 f4-ns lh-copy pt2 pb2 pl3 pr3 dib relative z-1 b--dark-green bb bw2">
           Contact management
         </a>
       </div>
       <div class="mt4 mr2">
-        <a href="{{ url('/features/dashboard') }}" class="db link no-underline dark-gray f5 f4-ns lh-copy pt2 pb2 pl3 pr3 dib relative z-1">
+        <a href="{{ secure_url('/features/dashboard') }}" class="db link no-underline dark-gray f5 f4-ns lh-copy pt2 pb2 pl3 pr3 dib relative z-1">
           Powerful dashboard
         </a>
       </div>
       <div class="mt4">
-        <a href="{{ url('/features/journal') }}" class="db link no-underline dark-gray f5 f4-ns lh-copy pt2 pb2 pl3 pr3 dib relative z-1">
+        <a href="{{ secure_url('/features/journal') }}" class="db link no-underline dark-gray f5 f4-ns lh-copy pt2 pb2 pl3 pr3 dib relative z-1">
           Journal
         </a>
       </div>
@@ -182,7 +182,7 @@
         <p class="lh-copy">Easily import or export your contacts and their data with Monica's powerful REST API, or use the API to automate many areas of the application.</p>
       </div>
       <div class="fl w-50">
-        <img src="{{ url('img/api.png') }}" width="512" height="401">
+        <img src="{{ secure_url('img/api.png') }}" width="512" height="401">
       </div>
     </div>
   </div>

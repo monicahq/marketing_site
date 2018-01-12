@@ -6,7 +6,7 @@
   <div class="mw8 center">
     <div class="cf ph3">
       <div class="fl w-100">
-        <p class="pv2"><a href="{{ url('/blog') }}">Blog index</a> > {{ $category->name }}</p>
+        <p class="pv2"><a href="{{ secure_url('/blog') }}">Blog index</a> > {{ $category->name }}</p>
       </div>
     </div>
   </div>
@@ -17,7 +17,7 @@
     <div class="fl w-70-ns w-100 mb4">
       @foreach ($posts as $post)
       <article class="mb5">
-        <h2 class="mt0 mb0"><a href="{{ url('/blog/'.$post->slug) }}">{{ $post->title }}</a></h2>
+        <h2 class="mt0 mb0"><a href="{{ secure_url('/blog/'.$post->slug) }}">{{ $post->title }}</a></h2>
         <ul class="pl0 f6 black-60">
           <li class="di mr3">
             <svg class="mw0 relative" width="16px" height="17px" viewBox="0 0 38 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="top: 3px; margin-right: 3px">
@@ -41,7 +41,7 @@
                 </g>
               </g>
             </svg>
-            <a href="{{ url('blog/category/'.$post->category->slug) }}">{{ $post->category->name }}</a>
+            <a href="{{ secure_url('blog/category/'.$post->category->slug) }}">{{ $post->category->name }}</a>
           </li>
         </ul>
         {!! $post->post !!}

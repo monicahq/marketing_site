@@ -6,7 +6,7 @@
   <div class="mw8 center">
     <div class="cf ph3">
       <div class="fl w-100">
-        <p class="pv2"><a href="{{ url('/blog') }}">Blog index</a> > {{ $post->title }}</p>
+        <p class="pv2"><a href="{{ secure_url('/blog') }}">Blog index</a> > {{ $post->title }}</p>
       </div>
     </div>
   </div>
@@ -39,7 +39,7 @@
                 </g>
               </g>
             </svg>
-            <a href="{{ url('blog/category/'.$post->category->slug) }}">{{ $post->category->name }}</a>
+            <a href="{{ secure_url('blog/category/'.$post->category->slug) }}">{{ $post->category->name }}</a>
           </li>
         </ul>
         {!! $post->post !!}

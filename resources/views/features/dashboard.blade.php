@@ -6,17 +6,17 @@
   <div class="mw8 center ph3">
     <div class="flex justify-center">
       <div class="mt4 mr2">
-        <a href="{{ url('/features') }}" class="db link no-underline dark-gray f5 f4-ns lh-copy pt2 pb2 pl3 pr3 dib relative z-1">
+        <a href="{{ secure_url('/features') }}" class="db link no-underline dark-gray f5 f4-ns lh-copy pt2 pb2 pl3 pr3 dib relative z-1">
           Contact management
         </a>
       </div>
       <div class="mt4 mr2">
-        <a href="{{ url('/features/dashboard') }}" class="db link no-underline dark-gray f5 f4-ns lh-copy pt2 pb2 pl3 pr3 dib relative z-1 b--dark-green bb bw2">
+        <a href="{{ secure_url('/features/dashboard') }}" class="db link no-underline dark-gray f5 f4-ns lh-copy pt2 pb2 pl3 pr3 dib relative z-1 b--dark-green bb bw2">
           Powerful dashboard
         </a>
       </div>
       <div class="mt4">
-        <a href="{{ url('/features/journal') }}" class="db link no-underline dark-gray f5 f4-ns lh-copy pt2 pb2 pl3 pr3 dib relative z-1">
+        <a href="{{ secure_url('/features/journal') }}" class="db link no-underline dark-gray f5 f4-ns lh-copy pt2 pb2 pl3 pr3 dib relative z-1">
           Journal
         </a>
       </div>

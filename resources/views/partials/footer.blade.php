@@ -3,23 +3,23 @@
     <div class="fl w-20-ns w-100">
       <p class="fw5 mt0">Features</p>
       <ul class="pl0 list">
-        <li class="mb2 f6"><a href="{{ url('/features/') }}" class="muted-link no-underline">Contact management</a></li>
-        <li class="mb2 f6"><a href="{{ url('/features/dashboard') }}" class="muted-link no-underline">Powerful dashboard</a></li>
-        <li class="mb2 f6"><a href="{{ url('/features/journal') }}" class="muted-link no-underline">Journal</a></li>
+        <li class="mb2 f6"><a href="{{ secure_url('/features/') }}" class="muted-link no-underline">Contact management</a></li>
+        <li class="mb2 f6"><a href="{{ secure_url('/features/dashboard') }}" class="muted-link no-underline">Powerful dashboard</a></li>
+        <li class="mb2 f6"><a href="{{ secure_url('/features/journal') }}" class="muted-link no-underline">Journal</a></li>
       </ul>
     </div>
     <div class="fl w-20-ns w-100">
       <p class="fw5 mt0">Company</p>
       <ul class="pl0 list">
-        <li class="mb2 f6"><a href="{{ url('/team') }}" class="muted-link no-underline">Team</a></li>
-        <li class="mb2 f6"><a href="{{ url('/blog') }}" class="muted-link no-underline">Blog</a></li>
+        <li class="mb2 f6"><a href="{{ secure_url('/team') }}" class="muted-link no-underline">Team</a></li>
+        <li class="mb2 f6"><a href="{{ secure_url('/blog') }}" class="muted-link no-underline">Blog</a></li>
         <li class="mb2 f6"><a href="https://tinyletter.com/monicahq" class="muted-link no-underline">Newsletter</a></li>
       </ul>
     </div>
     <div class="fl w-20-ns w-100">
       <p class="fw5 mt0">Community</p>
       <ul class="pl0 list">
-        <li class="mb2 f6"><a href="{{ url('/changelog') }}" class="muted-link no-underline">Changelog</a></li>
+        <li class="mb2 f6"><a href="{{ secure_url('/changelog') }}" class="muted-link no-underline">Changelog</a></li>
         <li class="mb2 f6"><a href="https://github.com/monicahq/monica/projects/1" class="muted-link no-underline">Roadmap</a></li>
         <li class="mb2 f6"><a href="https://github.com/monicahq/monica" class="muted-link no-underline">Source code on GitHub</a></li>
         <li class="mb2 f6"><a href="https://github.com/monicahq/monica/issues" class="muted-link no-underline">Issue tracker</a></li>
@@ -30,14 +30,14 @@
     <div class="fl w-20-ns w-100">
       <p class="fw5 mt0">Resources</p>
       <ul class="pl0 list">
-        <li class="mb2 f6"><a href="{{ url('/terms') }}" class="muted-link no-underline">Terms</a></li>
-        <li class="mb2 f6"><a href="{{ url('/privacy') }}" class="muted-link no-underline">Privacy</a></li>
+        <li class="mb2 f6"><a href="{{ secure_url('/terms') }}" class="muted-link no-underline">Terms</a></li>
+        <li class="mb2 f6"><a href="{{ secure_url('/privacy') }}" class="muted-link no-underline">Privacy</a></li>
         <li class="mb2 f6">
           <a href="javascript:location='mailto:\u0072\u0065\u0067\u0069\u0073\u0040\u006d\u006f\u006e\u0069\u0063\u0061\u0068\u0071\u002e\u0063\u006f\u006d';void 0" class="muted-link no-underline">Contact</a></li>
       </ul>
     </div>
     <div class="fl w-20-ns w-100 tc tl-ns">
-      <img src="{{ url('/img/logo_vertical.png') }}" class="mw-none" style="width: 130px;">
+      <img src="{{ secure_url('/img/logo_vertical.png') }}" class="mw-none" style="width: 130px;">
       <p class="mt2 f6">© 2018</p>
     </div>
   </div>

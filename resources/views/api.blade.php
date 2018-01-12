@@ -17,52 +17,52 @@
     <div class="fl w-20-ns w-100 mb4 mb0-ns pr2">
       <ul class="list mt0 ba b--gray-monica pa2 br2 bg-near-white">
         <li class="mb3">
-          <a class="no-underline" href="{{ url('/api/overview') }}">Overview</a>
+          <a class="no-underline" href="{{ secure_url('/api/overview') }}">Overview</a>
         </li>
         <li class="mb3">
-          <a class="no-underline" href="{{ url('/api/contacts') }}">Contacts</a>
+          <a class="no-underline" href="{{ secure_url('/api/contacts') }}">Contacts</a>
         </li>
         <li class="mb3">
-          <a class="no-underline" href="{{ url('/api/addresses') }}">Addresses</a>
+          <a class="no-underline" href="{{ secure_url('/api/addresses') }}">Addresses</a>
         </li>
         <li class="mb3">
-          <a class="no-underline" href="{{ url('/api/contactfields') }}">Contact Fields</a>
+          <a class="no-underline" href="{{ secure_url('/api/contactfields') }}">Contact Fields</a>
         </li>
         <li class="mb3">
-          <a class="no-underline" href="{{ url('/api/notes') }}">Notes</a>
+          <a class="no-underline" href="{{ secure_url('/api/notes') }}">Notes</a>
         </li>
         <li class="mb3">
-          <a class="no-underline" href="{{ url('/api/activities') }}">Activities</a>
+          <a class="no-underline" href="{{ secure_url('/api/activities') }}">Activities</a>
         </li>
         <li class="mb3">
-          <a class="no-underline" href="{{ url('/api/reminders') }}">Reminders</a>
+          <a class="no-underline" href="{{ secure_url('/api/reminders') }}">Reminders</a>
         </li>
         <li class="mb3">
-          <a class="no-underline" href="{{ url('/api/tasks') }}">Tasks</a>
+          <a class="no-underline" href="{{ secure_url('/api/tasks') }}">Tasks</a>
         </li>
         <li class="mb3">
-          <a class="no-underline" href="{{ url('/api/tags') }}">Tags</a>
+          <a class="no-underline" href="{{ secure_url('/api/tags') }}">Tags</a>
         </li>
         <li class="mb3">
-          <a class="no-underline" href="{{ url('/api/calls') }}">Calls</a>
+          <a class="no-underline" href="{{ secure_url('/api/calls') }}">Calls</a>
         </li>
         <li class="mb3">
-          <a class="no-underline" href="{{ url('/api/gifts') }}">Gifts</a>
+          <a class="no-underline" href="{{ secure_url('/api/gifts') }}">Gifts</a>
         </li>
         <li class="mb3">
-          <a class="no-underline" href="{{ url('/api/debts') }}">Debts</a>
+          <a class="no-underline" href="{{ secure_url('/api/debts') }}">Debts</a>
         </li>
         <li class="mb3">
-          <a class="no-underline" href="{{ url('/api/journal') }}">Journal entries</a>
+          <a class="no-underline" href="{{ secure_url('/api/journal') }}">Journal entries</a>
         </li>
         <li class="mb3">
-          <a class="no-underline" href="{{ url('/api/contactfieldtypes') }}">Contact Field Types</a>
+          <a class="no-underline" href="{{ secure_url('/api/contactfieldtypes') }}">Contact Field Types</a>
         </li>
         <li class="mb3">
-          <a class="no-underline" href="{{ url('/api/countries') }}">Countries</a>
+          <a class="no-underline" href="{{ secure_url('/api/countries') }}">Countries</a>
         </li>
         <li class="mb3">
-          <a class="no-underline" href="{{ url('/api/changelog') }}">API changelog</a>
+          <a class="no-underline" href="{{ secure_url('/api/changelog') }}">API changelog</a>
         </li>
       </ul>
     </div>

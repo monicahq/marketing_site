@@ -12,7 +12,7 @@ class CreateSitemap extends Command
      *
      * @var string
      */
-    protected $signature = 'generate:sitemap';
+    protected $signature = 'sitemap:generate';
 
     /**
      * The console command description.

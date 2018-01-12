@@ -9742,6 +9742,11 @@ article img {
   line-height: 1.5;
 }
 
+.markdown.div-list p {
+  margin: 0 0 4px;
+  padding: 0;
+}
+
 .markdown code {
   font-size: 13px;
 }

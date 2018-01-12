@@ -43,13 +43,11 @@ Route::get('/privacy', function () {
     return view('privacy');
 });
 
-Route::get('/changelog', function () {
-    return view('changelog');
-});
-
 Route::get('/terms', function () {
     return view('terms');
 });
+
+Route::get('/changelog', 'ChangelogController@index');
 
 Route::get('/blog', 'BlogController@index');
 Route::get('/blog/{slug}', 'BlogController@post');

@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Note extends Model
 {
@@ -21,5 +22,10 @@ class Note extends Model
     public function release()
     {
         return $this->belongsTo('App\Release');
+    }
+
+    public function scopeOfCategory($query, $type)
+    {
+        return $query->where('category', $type);
     }
 }

@@ -71,6 +71,15 @@ article {
 .markdown {
   line-height: 1.5;
 
+  &.div-list p {
+    margin: 0 0 4px;
+    padding: 0;
+  }
+
+  p {
+
+  }
+
   code {
     font-size: 13px;
   }

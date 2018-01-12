@@ -36,7 +36,7 @@ class CreateTables extends Migration
         {
             $table->increments('id');
             $table->string('release_number')->unique();
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->string('github_release_url');
             $table->date('released_on');
             $table->timestamps();

@@ -20,6 +20,11 @@ class Release extends Model
         return $this->belongsTo('App\Category');
     }
 
+    public function notes()
+    {
+        return $this->hasMany('App\Note');
+    }
+
     public function getPostAttribute($value)
     {
         return Markdown::convertToHtml($value);

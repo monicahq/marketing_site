@@ -7,7 +7,7 @@
     <div class="fl w-100 tc mb5">
       <h1 class="f2 normal lh-copy">Personal Relationship Management done right.</h1>
       <h2 class="normal lh-copy">Monica helps you organize the social interactions with your loved ones.</h2>
-      <p class="lh-copy">It's like your social memory. Organize. Follow-up. <span class="sketch-underline">Strengthen your relationships</span>.</p>
+      <p class="lh-copy">It's like a personal CRM. Organize. Follow-up. <span class="sketch-underline">Strengthen your relationships</span>.</p>
     </div>
 
     <div class="fl w-100 tc mb5">

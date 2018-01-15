@@ -67,6 +67,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/release/add', 'ReleaseController@add');
     Route::post('/release/store', 'ReleaseController@store');
     Route::get('/release/{release}/notes', 'ReleaseController@notes');
+    Route::get('/release/{release}/generate', 'ReleaseController@generate');
     Route::get('/release/{release}/notes/add', 'ReleaseController@addNote');
     Route::post('/release/{release}/notes/store', 'ReleaseController@storeNote');
 });

@@ -6,6 +6,10 @@ List of releases:
 
 <ul>
 @foreach ($releases as $release)
-    <li>{{ $release->release_number }} - {{ $release->released_on }} - <a href="{{ secure_url('/release/'.$release->id.'/notes') }}">Add note</a></li>
+    <li>
+        {{ $release->release_number }} - {{ $release->released_on }} - 
+        <a href="{{ secure_url('/release/'.$release->id.'/notes') }}">Add note</a> - 
+        <a href="{{ secure_url('/release/'.$release->id.'/generate') }}">Generate release note</a>
+        </li>
 @endforeach
 </ul>

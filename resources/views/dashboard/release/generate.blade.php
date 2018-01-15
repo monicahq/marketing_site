@@ -1,0 +1,1 @@
+<textarea cols="150" rows="20">{!! $release_note !!}</textarea>

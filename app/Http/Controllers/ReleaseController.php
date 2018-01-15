@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Validator;
 use App\Release;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ReleaseController extends Controller
 {
@@ -72,5 +73,42 @@ class ReleaseController extends Controller
         $note->save();
 
         return redirect('/release/'.$release->id.'/notes');
+    }
+
+    public function generate(Request $request, Release $release)
+    {
+        $textToWrite = $release->description;
+        $textToWrite .= PHP_EOL;
+
+        if (count($release->notes()->ofCategory('new')->get()) > 0) {
+            $textToWrite .= PHP_EOL.'### Added'.PHP_EOL.PHP_EOL;
+        }
+
+        foreach ($release->notes()->ofCategory('new')->get() as $note) {
+            $textToWrite .= '* '.$note->description.' ([#'.$note->github_pull_request_number.']('.$note->github_pull_request_url.')  - thanks to ['.$note->github_author_name.']('.$note->github_author_url.')).'.PHP_EOL;
+        }
+
+        if (count($release->notes()->ofCategory('improvements')->get()) > 0) {
+            $textToWrite .= PHP_EOL.'### Changed'.PHP_EOL.PHP_EOL;
+        }
+
+        foreach ($release->notes()->ofCategory('improvements')->get() as $note) {
+            $textToWrite .= '* '.$note->description.' ([#'.$note->github_pull_request_number.']('.$note->github_pull_request_url.')  - thanks to ['.$note->github_author_name.']('.$note->github_author_url.')).'.PHP_EOL;
+        }
+
+        if (count($release->notes()->ofCategory('fixed')->get()) > 0) {
+            $textToWrite .= PHP_EOL.'### Fixed'.PHP_EOL.PHP_EOL;
+        }
+
+        foreach ($release->notes()->ofCategory('fixed')->get() as $note) {
+            $textToWrite .= '* '.$note->description.' ([#'.$note->github_pull_request_number.']('.$note->github_pull_request_url.')  - thanks to ['.$note->github_author_name.']('.$note->github_author_url.')).'.PHP_EOL;
+        }
+
+        //Storage::put('release_v'.$release->release_number.'.md', $textToWrite);
+        $data = [
+            'release_note' => $textToWrite,
+        ];
+
+        return view('dashboard.release.generate', $data);
     }
 }

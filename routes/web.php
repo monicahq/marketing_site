@@ -15,6 +15,8 @@ if (App::environment('production')) {
     URL::forceScheme('https');
 }
 
+Route::feeds();
+
 Route::get('/', function () {
     return view('welcome');
 });

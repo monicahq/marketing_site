@@ -1,6 +1,10 @@
 # Changelog
 
-The changelog is mostly a list of backwards-incompatible updates in the API.
+The changelog is a list of changes and sometimes backwards-incompatible updates in the API.
+
+### Feb 24, 2018
+
+* Tags: Add ability to associate and remove tags to a contact.
 
 ### v1.3.0
 

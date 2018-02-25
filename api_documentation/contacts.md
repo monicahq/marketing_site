@@ -168,6 +168,8 @@ Response:
 | ---- | ----------- | ----------- |
 | limit | integer | Indicates the page size. |
 | page | integer | Indicates the page to return. |
+| query | string | Performs a search with the given query. |
+| sort | string | Indicates how the query should be ordered by. Possible values: `created_at`, `-created_at`, `updated_at`, `-updated_at`. |
 
 ### Response
 

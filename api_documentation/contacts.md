@@ -12,6 +12,7 @@
 * [Delete a contact](#delete-a-contact)
 * [Partners](#partners)
 * [Children](#children)
+* [Search](#search)
 
 <!-- /MarkdownTOC -->
 
@@ -1059,6 +1060,8 @@ contacts together.
 | ---- | ----------- | ----------- |
 | child_id | integer | <strong>Required</strong>. The ID of the contact ID that will be set as the partner of the given contact. |
 
+#### Example
+
 <pre><code class="json">{
   "child_id":2
 }</code></pre>
@@ -1077,8 +1080,311 @@ This call returns a standard Contact object.
 | ---- | ----------- | ----------- |
 | child_id | integer | <strong>Required</strong>. The ID of the contact ID that needs to be unset. |
 
+#### Example
+
 <pre><code class="json">{
   "child_id":2
 }</code></pre>
 
 This call returns a standard Contact object.
+
+<a name="search"></a>
+## Search
+
+You can search specific contacts. Here are the fields that search takes into account:
+* first name
+* last name
+* food preferencies
+* job
+* company.
+
+<span class="url">
+  GET /contacts?query=regis
+</span>
+
+#### Input
+
+| Name | Type | Description |
+| ---- | ----------- | ----------- |
+| query | string | <strong>Required</strong>. The string you'd like to search. |
+
+#### Response
+
+This call returns a collection of contacts. Note that `body.meta.query` contains the query you wanted to search.
+
+<pre><code class="json">{
+    "data": [
+        {
+            "id": 117,
+            "object": "contact",
+            "first_name": "Collin",
+            "last_name": "Moen",
+            "gender": "Man",
+            "is_partial": false,
+            "is_dead": false,
+            "last_called": null,
+            "last_activity_together": null,
+            "information": {
+                "family": {
+                    "kids": {
+                        "total": 6,
+                        "kids": [
+                            {
+                                "id": 118,
+                                "object": "contact",
+                                "first_name": "Reilly",
+                                "last_name": "Lang",
+                                "gender": "Rather not say",
+                                "is_partial": true,
+                                "information": {
+                                    "birthdate": {
+                                        "is_age_based": false,
+                                        "is_year_unknown": false,
+                                        "date": "1960-02-09T00:00:00Z"
+                                    }
+                                },
+                                "account": {
+                                    "id": 1
+                                }
+                            },
+                            {
+                                "id": 119,
+                                "object": "contact",
+                                "first_name": "Tate",
+                                "last_name": null,
+                                "gender": "Woman",
+                                "is_partial": false,
+                                "information": {
+                                    "birthdate": {
+                                        "is_age_based": false,
+                                        "is_year_unknown": true,
+                                        "date": "2018-11-09T00:00:00Z"
+                                    }
+                                },
+                                "account": {
+                                    "id": 1
+                                }
+                            },
+                            {
+                                "id": 120,
+                                "object": "contact",
+                                "first_name": "Lori",
+                                "last_name": "Witting",
+                                "gender": "Rather not say",
+                                "is_partial": true,
+                                "information": {
+                                    "birthdate": {
+                                        "is_age_based": false,
+                                        "is_year_unknown": false,
+                                        "date": "1945-01-23T00:00:00Z"
+                                    }
+                                },
+                                "account": {
+                                    "id": 1
+                                }
+                            },
+                            {
+                                "id": 121,
+                                "object": "contact",
+                                "first_name": "Pink",
+                                "last_name": null,
+                                "gender": "Rather not say",
+                                "is_partial": false,
+                                "information": {
+                                    "birthdate": {
+                                        "is_age_based": false,
+                                        "is_year_unknown": false,
+                                        "date": "1955-07-13T00:00:00Z"
+                                    }
+                                },
+                                "account": {
+                                    "id": 1
+                                }
+                            },
+                            {
+                                "id": 122,
+                                "object": "contact",
+                                "first_name": "Colby",
+                                "last_name": null,
+                                "gender": "Man",
+                                "is_partial": false,
+                                "information": {
+                                    "birthdate": {
+                                        "is_age_based": false,
+                                        "is_year_unknown": false,
+                                        "date": "1963-08-29T00:00:00Z"
+                                    }
+                                },
+                                "account": {
+                                    "id": 1
+                                }
+                            },
+                            {
+                                "id": 123,
+                                "object": "contact",
+                                "first_name": "Abbie",
+                                "last_name": "Dare",
+                                "gender": "Woman",
+                                "is_partial": false,
+                                "information": {
+                                    "birthdate": {
+                                        "is_age_based": false,
+                                        "is_year_unknown": false,
+                                        "date": "1953-12-17T00:00:00Z"
+                                    }
+                                },
+                                "account": {
+                                    "id": 1
+                                }
+                            }
+                        ]
+                    },
+                    "partners": {
+                        "total": 3,
+                        "partners": [
+                            {
+                                "id": 124,
+                                "object": "contact",
+                                "first_name": "Kristoffer",
+                                "last_name": null,
+                                "gender": "Woman",
+                                "is_partial": true,
+                                "information": {
+                                    "birthdate": {
+                                        "is_age_based": false,
+                                        "is_year_unknown": true,
+                                        "date": "2018-07-27T00:00:00Z"
+                                    }
+                                },
+                                "account": {
+                                    "id": 1
+                                }
+                            },
+                            {
+                                "id": 125,
+                                "object": "contact",
+                                "first_name": "Anjali",
+                                "last_name": null,
+                                "gender": "Man",
+                                "is_partial": true,
+                                "information": {
+                                    "birthdate": {
+                                        "is_age_based": false,
+                                        "is_year_unknown": false,
+                                        "date": "1929-02-21T00:00:00Z"
+                                    }
+                                },
+                                "account": {
+                                    "id": 1
+                                }
+                            },
+                            {
+                                "id": 126,
+                                "object": "contact",
+                                "first_name": "Edmund",
+                                "last_name": "Weissnat",
+                                "gender": "Woman",
+                                "is_partial": true,
+                                "information": {
+                                    "birthdate": {
+                                        "is_age_based": false,
+                                        "is_year_unknown": false,
+                                        "date": "1994-03-29T00:00:00Z"
+                                    }
+                                },
+                                "account": {
+                                    "id": 1
+                                }
+                            }
+                        ]
+                    },
+                    "progenitors": {
+                        "total": 0,
+                        "progenitors": []
+                    }
+                },
+                "dates": {
+                    "birthdate": {
+                        "is_age_based": null,
+                        "is_year_unknown": null,
+                        "date": null
+                    },
+                    "deceased_date": {
+                        "is_age_based": null,
+                        "is_year_unknown": null,
+                        "date": null
+                    }
+                },
+                "career": {
+                    "job": null,
+                    "company": null
+                },
+                "avatar": {
+                    "url": null,
+                    "source": null,
+                    "default_avatar_color": "#fdb660"
+                },
+                "food_preferencies": null,
+                "how_you_met": {
+                    "general_information": null,
+                    "first_met_date": {
+                        "is_age_based": null,
+                        "is_year_unknown": null,
+                        "date": null
+                    },
+                    "first_met_through_contact": null
+                }
+            },
+            "addresses": [
+                {
+                    "id": 7,
+                    "object": "address",
+                    "name": "beatae",
+                    "street": "88761 Hallie Walk Apt. 685",
+                    "city": null,
+                    "province": null,
+                    "postal_code": null,
+                    "country": {
+                        "id": 154,
+                        "object": "country",
+                        "name": "Montenegro",
+                        "iso": "me"
+                    },
+                    "created_at": "2018-02-18T10:36:02Z",
+                    "updated_at": "2018-02-18T10:36:02Z"
+                }
+            ],
+            "tags": [],
+            "statistics": {
+                "number_of_calls": 0,
+                "number_of_notes": 2,
+                "number_of_activities": 0,
+                "number_of_reminders": 1,
+                "number_of_tasks": 0,
+                "number_of_gifts": 0,
+                "number_of_debts": 4
+            },
+            "account": {
+                "id": 1
+            },
+            "created_at": "2018-02-18T10:36:02Z",
+            "updated_at": "2018-02-25T11:17:18Z"
+        }
+    ],
+    "links": {
+        "first": "http://monica.test/api/contacts?page=1",
+        "last": "http://monica.test/api/contacts?page=1",
+        "prev": null,
+        "next": null
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 1,
+        "path": "http://monica.test/api/contacts",
+        "per_page": 15,
+        "to": 1,
+        "total": 1,
+        "query": "collin"
+    }
+}</code></pre>

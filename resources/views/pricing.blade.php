@@ -6,7 +6,7 @@
   <div class="cf">
     <div class="fl w-100 tc mb5">
       <h1 class="f2 normal lh-copy">How much does Monica cost?</h1>
-      <h2 class="normal lh-copy measure center">Monica is the single best investment you can make to have better relationships.</h2>
+      <h2 class="normal lh-copy measure center">Nothing if you <a href="https://github.com/monicahq/monica#get-started">host it yourself</a>. Otherwise, Monica is the single best investment you can make to have better relationships.</h2>
     </div>
   </div>
 </div>
@@ -22,7 +22,7 @@
     </div>
   </div>
   <div class="flex justify-center">
-    <p class="measure lh-copy">We also offer a <a href="https://app.monicahq.com">free plan</a>, with limitations. And if you are into computer and stuff, you can also <a href="https://github.com/monicahq/monica#get-started">install it on a server that you own</a>.</p>
+    <p class="measure lh-copy">We also offer a <a href="https://app.monicahq.com">free plan</a>, that comes with unlimited contacts but some featurs are restricted. And if you are into computer and stuff, you can also <a href="https://github.com/monicahq/monica#get-started">install it on a server that you own</a>. And if you don't trust us, you can <a href="https://github.com/monicahq/monica#get-started">always install the exact same version</a> that we run here, on a server that you own, for free.</p>
   </div>
 </div>
 

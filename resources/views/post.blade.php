@@ -42,7 +42,7 @@
             <a href="{{ secure_url('blog/category/'.$post->category->slug) }}">{{ $post->category->name }}</a>
           </li>
         </ul>
-        {!! $post->post !!}
+        {!! (new \Parsedown())->text(Storage::get('/resources/assets/posts/'.$post->created_at->format('Y-m-d').'/post.md')) !!}
       </article>
     </div>
 

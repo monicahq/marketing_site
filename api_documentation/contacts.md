@@ -17,6 +17,7 @@
 <!-- /MarkdownTOC -->
 
 <a name="overview"></a>
+<a id="overview"></a>
 ## Overview
 
 The Contact object is the core of what Monica is all about. The API allows you
@@ -156,6 +157,7 @@ Response:
 }</code></pre>
 
 <a name="list-all-your-contacts"></a>
+<a id="list-all-your-contacts"></a>
 ## List all your contacts
 
 <span class="url">
@@ -457,7 +459,19 @@ Response:
   }
 }</code></pre>
 
+### Sorting
+
+You can sort this query. Accepted criteria are:
+
+| Name | Description |
+| ---- | ----------- |
+| `created_at` | Will add `order by created_at asc` to the query |
+| `-created_at` | Will add `order by created_at desc` to the query |
+| `updated_at` | Will add `order by updated_at asc` to the query |
+| `-updated_at` | Will add `order by updated_at desc` to the query |
+
 <a name="get-a-specific-contact"></a>
+<a id="get-a-specific-contact"></a>
 ## Get a specific contact
 
 ### Get a `real` contact
@@ -682,6 +696,7 @@ Partial contacts are partners or children.
 }</code></pre>
 
 <a name="create-a-contact"></a>
+<a id="create-a-contact"></a>
 ## Create a contact
 
 <span class="url">
@@ -831,6 +846,7 @@ The API call returns a contact object if the call succeeds.
 }</code></pre>
 
 <a name="update-a-contact"></a>
+<a id="update-a-contact"></a>
 ## Update a contact
 
 <span class="url">
@@ -976,6 +992,7 @@ The API call returns a contact object if the call succeeds.
 }</code></pre>
 
 <a name="delete-a-contact"></a>
+<a id="delete-a-contact"></a>
 ## Delete a contact
 
 <span class="url">
@@ -992,6 +1009,7 @@ The response sends back the id that was just deleted.
 }</code></pre>
 
 <a name="partners"></a>
+<a id="partners"></a>
 ## Partners
 
 Each contact can have one or multiple partners (even if polygamy is somewhat
@@ -1040,6 +1058,7 @@ This call returns a standard Contact object.
 This call returns a standard Contact object.
 
 <a name="children"></a>
+<a id="children"></a>
 ## Children
 
 Each contact can have one or multiple children. A child can be either a `real` contact
@@ -1091,6 +1110,7 @@ This call returns a standard Contact object.
 This call returns a standard Contact object.
 
 <a name="search"></a>
+<a id="search"></a>
 ## Search
 
 You can search specific contacts. Here are the fields that search takes into account:

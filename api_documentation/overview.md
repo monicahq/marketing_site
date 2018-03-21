@@ -101,6 +101,9 @@ Sending an invalid JSON during a POST or a PUT will result in a error.
 | 35 | This email address is already taken. | An email address should be unique in the account. |
 | 36 | You can't set a partner or a child to a partial contact. | |
 | 37 | Problems parsing JSON. | When doing a `PUT` or a `POST`, returns an error if the JSON is not a valid JSON or badly formatted. |
+| 38 | Date should be in the future. | When setting up a reminder, the date should be in the future. |
+| 39 | The sorting criteria is invalid. | Sorting query only allows a few criterion. |
+| 40 | Invalid query. | The query is invalid for obscure reasons. It might be an invalid method call, an invalid sorting criteria, or something else. This should not happen often. |
 
 <a name="authentication"></a>
 ## Authentication

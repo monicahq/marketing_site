@@ -2,6 +2,10 @@
 
 The changelog is a list of changes and sometimes backwards-incompatible updates in the API.
 
+### Mar 20, 2018
+
+* Add new error codes returned by the API
+
 ### Feb 25, 2018
 
 * Contacts: add ability to search contacts with limit and pagination.

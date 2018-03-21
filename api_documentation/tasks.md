@@ -15,6 +15,7 @@
 <!-- /MarkdownTOC -->
 
 <a name="overview"></a>
+<a id="overview"></a>
 ## Overview
 
 The Task object allows to add tasks about your contacts.
@@ -23,6 +24,7 @@ When retrieving a task, we always also return some basic information about the
 related contact.
 
 <a name="list-all-the-tasks-in-your-account"></a>
+<a id="list-all-the-tasks-in-your-account"></a>
 ## List all the tasks in your account
 
 <span class="url">
@@ -124,7 +126,21 @@ related contact.
   }
 }</code></pre>
 
+### Sorting
+
+You can sort this query. Accepted criteria are:
+
+| Name | Description |
+| ---- | ----------- |
+| `created_at` | Will add `order by created_at asc` to the query |
+| `-created_at` | Will add `order by created_at desc` to the query |
+| `updated_at` | Will add `order by updated_at asc` to the query |
+| `-updated_at` | Will add `order by updated_at desc` to the query |
+| `completed_at` | Will add `order by completed_at asc` to the query |
+| `-completed_at` | Will add `order by completed_at desc` to the query |
+
 <a name="list-all-the-tasks-of-a-specific-contact"></a>
+<a id="list-all-the-tasks-of-a-specific-contact"></a>
 ## List all the tasks of a specific contact
 
 <span class="url">
@@ -220,6 +236,7 @@ related contact.
 }</code></pre>
 
 <a name="get-a-specific-task"></a>
+<a id="get-a-specific-task"></a>
 ## Get a specific task
 
 <span class="url">
@@ -265,6 +282,7 @@ related contact.
 }</code></pre>
 
 <a name="create-a-task"></a>
+<a id="create-a-task"></a>
 ## Create a task
 
 <span class="url">
@@ -331,6 +349,7 @@ The API call returns a task object if the call succeeds.
 }</code></pre>
 
 <a name="update-a-task"></a>
+<a id="update-a-task"></a>
 ## Update a task
 
 <span class="url">
@@ -396,6 +415,7 @@ The API call returns a task object if the call succeeds.
 }</code></pre>
 
 <a name="delete-a-task"></a>
+<a id="delete-a-task"></a>
 ## Delete a task
 
 <span class="url">

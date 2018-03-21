@@ -37,6 +37,20 @@ related contact.
 | ---- | ----------- | ----------- |
 | limit | integer | Indicates the page size. |
 | page | integer | Indicates the page to return. |
+| sort | string | Indicates a sorting criteria. |
+
+### Sorting
+
+You can sort this query. Accepted criteria are:
+
+| Name | Description |
+| ---- | ----------- |
+| `created_at` | Will add `order by created_at asc` to the query |
+| `-created_at` | Will add `order by created_at desc` to the query |
+| `updated_at` | Will add `order by updated_at asc` to the query |
+| `-updated_at` | Will add `order by updated_at desc` to the query |
+| `completed_at` | Will add `order by completed_at asc` to the query |
+| `-completed_at` | Will add `order by completed_at desc` to the query |
 
 ### Response
 
@@ -125,19 +139,6 @@ related contact.
     "total": 2
   }
 }</code></pre>
-
-### Sorting
-
-You can sort this query. Accepted criteria are:
-
-| Name | Description |
-| ---- | ----------- |
-| `created_at` | Will add `order by created_at asc` to the query |
-| `-created_at` | Will add `order by created_at desc` to the query |
-| `updated_at` | Will add `order by updated_at asc` to the query |
-| `-updated_at` | Will add `order by updated_at desc` to the query |
-| `completed_at` | Will add `order by completed_at asc` to the query |
-| `-completed_at` | Will add `order by completed_at desc` to the query |
 
 <a name="list-all-the-tasks-of-a-specific-contact"></a>
 <a id="list-all-the-tasks-of-a-specific-contact"></a>

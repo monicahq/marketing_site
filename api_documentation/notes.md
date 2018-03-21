@@ -15,6 +15,7 @@
 <!-- /MarkdownTOC -->
 
 <a name="overview"></a>
+<a id="overview"></a>
 ## Overview
 
 The Note object allows to associate notes to contacts. A note has to be
@@ -27,6 +28,7 @@ When retrieving a note, we always also return some basic information about the
 related contact.
 
 <a name="list-all-the-notes-in-your-account"></a>
+<a id="list-all-the-notes-in-your-account"></a>
 ## List all the notes in your account
 
 <span class="url">
@@ -39,6 +41,18 @@ related contact.
 | ---- | ----------- | ----------- |
 | limit | integer | Indicates the page size. |
 | page | integer | Indicates the page to return. |
+| sort | string | Indicates a sorting criteria. |
+
+### Sorting
+
+You can sort this query. Accepted criteria are:
+
+| Name | Description |
+| ---- | ----------- |
+| `created_at` | Will add `order by created_at asc` to the query |
+| `-created_at` | Will add `order by created_at desc` to the query |
+| `updated_at` | Will add `order by updated_at asc` to the query |
+| `-updated_at` | Will add `order by updated_at desc` to the query |
 
 ### Response
 
@@ -127,6 +141,7 @@ related contact.
 }</code></pre>
 
 <a name="list-all-the-notes-of-a-specific-contact"></a>
+<a id="list-all-the-notes-of-a-specific-contact"></a>
 ## List all the notes of a specific contact
 
 <span class="url">
@@ -220,6 +235,7 @@ related contact.
 }</code></pre>
 
 <a name="get-a-specific-note"></a>
+<a id="get-a-specific-note"></a>
 ## Get a specific note
 
 <span class="url">
@@ -264,6 +280,7 @@ related contact.
 }</code></pre>
 
 <a name="create-a-note"></a>
+<a id="create-a-note"></a>
 ## Create a note
 
 <span class="url">
@@ -326,6 +343,7 @@ The API call returns a note object if the call succeeds.
 }</code></pre>
 
 <a name="update-a-note"></a>
+<a id="update-a-note"></a>
 ## Update a note
 
 <span class="url">
@@ -385,6 +403,7 @@ The API call returns a note object if the call succeeds.
 }</code></pre>
 
 <a name="delete-a-note"></a>
+<a id="delete-a-note"></a>
 ## Delete a note
 
 <span class="url">

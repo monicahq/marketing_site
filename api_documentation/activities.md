@@ -16,6 +16,7 @@
 <!-- /MarkdownTOC -->
 
 <a name="overview"></a>
+<a id="overview"></a>
 ## Overview
 
 The Activity object represents activities made with one or more contacts. Use it
@@ -26,6 +27,7 @@ When retrieving an activity, we always also return some basic information about
 the related contact(s).
 
 <a name="list-all-the-activities-in-your-account"></a>
+<a id="list-all-the-activities-in-your-account"></a>
 ## List all the activities in your account
 
 <span class="url">
@@ -38,6 +40,18 @@ the related contact(s).
 | ---- | ----------- | ----------- |
 | limit | integer | Indicates the page size. |
 | page | integer | Indicates the page to return. |
+| sort | string | Indicates a sorting criteria. |
+
+### Sorting
+
+You can sort this query. Accepted criteria are:
+
+| Name | Description |
+| ---- | ----------- |
+| `created_at` | Will add `order by created_at asc` to the query |
+| `-created_at` | Will add `order by created_at desc` to the query |
+| `updated_at` | Will add `order by updated_at asc` to the query |
+| `-updated_at` | Will add `order by updated_at desc` to the query |
 
 ### Response
 
@@ -324,6 +338,7 @@ the related contact(s).
 }</code></pre>
 
 <a name="list-all-the-activities-of-a-specific-contact"></a>
+<a id="list-all-the-activities-of-a-specific-contact"></a>
 ## List all the activities of a specific contact
 
 <span class="url">
@@ -399,6 +414,7 @@ the related contact(s).
 }</code></pre>
 
 <a name="get-a-specific-activity"></a>
+<a id="get-a-specific-activity"></a>
 ## Get a specific activity
 
 <span class="url">
@@ -457,6 +473,7 @@ the related contact(s).
 }</code></pre>
 
 <a name="create-an-activity"></a>
+<a id="create-an-activity"></a>
 ## Create an activity
 
 <span class="url">
@@ -577,6 +594,7 @@ The API call returns an Activity object if the call succeeds.
 }</code></pre>
 
 <a name="update-an-activity"></a>
+<a id="update-an-activity"></a>
 ## Update an activity
 
 <span class="url">
@@ -675,6 +693,7 @@ The API call returns an Activity object if the call succeeds.
 }</code></pre>
 
 <a name="delete-an-activity"></a>
+<a id="delete-an-activity"></a>
 ## Delete an activity
 
 <span class="url">
@@ -691,6 +710,7 @@ The response sends back the id that was just deleted.
 }</code></pre>
 
 <a name="list-of-all-activity-types"></a>
+<a id="list-of-all-activity-types"></a>
 ## List of all activity types
 
 An activity can optionally be associated with an activity type, like

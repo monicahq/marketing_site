@@ -14,6 +14,7 @@
 <!-- /MarkdownTOC -->
 
 <a name="overview"></a>
+<a id="overview"></a>
 ## Overview
 
 The Debt object allows to record that you own to contacts, or what your contacts
@@ -25,6 +26,7 @@ If the user owns money to the contact, the `in_debt` will be `yes`. If the
 contact owns money to the user, `in_debt` will be `no`.
 
 <a name="list-all-your-debts"></a>
+<a id="list-all-your-debts"></a>
 ## List all your debts
 
 <span class="url">
@@ -37,6 +39,18 @@ contact owns money to the user, `in_debt` will be `no`.
 | ---- | ----------- | ----------- |
 | limit | integer | Indicates the page size. |
 | page | integer | Indicates the page to return. |
+| sort | string | Indicates a sorting criteria. |
+
+### Sorting
+
+You can sort this query. Accepted criteria are:
+
+| Name | Description |
+| ---- | ----------- |
+| `created_at` | Will add `order by created_at asc` to the query |
+| `-created_at` | Will add `order by created_at desc` to the query |
+| `updated_at` | Will add `order by updated_at asc` to the query |
+| `-updated_at` | Will add `order by updated_at desc` to the query |
 
 ### Response
 
@@ -160,6 +174,7 @@ contact owns money to the user, `in_debt` will be `no`.
 }</code></pre>
 
 <a name="get-a-specific-debt"></a>
+<a id="get-a-specific-debt"></a>
 ## Get a specific debt
 
 <span class="url">
@@ -203,6 +218,7 @@ contact owns money to the user, `in_debt` will be `no`.
 }</code></pre>
 
 <a name="create-a-debt"></a>
+<a id="create-a-debt"></a>
 ## Create a debt
 
 <span class="url">
@@ -272,6 +288,7 @@ The API call returns a debt object if the call succeeds.
 }</code></pre>
 
 <a name="update-a-debt"></a>
+<a id="update-a-debt"></a>
 ## Update a debt
 
 <span class="url">
@@ -337,6 +354,7 @@ The API call returns a debt object if the call succeeds.
 }</code></pre>
 
 <a name="delete-a-debt"></a>
+<a id="delete-a-debt"></a>
 ## Delete a debt
 
 <span class="url">

@@ -15,6 +15,7 @@
 <!-- /MarkdownTOC -->
 
 <a name="overview"></a>
+<a id="overview"></a>
 ## Overview
 
 The Gift object allows to record gifts you have offered, or wish to offer to
@@ -28,6 +29,7 @@ When retrieving a gift, we always also return some basic information about the
 related contact.
 
 <a name="list-all-the-gifts-in-your-account"></a>
+<a id="list-all-the-gifts-in-your-account"></a>
 ## List all the gifts in your account
 
 <span class="url">
@@ -40,6 +42,18 @@ related contact.
 | ---- | ----------- | ----------- |
 | limit | integer | Indicates the page size. |
 | page | integer | Indicates the page to return. |
+| sort | string | Indicates a sorting criteria. |
+
+### Sorting
+
+You can sort this query. Accepted criteria are:
+
+| Name | Description |
+| ---- | ----------- |
+| `created_at` | Will add `order by created_at asc` to the query |
+| `-created_at` | Will add `order by created_at desc` to the query |
+| `updated_at` | Will add `order by updated_at asc` to the query |
+| `-updated_at` | Will add `order by updated_at desc` to the query |
 
 ### Response
 
@@ -194,6 +208,7 @@ related contact.
 }</code></pre>
 
 <a name="list-all-the-gifts-of-a-specific-contact"></a>
+<a id="list-all-the-gifts-of-a-specific-contact"></a>
 ## List all the gifts of a specific contact
 
 <span class="url">
@@ -316,6 +331,7 @@ related contact.
 }</code></pre>
 
 <a name="get-a-specific-gift"></a>
+<a id="get-a-specific-gift"></a>
 ## Get a specific gift
 
 <span class="url">
@@ -365,6 +381,7 @@ related contact.
 }</code></pre>
 
 <a name="create-a-gift"></a>
+<a id="create-a-gift"></a>
 ## Create a gift
 
 <span class="url">
@@ -467,6 +484,7 @@ The API gift returns a gift object if the gift succeeds.
 }</code></pre>
 
 <a name="update-a-gift"></a>
+<a id="update-a-gift"></a>
 ## Update a gift
 
 <span class="url">
@@ -548,6 +566,7 @@ The API gift returns a gift object if the gift succeeds.
 }</code></pre>
 
 <a name="delete-a-gift"></a>
+<a id="delete-a-gift"></a>
 ## Delete a gift
 
 <span class="url">

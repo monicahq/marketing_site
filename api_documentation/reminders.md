@@ -15,6 +15,7 @@
 <!-- /MarkdownTOC -->
 
 <a name="overview"></a>
+<a id="overview"></a>
 ## Overview
 
 The Reminder object allows to add reminders about your contacts.
@@ -38,6 +39,7 @@ When retrieving a reminder, we always also return some basic information about t
 related contact.
 
 <a name="list-all-the-reminders-in-your-account"></a>
+<a id="list-all-the-reminders-in-your-account"></a>
 ## List all the reminders in your account
 
 <span class="url">
@@ -50,6 +52,20 @@ related contact.
 | ---- | ----------- | ----------- |
 | limit | integer | Indicates the page size. |
 | page | integer | Indicates the page to return. |
+| sort | string | Indicates a sorting criteria. |
+
+### Sorting
+
+You can sort this query. Accepted criteria are:
+
+| Name | Description |
+| ---- | ----------- |
+| `created_at` | Will add `order by created_at asc` to the query |
+| `-created_at` | Will add `order by created_at desc` to the query |
+| `updated_at` | Will add `order by updated_at asc` to the query |
+| `-updated_at` | Will add `order by updated_at desc` to the query |
+| `next_expected_date` | Will add `order by next_expected_date asc` to the query |
+| `-next_expected_date` | Will add `order by next_expected_date desc` to the query |
 
 ### Response
 
@@ -424,6 +440,7 @@ related contact.
 }</code></pre>
 
 <a name="list-all-the-reminders-of-a-specific-contact"></a>
+<a id="list-all-the-reminders-of-a-specific-contact"></a>
 ## List all the reminders of a specific contact
 
 <span class="url">
@@ -488,6 +505,7 @@ related contact.
 }</code></pre>
 
 <a name="get-a-specific-reminder"></a>
+<a id="get-a-specific-reminder"></a>
 ## Get a specific reminder
 
 <span class="url">
@@ -535,6 +553,7 @@ related contact.
 }</code></pre>
 
 <a name="create-a-reminder"></a>
+<a id="create-a-reminder"></a>
 ## Create a reminder
 
 <span class="url">
@@ -606,6 +625,7 @@ The API call returns a Reminder object if the call succeeds.
 }</code></pre>
 
 <a name="update-a-reminder"></a>
+<a id="update-a-reminder"></a>
 ## Update a reminder
 
 <span class="url">
@@ -675,6 +695,7 @@ The API call returns a Reminder object if the call succeeds.
 }</code></pre>
 
 <a name="delete-a-reminder"></a>
+<a id="delete-a-reminder"></a>
 ## Delete a reminder
 
 <span class="url">

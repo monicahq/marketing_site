@@ -17,12 +17,14 @@
 <!-- /MarkdownTOC -->
 
 <a name="overview"></a>
+<a id="overview"></a>
 ## Overview
 
 The Tag object allows to tag contacts. Think of tags as labels, or folders, with
 which you can group contacts who belong together.
 
 <a name="list-all-your-tags"></a>
+<a id="list-all-your-tags"></a>
 ## List all your tags
 
 <span class="url">
@@ -35,6 +37,18 @@ which you can group contacts who belong together.
 | ---- | ----------- | ----------- |
 | limit | integer | Indicates the page size. |
 | page | integer | Indicates the page to return. |
+| sort | string | Indicates a sorting criteria. |
+
+### Sorting
+
+You can sort this query. Accepted criteria are:
+
+| Name | Description |
+| ---- | ----------- |
+| `created_at` | Will add `order by created_at asc` to the query |
+| `-created_at` | Will add `order by created_at desc` to the query |
+| `updated_at` | Will add `order by updated_at asc` to the query |
+| `-updated_at` | Will add `order by updated_at desc` to the query |
 
 ### Response
 
@@ -114,6 +128,7 @@ which you can group contacts who belong together.
 }</code></pre>
 
 <a name="get-a-specific-tag"></a>
+<a id="get-a-specific-tag"></a>
 ## Get a specific tag
 
 <span class="url">
@@ -135,6 +150,7 @@ which you can group contacts who belong together.
 }</code></pre>
 
 <a name="create-a-tag"></a>
+<a id="create-a-tag"></a>
 ## Create a tag
 
 <span class="url">
@@ -174,6 +190,7 @@ The API call returns a tag object if the call succeeds.
 }</code></pre>
 
 <a name="update-a-tag"></a>
+<a id="update-a-tag"></a>
 ## Update a tag
 
 <span class="url">
@@ -209,6 +226,7 @@ The API call returns a tag object if the call succeeds.
 }</code></pre>
 
 <a name="delete-a-tag"></a>
+<a id="delete-a-tag"></a>
 ## Delete a tag
 
 <span class="url">
@@ -226,6 +244,7 @@ The response sends back the id that was just deleted.
 
 
 <a name="associate-a-tag-to-a-contact"></a>
+<a id="associate-a-tag-to-a-contact"></a>
 ## Associate a tag to a contact
 
 A tag is only useful if linked to a contact. To associate a tag to a contact, simply call the following method and give an array of tag name. The call automatically manages whether a tag with the given name already exists and will only create tags that do not exist yet.
@@ -494,6 +513,7 @@ The response sends back a standard Contact object.
 
 
 <a name="remove-a-specific-tag-from-a-contact"></a>
+<a id="remove-a-specific-tag-from-a-contact"></a>
 ## Remove a specific tag from a contact
 
 The call lets you remove one or multiple tags from a contact. The difference with the tag creation method is the fact that this call accepts a list of ids of the tags, not a list of tag names. This is because when you create a tag, you don't want to deal with creating a tag first, then take the id and pass it to the creation method call. However, when you remove a tag, you know the id of the tag you want to remove.
@@ -743,6 +763,7 @@ The response sends back a standard Contact object.
 
 
 <a name="remove-all-the-tags-from-a-contact"></a>
+<a id="remove-all-the-tags-from-a-contact"></a>
 ## Remove all the tags from a contact
 
 If you need to remove all the tags associated with a contact, you can use this method. Note that the call does not delete the tags, it only removes the association.

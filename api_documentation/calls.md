@@ -15,6 +15,7 @@
 <!-- /MarkdownTOC -->
 
 <a name="overview"></a>
+<a id="overview"></a>
 ## Overview
 
 The Call object allows to record phone calls made with contacts. A call has to be
@@ -28,6 +29,7 @@ When retrieving a call, we always also return some basic information about the
 related contact.
 
 <a name="list-all-the-calls-in-your-account"></a>
+<a id="list-all-the-calls-in-your-account"></a>
 ## List all the calls in your account
 
 <span class="url">
@@ -40,6 +42,20 @@ related contact.
 | ---- | ----------- | ----------- |
 | limit | integer | Indicates the page size. |
 | page | integer | Indicates the page to return. |
+| sort | string | Indicates a sorting criteria. |
+
+### Sorting
+
+You can sort this query. Accepted criteria are:
+
+| Name | Description |
+| ---- | ----------- |
+| `created_at` | Will add `order by created_at asc` to the query |
+| `-created_at` | Will add `order by created_at desc` to the query |
+| `updated_at` | Will add `order by updated_at asc` to the query |
+| `-updated_at` | Will add `order by updated_at desc` to the query |
+| `called_at` | Will add `order by called_at asc` to the query |
+| `-called_at` | Will add `order by called_at desc` to the query |
 
 ### Response
 
@@ -188,6 +204,7 @@ related contact.
 }</code></pre>
 
 <a name="list-all-the-calls-of-a-specific-contact"></a>
+<a id="list-all-the-calls-of-a-specific-contact"></a>
 ## List all the calls of a specific contact
 
 <span class="url">
@@ -279,6 +296,7 @@ related contact.
 }</code></pre>
 
 <a name="get-a-specific-call"></a>
+<a id="get-a-specific-call"></a>
 ## Get a specific call
 
 <span class="url">
@@ -322,6 +340,7 @@ related contact.
 }</code></pre>
 
 <a name="create-a-call"></a>
+<a id="create-a-call"></a>
 ## Create a call
 
 <span class="url">
@@ -383,6 +402,7 @@ The API call returns a Call object if the call succeeds.
 }</code></pre>
 
 <a name="update-a-call"></a>
+<a id="update-a-call"></a>
 ## Update a call
 
 <span class="url">
@@ -442,6 +462,7 @@ The API call returns a Call object if the call succeeds.
 }</code></pre>
 
 <a name="delete-a-call"></a>
+<a id="delete-a-call"></a>
 ## Delete a call
 
 <span class="url">

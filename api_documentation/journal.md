@@ -14,6 +14,7 @@
 <!-- /MarkdownTOC -->
 
 <a name="overview"></a>
+<a id="overview"></a>
 ## Overview
 
 The Journal object allows to enter information that are not linked to a specific
@@ -21,6 +22,7 @@ contact. You can use this to store general notes, or to use it like a personal
 diary.
 
 <a name="list-all-the-entries-in-your-journal"></a>
+<a id="list-all-the-entries-in-your-journal"></a>
 ## List all the entries in your journal
 
 <span class="url">
@@ -33,6 +35,18 @@ diary.
 | ---- | ----------- | ----------- |
 | limit | integer | Indicates the page size. |
 | page | integer | Indicates the page to return. |
+| sort | string | Indicates a sorting criteria. |
+
+### Sorting
+
+You can sort this query. Accepted criteria are:
+
+| Name | Description |
+| ---- | ----------- |
+| `created_at` | Will add `order by created_at asc` to the query |
+| `-created_at` | Will add `order by created_at desc` to the query |
+| `updated_at` | Will add `order by updated_at asc` to the query |
+| `-updated_at` | Will add `order by updated_at desc` to the query |
 
 ### Response
 
@@ -79,6 +93,7 @@ diary.
 }</code></pre>
 
 <a name="get-a-specific-journal-entry"></a>
+<a id="get-a-specific-journal-entry"></a>
 ## Get a specific journal entry
 
 <span class="url">
@@ -102,6 +117,7 @@ diary.
 }</code></pre>
 
 <a name="create-a-journal-entry"></a>
+<a id="create-a-journal-entry"></a>
 ## Create a journal entry
 
 <span class="url">
@@ -141,6 +157,7 @@ The API call returns a journal entry object if the call succeeds.
 }</code></pre>
 
 <a name="update-a-journal-entry"></a>
+<a id="update-a-journal-entry"></a>
 ## Update a journal entry
 
 <span class="url">
@@ -178,6 +195,7 @@ The API call returns a journal entry object if the call succeeds.
 }</code></pre>
 
 <a name="delete-a-journal-entry"></a>
+<a id="delete-a-journal-entry"></a>
 ## Delete a journal entry
 
 <span class="url">

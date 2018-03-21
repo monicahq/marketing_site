@@ -171,7 +171,18 @@ Response:
 | limit | integer | Indicates the page size. |
 | page | integer | Indicates the page to return. |
 | query | string | Performs a search with the given query. |
-| sort | string | Indicates how the query should be ordered by. Possible values: `created_at`, `-created_at`, `updated_at`, `-updated_at`. |
+| sort | string | Indicates a sorting criteria. |
+
+### Sorting
+
+You can sort this query. Accepted criteria are:
+
+| Name | Description |
+| ---- | ----------- |
+| `created_at` | Will add `order by created_at asc` to the query |
+| `-created_at` | Will add `order by created_at desc` to the query |
+| `updated_at` | Will add `order by updated_at asc` to the query |
+| `-updated_at` | Will add `order by updated_at desc` to the query |
 
 ### Response
 
@@ -458,17 +469,6 @@ Response:
     "total": 208
   }
 }</code></pre>
-
-### Sorting
-
-You can sort this query. Accepted criteria are:
-
-| Name | Description |
-| ---- | ----------- |
-| `created_at` | Will add `order by created_at asc` to the query |
-| `-created_at` | Will add `order by created_at desc` to the query |
-| `updated_at` | Will add `order by updated_at asc` to the query |
-| `-updated_at` | Will add `order by updated_at desc` to the query |
 
 <a name="get-a-specific-contact"></a>
 <a id="get-a-specific-contact"></a>

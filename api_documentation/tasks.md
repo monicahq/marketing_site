@@ -1,21 +1,30 @@
 # Tasks
 
-<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
-<!-- Simply install the plugin, then press Save, and it does it magic -->
-<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+<!-- TOC -->
 
-* [Overview](#overview)
-* [List all the tasks in your account](#list-all-the-tasks-in-your-account)
-* [List all the tasks of a specific contact](#list-all-the-tasks-of-a-specific-contact)
-* [Get a specific task](#get-a-specific-task)
-* [Create a task](#create-a-task)
-* [Update a task](#update-a-task)
-* [Delete a task](#delete-a-task)
+- [Overview](#overview)
+- [List all the tasks in your account](#list-all-the-tasks-in-your-account)
+    - [Parameters](#parameters)
+    - [Response](#response)
+    - [Sorting](#sorting)
+- [List all the tasks of a specific contact](#list-all-the-tasks-of-a-specific-contact)
+    - [Response](#response-1)
+- [Get a specific task](#get-a-specific-task)
+    - [Response](#response-2)
+- [Create a task](#create-a-task)
+    - [Input](#input)
+    - [Example](#example)
+    - [Response](#response-3)
+- [Update a task](#update-a-task)
+    - [Input](#input-1)
+    - [Example](#example-1)
+    - [Response](#response-4)
+- [Delete a task](#delete-a-task)
+    - [Response](#response-5)
 
-<!-- /MarkdownTOC -->
+<!-- /TOC -->
 
-<a name="overview"></a>
-<a id="overview"></a>
+<a id="markdown-overview" name="overview"></a>
 ## Overview
 
 The Task object allows to add tasks about your contacts.
@@ -25,12 +34,14 @@ related contact.
 
 <a name="list-all-the-tasks-in-your-account"></a>
 <a id="list-all-the-tasks-in-your-account"></a>
+<a id="markdown-list-all-the-tasks-in-your-account" name="list-all-the-tasks-in-your-account"></a>
 ## List all the tasks in your account
 
 <span class="url">
   GET /tasks/
 </span>
 
+<a id="markdown-parameters" name="parameters"></a>
 ### Parameters
 
 | Name | Type | Description |
@@ -38,6 +49,7 @@ related contact.
 | limit | integer | Indicates the page size. |
 | page | integer | Indicates the page to return. |
 
+<a id="markdown-response" name="response"></a>
 ### Response
 
 <pre><code class="json">{
@@ -126,6 +138,7 @@ related contact.
   }
 }</code></pre>
 
+<a id="markdown-sorting" name="sorting"></a>
 ### Sorting
 
 You can sort this query. Accepted criteria are:
@@ -141,12 +154,14 @@ You can sort this query. Accepted criteria are:
 
 <a name="list-all-the-tasks-of-a-specific-contact"></a>
 <a id="list-all-the-tasks-of-a-specific-contact"></a>
+<a id="markdown-list-all-the-tasks-of-a-specific-contact" name="list-all-the-tasks-of-a-specific-contact"></a>
 ## List all the tasks of a specific contact
 
 <span class="url">
   GET /contacts/:id/tasks
 </span>
 
+<a id="markdown-response-1" name="response-1"></a>
 ### Response
 
 <pre><code class="json">{
@@ -237,12 +252,14 @@ You can sort this query. Accepted criteria are:
 
 <a name="get-a-specific-task"></a>
 <a id="get-a-specific-task"></a>
+<a id="markdown-get-a-specific-task" name="get-a-specific-task"></a>
 ## Get a specific task
 
 <span class="url">
   GET /tasks/:id
 </span>
 
+<a id="markdown-response-2" name="response-2"></a>
 ### Response
 
 <pre><code class="json">{
@@ -283,12 +300,14 @@ You can sort this query. Accepted criteria are:
 
 <a name="create-a-task"></a>
 <a id="create-a-task"></a>
+<a id="markdown-create-a-task" name="create-a-task"></a>
 ## Create a task
 
 <span class="url">
   POST /task/
 </span>
 
+<a id="markdown-input" name="input"></a>
 ### Input
 
 | Name | Type | Description |
@@ -299,6 +318,7 @@ You can sort this query. Accepted criteria are:
 | completed_at | string | The date the task happened. Can be in the past or future - the latter being dumb, but well. Format: YYYY-MM-DD. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the call is associated with. |
 
+<a id="markdown-example" name="example"></a>
 ### Example
 
 <pre><code class="json">{
@@ -308,6 +328,7 @@ You can sort this query. Accepted criteria are:
   "contact_id": 1
 }</code></pre>
 
+<a id="markdown-response-3" name="response-3"></a>
 ### Response
 
 The API call returns a task object if the call succeeds.
@@ -350,12 +371,14 @@ The API call returns a task object if the call succeeds.
 
 <a name="update-a-task"></a>
 <a id="update-a-task"></a>
+<a id="markdown-update-a-task" name="update-a-task"></a>
 ## Update a task
 
 <span class="url">
   PUT /tasks/:id
 </span>
 
+<a id="markdown-input-1" name="input-1"></a>
 ### Input
 
 | Name | Type | Description |
@@ -366,6 +389,7 @@ The API call returns a task object if the call succeeds.
 | completed_at | string | The date the task happened. Can be in the past or future - the latter being dumb, but well. Format: YYYY-MM-DD. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the call is associated with. |
 
+<a id="markdown-example-1" name="example-1"></a>
 ### Example
 
 <pre><code class="json">{
@@ -376,6 +400,7 @@ The API call returns a task object if the call succeeds.
   "contact_id": 1
 }</code></pre>
 
+<a id="markdown-response-4" name="response-4"></a>
 ### Response
 
 <pre><code class="json">{
@@ -416,12 +441,14 @@ The API call returns a task object if the call succeeds.
 
 <a name="delete-a-task"></a>
 <a id="delete-a-task"></a>
+<a id="markdown-delete-a-task" name="delete-a-task"></a>
 ## Delete a task
 
 <span class="url">
   DELETE /tasks/:id
 </span>
 
+<a id="markdown-response-5" name="response-5"></a>
 ### Response
 
 The response sends back the id that was just deleted.

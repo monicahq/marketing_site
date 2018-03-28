@@ -1,18 +1,21 @@
 # Overview
 
-<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
-<!-- Simply install the plugin, then press Save, and it does it magic -->
-<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+<!-- TOC -->
 
-* [Current version](#current-version)
-* [Schema](#schema)
-* [HTTP verbs](#http-verbs)
-* [Client errors](#client-errors)
-* [Authentication](#authentication)
-* [Pagination](#pagination)
-* [Rate limiting](#rate-limiting)
+- [Current version](#current-version)
+- [Schema](#schema)
+    - [Summary Representations](#summary-representations)
+- [HTTP verbs](#http-verbs)
+- [Client errors](#client-errors)
+    - [Invalid JSON](#invalid-json)
+    - [All custom errors](#all-custom-errors)
+- [Authentication](#authentication)
+    - [OAuth 2 Token (sent in a header)](#oauth-2-token-sent-in-a-header)
+    - [OAuth2 Key/Secret](#oauth2-keysecret)
+- [Pagination](#pagination)
+- [Rate limiting](#rate-limiting)
 
-<!-- /MarkdownTOC -->
+<!-- /TOC -->
 
 Note: the API is in alpha mode at the moment. It's not considered to be production
 ready and we will stabilize it over the next months.
@@ -22,13 +25,13 @@ inspired by [GitHub's](https://developer.github.com/v3) and
 [Stripe's](https://stripe.com/docs/api) API. Please use the API in a nice way
 and don't be a jerk.
 
-<a name="current-version"></a>
+<a id="markdown-current-version" name="current-version"></a>
 ## Current version
 
 By default, all requests to <span>https://app.monicahq.com/api</span> receive the
 v1 version of the API.
 
-<a name="schema"></a>
+<a id="markdown-schema" name="schema"></a>
 ## Schema
 
 All API access is over HTTPS, and accessed from the
@@ -54,6 +57,7 @@ All timestamps return in ISO 8601 format:
 YYYY-MM-DDTHH:MM:SSZ
 </span>
 
+<a id="markdown-summary-representations" name="summary-representations"></a>
 ### Summary Representations
 
 When you fetch a list of resources, for instance the list of reminders, you will
@@ -61,7 +65,7 @@ always get a subset of a contact attached to it, giving you just enough
 information so you don't need to fetch the full information of the contact to do
 something with it.
 
-<a name="http-verbs"></a>
+<a id="markdown-http-verbs" name="http-verbs"></a>
 ## HTTP verbs
 
 Monica tries to use the appropriate HTTP verbs wherever it can. Note that the
@@ -74,9 +78,10 @@ Monica tries to use the appropriate HTTP verbs wherever it can. Note that the
 | PUT | Used for replacing resources or collections. |
 | DELETE | Used for deleting resources. |
 
-<a name="client-errors"></a>
+<a id="markdown-client-errors" name="client-errors"></a>
 ## Client errors
 
+<a id="markdown-invalid-json" name="invalid-json"></a>
 ### Invalid JSON
 
 Sending an invalid JSON during a POST or a PUT will result in a error.
@@ -89,6 +94,7 @@ Sending an invalid JSON during a POST or a PUT will result in a error.
 }</code>
 </pre>
 
+<a id="markdown-all-custom-errors" name="all-custom-errors"></a>
 ### All custom errors
 
 | Code | Message | Explanation |
@@ -105,24 +111,26 @@ Sending an invalid JSON during a POST or a PUT will result in a error.
 | 39 | The sorting criteria is invalid. | Sorting query only allows a few criterion. |
 | 40 | Invalid query. | The query is invalid for obscure reasons. It might be an invalid method call, an invalid sorting criteria, or something else. This should not happen often. |
 
-<a name="authentication"></a>
+<a id="markdown-authentication" name="authentication"></a>
 ## Authentication
 
 There are several ways to authenticate to the API. All requests to the API require authentication.
 
+<a id="markdown-oauth-2-token-sent-in-a-header" name="oauth-2-token-sent-in-a-header"></a>
 ### OAuth 2 Token (sent in a header)
 
 <span class="url">
   curl -H "Authorization: Bearer OAUTH-TOKEN" https://monicahq.com/api
 </span>
 
+<a id="markdown-oauth2-keysecret" name="oauth2-keysecret"></a>
 ### OAuth2 Key/Secret
 
 This is meant to be used in server to server scenarios. Never reveal your OAuth
 application's client secret to your users. To use this authentication method,
 you need to first register an application in your Monica's instance.
 
-<a name="pagination"></a>
+<a id="markdown-pagination" name="pagination"></a>
 ## Pagination
 
 Requests that return multiple items will be paginated to 10 items by default.
@@ -134,7 +142,7 @@ Omitting the `?page` parameter will return the first page.
 curl 'https://app.monicahq.com/api/contacts?page=2&limit=100'
 </span>
 
-<a name="rate-limiting"></a>
+<a id="markdown-rate-limiting" name="rate-limiting"></a>
 ## Rate limiting
 
 The returned HTTP headers of any API request show your current rate limit status:

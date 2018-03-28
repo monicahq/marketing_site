@@ -1,19 +1,28 @@
 # Journal
 
-<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
-<!-- Simply install the plugin, then press Save, and it does it magic -->
-<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+<!-- TOC -->
 
-* [Overview](#overview)
-* [List all the entries in your journal](#list-all-the-entries-in-your-journal)
-* [Get a specific journal entry](#get-a-specific-journal-entry)
-* [Create a journal entry](#create-a-journal-entry)
-* [Update a journal entry](#update-a-journal-entry)
-* [Delete a journal entry](#delete-a-journal-entry)
+- [Overview](#overview)
+- [List all the entries in your journal](#list-all-the-entries-in-your-journal)
+    - [Parameters](#parameters)
+    - [Response](#response)
+- [Get a specific journal entry](#get-a-specific-journal-entry)
+    - [Response](#response-1)
+- [Create a journal entry](#create-a-journal-entry)
+    - [Input](#input)
+    - [Example](#example)
+    - [Response](#response-2)
+- [Update a journal entry](#update-a-journal-entry)
+    - [Input](#input-1)
+    - [Example](#example-1)
+    - [Response](#response-3)
+- [Delete a journal entry](#delete-a-journal-entry)
+    - [Response](#response-4)
 
-<!-- /MarkdownTOC -->
+<!-- /TOC -->
 
 <a name="overview"></a>
+<a id="markdown-overview" name="overview"></a>
 ## Overview
 
 The Journal object allows to enter information that are not linked to a specific
@@ -21,12 +30,14 @@ contact. You can use this to store general notes, or to use it like a personal
 diary.
 
 <a name="list-all-the-entries-in-your-journal"></a>
+<a id="markdown-list-all-the-entries-in-your-journal" name="list-all-the-entries-in-your-journal"></a>
 ## List all the entries in your journal
 
 <span class="url">
   GET /journal/
 </span>
 
+<a id="markdown-parameters" name="parameters"></a>
 ### Parameters
 
 | Name | Type | Description |
@@ -34,6 +45,7 @@ diary.
 | limit | integer | Indicates the page size. |
 | page | integer | Indicates the page to return. |
 
+<a id="markdown-response" name="response"></a>
 ### Response
 
 <pre><code class="json">{
@@ -79,12 +91,14 @@ diary.
 }</code></pre>
 
 <a name="get-a-specific-journal-entry"></a>
+<a id="markdown-get-a-specific-journal-entry" name="get-a-specific-journal-entry"></a>
 ## Get a specific journal entry
 
 <span class="url">
   GET /journal/:id
 </span>
 
+<a id="markdown-response-1" name="response-1"></a>
 ### Response
 
 <pre><code class="json">{
@@ -102,12 +116,14 @@ diary.
 }</code></pre>
 
 <a name="create-a-journal-entry"></a>
+<a id="markdown-create-a-journal-entry" name="create-a-journal-entry"></a>
 ## Create a journal entry
 
 <span class="url">
   POST /journal/
 </span>
 
+<a id="markdown-input" name="input"></a>
 ### Input
 
 | Name | Type | Description |
@@ -115,6 +131,7 @@ diary.
 | title | string | <strong>Required</strong>. A title for this journal entry. Max 255 characters. |
 | post | string | <strong>Required</strong>. The content of the post. Max 1000000 characters. |
 
+<a id="markdown-example" name="example"></a>
 ### Example
 
 <pre><code class="json">{
@@ -122,6 +139,7 @@ diary.
   "post":"The birthday party got cancelled. My boyfriend felt the invitees had enough time to respond. They did not. So he cancelled it. I thought he jumped the gun, but it was not all in my hands. My son got some lizards instead. I did not really like that idea either, but it was his birthday. His grandfather still has to get him something. And my parents also have a gift for him."
 }</code></pre>
 
+<a id="markdown-response-2" name="response-2"></a>
 ### Response
 
 The API call returns a journal entry object if the call succeeds.
@@ -141,12 +159,14 @@ The API call returns a journal entry object if the call succeeds.
 }</code></pre>
 
 <a name="update-a-journal-entry"></a>
+<a id="markdown-update-a-journal-entry" name="update-a-journal-entry"></a>
 ## Update a journal entry
 
 <span class="url">
   PUT /journal/:id
 </span>
 
+<a id="markdown-input-1" name="input-1"></a>
 ### Input
 
 | Name | Type | Description |
@@ -154,6 +174,7 @@ The API call returns a journal entry object if the call succeeds.
 | title | string | <strong>Required</strong>. A title for this journal entry. Max 255 characters. |
 | post | string | <strong>Required</strong>. The content of the post. Max 1000000 characters. |
 
+<a id="markdown-example-1" name="example-1"></a>
 ### Example
 
 <pre><code class="json">{
@@ -161,6 +182,7 @@ The API call returns a journal entry object if the call succeeds.
   "post":"The birthday party got cancelled. My boyfriend felt the invitees had enough time to respond. They did not. So he cancelled it. I thought he jumped the gun, but it was not all in my hands. My son got some lizards instead. I did not really like that idea either, but it was his birthday. His grandfather still has to get him something. And my parents also have a gift for him."
 }</code></pre>
 
+<a id="markdown-response-3" name="response-3"></a>
 ### Response
 
 <pre><code class="json">{
@@ -178,12 +200,14 @@ The API call returns a journal entry object if the call succeeds.
 }</code></pre>
 
 <a name="delete-a-journal-entry"></a>
+<a id="markdown-delete-a-journal-entry" name="delete-a-journal-entry"></a>
 ## Delete a journal entry
 
 <span class="url">
   DELETE /calls/:id
 </span>
 
+<a id="markdown-response-4" name="response-4"></a>
 ### Response
 
 The response sends back the id that was just deleted.

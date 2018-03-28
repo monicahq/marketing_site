@@ -1,23 +1,47 @@
 # Contacts
 
-<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
-<!-- Simply install the plugin, then press Save, and it does it magic -->
-<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+<!-- TOC -->
 
-* [Overview](#overview)
-* [List all your contacts](#list-all-your-contacts)
-* [Get a specific contact](#get-a-specific-contact)
-* [Create a contact](#create-a-contact)
-* [Update a contact](#update-a-contact)
-* [Delete a contact](#delete-a-contact)
-* [Partners](#partners)
-* [Children](#children)
-* [Search](#search)
+- [Overview](#overview)
+    - [Special dates](#special-dates)
+- [List all your contacts](#list-all-your-contacts)
+    - [Parameters](#parameters)
+    - [Response](#response)
+    - [Sorting](#sorting)
+- [Get a specific contact](#get-a-specific-contact)
+    - [Get a `real` contact](#get-a-real-contact)
+    - [Get a `partial` contact](#get-a-partial-contact)
+- [Create a contact](#create-a-contact)
+    - [Input](#input)
+    - [Example](#example)
+    - [Response](#response-1)
+- [Update a contact](#update-a-contact)
+    - [Input](#input-1)
+    - [Example](#example-1)
+    - [Response](#response-2)
+- [Delete a contact](#delete-a-contact)
+    - [Response](#response-3)
+- [Partners](#partners)
+    - [Link a partner with a contact](#link-a-partner-with-a-contact)
+        - [Input](#input-2)
+    - [Unlink a partner and a contact](#unlink-a-partner-and-a-contact)
+        - [Input](#input-3)
+- [Children](#children)
+    - [Link a child to a contact](#link-a-child-to-a-contact)
+        - [Input](#input-4)
+        - [Example](#example-2)
+    - [Unlink a child and a contact](#unlink-a-child-and-a-contact)
+        - [Input](#input-5)
+        - [Example](#example-3)
+- [Search](#search)
+        - [Input](#input-6)
+        - [Response](#response-4)
 
-<!-- /MarkdownTOC -->
+<!-- /TOC -->
 
 <a name="overview"></a>
 <a id="overview"></a>
+<a id="markdown-overview" name="overview"></a>
 ## Overview
 
 The Contact object is the core of what Monica is all about. The API allows you
@@ -46,6 +70,7 @@ When creating `real` contacts, the only rule is the uniqueness of the email
 address in the user's account. If you try to use the same email address when
 creating another contact in the account, the API will return an error.
 
+<a id="markdown-special-dates" name="special-dates"></a>
 ### Special dates
 
 Some dates about a contact are considered "special". Currently three dates have this special type:
@@ -158,12 +183,14 @@ Response:
 
 <a name="list-all-your-contacts"></a>
 <a id="list-all-your-contacts"></a>
+<a id="markdown-list-all-your-contacts" name="list-all-your-contacts"></a>
 ## List all your contacts
 
 <span class="url">
   GET /contacts/
 </span>
 
+<a id="markdown-parameters" name="parameters"></a>
 ### Parameters
 
 | Name | Type | Description |
@@ -173,6 +200,7 @@ Response:
 | query | string | Performs a search with the given query. |
 | sort | string | Indicates how the query should be ordered by. Possible values: `created_at`, `-created_at`, `updated_at`, `-updated_at`. |
 
+<a id="markdown-response" name="response"></a>
 ### Response
 
 <pre><code class="json">{
@@ -459,6 +487,7 @@ Response:
   }
 }</code></pre>
 
+<a id="markdown-sorting" name="sorting"></a>
 ### Sorting
 
 You can sort this query. Accepted criteria are:
@@ -472,8 +501,10 @@ You can sort this query. Accepted criteria are:
 
 <a name="get-a-specific-contact"></a>
 <a id="get-a-specific-contact"></a>
+<a id="markdown-get-a-specific-contact" name="get-a-specific-contact"></a>
 ## Get a specific contact
 
+<a id="markdown-get-a-real-contact" name="get-a-real-contact"></a>
 ### Get a `real` contact
 
 <span class="url">
@@ -656,6 +687,7 @@ You can sort this query. Accepted criteria are:
   }
 }</code></pre>
 
+<a id="markdown-get-a-partial-contact" name="get-a-partial-contact"></a>
 ### Get a `partial` contact
 
 Partial contacts are partners or children.
@@ -697,12 +729,14 @@ Partial contacts are partners or children.
 
 <a name="create-a-contact"></a>
 <a id="create-a-contact"></a>
+<a id="markdown-create-a-contact" name="create-a-contact"></a>
 ## Create a contact
 
 <span class="url">
   POST /contacts/
 </span>
 
+<a id="markdown-input" name="input"></a>
 ### Input
 
 If a field is not required, you can send the `null` value as the content of the field.
@@ -734,6 +768,7 @@ If a field is not required, you can send the `null` value as the content of the 
 | deceased_date_age | integer | The number of years between the deceased_date and the current year. |
 | avatar_url | string | The URL of an external image that would serve as the avatar of the contact. Max 400 characters. |
 
+<a id="markdown-example" name="example"></a>
 ### Example
 
 <pre><code class="json">{
@@ -765,6 +800,7 @@ If a field is not required, you can send the `null` value as the content of the 
   "avatar_url": "https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-1/p160x160/23561695_738743569647668_3975953680386408_n.jpg?oh=c32aa5f5c6c8d2ca927cbd2fcaa3&oe=5AA2632F"
 }</code></pre>
 
+<a id="markdown-response-1" name="response-1"></a>
 ### Response
 
 The API call returns a contact object if the call succeeds.
@@ -847,12 +883,14 @@ The API call returns a contact object if the call succeeds.
 
 <a name="update-a-contact"></a>
 <a id="update-a-contact"></a>
+<a id="markdown-update-a-contact" name="update-a-contact"></a>
 ## Update a contact
 
 <span class="url">
   PUT /contacts/:id
 </span>
 
+<a id="markdown-input-1" name="input-1"></a>
 ### Input
 
 | Name | Type | Description |
@@ -882,6 +920,7 @@ The API call returns a contact object if the call succeeds.
 | deceased_date_age | integer | The number of years between the deceased_date and the current year. |
 | avatar_url | string | The URL of an external image that would serve as the avatar of the contact. Max 400 characters. |
 
+<a id="markdown-example-1" name="example-1"></a>
 ### Example
 
 <pre><code class="json">{
@@ -913,6 +952,7 @@ The API call returns a contact object if the call succeeds.
   "avatar_url": "https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-1/p160x160/23561695_738743569647668_3975953680386408_n.jpg?oh=c32aa5f5c6c8d2ca927cbd2fcaa3&oe=5AA2632F"
 }</code></pre>
 
+<a id="markdown-response-2" name="response-2"></a>
 ### Response
 
 <pre><code class="json">{
@@ -993,12 +1033,14 @@ The API call returns a contact object if the call succeeds.
 
 <a name="delete-a-contact"></a>
 <a id="delete-a-contact"></a>
+<a id="markdown-delete-a-contact" name="delete-a-contact"></a>
 ## Delete a contact
 
 <span class="url">
   DELETE /contacts/:id
 </span>
 
+<a id="markdown-response-3" name="response-3"></a>
 ### Response
 
 The response sends back the id that was just deleted.
@@ -1010,6 +1052,7 @@ The response sends back the id that was just deleted.
 
 <a name="partners"></a>
 <a id="partners"></a>
+<a id="markdown-partners" name="partners"></a>
 ## Partners
 
 Each contact can have one or multiple partners (even if polygamy is somewhat
@@ -1021,12 +1064,14 @@ worry about the concept of  when you do create the relationship.
 When you define a relationship, only one call is necessary to link the two
 contacts together.
 
+<a id="markdown-link-a-partner-with-a-contact" name="link-a-partner-with-a-contact"></a>
 ### Link a partner with a contact
 
 <span class="url">
   POST /contacts/:id/partners
 </span>
 
+<a id="markdown-input-2" name="input-2"></a>
 #### Input
 
 | Name | Type | Description |
@@ -1039,12 +1084,14 @@ contacts together.
 
 This call returns a standard Contact object.
 
+<a id="markdown-unlink-a-partner-and-a-contact" name="unlink-a-partner-and-a-contact"></a>
 ### Unlink a partner and a contact
 
 <span class="url">
   POST /contacts/:id/partners/unset
 </span>
 
+<a id="markdown-input-3" name="input-3"></a>
 #### Input
 
 | Name | Type | Description |
@@ -1059,6 +1106,7 @@ This call returns a standard Contact object.
 
 <a name="children"></a>
 <a id="children"></a>
+<a id="markdown-children" name="children"></a>
 ## Children
 
 Each contact can have one or multiple children. A child can be either a `real` contact
@@ -1069,18 +1117,21 @@ worry about the concept of  when you do create the relationship.
 When you define a relationship, only one call is necessary to link the two
 contacts together.
 
+<a id="markdown-link-a-child-to-a-contact" name="link-a-child-to-a-contact"></a>
 ### Link a child to a contact
 
 <span class="url">
   POST /contacts/:id/kids
 </span>
 
+<a id="markdown-input-4" name="input-4"></a>
 #### Input
 
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
 | child_id | integer | <strong>Required</strong>. The ID of the contact ID that will be set as the partner of the given contact. |
 
+<a id="markdown-example-2" name="example-2"></a>
 #### Example
 
 <pre><code class="json">{
@@ -1089,18 +1140,21 @@ contacts together.
 
 This call returns a standard Contact object.
 
+<a id="markdown-unlink-a-child-and-a-contact" name="unlink-a-child-and-a-contact"></a>
 ### Unlink a child and a contact
 
 <span class="url">
   POST /contacts/:id/kids/unset
 </span>
 
+<a id="markdown-input-5" name="input-5"></a>
 #### Input
 
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
 | child_id | integer | <strong>Required</strong>. The ID of the contact ID that needs to be unset. |
 
+<a id="markdown-example-3" name="example-3"></a>
 #### Example
 
 <pre><code class="json">{
@@ -1111,6 +1165,7 @@ This call returns a standard Contact object.
 
 <a name="search"></a>
 <a id="search"></a>
+<a id="markdown-search" name="search"></a>
 ## Search
 
 You can search specific contacts. Here are the fields that search takes into account:
@@ -1124,12 +1179,14 @@ You can search specific contacts. Here are the fields that search takes into acc
   GET /contacts?query=regis
 </span>
 
+<a id="markdown-input-6" name="input-6"></a>
 #### Input
 
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
 | query | string | <strong>Required</strong>. The string you'd like to search. |
 
+<a id="markdown-response-4" name="response-4"></a>
 #### Response
 
 This call returns a collection of contacts. Note that `body.meta.query` contains the query you wanted to search.

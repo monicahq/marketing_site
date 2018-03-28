@@ -1,20 +1,30 @@
 # Notes
 
-<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
-<!-- Simply install the plugin, then press Save, and it does it magic -->
-<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+<!-- TOC -->
 
-* [Overview](#overview)
-* [List all the notes in your account](#list-all-the-notes-in-your-account)
-* [List all the notes of a specific contact](#list-all-the-notes-of-a-specific-contact)
-* [Get a specific note](#get-a-specific-note)
-* [Create a note](#create-a-note)
-* [Update a note](#update-a-note)
-* [Delete a note](#delete-a-note)
+- [Overview](#overview)
+- [List all the notes in your account](#list-all-the-notes-in-your-account)
+    - [Parameters](#parameters)
+    - [Response](#response)
+- [List all the notes of a specific contact](#list-all-the-notes-of-a-specific-contact)
+    - [Response](#response-1)
+- [Get a specific note](#get-a-specific-note)
+    - [Response](#response-2)
+- [Create a note](#create-a-note)
+    - [Input](#input)
+    - [Example](#example)
+    - [Response](#response-3)
+- [Update a note](#update-a-note)
+    - [Input](#input-1)
+    - [Example](#example-1)
+    - [Response](#response-4)
+- [Delete a note](#delete-a-note)
+    - [Response](#response-5)
 
-<!-- /MarkdownTOC -->
+<!-- /TOC -->
 
 <a name="overview"></a>
+<a id="markdown-overview" name="overview"></a>
 ## Overview
 
 The Note object allows to associate notes to contacts. A note has to be
@@ -27,12 +37,14 @@ When retrieving a note, we always also return some basic information about the
 related contact.
 
 <a name="list-all-the-notes-in-your-account"></a>
+<a id="markdown-list-all-the-notes-in-your-account" name="list-all-the-notes-in-your-account"></a>
 ## List all the notes in your account
 
 <span class="url">
   GET /notes/
 </span>
 
+<a id="markdown-parameters" name="parameters"></a>
 ### Parameters
 
 | Name | Type | Description |
@@ -40,6 +52,7 @@ related contact.
 | limit | integer | Indicates the page size. |
 | page | integer | Indicates the page to return. |
 
+<a id="markdown-response" name="response"></a>
 ### Response
 
 <pre><code class="json">{
@@ -127,12 +140,14 @@ related contact.
 }</code></pre>
 
 <a name="list-all-the-notes-of-a-specific-contact"></a>
+<a id="markdown-list-all-the-notes-of-a-specific-contact" name="list-all-the-notes-of-a-specific-contact"></a>
 ## List all the notes of a specific contact
 
 <span class="url">
   GET /contacts/:id/notes
 </span>
 
+<a id="markdown-response-1" name="response-1"></a>
 ### Response
 
 <pre><code class="json">{
@@ -220,12 +235,14 @@ related contact.
 }</code></pre>
 
 <a name="get-a-specific-note"></a>
+<a id="markdown-get-a-specific-note" name="get-a-specific-note"></a>
 ## Get a specific note
 
 <span class="url">
   GET /notes/:id
 </span>
 
+<a id="markdown-response-2" name="response-2"></a>
 ### Response
 
 <pre><code class="json">{
@@ -264,12 +281,14 @@ related contact.
 }</code></pre>
 
 <a name="create-a-note"></a>
+<a id="markdown-create-a-note" name="create-a-note"></a>
 ## Create a note
 
 <span class="url">
   POST /notes/
 </span>
 
+<a id="markdown-input" name="input"></a>
 ### Input
 
 | Name | Type | Description |
@@ -278,6 +297,7 @@ related contact.
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the note is associated with. |
 | is_favorited | integer | <strong>Required</strong>. Indicates whether the note is favorited or not. Can be `0` (false) or `1` (true). |
 
+<a id="markdown-example" name="example"></a>
 ### Example
 
 <pre><code class="json">{
@@ -286,6 +306,7 @@ related contact.
   "is_favorited": 0
 }</code></pre>
 
+<a id="markdown-response-3" name="response-3"></a>
 ### Response
 
 The API call returns a note object if the call succeeds.
@@ -326,12 +347,14 @@ The API call returns a note object if the call succeeds.
 }</code></pre>
 
 <a name="update-a-note"></a>
+<a id="markdown-update-a-note" name="update-a-note"></a>
 ## Update a note
 
 <span class="url">
   PUT /notes/:id
 </span>
 
+<a id="markdown-input-1" name="input-1"></a>
 ### Input
 
 | Name | Type | Description |
@@ -340,6 +363,7 @@ The API call returns a note object if the call succeeds.
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the note is associated with. |
 | is_favorited | integer | <strong>Required</strong>. Indicates whether the note is favorited or not. Can be `0` (false) or `1` (true). |
 
+<a id="markdown-example-1" name="example-1"></a>
 ### Example
 
 <pre><code class="json">{
@@ -347,6 +371,7 @@ The API call returns a note object if the call succeeds.
   "contact_id": 3
 }</code></pre>
 
+<a id="markdown-response-4" name="response-4"></a>
 ### Response
 
 <pre><code class="json">{
@@ -385,12 +410,14 @@ The API call returns a note object if the call succeeds.
 }</code></pre>
 
 <a name="delete-a-note"></a>
+<a id="markdown-delete-a-note" name="delete-a-note"></a>
 ## Delete a note
 
 <span class="url">
   DELETE /notes/:id
 </span>
 
+<a id="markdown-response-5" name="response-5"></a>
 ### Response
 
 The response sends back the id that was just deleted.

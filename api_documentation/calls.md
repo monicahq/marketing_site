@@ -183,7 +183,11 @@ related contact.
     "path": "https:\/\/app.monicahq.com\/api\/calls",
     "per_page": 10,
     "to": 4,
-    "total": 4
+    "total": 4,
+    "statistics": {
+      "2017": 7,
+      "2016": 1
+    }
   }
 }</code></pre>
 
@@ -274,7 +278,11 @@ related contact.
     "path": "https:\/\/app.monicahq.com\/api\/contacts\/3\/calls",
     "per_page": 10,
     "to": 2,
-    "total": 2
+    "total": 2,
+    "statistics": {
+      "2017": 7,
+      "2016": 1
+    }
   }
 }</code></pre>
 

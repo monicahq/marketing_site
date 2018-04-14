@@ -319,7 +319,11 @@ the related contact(s).
     "path": "https:\/\/app.monicahq.com\/api\/activities",
     "per_page": 10,
     "to": 5,
-    "total": 5
+    "total": 5,
+    "statistics": {
+      "2017": 7,
+      "2016": 1
+    }
   }
 }</code></pre>
 
@@ -394,7 +398,11 @@ the related contact(s).
     "path": "https:\/\/app.monicahq.com\/api\/contacts\/8\/activities",
     "per_page": 10,
     "to": 1,
-    "total": 1
+    "total": 1,
+    "statistics": {
+      "2017": 7,
+      "2016": 1
+    }
   }
 }</code></pre>
 

@@ -6,7 +6,7 @@
   <div class="cf">
     <div class="fl w-100 tc mb2">
       <h1 class=" normal mb2">Our terms of use</h1>
-      <p class="normal lh-copy measure center">Last update: June 20, 2017</p>
+      <p class="normal lh-copy measure center">Last update: April 12, 2018</p>
     </div>
   </div>
 </div>
@@ -37,7 +37,7 @@
 
       <p class="measure lh-copy">Your personal data will not be shared with anyone without your consent.</p>
 
-      <p class="measure lh-copy">Your data is backed up every day.</p>
+      <p class="measure lh-copy">Your data is backed up every hour.</p>
 
       <p class="measure lh-copy">If the site ceases operation, you will receive an opportunity to export all your data before the site dies.</p>
 
@@ -45,7 +45,7 @@
 
       <h3>Responsibilities</h3>
 
-      <p class="measure lh-copy">You will not use the site to store illegal information or data under the Canadian law.</p>
+      <p class="measure lh-copy">You will not use the site to store illegal information or data under the Canadian law (or any law).</p>
 
       <p class="measure lh-copy">You have to be at least 18+ to create an account and use the site.</p>
 

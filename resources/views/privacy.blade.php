@@ -1,4 +1,4 @@
-@ictoirebatsextends('partials.skeleton', ['pageTitle' => 'Monica privacy page'])
+@extends('partials.skeleton', ['pageTitle' => 'Monica privacy page'])
 
 @section('content')
 

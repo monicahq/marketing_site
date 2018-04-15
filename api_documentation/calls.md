@@ -1,20 +1,30 @@
 # Calls
 
-<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
-<!-- Simply install the plugin, then press Save, and it does it magic -->
-<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+<!-- TOC -->
 
-* [Overview](#overview)
-* [List all the calls in your account](#list-all-the-calls-in-your-account)
-* [List all the calls of a specific contact](#list-all-the-calls-of-a-specific-contact)
-* [Get a specific call](#get-a-specific-call)
-* [Create a call](#create-a-call)
-* [Update a call](#update-a-call)
-* [Delete a call](#delete-a-call)
+- [Overview](#overview)
+- [List all the calls in your account](#list-all-the-calls-in-your-account)
+    - [Parameters](#parameters)
+    - [Response](#response)
+- [List all the calls of a specific contact](#list-all-the-calls-of-a-specific-contact)
+    - [Response](#response-1)
+- [Get a specific call](#get-a-specific-call)
+    - [Response](#response-2)
+- [Create a call](#create-a-call)
+    - [Input](#input)
+    - [Example](#example)
+    - [Response](#response-3)
+- [Update a call](#update-a-call)
+    - [Input](#input-1)
+    - [Example](#example-1)
+    - [Response](#response-4)
+- [Delete a call](#delete-a-call)
+    - [Response](#response-5)
 
-<!-- /MarkdownTOC -->
+<!-- /TOC -->
 
 <a name="overview"></a>
+<a id="markdown-overview" name="overview"></a>
 ## Overview
 
 The Call object allows to record phone calls made with contacts. A call has to be
@@ -28,12 +38,14 @@ When retrieving a call, we always also return some basic information about the
 related contact.
 
 <a name="list-all-the-calls-in-your-account"></a>
+<a id="markdown-list-all-the-calls-in-your-account" name="list-all-the-calls-in-your-account"></a>
 ## List all the calls in your account
 
 <span class="url">
   GET /calls/
 </span>
 
+<a id="markdown-parameters" name="parameters"></a>
 ### Parameters
 
 | Name | Type | Description |
@@ -41,6 +53,7 @@ related contact.
 | limit | integer | Indicates the page size. |
 | page | integer | Indicates the page to return. |
 
+<a id="markdown-response" name="response"></a>
 ### Response
 
 <pre><code class="json">{
@@ -188,12 +201,14 @@ related contact.
 }</code></pre>
 
 <a name="list-all-the-calls-of-a-specific-contact"></a>
+<a id="markdown-list-all-the-calls-of-a-specific-contact" name="list-all-the-calls-of-a-specific-contact"></a>
 ## List all the calls of a specific contact
 
 <span class="url">
   GET /contacts/:id/calls
 </span>
 
+<a id="markdown-response-1" name="response-1"></a>
 ### Response
 
 <pre><code class="json">{
@@ -279,12 +294,14 @@ related contact.
 }</code></pre>
 
 <a name="get-a-specific-call"></a>
+<a id="markdown-get-a-specific-call" name="get-a-specific-call"></a>
 ## Get a specific call
 
 <span class="url">
   GET /calls/:id
 </span>
 
+<a id="markdown-response-2" name="response-2"></a>
 ### Response
 
 <pre><code class="json">{
@@ -322,12 +339,14 @@ related contact.
 }</code></pre>
 
 <a name="create-a-call"></a>
+<a id="markdown-create-a-call" name="create-a-call"></a>
 ## Create a call
 
 <span class="url">
   POST /calls/
 </span>
 
+<a id="markdown-input" name="input"></a>
 ### Input
 
 | Name | Type | Description |
@@ -336,6 +355,7 @@ related contact.
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the call is associated with. |
 | called_at | string | <strong>Required</strong>. The date the call happened. Can be in the past or future - the latter being dumb, but well. Format: YYYY-MM-DD. |
 
+<a id="markdown-example" name="example"></a>
 ### Example
 
 <pre><code class="json">{
@@ -344,6 +364,7 @@ related contact.
   "called_at": "2018-02-02"
 }</code></pre>
 
+<a id="markdown-response-3" name="response-3"></a>
 ### Response
 
 The API call returns a Call object if the call succeeds.
@@ -383,12 +404,14 @@ The API call returns a Call object if the call succeeds.
 }</code></pre>
 
 <a name="update-a-call"></a>
+<a id="markdown-update-a-call" name="update-a-call"></a>
 ## Update a call
 
 <span class="url">
   PUT /calls/:id
 </span>
 
+<a id="markdown-input-1" name="input-1"></a>
 ### Input
 
 | Name | Type | Description |
@@ -397,6 +420,7 @@ The API call returns a Call object if the call succeeds.
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the call is associated with. |
 | called_at | string | <strong>Required</strong>. The date the called happened. Can be in the past or future - the latter being dumb, but well. Format: YYYY-MM-DD. |
 
+<a id="markdown-example-1" name="example-1"></a>
 ### Example
 
 <pre><code class="json">{
@@ -405,6 +429,7 @@ The API call returns a Call object if the call succeeds.
   "called_at": "2018-02-02"
 }</code></pre>
 
+<a id="markdown-response-4" name="response-4"></a>
 ### Response
 
 <pre><code class="json">{
@@ -442,12 +467,14 @@ The API call returns a Call object if the call succeeds.
 }</code></pre>
 
 <a name="delete-a-call"></a>
+<a id="markdown-delete-a-call" name="delete-a-call"></a>
 ## Delete a call
 
 <span class="url">
   DELETE /calls/:id
 </span>
 
+<a id="markdown-response-5" name="response-5"></a>
 ### Response
 
 The response sends back the id that was just deleted.

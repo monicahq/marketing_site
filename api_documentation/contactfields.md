@@ -1,19 +1,27 @@
 # Contact fields
 
-<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
-<!-- Simply install the plugin, then press Save, and it does it magic -->
-<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+<!-- TOC -->
 
-* [Overview](#overview)
-* [List all the contact fields of a specific contact](#list-all-the-contact-fields-of-a-specific-contact)
-* [Get a specific contact field](#get-a-specific-contact-field)
-* [Create a contact field](#create-a-contact-field)
-* [Update a contact field](#update-a-contact-field)
-* [Delete a contact field](#delete-a-contact-field)
+- [Overview](#overview)
+- [List all the contact fields of a specific contact](#list-all-the-contact-fields-of-a-specific-contact)
+    - [Response](#response)
+- [Get a specific contact field](#get-a-specific-contact-field)
+    - [Response](#response-1)
+- [Create a contact field](#create-a-contact-field)
+    - [Input](#input)
+    - [Example](#example)
+    - [Response](#response-2)
+- [Update a contact field](#update-a-contact-field)
+    - [Input](#input-1)
+    - [Example](#example-1)
+    - [Response](#response-3)
+- [Delete a contact field](#delete-a-contact-field)
+    - [Response](#response-4)
 
-<!-- /MarkdownTOC -->
+<!-- /TOC -->
 
 <a name="overview"></a>
+<a id="markdown-overview" name="overview"></a>
 ## Overview
 
 A contact can be contacted in multiple ways. It can be a phone number, an email address, a Twitter profile, a Telegram nickname, etc... We call these a contact field.
@@ -21,12 +29,14 @@ A contact can be contacted in multiple ways. It can be a phone number, an email 
 When retrieving a contact field, we always also return some basic information about the related contact.
 
 <a name="list-all-the-contact-fields-of-a-specific-contact"></a>
+<a id="markdown-list-all-the-contact-fields-of-a-specific-contact" name="list-all-the-contact-fields-of-a-specific-contact"></a>
 ## List all the contact fields of a specific contact
 
 <span class="url">
   GET /contact/:id/contactfields
 </span>
 
+<a id="markdown-response" name="response"></a>
 ### Response
 
 <pre><code class="json">{
@@ -280,12 +290,14 @@ When retrieving a contact field, we always also return some basic information ab
 }</code></pre>
 
 <a name="get-a-specific-contact-field"></a>
+<a id="markdown-get-a-specific-contact-field" name="get-a-specific-contact-field"></a>
 ## Get a specific contact field
 
 <span class="url">
   GET /contactfields/:id
 </span>
 
+<a id="markdown-response-1" name="response-1"></a>
 ### Response
 
 <pre><code class="json">{
@@ -336,12 +348,14 @@ When retrieving a contact field, we always also return some basic information ab
 }</code></pre>
 
 <a name="create-a-contact-field"></a>
+<a id="markdown-create-a-contact-field" name="create-a-contact-field"></a>
 ## Create a contact field
 
 <span class="url">
   POST /contactfields/
 </span>
 
+<a id="markdown-input" name="input"></a>
 ### Input
 
 | Name | Type | Description |
@@ -350,6 +364,7 @@ When retrieving a contact field, we always also return some basic information ab
 | contact_field_type_id | integer | <strong>Required</strong>. The type of the contact field. Has to be a valid, existing contact field type ID. You can retrieve the list of all the contact field types of an account <a href="{{ "/api/countries" | prepend: site.baseurl | prepend: site.url }}">via the API</a>. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the content field is associated with. |
 
+<a id="markdown-example" name="example"></a>
 ### Example
 
 <pre><code class="json">{
@@ -358,6 +373,7 @@ When retrieving a contact field, we always also return some basic information ab
   "contact_id": 8
 }</code></pre>
 
+<a id="markdown-response-2" name="response-2"></a>
 ### Response
 
 The API call returns a Contact Field object if the call succeeds.
@@ -410,12 +426,14 @@ The API call returns a Contact Field object if the call succeeds.
 }</code></pre>
 
 <a name="update-a-contact-field"></a>
+<a id="markdown-update-a-contact-field" name="update-a-contact-field"></a>
 ## Update a contact field
 
 <span class="url">
   PUT /contactfields/:id
 </span>
 
+<a id="markdown-input-1" name="input-1"></a>
 ### Input
 
 | Name | Type | Description |
@@ -424,6 +442,7 @@ The API call returns a Contact Field object if the call succeeds.
 | contact_field_type_id | integer | <strong>Required</strong>. The type of the contact field. Has to be a valid, existing contact field type ID. You can retrieve the list of all the contact field types of an account <a href="{{ "/api/countries" | prepend: site.baseurl | prepend: site.url }}">via the API</a>. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the content field is associated with. |
 
+<a id="markdown-example-1" name="example-1"></a>
 ### Example
 
 <pre><code class="json">{
@@ -432,6 +451,7 @@ The API call returns a Contact Field object if the call succeeds.
   "contact_id": 8
 }</code></pre>
 
+<a id="markdown-response-3" name="response-3"></a>
 ### Response
 
 <pre><code class="json">{
@@ -482,12 +502,14 @@ The API call returns a Contact Field object if the call succeeds.
 }</code></pre>
 
 <a name="delete-a-contact-field"></a>
+<a id="markdown-delete-a-contact-field" name="delete-a-contact-field"></a>
 ## Delete a contact field
 
 <span class="url">
   DELETE /contactfields/:id
 </span>
 
+<a id="markdown-response-4" name="response-4"></a>
 ### Response
 
 The response sends back the id that was just deleted.

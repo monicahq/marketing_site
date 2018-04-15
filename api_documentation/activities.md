@@ -1,21 +1,31 @@
 # Activities
 
-<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
-<!-- Simply install the plugin, then press Save, and it does it magic -->
-<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+<!-- TOC -->
 
-* [Overview](#overview)
-* [List all the activities in your account](#list-all-the-activities-in-your-account)
-* [List all the activities of a specific contact](#list-all-the-activities-of-a-specific-contact)
-* [Get a specific activity](#get-a-specific-activity)
-* [Create an activity](#create-an-activity)
-* [Update an activity](#update-an-activity)
-* [Delete an activity](#delete-an-activity)
-* [List of all activity types](#list-of-all-activity-types)
+- [Overview](#overview)
+- [List all the activities in your account](#list-all-the-activities-in-your-account)
+    - [Parameters](#parameters)
+    - [Response](#response)
+- [List all the activities of a specific contact](#list-all-the-activities-of-a-specific-contact)
+    - [Response](#response-1)
+- [Get a specific activity](#get-a-specific-activity)
+    - [Response](#response-2)
+- [Create an activity](#create-an-activity)
+    - [Input](#input)
+    - [Example](#example)
+    - [Response](#response-3)
+- [Update an activity](#update-an-activity)
+    - [Input](#input-1)
+    - [Example](#example-1)
+    - [Response](#response-4)
+- [Delete an activity](#delete-an-activity)
+    - [Response](#response-5)
+- [List of all activity types](#list-of-all-activity-types)
+    - [Response](#response-6)
 
-<!-- /MarkdownTOC -->
+<!-- /TOC -->
 
-<a name="overview"></a>
+<a id="markdown-overview" name="overview"></a>
 ## Overview
 
 The Activity object represents activities made with one or more contacts. Use it
@@ -25,13 +35,14 @@ linked to at least one contact.
 When retrieving an activity, we always also return some basic information about
 the related contact(s).
 
-<a name="list-all-the-activities-in-your-account"></a>
+<a id="markdown-list-all-the-activities-in-your-account" name="list-all-the-activities-in-your-account"></a>
 ## List all the activities in your account
 
 <span class="url">
   GET /activities/
 </span>
 
+<a id="markdown-parameters" name="parameters"></a>
 ### Parameters
 
 | Name | Type | Description |
@@ -39,6 +50,7 @@ the related contact(s).
 | limit | integer | Indicates the page size. |
 | page | integer | Indicates the page to return. |
 
+<a id="markdown-response" name="response"></a>
 ### Response
 
 <pre><code class="json">{
@@ -323,13 +335,14 @@ the related contact(s).
   }
 }</code></pre>
 
-<a name="list-all-the-activities-of-a-specific-contact"></a>
+<a id="markdown-list-all-the-activities-of-a-specific-contact" name="list-all-the-activities-of-a-specific-contact"></a>
 ## List all the activities of a specific contact
 
 <span class="url">
   GET /contacts/:id/activities
 </span>
 
+<a id="markdown-response-1" name="response-1"></a>
 ### Response
 
 <pre><code class="json">{
@@ -398,13 +411,14 @@ the related contact(s).
   }
 }</code></pre>
 
-<a name="get-a-specific-activity"></a>
+<a id="markdown-get-a-specific-activity" name="get-a-specific-activity"></a>
 ## Get a specific activity
 
 <span class="url">
   GET /activities/:id
 </span>
 
+<a id="markdown-response-2" name="response-2"></a>
 ### Response
 
 <pre><code class="json">{
@@ -456,13 +470,14 @@ the related contact(s).
   }
 }</code></pre>
 
-<a name="create-an-activity"></a>
+<a id="markdown-create-an-activity" name="create-an-activity"></a>
 ## Create an activity
 
 <span class="url">
   POST /activities/
 </span>
 
+<a id="markdown-input" name="input"></a>
 ### Input
 
 | Name | Type | Description |
@@ -473,6 +488,7 @@ the related contact(s).
 | activity_type_id | integer | The ID of the type of activity that the activity is associated with. |
 | contacts | array | <strong>Required</strong>. The ID of the contact(s) that the call is associated with. |
 
+<a id="markdown-example" name="example"></a>
 ### Example
 
 <pre><code class="json">{
@@ -483,6 +499,7 @@ the related contact(s).
   "contacts": [1,3,5]
 }</code></pre>
 
+<a id="markdown-response-3" name="response-3"></a>
 ### Response
 
 The API call returns an Activity object if the call succeeds.
@@ -576,13 +593,14 @@ The API call returns an Activity object if the call succeeds.
   }
 }</code></pre>
 
-<a name="update-an-activity"></a>
+<a id="markdown-update-an-activity" name="update-an-activity"></a>
 ## Update an activity
 
 <span class="url">
   PUT /activities/:id
 </span>
 
+<a id="markdown-input-1" name="input-1"></a>
 ### Input
 
 | Name | Type | Description |
@@ -593,6 +611,7 @@ The API call returns an Activity object if the call succeeds.
 | activity_type_id | integer | The ID of the type of activity that the activity is associated with. |
 | contacts | array | <strong>Required</strong>. The ID of the contact(s) that the call is associated with. |
 
+<a id="markdown-example-1" name="example-1"></a>
 ### Example
 
 <pre><code class="json">{
@@ -603,6 +622,7 @@ The API call returns an Activity object if the call succeeds.
   "contacts": [1,3]
 }</code></pre>
 
+<a id="markdown-response-4" name="response-4"></a>
 ### Response
 
 <pre><code class="json">{
@@ -674,13 +694,14 @@ The API call returns an Activity object if the call succeeds.
   }
 }</code></pre>
 
-<a name="delete-an-activity"></a>
+<a id="markdown-delete-an-activity" name="delete-an-activity"></a>
 ## Delete an activity
 
 <span class="url">
   DELETE /activities/:id
 </span>
 
+<a id="markdown-response-5" name="response-5"></a>
 ### Response
 
 The response sends back the id that was just deleted.
@@ -690,7 +711,7 @@ The response sends back the id that was just deleted.
   "id": 31
 }</code></pre>
 
-<a name="list-of-all-activity-types"></a>
+<a id="markdown-list-of-all-activity-types" name="list-of-all-activity-types"></a>
 ## List of all activity types
 
 An activity can optionally be associated with an activity type, like
@@ -703,6 +724,7 @@ what kind of activities he's doing with his contacts.
   GET /activitytypes
 </span>
 
+<a id="markdown-response-6" name="response-6"></a>
 ### Response
 
 <pre><code class="json">{

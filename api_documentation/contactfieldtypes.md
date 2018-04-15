@@ -16,7 +16,7 @@
 <a name="overview"></a>
 ## Overview
 
-A contact can have as many <a href="{{ "/api/contactfields" | prepend: site.baseurl | prepend: site.url }}">contact fields</a>
+A contact can have as many <a href="/api/contactfields">contact fields</a>
  as possible. Each contact field has a type: a phone number, email address,
  Twitter profile, Telegram nickname, etc... Each one of these means of
  communication is called a Contact Field Type. A contact can have as many

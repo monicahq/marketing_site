@@ -1,20 +1,30 @@
 # Reminders
 
-<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
-<!-- Simply install the plugin, then press Save, and it does it magic -->
-<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+<!-- TOC -->
 
-* [Overview](#overview)
-* [List all the reminders in your account](#list-all-the-reminders-in-your-account)
-* [List all the reminders of a specific contact](#list-all-the-reminders-of-a-specific-contact)
-* [Get a specific reminder](#get-a-specific-reminder)
-* [Create a reminder](#create-a-reminder)
-* [Update a reminder](#update-a-reminder)
-* [Delete a reminder](#delete-a-reminder)
+- [Overview](#overview)
+- [List all the reminders in your account](#list-all-the-reminders-in-your-account)
+    - [Parameters](#parameters)
+    - [Response](#response)
+- [List all the reminders of a specific contact](#list-all-the-reminders-of-a-specific-contact)
+    - [Response](#response-1)
+- [Get a specific reminder](#get-a-specific-reminder)
+    - [Response](#response-2)
+- [Create a reminder](#create-a-reminder)
+    - [Input](#input)
+    - [Example](#example)
+    - [Response](#response-3)
+- [Update a reminder](#update-a-reminder)
+    - [Input](#input-1)
+    - [Example](#example-1)
+    - [Response](#response-4)
+- [Delete a reminder](#delete-a-reminder)
+    - [Response](#response-5)
 
-<!-- /MarkdownTOC -->
+<!-- /TOC -->
 
 <a name="overview"></a>
+<a id="markdown-overview" name="overview"></a>
 ## Overview
 
 The Reminder object allows to add reminders about your contacts.
@@ -38,12 +48,14 @@ When retrieving a reminder, we always also return some basic information about t
 related contact.
 
 <a name="list-all-the-reminders-in-your-account"></a>
+<a id="markdown-list-all-the-reminders-in-your-account" name="list-all-the-reminders-in-your-account"></a>
 ## List all the reminders in your account
 
 <span class="url">
   GET /reminders/
 </span>
 
+<a id="markdown-parameters" name="parameters"></a>
 ### Parameters
 
 | Name | Type | Description |
@@ -51,6 +63,7 @@ related contact.
 | limit | integer | Indicates the page size. |
 | page | integer | Indicates the page to return. |
 
+<a id="markdown-response" name="response"></a>
 ### Response
 
 <pre><code class="json">{
@@ -424,12 +437,14 @@ related contact.
 }</code></pre>
 
 <a name="list-all-the-reminders-of-a-specific-contact"></a>
+<a id="markdown-list-all-the-reminders-of-a-specific-contact" name="list-all-the-reminders-of-a-specific-contact"></a>
 ## List all the reminders of a specific contact
 
 <span class="url">
   GET /contacts/:id/reminders
 </span>
 
+<a id="markdown-response-1" name="response-1"></a>
 ### Response
 
 <pre><code class="json">{
@@ -488,12 +503,14 @@ related contact.
 }</code></pre>
 
 <a name="get-a-specific-reminder"></a>
+<a id="markdown-get-a-specific-reminder" name="get-a-specific-reminder"></a>
 ## Get a specific reminder
 
 <span class="url">
   GET /reminders/:id
 </span>
 
+<a id="markdown-response-2" name="response-2"></a>
 ### Response
 
 <pre><code class="json">{
@@ -535,12 +552,14 @@ related contact.
 }</code></pre>
 
 <a name="create-a-reminder"></a>
+<a id="markdown-create-a-reminder" name="create-a-reminder"></a>
 ## Create a reminder
 
 <span class="url">
   POST /reminder/
 </span>
 
+<a id="markdown-input" name="input"></a>
 ### Input
 
 | Name | Type | Description |
@@ -552,6 +571,7 @@ related contact.
 | frequency_number | integer | The frequency of which the event should occur. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the call is associated with. |
 
+<a id="markdown-example" name="example"></a>
 ### Example
 
 <pre><code class="json">{
@@ -563,6 +583,7 @@ related contact.
   "contact_id": 1
 }</code></pre>
 
+<a id="markdown-response-3" name="response-3"></a>
 ### Response
 
 The API call returns a Reminder object if the call succeeds.
@@ -606,12 +627,14 @@ The API call returns a Reminder object if the call succeeds.
 }</code></pre>
 
 <a name="update-a-reminder"></a>
+<a id="markdown-update-a-reminder" name="update-a-reminder"></a>
 ## Update a reminder
 
 <span class="url">
   PUT /reminders/:id
 </span>
 
+<a id="markdown-input-1" name="input-1"></a>
 ### Input
 
 | Name | Type | Description |
@@ -623,6 +646,7 @@ The API call returns a Reminder object if the call succeeds.
 | frequency_number | integer | The frequency of which the event should occur. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the call is associated with. |
 
+<a id="markdown-example-1" name="example-1"></a>
 ### Example
 
 <pre><code class="json">{
@@ -634,6 +658,7 @@ The API call returns a Reminder object if the call succeeds.
   "contact_id": 3
 }</code></pre>
 
+<a id="markdown-response-4" name="response-4"></a>
 ### Response
 
 <pre><code class="json">{
@@ -675,12 +700,14 @@ The API call returns a Reminder object if the call succeeds.
 }</code></pre>
 
 <a name="delete-a-reminder"></a>
+<a id="markdown-delete-a-reminder" name="delete-a-reminder"></a>
 ## Delete a reminder
 
 <span class="url">
   DELETE /reminders/:id
 </span>
 
+<a id="markdown-response-5" name="response-5"></a>
 ### Response
 
 The response sends back the id that was just deleted.

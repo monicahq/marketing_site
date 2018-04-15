@@ -1,34 +1,51 @@
 # Tags
 
-<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
-<!-- Simply install the plugin, then press Save, and it does it magic -->
-<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+<!-- TOC -->
 
-* [Overview](#overview)
-* [List all your tags](#list-all-your-tags)
-* [Get a specific tag](#get-a-specific-tag)
-* [Create a tag](#create-a-tag)
-* [Update a tag](#update-a-tag)
-* [Delete a tag](#delete-a-tag)
-* [Associate a tag to a contact](#associate-a-tag-to-a-contact)
-* [Remove a specific tag from a contact](#remove-a-specific-tag-from-a-contact)
-* [Remove all the tags from a contact](#remove-all-the-tags-from-a-contact)
+- [Overview](#overview)
+- [List all your tags](#list-all-your-tags)
+    - [Parameters](#parameters)
+    - [Response](#response)
+- [Get a specific tag](#get-a-specific-tag)
+- [Create a tag](#create-a-tag)
+    - [Input](#input)
+    - [Example](#example)
+    - [Response](#response-1)
+- [Update a tag](#update-a-tag)
+    - [Input](#input-1)
+    - [Example](#example-1)
+    - [Response](#response-2)
+- [Delete a tag](#delete-a-tag)
+    - [Response](#response-3)
+- [Associate a tag to a contact](#associate-a-tag-to-a-contact)
+    - [Parameters](#parameters-1)
+    - [Example](#example-2)
+    - [Response](#response-4)
+- [Remove a specific tag from a contact](#remove-a-specific-tag-from-a-contact)
+    - [Parameters](#parameters-2)
+    - [Example](#example-3)
+    - [Response](#response-5)
+- [Remove all the tags from a contact](#remove-all-the-tags-from-a-contact)
+    - [Response](#response-6)
 
-<!-- /MarkdownTOC -->
+<!-- /TOC -->
 
 <a name="overview"></a>
+<a id="markdown-overview" name="overview"></a>
 ## Overview
 
 The Tag object allows to tag contacts. Think of tags as labels, or folders, with
 which you can group contacts who belong together.
 
 <a name="list-all-your-tags"></a>
+<a id="markdown-list-all-your-tags" name="list-all-your-tags"></a>
 ## List all your tags
 
 <span class="url">
   GET /tags/
 </span>
 
+<a id="markdown-parameters" name="parameters"></a>
 ### Parameters
 
 | Name | Type | Description |
@@ -36,6 +53,7 @@ which you can group contacts who belong together.
 | limit | integer | Indicates the page size. |
 | page | integer | Indicates the page to return. |
 
+<a id="markdown-response" name="response"></a>
 ### Response
 
 <pre><code class="json">{
@@ -114,6 +132,7 @@ which you can group contacts who belong together.
 }</code></pre>
 
 <a name="get-a-specific-tag"></a>
+<a id="markdown-get-a-specific-tag" name="get-a-specific-tag"></a>
 ## Get a specific tag
 
 <span class="url">
@@ -135,12 +154,14 @@ which you can group contacts who belong together.
 }</code></pre>
 
 <a name="create-a-tag"></a>
+<a id="markdown-create-a-tag" name="create-a-tag"></a>
 ## Create a tag
 
 <span class="url">
   POST /tags/
 </span>
 
+<a id="markdown-input" name="input"></a>
 ### Input
 
 If a field is not required, you can send the `null` value as the content of the field.
@@ -149,12 +170,14 @@ If a field is not required, you can send the `null` value as the content of the 
 | ---- | ----------- | ----------- |
 | name | string | <strong>Required</strong>. The name of the tag. Max 255 characters. |
 
+<a id="markdown-example" name="example"></a>
 ### Example
 
 <pre><code class="json">{
   "name":"friends"
 }</code></pre>
 
+<a id="markdown-response-1" name="response-1"></a>
 ### Response
 
 The API call returns a tag object if the call succeeds.
@@ -174,24 +197,28 @@ The API call returns a tag object if the call succeeds.
 }</code></pre>
 
 <a name="update-a-tag"></a>
+<a id="markdown-update-a-tag" name="update-a-tag"></a>
 ## Update a tag
 
 <span class="url">
   PUT /tags/:id
 </span>
 
+<a id="markdown-input-1" name="input-1"></a>
 ### Input
 
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
 | name | string | <strong>Required</strong>. The name of the tag. Max 255 characters. |
 
+<a id="markdown-example-1" name="example-1"></a>
 ### Example
 
 <pre><code class="json">{
   "name":"prison"
 }</code></pre>
 
+<a id="markdown-response-2" name="response-2"></a>
 ### Response
 
 <pre><code class="json">{
@@ -209,12 +236,14 @@ The API call returns a tag object if the call succeeds.
 }</code></pre>
 
 <a name="delete-a-tag"></a>
+<a id="markdown-delete-a-tag" name="delete-a-tag"></a>
 ## Delete a tag
 
 <span class="url">
   DELETE /tags/:id
 </span>
 
+<a id="markdown-response-3" name="response-3"></a>
 ### Response
 
 The response sends back the id that was just deleted.
@@ -226,6 +255,7 @@ The response sends back the id that was just deleted.
 
 
 <a name="associate-a-tag-to-a-contact"></a>
+<a id="markdown-associate-a-tag-to-a-contact" name="associate-a-tag-to-a-contact"></a>
 ## Associate a tag to a contact
 
 A tag is only useful if linked to a contact. To associate a tag to a contact, simply call the following method and give an array of tag name. The call automatically manages whether a tag with the given name already exists and will only create tags that do not exist yet.
@@ -244,18 +274,21 @@ Please note that calling this method will add the given tags to the contact with
   POST /contacts/:id/setTags
 </span>
 
+<a id="markdown-parameters-1" name="parameters-1"></a>
 ### Parameters
 
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
 | tags | array | <strong>Required</strong>. A list of tags, as string, separated by a comma. |
 
+<a id="markdown-example-2" name="example-2"></a>
 ### Example
 
 <pre><code class="json">{
   "tags": ["family", "friend"]
 }</code></pre>
 
+<a id="markdown-response-4" name="response-4"></a>
 ### Response
 
 The response sends back a standard Contact object.
@@ -494,6 +527,7 @@ The response sends back a standard Contact object.
 
 
 <a name="remove-a-specific-tag-from-a-contact"></a>
+<a id="markdown-remove-a-specific-tag-from-a-contact" name="remove-a-specific-tag-from-a-contact"></a>
 ## Remove a specific tag from a contact
 
 The call lets you remove one or multiple tags from a contact. The difference with the tag creation method is the fact that this call accepts a list of ids of the tags, not a list of tag names. This is because when you create a tag, you don't want to deal with creating a tag first, then take the id and pass it to the creation method call. However, when you remove a tag, you know the id of the tag you want to remove.
@@ -504,18 +538,21 @@ The call does not delete the actual tag. It only removes the association.
   POST /contacts/:id/unsetTag
 </span>
 
+<a id="markdown-parameters-2" name="parameters-2"></a>
 ### Parameters
 
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
 | tags | array | <strong>Required</strong>. A list of tag ids, as integer, separated by a comma. |
 
+<a id="markdown-example-3" name="example-3"></a>
 ### Example
 
 <pre><code class="json">{
   "tags": [1]
 }</code></pre>
 
+<a id="markdown-response-5" name="response-5"></a>
 ### Response
 
 The response sends back a standard Contact object.
@@ -743,6 +780,7 @@ The response sends back a standard Contact object.
 
 
 <a name="remove-all-the-tags-from-a-contact"></a>
+<a id="markdown-remove-all-the-tags-from-a-contact" name="remove-all-the-tags-from-a-contact"></a>
 ## Remove all the tags from a contact
 
 If you need to remove all the tags associated with a contact, you can use this method. Note that the call does not delete the tags, it only removes the association.
@@ -751,6 +789,7 @@ If you need to remove all the tags associated with a contact, you can use this m
   POST /contacts/:id/unsetTags
 </span>
 
+<a id="markdown-response-6" name="response-6"></a>
 ### Response
 
 The response sends back a standard Contact object.

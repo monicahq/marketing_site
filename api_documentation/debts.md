@@ -1,19 +1,27 @@
 # Debts
 
-<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
-<!-- Simply install the plugin, then press Save, and it does it magic -->
-<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+<!-- TOC -->
 
-* [Overview](#overview)
-* [List all your debts](#list-all-your-debts)
-* [Get a specific debt](#get-a-specific-debt)
-* [Create a debt](#create-a-debt)
-* [Update a debt](#update-a-debt)
-* [Delete a debt](#delete-a-debt)
+- [Overview](#overview)
+- [List all your debts](#list-all-your-debts)
+    - [Parameters](#parameters)
+    - [Response](#response)
+- [Get a specific debt](#get-a-specific-debt)
+- [Create a debt](#create-a-debt)
+    - [Input](#input)
+    - [Example](#example)
+    - [Response](#response-1)
+- [Update a debt](#update-a-debt)
+    - [Input](#input-1)
+    - [Example](#example-1)
+    - [Response](#response-2)
+- [Delete a debt](#delete-a-debt)
+    - [Response](#response-3)
 
-<!-- /MarkdownTOC -->
+<!-- /TOC -->
 
 <a name="overview"></a>
+<a id="markdown-overview" name="overview"></a>
 ## Overview
 
 The Debt object allows to record that you own to contacts, or what your contacts
@@ -25,12 +33,14 @@ If the user owns money to the contact, the `in_debt` will be `yes`. If the
 contact owns money to the user, `in_debt` will be `no`.
 
 <a name="list-all-your-debts"></a>
+<a id="markdown-list-all-your-debts" name="list-all-your-debts"></a>
 ## List all your debts
 
 <span class="url">
   GET /debts/
 </span>
 
+<a id="markdown-parameters" name="parameters"></a>
 ### Parameters
 
 | Name | Type | Description |
@@ -38,6 +48,7 @@ contact owns money to the user, `in_debt` will be `no`.
 | limit | integer | Indicates the page size. |
 | page | integer | Indicates the page to return. |
 
+<a id="markdown-response" name="response"></a>
 ### Response
 
 <pre><code class="json">{
@@ -160,6 +171,7 @@ contact owns money to the user, `in_debt` will be `no`.
 }</code></pre>
 
 <a name="get-a-specific-debt"></a>
+<a id="markdown-get-a-specific-debt" name="get-a-specific-debt"></a>
 ## Get a specific debt
 
 <span class="url">
@@ -203,12 +215,14 @@ contact owns money to the user, `in_debt` will be `no`.
 }</code></pre>
 
 <a name="create-a-debt"></a>
+<a id="markdown-create-a-debt" name="create-a-debt"></a>
 ## Create a debt
 
 <span class="url">
   POST /debts/
 </span>
 
+<a id="markdown-input" name="input"></a>
 ### Input
 
 If a field is not required, you can send the `null` value as the content of the field.
@@ -221,6 +235,7 @@ If a field is not required, you can send the `null` value as the content of the 
 | amount | integer | <strong>Required</strong>. The amount of money owned. |
 | reason | string | The reason the debt exists. Max 10000000 characters. |
 
+<a id="markdown-example" name="example"></a>
 ### Example
 
 <pre><code class="json">{
@@ -231,6 +246,7 @@ If a field is not required, you can send the `null` value as the content of the 
   "contact_id": 1
 }</code></pre>
 
+<a id="markdown-response-1" name="response-1"></a>
 ### Response
 
 The API call returns a debt object if the call succeeds.
@@ -272,12 +288,14 @@ The API call returns a debt object if the call succeeds.
 }</code></pre>
 
 <a name="update-a-debt"></a>
+<a id="markdown-update-a-debt" name="update-a-debt"></a>
 ## Update a debt
 
 <span class="url">
   PUT /debts/:id
 </span>
 
+<a id="markdown-input-1" name="input-1"></a>
 ### Input
 
 | Name | Type | Description |
@@ -288,6 +306,7 @@ The API call returns a debt object if the call succeeds.
 | amount | integer | <strong>Required</strong>. The amount of money owned. |
 | reason | string | The reason the debt exists. Max 10000000 characters. |
 
+<a id="markdown-example-1" name="example-1"></a>
 ### Example
 
 <pre><code class="json">{
@@ -298,6 +317,7 @@ The API call returns a debt object if the call succeeds.
   "contact_id": 1
 }</code></pre>
 
+<a id="markdown-response-2" name="response-2"></a>
 ### Response
 
 <pre><code class="json">{
@@ -337,12 +357,14 @@ The API call returns a debt object if the call succeeds.
 }</code></pre>
 
 <a name="delete-a-debt"></a>
+<a id="markdown-delete-a-debt" name="delete-a-debt"></a>
 ## Delete a debt
 
 <span class="url">
   DELETE /debts/:id
 </span>
 
+<a id="markdown-response-3" name="response-3"></a>
 ### Response
 
 The response sends back the id that was just deleted.

@@ -1,20 +1,30 @@
 # Gifts
 
-<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
-<!-- Simply install the plugin, then press Save, and it does it magic -->
-<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+<!-- TOC -->
 
-* [Overview](#overview)
-* [List all the gifts in your account](#list-all-the-gifts-in-your-account)
-* [List all the gifts of a specific contact](#list-all-the-gifts-of-a-specific-contact)
-* [Get a specific gift](#get-a-specific-gift)
-* [Create a gift](#create-a-gift)
-* [Update a gift](#update-a-gift)
-* [Delete a gift](#delete-a-gift)
+- [Overview](#overview)
+- [List all the gifts in your account](#list-all-the-gifts-in-your-account)
+    - [Parameters](#parameters)
+    - [Response](#response)
+- [List all the gifts of a specific contact](#list-all-the-gifts-of-a-specific-contact)
+    - [Response](#response-1)
+- [Get a specific gift](#get-a-specific-gift)
+    - [Response](#response-2)
+- [Create a gift](#create-a-gift)
+    - [Input](#input)
+    - [Example](#example)
+    - [Response](#response-3)
+- [Update a gift](#update-a-gift)
+    - [Input](#input-1)
+    - [Example](#example-1)
+    - [Response](#response-4)
+- [Delete a gift](#delete-a-gift)
+    - [Response](#response-5)
 
-<!-- /MarkdownTOC -->
+<!-- /TOC -->
 
 <a name="overview"></a>
+<a id="markdown-overview" name="overview"></a>
 ## Overview
 
 The Gift object allows to record gifts you have offered, or wish to offer to
@@ -28,12 +38,14 @@ When retrieving a gift, we always also return some basic information about the
 related contact.
 
 <a name="list-all-the-gifts-in-your-account"></a>
+<a id="markdown-list-all-the-gifts-in-your-account" name="list-all-the-gifts-in-your-account"></a>
 ## List all the gifts in your account
 
 <span class="url">
   GET /gifts/
 </span>
 
+<a id="markdown-parameters" name="parameters"></a>
 ### Parameters
 
 | Name | Type | Description |
@@ -41,6 +53,7 @@ related contact.
 | limit | integer | Indicates the page size. |
 | page | integer | Indicates the page to return. |
 
+<a id="markdown-response" name="response"></a>
 ### Response
 
 <pre><code class="json">{
@@ -194,12 +207,14 @@ related contact.
 }</code></pre>
 
 <a name="list-all-the-gifts-of-a-specific-contact"></a>
+<a id="markdown-list-all-the-gifts-of-a-specific-contact" name="list-all-the-gifts-of-a-specific-contact"></a>
 ## List all the gifts of a specific contact
 
 <span class="url">
   GET /contacts/:id/gifts
 </span>
 
+<a id="markdown-response-1" name="response-1"></a>
 ### Response
 
 <pre><code class="json">{
@@ -316,12 +331,14 @@ related contact.
 }</code></pre>
 
 <a name="get-a-specific-gift"></a>
+<a id="markdown-get-a-specific-gift" name="get-a-specific-gift"></a>
 ## Get a specific gift
 
 <span class="url">
   GET /gifts/:id
 </span>
 
+<a id="markdown-response-2" name="response-2"></a>
 ### Response
 
 <pre><code class="json">{
@@ -365,12 +382,14 @@ related contact.
 }</code></pre>
 
 <a name="create-a-gift"></a>
+<a id="markdown-create-a-gift" name="create-a-gift"></a>
 ## Create a gift
 
 <span class="url">
   POST /gifts/
 </span>
 
+<a id="markdown-input" name="input"></a>
 ### Input
 
 | Name | Type | Description |
@@ -385,6 +404,7 @@ related contact.
 | has_been_offered | boolean | Indicates whether the gift has been offered or not. Value: 0 (false) or 1 (true). |
 | date_offered | string | The date the gift has been offered. Can be in the past or future - the latter being dumb, but well. Format: YYYY-MM-DD. |
 
+<a id="markdown-example" name="example"></a>
 ### Example
 
 <pre><code class="json">{
@@ -399,6 +419,7 @@ related contact.
   "contact_id": 3
 }</code></pre>
 
+<a id="markdown-response-3" name="response-3"></a>
 ### Response
 
 The API gift returns a gift object if the gift succeeds.
@@ -467,12 +488,14 @@ The API gift returns a gift object if the gift succeeds.
 }</code></pre>
 
 <a name="update-a-gift"></a>
+<a id="markdown-update-a-gift" name="update-a-gift"></a>
 ## Update a gift
 
 <span class="url">
   PUT /gifts/:id
 </span>
 
+<a id="markdown-input-1" name="input-1"></a>
 ### Input
 
 | Name | Type | Description |
@@ -487,6 +510,7 @@ The API gift returns a gift object if the gift succeeds.
 | has_been_offered | boolean | Indicates whether the gift has been offered or not. Value: 0 (false) or 1 (true). |
 | date_offered | string | The date the gift has been offered. Can be in the past or future - the latter being dumb, but well. Format: YYYY-MM-DD. |
 
+<a id="markdown-example-1" name="example-1"></a>
 ### Example
 
 <pre><code class="json">{
@@ -501,6 +525,7 @@ The API gift returns a gift object if the gift succeeds.
   "contact_id": 3
 }</code></pre>
 
+<a id="markdown-response-4" name="response-4"></a>
 ### Response
 
 <pre><code class="json">{
@@ -548,12 +573,14 @@ The API gift returns a gift object if the gift succeeds.
 }</code></pre>
 
 <a name="delete-a-gift"></a>
+<a id="markdown-delete-a-gift" name="delete-a-gift"></a>
 ## Delete a gift
 
 <span class="url">
   DELETE /gifts/:id
 </span>
 
+<a id="markdown-response-5" name="response-5"></a>
 ### Response
 
 The response sends back the id that was just deleted.

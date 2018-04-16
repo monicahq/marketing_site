@@ -4,7 +4,7 @@ Relationships is all about what we are trying to achieve with Monica. We want th
 
 Monica has always let you link contacts together. However this was limited to parent->child relationships, or love relationships. This wasn't the most flexible system. Starting now, you can now link contacts with many different relationship types, like uncle/nephew, coworker, mentor/protege, etc... The complete list of the possible relationships is [defined here](https://www.monicahq.com/api/relationshiptypes#all-available-relationship-types).
 
-![image](/img/posts/2018-04-16-blog-post.png)
+![image](/img/posts/2018-04-16-relationships.png)
 
 We've also tried to respect genders when we can. For instance, if contacts are women, we'll say "aunt" instead of "uncle", and so on. This is a real challenge for contacts who have a custom gender though. We do not support this case yet, but we are working on finding a good solution to manage this specific case.
 

@@ -1,4 +1,4 @@
-Relationships is all about what we are trying to achieve with Monica. We want the tool to become the best tool that helps you have a life full with love and friendships. Today's release is a great step towards this vision.
+Relationships are all about what we are trying to achieve with Monica. We want it to become the best tool that helps you have a life full with love and friendships. Today's release is a great step towards this vision.
 
 ### Redesign of relationships
 

@@ -20,43 +20,37 @@
           <a class="no-underline" href="{{ secure_url('/api/overview') }}">Overview</a>
         </li>
         <li class="mb3">
-          <a class="no-underline" href="{{ secure_url('/api/contacts') }}">Contacts</a>
+          <a class="no-underline" href="{{ secure_url('/api/activities') }}">Activities</a>
         </li>
         <li class="mb3">
           <a class="no-underline" href="{{ secure_url('/api/addresses') }}">Addresses</a>
         </li>
         <li class="mb3">
-          <a class="no-underline" href="{{ secure_url('/api/contactfields') }}">Contact Fields</a>
-        </li>
-        <li class="mb3">
-          <a class="no-underline" href="{{ secure_url('/api/notes') }}">Notes</a>
-        </li>
-        <li class="mb3">
-          <a class="no-underline" href="{{ secure_url('/api/activities') }}">Activities</a>
-        </li>
-        <li class="mb3">
-          <a class="no-underline" href="{{ secure_url('/api/reminders') }}">Reminders</a>
-        </li>
-        <li class="mb3">
-          <a class="no-underline" href="{{ secure_url('/api/tasks') }}">Tasks</a>
-        </li>
-        <li class="mb3">
-          <a class="no-underline" href="{{ secure_url('/api/tags') }}">Tags</a>
-        </li>
-        <li class="mb3">
           <a class="no-underline" href="{{ secure_url('/api/calls') }}">Calls</a>
         </li>
         <li class="mb3">
-          <a class="no-underline" href="{{ secure_url('/api/gifts') }}">Gifts</a>
+          <a class="no-underline" href="{{ secure_url('/api/contacts') }}">Contacts</a>
+        </li>
+        <li class="mb3">
+          <a class="no-underline" href="{{ secure_url('/api/contactfields') }}">Contact Fields</a>
+        </li>
+        <li class="mb3">
+          <a class="no-underline" href="{{ secure_url('/api/contactfieldtypes') }}">Contact Field Types</a>
+        </li>
+        <li class="mb3">
+          <a class="no-underline" href="{{ secure_url('/api/countries') }}">Countries</a>
         </li>
         <li class="mb3">
           <a class="no-underline" href="{{ secure_url('/api/debts') }}">Debts</a>
         </li>
         <li class="mb3">
+          <a class="no-underline" href="{{ secure_url('/api/gifts') }}">Gifts</a>
+        </li>
+        <li class="mb3">
           <a class="no-underline" href="{{ secure_url('/api/journal') }}">Journal entries</a>
         </li>
         <li class="mb3">
-          <a class="no-underline" href="{{ secure_url('/api/contactfieldtypes') }}">Contact Field Types</a>
+          <a class="no-underline" href="{{ secure_url('/api/notes') }}">Notes</a>
         </li>
         <li class="mb3">
           <a class="no-underline" href="{{ secure_url('/api/relationshiptypes') }}">Relationship Types</a>
@@ -65,7 +59,13 @@
           <a class="no-underline" href="{{ secure_url('/api/relationshiptypegroups') }}">Relationship Type Groups</a>
         </li>
         <li class="mb3">
-          <a class="no-underline" href="{{ secure_url('/api/countries') }}">Countries</a>
+          <a class="no-underline" href="{{ secure_url('/api/reminders') }}">Reminders</a>
+        </li>
+        <li class="mb3">
+          <a class="no-underline" href="{{ secure_url('/api/tags') }}">Tags</a>
+        </li>
+        <li class="mb3">
+          <a class="no-underline" href="{{ secure_url('/api/tasks') }}">Tasks</a>
         </li>
         <li class="mb3">
           <a class="no-underline" href="{{ secure_url('/api/changelog') }}">API changelog</a>

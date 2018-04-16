@@ -6,7 +6,7 @@
   <div class="cf">
     <div class="fl w-100 tc mb2">
       <h1 class=" normal mb2">Our privacy policy</h1>
-      <p class="normal lh-copy measure center">Last update: April 12, 2018 </p>
+      <p class="normal lh-copy measure center">Last update: April 12, 2018</p>
     </div>
   </div>
 </div>

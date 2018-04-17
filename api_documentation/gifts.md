@@ -422,7 +422,7 @@ related contact.
 <a id="markdown-response-3" name="response-3"></a>
 ### Response
 
-The API gift returns a gift object if the gift succeeds.
+The API returns a gift object if the gift succeeds.
 
 <pre><code class="json">{
   "data": {

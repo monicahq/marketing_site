@@ -2,6 +2,10 @@
 
 The changelog is a list of changes and sometimes backwards-incompatible updates in the API.
 
+### Apr 16, 2018
+
+* Add relationships API documentation.
+
 ### Apr 15, 2018
 
 * Add relationship types and relationship type groups API documentation.

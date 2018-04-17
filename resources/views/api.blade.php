@@ -53,6 +53,9 @@
           <a class="no-underline" href="{{ secure_url('/api/notes') }}">Notes</a>
         </li>
         <li class="mb3">
+          <a class="no-underline" href="{{ secure_url('/api/relationships') }}">Relationships</a>
+        </li>
+        <li class="mb3">
           <a class="no-underline" href="{{ secure_url('/api/relationshiptypes') }}">Relationship Types</a>
         </li>
         <li class="mb3">

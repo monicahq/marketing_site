@@ -110,6 +110,7 @@ Sending an invalid JSON during a POST or a PUT will result in a error.
 | 38 | Date should be in the future. | When setting up a reminder, the date should be in the future. |
 | 39 | The sorting criteria is invalid. | Sorting query only allows a few criterion. |
 | 40 | Invalid query. | The query is invalid for obscure reasons. It might be an invalid method call, an invalid sorting criteria, or something else. This should not happen often. |
+| 41 | Invalid parameters. | Parameters in the JSON request are invalid. |
 
 <a id="markdown-authentication" name="authentication"></a>
 ## Authentication

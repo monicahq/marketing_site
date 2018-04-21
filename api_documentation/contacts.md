@@ -219,6 +219,8 @@ Response:
         "timezone_type": 3,
         "timezone": "US\/Eastern"
       },
+      "stay_in_touch_frequency": 5,
+      "stay_in_touch_trigger_date": "2018-04-26T09:25:43Z",
       "information": {
         "family": {
           "kids": {
@@ -388,6 +390,8 @@ Response:
       "is_dead": false,
       "last_called": null,
       "last_activity_together": null,
+      "stay_in_touch_frequency": 5,
+      "stay_in_touch_trigger_date": "2018-04-26T09:25:43Z",
       "information": {
         "family": {
           "kids": {
@@ -526,6 +530,8 @@ You can sort this query. Accepted criteria are:
       "timezone_type": 3,
       "timezone": "US\/Eastern"
     },
+    "stay_in_touch_frequency": 5,
+    "stay_in_touch_trigger_date": "2018-04-26T09:25:43Z",
     "information": {
       "family": {
         "kids": {
@@ -816,6 +822,8 @@ The API call returns a contact object if the call succeeds.
     "is_dead": true,
     "last_called": null,
     "last_activity_together": null,
+    "stay_in_touch_frequency": 5,
+    "stay_in_touch_trigger_date": "2018-04-26T09:25:43Z",
     "information": {
       "family": {
         "kids": {
@@ -966,6 +974,8 @@ The API call returns a contact object if the call succeeds.
     "is_dead": true,
     "last_called": null,
     "last_activity_together": null,
+    "stay_in_touch_frequency": 5,
+    "stay_in_touch_trigger_date": "2018-04-26T09:25:43Z",
     "information": {
       "family": {
         "kids": {
@@ -1203,6 +1213,8 @@ This call returns a collection of contacts. Note that `body.meta.query` contains
             "is_dead": false,
             "last_called": null,
             "last_activity_together": null,
+            "stay_in_touch_frequency": 5,
+            "stay_in_touch_trigger_date": "2018-04-26T09:25:43Z",
             "information": {
                 "family": {
                     "kids": {

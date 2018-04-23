@@ -44,7 +44,7 @@ When retrieving a contact field, we always also return some basic information ab
     {
       "id": 1,
       "object": "contactfield",
-      "data": "jim@dundermifflin.com",
+      "content": "jim@dundermifflin.com",
       "contact_field_type": {
         "id": 1,
         "object": "contactfieldtype",
@@ -303,7 +303,7 @@ When retrieving a contact field, we always also return some basic information ab
 <pre><code class="json">{
   "id": 1,
   "object": "contactfield",
-  "data": "jim@dundermifflin.com",
+  "content": "jim@dundermifflin.com",
   "contact_field_type": {
     "id": 1,
     "object": "contactfieldtype",
@@ -381,7 +381,7 @@ The API call returns a Contact Field object if the call succeeds.
 <pre><code class="json">{
   "id": 62795,
   "object": "contactfield",
-  "data": "123456",
+  "content": "123456",
   "contact_field_type": {
     "id": 1,
     "object": "contactfieldtype",
@@ -457,7 +457,7 @@ The API call returns a Contact Field object if the call succeeds.
 <pre><code class="json">{
   "id": 62795,
   "object": "contactfield",
-  "data": "456778",
+  "content": "456778",
   "contact_field_type": {
     "id": 1,
     "object": "contactfieldtype",

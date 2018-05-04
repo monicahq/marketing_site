@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
+        <loc>https://www.monicahq.com</loc>
+    
+    
+        <lastmod>2018-05-04T03:00:48+00:00</lastmod>
+    
+        <changefreq>daily</changefreq>
+    
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://www.monicahq.com/</loc>
     
     
-        <lastmod>2018-01-23T03:49:59+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:47+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -14,7 +24,7 @@
         <loc>https://www.monicahq.com/api</loc>
     
     
-        <lastmod>2018-01-23T03:49:59+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:48+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -24,7 +34,7 @@
         <loc>https://www.monicahq.com/api/activities</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:49+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -34,7 +44,7 @@
         <loc>https://www.monicahq.com/api/addresses</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:49+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -44,7 +54,7 @@
         <loc>https://www.monicahq.com/api/calls</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:49+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -54,7 +64,7 @@
         <loc>https://www.monicahq.com/api/changelog</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -64,7 +74,7 @@
         <loc>https://www.monicahq.com/api/contactfields</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:49+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -74,7 +84,7 @@
         <loc>https://www.monicahq.com/api/contactfieldtypes</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:49+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -84,7 +94,7 @@
         <loc>https://www.monicahq.com/api/contacts</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:49+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -94,7 +104,7 @@
         <loc>https://www.monicahq.com/api/countries</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:49+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -104,7 +114,7 @@
         <loc>https://www.monicahq.com/api/debts</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:49+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -114,7 +124,7 @@
         <loc>https://www.monicahq.com/api/gifts</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -124,7 +134,7 @@
         <loc>https://www.monicahq.com/api/journal</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:49+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -134,7 +144,7 @@
         <loc>https://www.monicahq.com/api/notes</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:49+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -144,7 +154,37 @@
         <loc>https://www.monicahq.com/api/overview</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:49+00:00</lastmod>
+    
+        <changefreq>daily</changefreq>
+    
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.monicahq.com/api/relationships</loc>
+    
+    
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
+    
+        <changefreq>daily</changefreq>
+    
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.monicahq.com/api/relationshiptypegroups</loc>
+    
+    
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
+    
+        <changefreq>daily</changefreq>
+    
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.monicahq.com/api/relationshiptypes</loc>
+    
+    
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -154,7 +194,7 @@
         <loc>https://www.monicahq.com/api/reminders</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -164,7 +204,7 @@
         <loc>https://www.monicahq.com/api/tags</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -174,7 +214,7 @@
         <loc>https://www.monicahq.com/api/tasks</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -184,7 +224,7 @@
         <loc>https://www.monicahq.com/blog</loc>
     
     
-        <lastmod>2018-01-23T03:49:59+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:48+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -194,7 +234,7 @@
         <loc>https://www.monicahq.com/blog/2017-year-review</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -204,7 +244,7 @@
         <loc>https://www.monicahq.com/blog/50000-contacts</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -214,7 +254,7 @@
         <loc>https://www.monicahq.com/blog/birthdays-without-year</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -224,7 +264,7 @@
         <loc>https://www.monicahq.com/blog/category/growing</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -234,7 +274,7 @@
         <loc>https://www.monicahq.com/blog/category/new-feature</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -244,7 +284,7 @@
         <loc>https://www.monicahq.com/blog/category/new-feature?page=1</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:51+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -254,7 +294,17 @@
         <loc>https://www.monicahq.com/blog/category/new-feature?page=2</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
+    
+        <changefreq>daily</changefreq>
+    
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.monicahq.com/blog/custom-genders</loc>
+    
+    
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -264,7 +314,7 @@
         <loc>https://www.monicahq.com/blog/do-we-need-import</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:51+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -274,7 +324,7 @@
         <loc>https://www.monicahq.com/blog/dont-be-smarter-than-me</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -284,7 +334,7 @@
         <loc>https://www.monicahq.com/blog/inline-notes</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -294,7 +344,17 @@
         <loc>https://www.monicahq.com/blog/laravel</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:51+00:00</lastmod>
+    
+        <changefreq>daily</changefreq>
+    
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.monicahq.com/blog/mark-gift-offered</loc>
+    
+    
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -304,7 +364,7 @@
         <loc>https://www.monicahq.com/blog/monica-in-2018</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -314,7 +374,37 @@
         <loc>https://www.monicahq.com/blog/multi-user-support</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:51+00:00</lastmod>
+    
+        <changefreq>daily</changefreq>
+    
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.monicahq.com/blog/notifications</loc>
+    
+    
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
+    
+        <changefreq>daily</changefreq>
+    
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.monicahq.com/blog/our-first-award</loc>
+    
+    
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
+    
+        <changefreq>daily</changefreq>
+    
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.monicahq.com/blog/product-design</loc>
+    
+    
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -324,7 +414,37 @@
         <loc>https://www.monicahq.com/blog/status-september-2017</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
+    
+        <changefreq>daily</changefreq>
+    
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.monicahq.com/blog/stay-in-touch</loc>
+    
+    
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
+    
+        <changefreq>daily</changefreq>
+    
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.monicahq.com/blog/too-many-settings</loc>
+    
+    
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
+    
+        <changefreq>daily</changefreq>
+    
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.monicahq.com/blog/translations</loc>
+    
+    
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -334,7 +454,7 @@
         <loc>https://www.monicahq.com/blog/v0.2.0</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:51+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -344,7 +464,7 @@
         <loc>https://www.monicahq.com/blog/v0.3.0</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:51+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -354,7 +474,7 @@
         <loc>https://www.monicahq.com/blog/v0.4.0</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:51+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -364,7 +484,7 @@
         <loc>https://www.monicahq.com/blog/v0.5.0</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -374,7 +494,7 @@
         <loc>https://www.monicahq.com/blog/v0.6.3</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -384,7 +504,7 @@
         <loc>https://www.monicahq.com/blog/v1.0.0</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -394,7 +514,7 @@
         <loc>https://www.monicahq.com/blog/v1.1.0</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -404,7 +524,17 @@
         <loc>https://www.monicahq.com/blog/v1.2.0</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
+    
+        <changefreq>daily</changefreq>
+    
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.monicahq.com/blog/v2.0.0</loc>
+    
+    
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -414,7 +544,7 @@
         <loc>https://www.monicahq.com/blog/why-open-source</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:51+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -424,7 +554,7 @@
         <loc>https://www.monicahq.com/blog?page=1</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -434,7 +564,17 @@
         <loc>https://www.monicahq.com/blog?page=2</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
+    
+        <changefreq>daily</changefreq>
+    
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.monicahq.com/blog?page=3</loc>
+    
+    
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -444,7 +584,7 @@
         <loc>https://www.monicahq.com/cdn-cgi/l/email-protection</loc>
     
     
-        <lastmod>2018-01-23T03:50:00+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:50+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -454,7 +594,7 @@
         <loc>https://www.monicahq.com/changelog</loc>
     
     
-        <lastmod>2018-01-23T03:49:59+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:49+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -464,7 +604,7 @@
         <loc>https://www.monicahq.com/features</loc>
     
     
-        <lastmod>2018-01-23T03:49:59+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:48+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -474,7 +614,7 @@
         <loc>https://www.monicahq.com/features/dashboard</loc>
     
     
-        <lastmod>2018-01-23T03:49:59+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:48+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -484,7 +624,7 @@
         <loc>https://www.monicahq.com/features/journal</loc>
     
     
-        <lastmod>2018-01-23T03:49:59+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:48+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -494,7 +634,7 @@
         <loc>https://www.monicahq.com/pricing</loc>
     
     
-        <lastmod>2018-01-23T03:49:59+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:48+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -504,7 +644,7 @@
         <loc>https://www.monicahq.com/privacy</loc>
     
     
-        <lastmod>2018-01-23T03:49:59+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:49+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -514,7 +654,7 @@
         <loc>https://www.monicahq.com/team</loc>
     
     
-        <lastmod>2018-01-23T03:49:59+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:48+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -524,7 +664,7 @@
         <loc>https://www.monicahq.com/terms</loc>
     
     
-        <lastmod>2018-01-23T03:49:59+00:00</lastmod>
+        <lastmod>2018-05-04T03:00:49+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     

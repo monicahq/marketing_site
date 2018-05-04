@@ -1,18 +1,18 @@
-@extends('partials.skeleton', ['pageTitle' => 'Monica - personal relationship manager'])
+@extends('partials.skeleton', ['pageTitle' => 'Personal CRM done right - Monica'])
 
 @section('content')
 
 <div class="mw8 center ph3">
   <div class="cf">
     <div class="fl w-100 tc mb5">
-      <h1 class="f2 normal lh-copy">Personal Relationship Management done right.</h1>
+      <h1 class="f2 normal lh-copy">Open source personal CRM.</h1>
       <h2 class="normal lh-copy">Monica helps you organize the social interactions with your loved ones.</h2>
-      <p class="lh-copy">It's like a personal CRM. Organize. Follow-up. <span class="sketch-underline">Strengthen your relationships</span>.</p>
+      <p class="lh-copy">Organize. Follow-up. <span class="sketch-underline">Strengthen your relationships</span>.</p>
     </div>
 
     <div class="fl w-100 tc mb5">
       <a href="https://app.monicahq.com/register" class="primary-button br3 pv3 ph4 mb2 dib fw5">Signup for free</a>
-      <p class="f6">No obligations. No credit card required.</p>
+      <p class="f6">No credit card required. Or <a href="https://github.com/monicahq/monica/wiki/Installation-instructions">install it</a> on your own server.</p>
     </div>
   </div>
 </div>
@@ -420,7 +420,7 @@
   </div>
   <div class="cf">
     <div class="fl w-100 mb6-ns mb2">
-      <h2 class="f2 normal tc-ns">Monica powers people who want to be better</h2>
+      <h2 class="f2 normal tc-ns">Monica empowers people who want to be better</h2>
       <p class="measure lh-copy center-ns">Monica is for people who have jobs, a family, and are busy trying to find a good work/life balance. So busy, that they don’t have time anymore to remember to call a friend, say happy birthday to a nephew, or remember to invite someone special for dinner next week. The older we get, the more life gets in the way. It’s sad, but it’s the reality.</p>
       <p class="measure lh-copy center">I created Monica to help these people.</p>
       <p class="measure lh-copy center">Monica is not a social network. It will never be. It's a private place for your eyes only, that you own, without any ads or malicious software that will read your data, where you can safely document what you know about who you love. And if you want another level of security, you can always <a href="https://github.com/monicahq/monica#get-started">install Monica</a> on a server that you own, for free.</p>

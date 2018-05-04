@@ -1,4 +1,4 @@
-@extends('partials.skeleton', ['pageTitle' => 'Monica changelog'])
+@extends('partials.skeleton', ['pageTitle' => 'Personal CRM - Monica changelog'])
 
 @section('content')
 

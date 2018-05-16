@@ -2,6 +2,10 @@
 
 The changelog is a list of changes and sometimes backwards-incompatible updates in the API.
 
+### May 16, 2018
+
+* Add Compliance API documentation.
+
 ### Apr 21, 2018
 
 * Add stay in touch information in a Contact.

@@ -1,25 +1,5 @@
 # Compliance
 
-<!-- TOC -->
-
-- [Overview](#overview)
-- [List all the contact fields of a specific contact](#list-all-the-contact-fields-of-a-specific-contact)
-    - [Response](#response)
-- [Get a specific contact field](#get-a-specific-contact-field)
-    - [Response](#response-1)
-- [Create a contact field](#create-a-contact-field)
-    - [Input](#input)
-    - [Example](#example)
-    - [Response](#response-2)
-- [Update a contact field](#update-a-contact-field)
-    - [Input](#input-1)
-    - [Example](#example-1)
-    - [Response](#response-3)
-- [Delete a contact field](#delete-a-contact-field)
-    - [Response](#response-4)
-
-<!-- /TOC -->
-
 ## Overview
 
 Compliance is about terms of use and privacy policies.
@@ -28,7 +8,7 @@ Monica, like any other software, needs to be compliant with the laws. In that re
 
 Per instance, we keep track of who have accepted the terms, when they've done it and from which IP address, as required by the law.
 
-## List all the contact fields of a specific contact
+## List all the terms and privacy policies ever used in Monica
 
 <span class="url">
   GET /compliance
@@ -58,233 +38,94 @@ Per instance, we keep track of who have accepted the terms, when they've done it
       "created_at": "2018-04-12T00:00:00Z",
       "updated_at": null
     }
-  ]
+  ],
+  "links": {
+    "first": "http:\/\/monica.test\/api\/compliance?page=1",
+    "last": "http:\/\/monica.test\/api\/compliance?page=1",
+    "prev": null,
+    "next": null
+  },
+  "meta": {
+    "current_page": 1,
+    "from": 1,
+    "last_page": 1,
+    "path": "http:\/\/monica.test\/api\/compliance",
+    "per_page": 15,
+    "to": 2,
+    "total": 2
+  }
 }</code></pre>
 
-## Get a specific contact field
+## Get a specific term and privacy policy
 
 <span class="url">
-  GET /contacts/:id
+  GET /compliance/:id
 </span>
 
-<a id="markdown-response-1" name="response-1"></a>
 ### Response
 
 <pre><code class="json">{
-  "id": 1,
-  "object": "contactfield",
-  "data": "jim@dundermifflin.com",
-  "contact_field_type": {
-    "id": 1,
-    "object": "contactfieldtype",
-    "name": "Email",
-    "fontawesome_icon": "fa fa-envelope-open-o",
-    "protocol": "mailto:",
-    "delible": false,
-    "type": "email",
-    "account": {
-      "id": 1
+  "data": {
+    "id": 3,
+    "object": "term",
+    "term_version": "3",
+    "term_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor.",
+    "privacy_version": "3",
+    "privacy_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor.",
+    "created_at": "2018-05-18T00:00:00Z",
+    "updated_at": null
+  }
+}</code></pre>
+
+## Get the status of all policies for a given user
+
+
+
+## Get the status of a specific policy for a given user
+
+You can check that a specific policy version has been accepted by the authenticated user.
+
+<span class="url">
+  GET /me/compliance/:id
+</span>
+
+### Response
+
+<pre><code class="json">{
+  "data": {
+    "signed": true,
+    "ip_address": "127.0.0.1",
+    "user": {
+      "id": 1,
+      "object": "user",
+      "first_name": "John",
+      "last_name": "Doe",
+      "email": "admin@admin.com",
+      "timezone": "US\/Eastern",
+      "currency": {
+        "id": 2,
+        "object": "currency",
+        "iso": "USD",
+        "name": "US Dollar",
+        "symbol": "$"
+      },
+      "locale": "en",
+      "is_policy_compliant": true,
+      "account": {
+        "id": 1
+      },
+      "created_at": "2018-05-14T22:21:09Z",
+      "updated_at": "2018-05-14T22:21:09Z"
     },
-    "created_at": "2017-11-24T11:19:18Z",
-    "updated_at": "2017-11-24T11:19:18Z"
-  },
-  "account": {
-    "id": 1
-  },
-  "contact": {
-    "id": 8,
-    "object": "contact",
-    "first_name": "Jim",
-    "last_name": "Halpert",
-    "gender": "male",
-    "is_partial": false,
-    "is_dead": false,
-    "deceased_date": null,
-    "information": {
-      "dates": [
-        {
-          "name": "birthdate",
-          "is_birthdate_approximate": "exact",
-          "birthdate": "1978-10-01T00:00:00Z"
-        }
-      ]
-    },
-    "account": {
-      "id": 1
+    "term": {
+      "id": 3,
+      "object": "term",
+      "term_version": "3",
+      "term_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor.",
+      "privacy_version": "3",
+      "privacy_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor.",
+      "created_at": "2018-05-18T00:00:00Z",
+      "updated_at": null
     }
-  },
-  "created_at": "2017-11-24T11:19:18Z",
-  "updated_at": null
-}</code></pre>
-
-<a name="create-a-contact-field"></a>
-<a id="markdown-create-a-contact-field" name="create-a-contact-field"></a>
-## Create a contact field
-
-<span class="url">
-  POST /contactfields/
-</span>
-
-<a id="markdown-input" name="input"></a>
-### Input
-
-| Name | Type | Description |
-| ---- | ----------- | ----------- |
-| data | string | <strong>Required</strong>. The actual content of the contact field. Max 255 characters. |
-| contact_field_type_id | integer | <strong>Required</strong>. The type of the contact field. Has to be a valid, existing contact field type ID. You can retrieve the list of all the contact field types of an account <a href="{{ "/api/countries" | prepend: site.baseurl | prepend: site.url }}">via the API</a>. |
-| contact_id | integer | <strong>Required</strong>. The ID of the contact that the content field is associated with. |
-
-<a id="markdown-example" name="example"></a>
-### Example
-
-<pre><code class="json">{
-  "contact_field_type_id": 1,
-  "data": "123456",
-  "contact_id": 8
-}</code></pre>
-
-<a id="markdown-response-2" name="response-2"></a>
-### Response
-
-The API call returns a Contact Field object if the call succeeds.
-
-<pre><code class="json">{
-  "id": 62795,
-  "object": "contactfield",
-  "data": "123456",
-  "contact_field_type": {
-    "id": 1,
-    "object": "contactfieldtype",
-    "name": "Email",
-    "fontawesome_icon": "fa fa-envelope-open-o",
-    "protocol": "mailto:",
-    "delible": false,
-    "type": "email",
-    "account": {
-      "id": 1
-    },
-    "created_at": "2017-11-24T11:19:18Z",
-    "updated_at": "2017-11-24T11:19:18Z"
-  },
-  "account": {
-    "id": 1
-  },
-  "contact": {
-    "id": 8,
-    "object": "contact",
-    "first_name": "Jim",
-    "last_name": "Halpert",
-    "gender": "male",
-    "is_partial": false,
-    "is_dead": false,
-    "deceased_date": null,
-    "information": {
-      "dates": [
-        {
-          "name": "birthdate",
-          "is_birthdate_approximate": "exact",
-          "birthdate": "1978-10-01T00:00:00Z"
-        }
-      ]
-    },
-    "account": {
-      "id": 1
-    }
-  },
-  "created_at": "2017-11-25T08:42:36Z",
-  "updated_at": "2017-11-25T08:42:36Z"
-}</code></pre>
-
-<a name="update-a-contact-field"></a>
-<a id="markdown-update-a-contact-field" name="update-a-contact-field"></a>
-## Update a contact field
-
-<span class="url">
-  PUT /contactfields/:id
-</span>
-
-<a id="markdown-input-1" name="input-1"></a>
-### Input
-
-| Name | Type | Description |
-| ---- | ----------- | ----------- |
-| data | string | <strong>Required</strong>. The actual content of the contact field. Max 255 characters. |
-| contact_field_type_id | integer | <strong>Required</strong>. The type of the contact field. Has to be a valid, existing contact field type ID. You can retrieve the list of all the contact field types of an account <a href="{{ "/api/countries" | prepend: site.baseurl | prepend: site.url }}">via the API</a>. |
-| contact_id | integer | <strong>Required</strong>. The ID of the contact that the content field is associated with. |
-
-<a id="markdown-example-1" name="example-1"></a>
-### Example
-
-<pre><code class="json">{
-  "contact_field_type_id": 1,
-  "data": "456778",
-  "contact_id": 8
-}</code></pre>
-
-<a id="markdown-response-3" name="response-3"></a>
-### Response
-
-<pre><code class="json">{
-  "id": 62795,
-  "object": "contactfield",
-  "data": "456778",
-  "contact_field_type": {
-    "id": 1,
-    "object": "contactfieldtype",
-    "name": "Email",
-    "fontawesome_icon": "fa fa-envelope-open-o",
-    "protocol": "mailto:",
-    "delible": false,
-    "type": "email",
-    "account": {
-      "id": 1
-    },
-    "created_at": "2017-11-24T11:19:18Z",
-    "updated_at": "2017-11-24T11:19:18Z"
-  },
-  "account": {
-    "id": 1
-  },
-  "contact": {
-    "id": 8,
-    "object": "contact",
-    "first_name": "Jim",
-    "last_name": "Halpert",
-    "gender": "male",
-    "is_partial": false,
-    "is_dead": false,
-    "deceased_date": null,
-    "information": {
-      "dates": [
-        {
-          "name": "birthdate",
-          "is_birthdate_approximate": "exact",
-          "birthdate": "1978-10-01T00:00:00Z"
-        }
-      ]
-    },
-    "account": {
-      "id": 1
-    }
-  },
-  "created_at": "2017-11-25T08:42:36Z",
-  "updated_at": "2017-11-25T08:43:47Z"
-}</code></pre>
-
-<a name="delete-a-contact-field"></a>
-<a id="markdown-delete-a-contact-field" name="delete-a-contact-field"></a>
-## Delete a contact field
-
-<span class="url">
-  DELETE /contactfields/:id
-</span>
-
-<a id="markdown-response-4" name="response-4"></a>
-### Response
-
-The response sends back the id that was just deleted.
-
-<pre><code class="json">{
-  "deleted": true,
-  "id": 31
+  }
 }</code></pre>

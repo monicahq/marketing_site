@@ -29,6 +29,9 @@
           <a class="no-underline" href="{{ secure_url('/api/calls') }}">Calls</a>
         </li>
         <li class="mb3">
+          <a class="no-underline" href="{{ secure_url('/api/compliance') }}">Compliance</a>
+        </li>
+        <li class="mb3">
           <a class="no-underline" href="{{ secure_url('/api/contacts') }}">Contacts</a>
         </li>
         <li class="mb3">
@@ -39,6 +42,9 @@
         </li>
         <li class="mb3">
           <a class="no-underline" href="{{ secure_url('/api/countries') }}">Countries</a>
+        </li>
+        <li class="mb3">
+          <a class="no-underline" href="{{ secure_url('/api/currencies') }}">Currencies</a>
         </li>
         <li class="mb3">
           <a class="no-underline" href="{{ secure_url('/api/debts') }}">Debts</a>
@@ -69,6 +75,9 @@
         </li>
         <li class="mb3">
           <a class="no-underline" href="{{ secure_url('/api/tasks') }}">Tasks</a>
+        </li>
+        <li class="mb3">
+          <a class="no-underline" href="{{ secure_url('/api/user') }}">User</a>
         </li>
         <li class="mb3">
           <a class="no-underline" href="{{ secure_url('/api/changelog') }}">API changelog</a>

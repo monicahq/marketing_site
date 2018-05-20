@@ -2,6 +2,10 @@
 
 The changelog is a list of changes and sometimes backwards-incompatible updates in the API.
 
+### May 20, 2018
+
+* Add User and Currency API documentation.
+
 ### May 16, 2018
 
 * Add Compliance API documentation.

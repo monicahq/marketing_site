@@ -1,15 +1,28 @@
 # Compliance
 
+<!-- TOC -->
+
+- [Overview](#overview)
+- [List all the currencies](#list-all-the-currencies)
+    - [Response](#response)
+- [Get a specific currency](#get-a-specific-currency)
+    - [Response](#response-1)
+
+<!-- /TOC -->
+
+<a id="markdown-overview" name="overview"></a>
 ## Overview
 
 This is the list of currencies we support.
 
+<a id="markdown-list-all-the-currencies" name="list-all-the-currencies"></a>
 ## List all the currencies
 
 <span class="url">
   GET /currencies
 </span>
 
+<a id="markdown-response" name="response"></a>
 ### Response
 
 <pre><code class="json">{
@@ -137,12 +150,14 @@ This is the list of currencies we support.
   }
 }</code></pre>
 
+<a id="markdown-get-a-specific-currency" name="get-a-specific-currency"></a>
 ## Get a specific currency
 
 <span class="url">
   GET /currencies/:id
 </span>
 
+<a id="markdown-response-1" name="response-1"></a>
 ### Response
 
 <pre><code class="json">{

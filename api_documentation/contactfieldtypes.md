@@ -1,19 +1,27 @@
 # Contact field types
 
-<!-- This uses the MarkdownTOC's Sublime Text plugin to autogenerate the TOC -->
-<!-- Simply install the plugin, then press Save, and it does it magic -->
-<!-- MarkdownTOC autolink="true" autoanchor="true" depth="1" bracket="round" list_bullets="*" -->
+<!-- TOC -->
 
-* [Overview](#overview)
-* [List all the contact field types in an account](#list-all-the-contact-field-types-in-an-account)
-* [Get a specific contact type field](#get-a-specific-contact-type-field)
-* [Create a contact field type](#create-a-contact-field-type)
-* [Update a contact field type](#update-a-contact-field-type)
-* [Delete a contact field type](#delete-a-contact-field-type)
+- [Overview](#overview)
+- [List all the contact field types in an account](#list-all-the-contact-field-types-in-an-account)
+    - [Response](#response)
+- [Get a specific contact type field](#get-a-specific-contact-type-field)
+    - [Response](#response-1)
+- [Create a contact field type](#create-a-contact-field-type)
+    - [Input](#input)
+    - [Example](#example)
+    - [Response](#response-2)
+- [Update a contact field type](#update-a-contact-field-type)
+    - [Input](#input-1)
+    - [Example](#example-1)
+    - [Response](#response-3)
+- [Delete a contact field type](#delete-a-contact-field-type)
+    - [Response](#response-4)
 
-<!-- /MarkdownTOC -->
+<!-- /TOC -->
 
 <a name="overview"></a>
+<a id="markdown-overview" name="overview"></a>
 ## Overview
 
 A contact can have as many <a href="/api/contactfields">contact fields</a>
@@ -44,12 +52,14 @@ the name of a contact field type can change, the `type` column is there to
 indicate the type of contact field.
 
 <a name="list-all-the-contact-field-types-in-an-account"></a>
+<a id="markdown-list-all-the-contact-field-types-in-an-account" name="list-all-the-contact-field-types-in-an-account"></a>
 ## List all the contact field types in an account
 
 <span class="url">
   GET /contactfieldtypes/
 </span>
 
+<a id="markdown-response" name="response"></a>
 ### Response
 
 <pre><code class="json">{
@@ -115,12 +125,14 @@ indicate the type of contact field.
 }</code></pre>
 
 <a name="get-a-specific-contact-type-field"></a>
+<a id="markdown-get-a-specific-contact-type-field" name="get-a-specific-contact-type-field"></a>
 ## Get a specific contact type field
 
 <span class="url">
   GET /contactfieldtypes/:id
 </span>
 
+<a id="markdown-response-1" name="response-1"></a>
 ### Response
 
 <pre><code class="json">{
@@ -141,12 +153,14 @@ indicate the type of contact field.
 }</code></pre>
 
 <a name="create-a-contact-field-type"></a>
+<a id="markdown-create-a-contact-field-type" name="create-a-contact-field-type"></a>
 ## Create a contact field type
 
 <span class="url">
   POST /contactfieldtypes/
 </span>
 
+<a id="markdown-input" name="input"></a>
 ### Input
 
 | Name | Type | Description |
@@ -157,6 +171,7 @@ indicate the type of contact field.
 | delible | integer | Indicates whether the contact field type can be deleted. Possible values: `0` (false), `1` (true). |
 | type | string | Used on special occasions so we can manipulate data in the backend. Most of the time it has be set to null. Max 255 characters. |
 
+<a id="markdown-example" name="example"></a>
 ### Example
 
 <pre><code class="json">{
@@ -167,6 +182,7 @@ indicate the type of contact field.
   "type": null
 }</code></pre>
 
+<a id="markdown-response-2" name="response-2"></a>
 ### Response
 
 The API call returns a contact field type object if the call succeeds.
@@ -189,12 +205,14 @@ The API call returns a contact field type object if the call succeeds.
 }</code></pre>
 
 <a name="update-a-contact-field-type"></a>
+<a id="markdown-update-a-contact-field-type" name="update-a-contact-field-type"></a>
 ## Update a contact field type
 
 <span class="url">
   PUT /contactfieldtypes/:id
 </span>
 
+<a id="markdown-input-1" name="input-1"></a>
 ### Input
 
 | Name | Type | Description |
@@ -205,6 +223,7 @@ The API call returns a contact field type object if the call succeeds.
 | delible | integer | Indicates whether the contact field type can be deleted. Possible values: `0` (false), `1` (true). |
 | type | string | Used on special occasions so we can manipulate data in the backend. Most of the time it has be set to null. Max 255 characters. |
 
+<a id="markdown-example-1" name="example-1"></a>
 ### Example
 
 <pre><code class="json">{
@@ -215,6 +234,7 @@ The API call returns a contact field type object if the call succeeds.
   "type": "telegram"
 }</code></pre>
 
+<a id="markdown-response-3" name="response-3"></a>
 ### Response
 
 <pre><code class="json">{
@@ -235,12 +255,14 @@ The API call returns a contact field type object if the call succeeds.
 }</code></pre>
 
 <a name="delete-a-contact-field-type"></a>
+<a id="markdown-delete-a-contact-field-type" name="delete-a-contact-field-type"></a>
 ## Delete a contact field type
 
 <span class="url">
   DELETE /contactfieldtypes/:id
 </span>
 
+<a id="markdown-response-4" name="response-4"></a>
 ### Response
 
 The response sends back the id that was just deleted.

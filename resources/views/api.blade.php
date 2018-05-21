@@ -77,7 +77,7 @@
           <a class="no-underline" href="{{ secure_url('/api/tasks') }}">Tasks</a>
         </li>
         <li class="mb3">
-          <a class="no-underline" href="{{ secure_url('/api/user') }}">User</a>
+          <a class="no-underline" href="{{ secure_url('/api/users') }}">User</a>
         </li>
         <li class="mb3">
           <a class="no-underline" href="{{ secure_url('/api/changelog') }}">API changelog</a>

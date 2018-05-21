@@ -1,4 +1,4 @@
-# Compliance
+# Currencies
 
 <!-- TOC -->
 

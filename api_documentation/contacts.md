@@ -210,6 +210,7 @@ Response:
       "object": "contact",
       "first_name": "Justen",
       "last_name": "Flatley",
+      "nickname": "Rambo",
       "gender": "male",
       "is_partial": false,
       "is_dead": false,
@@ -231,6 +232,7 @@ Response:
                 "object": "contact",
                 "first_name": "Oscar",
                 "last_name": "Tremblay",
+                "nickname": "Rambo",
                 "gender": "male",
                 "is_partial": true,
                 "information": {
@@ -249,6 +251,7 @@ Response:
                 "object": "contact",
                 "first_name": "Makayla",
                 "last_name": null,
+                "nickname": "Rambo",
                 "gender": "female",
                 "is_partial": false,
                 "information": {
@@ -267,6 +270,7 @@ Response:
                 "object": "contact",
                 "first_name": "Johnathon",
                 "last_name": "Stark",
+                "nickname": "Rambo",
                 "gender": "male",
                 "is_partial": true,
                 "information": {
@@ -285,6 +289,7 @@ Response:
                 "object": "contact",
                 "first_name": "Karianne",
                 "last_name": null,
+                "nickname": "Rambo",
                 "gender": "female",
                 "is_partial": true,
                 "information": {
@@ -342,6 +347,7 @@ Response:
             "object": "contact",
             "first_name": "Johnathon",
             "last_name": "Stark",
+            "nickname": "Rambo",
             "gender": "male",
             "is_partial": true,
             "is_dead": false,
@@ -385,6 +391,7 @@ Response:
       "object": "contact",
       "first_name": "Makayla",
       "last_name": null,
+      "nickname": "Rambo",
       "gender": "female",
       "is_partial": false,
       "is_dead": false,
@@ -410,6 +417,7 @@ Response:
                 "object": "contact",
                 "first_name": "Justen",
                 "last_name": "Flatley",
+                "nickname": "Rambo",
                 "gender": "male",
                 "information": {
                   "birthdate": {
@@ -521,6 +529,7 @@ You can sort this query. Accepted criteria are:
     "object": "contact",
     "first_name": "Justen",
     "last_name": "Flatley",
+    "nickname": "Rambo",
     "gender": "male",
     "is_partial": false,
     "is_dead": false,
@@ -542,6 +551,7 @@ You can sort this query. Accepted criteria are:
               "object": "contact",
               "first_name": "Oscar",
               "last_name": "Tremblay",
+              "nickname": "Rambo",
               "gender": "male",
               "is_partial": true,
               "information": {
@@ -560,6 +570,7 @@ You can sort this query. Accepted criteria are:
               "object": "contact",
               "first_name": "Makayla",
               "last_name": null,
+              "nickname": "Rambo",
               "gender": "female",
               "is_partial": false,
               "information": {
@@ -578,6 +589,7 @@ You can sort this query. Accepted criteria are:
               "object": "contact",
               "first_name": "Johnathon",
               "last_name": "Stark",
+              "nickname": "Rambo",
               "gender": "male",
               "is_partial": true,
               "information": {
@@ -596,6 +608,7 @@ You can sort this query. Accepted criteria are:
               "object": "contact",
               "first_name": "Karianne",
               "last_name": null,
+              "nickname": "Rambo",
               "gender": "female",
               "is_partial": true,
               "information": {
@@ -653,6 +666,7 @@ You can sort this query. Accepted criteria are:
           "object": "contact",
           "first_name": "Johnathon",
           "last_name": "Stark",
+          "nickname": "Rambo",
           "gender": "male",
           "is_partial": true,
           "is_dead": false,
@@ -708,6 +722,7 @@ Partial contacts are partners or children.
     "object": "contact",
     "first_name": "Casandra",
     "last_name": null,
+    "nickname": "Rambo",
     "gender": "female",
     "is_partial": true,
     "is_dead": false,
@@ -751,6 +766,7 @@ If a field is not required, you can send the `null` value as the content of the 
 | ---- | ----------- | ----------- |
 | first_name | string | <strong>Required</strong>. The first name of the contact. Max 50 characters. |
 | last_name | string | Last name of the contact. Max 100 characters. |
+| nickname | string | Nickname of the contact. Max 100 characters. |
 | gender | string | <strong>Required</strong>. The gender of the contact. Can be `male`, `female` or `unknown`. |
 | birthdate | string | The birthdate of the contact. Format: 'YYYY-MM-DD'. |
 | birthdate_is_age_based | boolean | <strong>Required</strong>. Indicates whether the birthdate is age based or not. |
@@ -780,6 +796,7 @@ If a field is not required, you can send the `null` value as the content of the 
 <pre><code class="json">{
   "first_name":"henri",
   "last_name":"troyat",
+  "nickname": "Rambo",
   "gender":"male",
   "birthdate": null,
   "birthdate_is_age_based": true,
@@ -817,6 +834,7 @@ The API call returns a contact object if the call succeeds.
     "object": "contact",
     "first_name": "henri",
     "last_name": "troyat",
+    "nickname": "Rambo",
     "gender": "male",
     "is_partial": false,
     "is_dead": true,
@@ -905,6 +923,7 @@ The API call returns a contact object if the call succeeds.
 | ---- | ----------- | ----------- |
 | first_name | string | <strong>Required</strong>. The first name of the contact. Max 50 characters. |
 | last_name | string | Last name of the contact. Max 100 characters. |
+| nickname | string | Nickname of the contact. Max 100 characters. |
 | gender | string | <strong>Required</strong>. The gender of the contact. Can be `male`, `female` or `unknown`. |
 | birthdate | string | The birthdate of the contact. Format: 'YYYY-MM-DD'. |
 | birthdate_is_age_based | boolean | <strong>Required</strong>. Indicates whether the birthdate is age based or not. |
@@ -934,6 +953,7 @@ The API call returns a contact object if the call succeeds.
 <pre><code class="json">{
   "first_name":"henri",
   "last_name":"troyat",
+  "nickname": "Rambo",
   "gender":"male",
   "birthdate": null,
   "birthdate_is_age_based": true,
@@ -969,6 +989,7 @@ The API call returns a contact object if the call succeeds.
     "object": "contact",
     "first_name": "henri",
     "last_name": "troyat",
+    "nickname": "Rambo",
     "gender": "male",
     "is_partial": false,
     "is_dead": true,
@@ -1208,6 +1229,7 @@ This call returns a collection of contacts. Note that `body.meta.query` contains
             "object": "contact",
             "first_name": "Collin",
             "last_name": "Moen",
+            "nickname": "Rambo",
             "gender": "Man",
             "is_partial": false,
             "is_dead": false,
@@ -1225,6 +1247,7 @@ This call returns a collection of contacts. Note that `body.meta.query` contains
                                 "object": "contact",
                                 "first_name": "Reilly",
                                 "last_name": "Lang",
+                                "nickname": "Rambo",
                                 "gender": "Rather not say",
                                 "is_partial": true,
                                 "information": {
@@ -1243,6 +1266,7 @@ This call returns a collection of contacts. Note that `body.meta.query` contains
                                 "object": "contact",
                                 "first_name": "Tate",
                                 "last_name": null,
+                                "nickname": "Rambo",
                                 "gender": "Woman",
                                 "is_partial": false,
                                 "information": {
@@ -1261,6 +1285,7 @@ This call returns a collection of contacts. Note that `body.meta.query` contains
                                 "object": "contact",
                                 "first_name": "Lori",
                                 "last_name": "Witting",
+                                "nickname": "Rambo",
                                 "gender": "Rather not say",
                                 "is_partial": true,
                                 "information": {
@@ -1279,6 +1304,7 @@ This call returns a collection of contacts. Note that `body.meta.query` contains
                                 "object": "contact",
                                 "first_name": "Pink",
                                 "last_name": null,
+                                "nickname": "Rambo",
                                 "gender": "Rather not say",
                                 "is_partial": false,
                                 "information": {
@@ -1297,6 +1323,7 @@ This call returns a collection of contacts. Note that `body.meta.query` contains
                                 "object": "contact",
                                 "first_name": "Colby",
                                 "last_name": null,
+                                "nickname": "Rambo",
                                 "gender": "Man",
                                 "is_partial": false,
                                 "information": {
@@ -1315,6 +1342,7 @@ This call returns a collection of contacts. Note that `body.meta.query` contains
                                 "object": "contact",
                                 "first_name": "Abbie",
                                 "last_name": "Dare",
+                                "nickname": "Rambo",
                                 "gender": "Woman",
                                 "is_partial": false,
                                 "information": {
@@ -1338,6 +1366,7 @@ This call returns a collection of contacts. Note that `body.meta.query` contains
                                 "object": "contact",
                                 "first_name": "Kristoffer",
                                 "last_name": null,
+                                "nickname": "Rambo",
                                 "gender": "Woman",
                                 "is_partial": true,
                                 "information": {
@@ -1356,6 +1385,7 @@ This call returns a collection of contacts. Note that `body.meta.query` contains
                                 "object": "contact",
                                 "first_name": "Anjali",
                                 "last_name": null,
+                                "nickname": "Rambo",
                                 "gender": "Man",
                                 "is_partial": true,
                                 "information": {
@@ -1374,6 +1404,7 @@ This call returns a collection of contacts. Note that `body.meta.query` contains
                                 "object": "contact",
                                 "first_name": "Edmund",
                                 "last_name": "Weissnat",
+                                "nickname": "Rambo",
                                 "gender": "Woman",
                                 "is_partial": true,
                                 "information": {

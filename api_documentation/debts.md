@@ -59,6 +59,7 @@ contact owns money to the user, `in_debt` will be `no`.
       "in_debt": "yes",
       "status": "inprogress",
       "amount": 100,
+      "amount_with_currency": "$100",
       "reason": "",
       "account": {
         "id": 1
@@ -92,6 +93,7 @@ contact owns money to the user, `in_debt` will be `no`.
       "in_debt": "no",
       "status": "inprogress",
       "amount": 123,
+      "amount_with_currency": "$123",
       "reason": "For the bar last time",
       "account": {
         "id": 1
@@ -125,6 +127,7 @@ contact owns money to the user, `in_debt` will be `no`.
       "in_debt": "yes",
       "status": "inprogress",
       "amount": 431,
+      "amount_with_currency": "$431",
       "reason": "For the coffee last time.",
       "account": {
         "id": 1
@@ -185,6 +188,7 @@ contact owns money to the user, `in_debt` will be `no`.
     "in_debt": "yes",
     "status": "inprogress",
     "amount": 431,
+    "amount_with_currency": "$431",
     "reason": "For the coffee last time.",
     "account": {
       "id": 1
@@ -258,6 +262,7 @@ The API call returns a debt object if the call succeeds.
     "in_debt": "yes",
     "status": "inprogress",
     "amount": 325,
+    "amount_with_currency": "$325",
     "reason": "He bought half the pizza",
     "account": {
       "id": 1
@@ -327,6 +332,7 @@ The API call returns a debt object if the call succeeds.
     "in_debt": "yes",
     "status": "inprogress",
     "amount": 23,
+    "amount_with_currency": "$23",
     "reason": "He bought half the pizza",
     "account": {
       "id": 1

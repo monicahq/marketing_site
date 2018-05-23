@@ -2,6 +2,10 @@
 
 The changelog is a list of changes and sometimes backwards-incompatible updates in the API.
 
+### May 22, 2018
+
+* Add `amount_with_currency` attribute in the Debt object
+
 ### May 20, 2018
 
 * Add User and Currency API documentation.

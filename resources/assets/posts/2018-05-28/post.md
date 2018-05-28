@@ -19,7 +19,6 @@ Apart from this, this mobile app has everything you come to expect from us:
 * [The code is open source](https://github.com/monicahq/chandler). You can read the code, submit issues, contribute to the code. Everything we do is open and transparent, and we believe that only collaboration can lead to the best product.
 * Open source means you can *build and run the mobile application without having to go through the official Apple and Google stores* - which is kind of amazing, in my opinion.
 * We don't display ads, we don't resell your data.
-* We don't have any tracking whatsoever in our code.
 * The app is free. No strings attached.
 
 ### How can you help?

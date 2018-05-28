@@ -16,7 +16,7 @@ Apart from this, this mobile app has everything you come to expect from us:
 
 * A simple and friendly user interface.
 * You can connect to our hosted version of Monica, or login to your own instance.
-* The code is open source. You can read the code, submit issues, contribute to the code. Everything we do is open and transparent, and we believe that only collaboration can lead to the best product.
+* [The code is open source](https://github.com/monicahq/chandler). You can read the code, submit issues, contribute to the code. Everything we do is open and transparent, and we believe that only collaboration can lead to the best product.
 * Open source means you can *build and run the mobile application without having to go through the official Apple and Google stores* - which is kind of amazing, in my opinion.
 * We don't display ads, we don't resell your data.
 * We don't have any tracking whatsoever in our code.
@@ -28,8 +28,10 @@ We need people who want to test the application and [tell us if there are bugs](
 
 ### What's next?
 
-In the coming days we'll improve the documentation on the official GitHub repository, in order to make it super easy for developers who want to help to join the project.
+In the coming days we'll improve the documentation on the [official GitHub repository](https://github.com/monicahq/chandler), in order to make it super easy for developers who want to help to join the project.
 
 In the coming months we'll add the possibility to modify your data within the mobile application. The end goal is that everything you can do on the web, you can do on mobile (with the exception of exporting your data, because how would you store a file on iOS for instance...). This is why we are now building features in the API first, then in the UI (both web and mobile).
 
 As a conclusion, I'd say that I'm very proud of what we've accomplished so far, and even prouder by the community who help us every single day. Your feedback and your help make Monica possible.
+
+Download the apps [on iOS](https://itunes.apple.com/ca/app/monica-personal-crm/id1339447754?mt=8) or [Android](https://play.google.com/store/apps/details?id=com.monicahq.app).

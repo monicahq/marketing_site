@@ -40,7 +40,7 @@
       <p class="measure lh-copy center-ns mb4">We do our best to make the most secure software. Monica is open source, and the source code is scrutinized by thousands of eyes. That being said, nothing is ever safe when it’s online. This is why we offer you the possibility to install Monica on your server, for free.</p>
 
       <h3 class="tc-ns measure center-ns">What is an open source project?</h3>
-      <p class="measure lh-copy center-ns mb6-ns">Monica is an open source project. That means the code is publicly available on GitHub, and everyone can inspect it, modify it or enhance it. That also means anyone can install Monica on a server she owns.</p>
+      <p class="measure lh-copy center-ns mb6-ns">Monica is an open source project. That means the code is publicly available on GitHub, and everyone can inspect it, modify it or enhance it. That also means anyone can install Monica on a server they own.</p>
     </div>
   </div>
 </div>

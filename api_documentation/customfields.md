@@ -1,10 +1,16 @@
 # Custom fields
 
+Custom fields let you capture your unique data by storing it in fields that make sense to you. By default, Monica lets you store a bunch of data about your contacts. You might however have unique, specific type of data you want to capture that we don't provide by default. This feature lets you deal with this use case.
+
+A CustomField (the object) depends on a lot of other concepts, that are all listed on this page.
+
 ## Overview
+
+## Definitio
 
 ## List all your custom fields
 
-<span class="url">
+<span class="url">k
   GET /customfields/
 </span>
 

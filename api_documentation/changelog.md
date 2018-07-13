@@ -2,6 +2,10 @@
 
 The changelog is a list of changes and sometimes backwards-incompatible updates in the API.
 
+### July 13, 2018
+
+* Add new Activity type and Activity type categories API documentation
+
 ### May 22, 2018
 
 * Add `amount_with_currency` attribute in the Debt object

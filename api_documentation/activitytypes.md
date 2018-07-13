@@ -1,5 +1,27 @@
 # Activities
 
+<!-- TOC -->
+
+- [Overview](#overview)
+- [List all the activity types in your account](#list-all-the-activity-types-in-your-account)
+    - [Parameters](#parameters)
+    - [Response](#response)
+- [Get a specific activity type](#get-a-specific-activity-type)
+    - [Response](#response-1)
+- [Create an activity type](#create-an-activity-type)
+    - [Input](#input)
+    - [Example](#example)
+    - [Response](#response-2)
+- [Update an activity type](#update-an-activity-type)
+    - [Input](#input-1)
+    - [Example](#example-1)
+    - [Response](#response-3)
+- [Delete an activity type](#delete-an-activity-type)
+    - [Response](#response-4)
+
+<!-- /TOC -->
+
+<a id="markdown-overview" name="overview"></a>
 ## Overview
 
 When adding an activity done with a contact, you can associate it with a type of activity. This is useful to categorize your activities done with your contacts.
@@ -8,12 +30,14 @@ An activity type also belongs to an activity type categories.
 
 By default, each account comes with a set of predefined activity types, like `Went to a restaurant` or `Went to the theater`.
 
+<a id="markdown-list-all-the-activity-types-in-your-account" name="list-all-the-activity-types-in-your-account"></a>
 ## List all the activity types in your account
 
 <span class="url">
   GET /activitytypes/
 </span>
 
+<a id="markdown-parameters" name="parameters"></a>
 ### Parameters
 
 | Name | Type | Description |
@@ -21,430 +45,341 @@ By default, each account comes with a set of predefined activity types, like `We
 | limit | integer | Indicates the page size. |
 | page | integer | Indicates the page to return. |
 
+<a id="markdown-response" name="response"></a>
 ### Response
 
 <pre><code class="json">{
-  "data": [
-    {
-      "id": 1,
-      "object": "activity",
-      "summary": "",
-      "description": "On a mangé avec papi et mamie au restaurant indien.",
-      "date_it_happened": "2016-10-04T07:59:14Z",
-      "activity_type": {
-        "id": 9,
-        "object": "activityType",
-        "type": "ate_restaurant",
-        "group": "food",
-        "location_type": "outside",
-        "created_at": "2017-01-17T17:06:34Z",
-        "updated_at": "2017-01-17T17:06:34Z"
-      },
-      "attendees": {
-        "total": 1,
-        "contacts": [
-          {
-            "id": 1,
-            "object": "contact",
-            "first_name": "Henri",
-            "last_name": "Troyat",
-            "gender": "female",
-            "is_partial": false,
-            "information": {
-              "dates": [
-                {
-                  "name": "birthdate",
-                  "is_birthdate_approximate": "exact",
-                  "birthdate": "1983-10-23T19:10:42Z"
-                }
-              ]
-            },
-            "account": {
-              "id": 1
-            }
-          }
-        ]
-      },
-      "account": {
-        "id": 1
-      },
-      "created_at": "2016-10-07T11:59:14Z",
-      "updated_at": "2017-05-03T01:42:28Z"
-    },
-    {
-      "id": 2,
-      "object": "activity",
-      "summary": "Lunch with Dwight",
-      "description": "We play handball and it was just awesome. He told me about a new girl he likes Cathy Simms, so he has to be careful.",
-      "date_it_happened": "2016-10-18T13:09:47Z",
-      "activity_type": {
-        "id": 4,
-        "object": "activityType",
-        "type": "did_sport_activities_together",
-        "group": "sport",
-        "location_type": "outside",
-        "created_at": "2017-01-17T17:06:34Z",
-        "updated_at": "2017-01-17T17:06:34Z"
-      },
-      "attendees": {
-        "total": 1,
-        "contacts": [
-          {
-            "id": 8,
-            "object": "contact",
-            "first_name": "Jim",
-            "last_name": "Halpert",
-            "gender": "male",
-            "is_partial": false,
-            "information": {
-              "dates": [
-                {
-                  "name": "birthdate",
-                  "is_birthdate_approximate": "exact",
-                  "birthdate": "1978-10-01T16:20:55Z"
-                }
-              ]
-            },
-            "account": {
-              "id": 1
-            }
-          }
-        ]
-      },
-      "account": {
-        "id": 1
-      },
-      "created_at": "2016-10-18T23:58:18Z",
-      "updated_at": "2017-06-07T13:09:47Z"
-    },
-    {
-      "id": 42,
-      "object": "activity",
-      "summary": "",
-      "description": null,
-      "date_it_happened": "2017-02-18T23:59:47Z",
-      "activity_type": {
-        "id": 4,
-        "object": "activityType",
-        "type": "did_sport_activities_together",
-        "group": "sport",
-        "location_type": "outside",
-        "created_at": "2017-01-17T17:06:34Z",
-        "updated_at": "2017-01-17T17:06:34Z"
-      },
-      "attendees": {
-        "total": 1,
-        "contacts": [
-          {
-            "id": 1,
-            "object": "contact",
-            "first_name": "Henri",
-            "last_name": "Troyat",
-            "gender": "female",
-            "is_partial": false,
-            "information": {
-              "dates": [
-                {
-                  "name": "birthdate",
-                  "is_birthdate_approximate": "exact",
-                  "birthdate": "1983-10-23T19:10:42Z"
-                }
-              ]
-            },
-            "account": {
-              "id": 1
-            }
-          }
-        ]
-      },
-      "account": {
-        "id": 1
-      },
-      "created_at": "2017-02-18T23:59:47Z",
-      "updated_at": "2017-02-18T23:59:47Z"
-    },
-    {
-      "id": 4667,
-      "object": "activity",
-      "summary": "Theater",
-      "description": "We had such an incredible time doing all this.",
-      "date_it_happened": "2017-10-25T00:00:00Z",
-      "activity_type": null,
-      "attendees": {
-        "total": 3,
-        "contacts": [
-          {
-            "id": 7,
-            "object": "contact",
-            "first_name": "Alexandre",
-            "last_name": "Trioi",
-            "gender": "male",
-            "is_partial": false,
-            "information": {
-              "dates": [
-                {
-                  "name": "birthdate",
-                  "is_birthdate_approximate": "unknown",
-                  "birthdate": null
-                }
-              ]
-            },
-            "account": {
-              "id": 1
-            }
-          },
-          {
-            "id": 1,
-            "object": "contact",
-            "first_name": "Henri",
-            "last_name": "Troyat",
-            "gender": "female",
-            "is_partial": false,
-            "information": {
-              "dates": [
-                {
-                  "name": "birthdate",
-                  "is_birthdate_approximate": "exact",
-                  "birthdate": "1983-10-23T19:10:42Z"
-                }
-              ]
-            },
-            "account": {
-              "id": 1
-            }
-          },
-          {
-            "id": 79120,
-            "object": "contact",
-            "first_name": "Cecelia Marie",
-            "last_name": null,
-            "gender": "female",
-            "is_partial": true,
-            "information": {
-              "dates": [
-                {
-                  "name": "birthdate",
-                  "is_birthdate_approximate": "approximate",
-                  "birthdate": "2013-01-01T23:55:58Z"
-                }
-              ]
-            },
-            "account": {
-              "id": 1
-            }
-          }
-        ]
-      },
-      "account": {
-        "id": 1
-      },
-      "created_at": "2017-10-25T11:12:20Z",
-      "updated_at": "2017-10-25T11:12:20Z"
-    },
-    {
-      "id": 4669,
-      "object": "activity",
-      "summary": "We ate at an awesome restaurant.",
-      "description": "We ate way too much, we had fun and we promised we'd see each other again in a couple of weeks.",
-      "date_it_happened": "2018-02-02T00:00:00Z",
-      "activity_type": {
-        "id": 2,
-        "object": "activityType",
-        "type": "watched_movie_at_home",
-        "group": "simple_activities",
-        "location_type": "my_place",
-        "created_at": "2017-01-17T17:06:34Z",
-        "updated_at": "2017-01-17T17:06:34Z"
-      },
-      "attendees": {
-        "total": 1,
-        "contacts": [
-          {
-            "id": 1,
-            "object": "contact",
-            "first_name": "Henri",
-            "last_name": "Troyat",
-            "gender": "female",
-            "is_partial": false,
-            "information": {
-              "dates": [
-                {
-                  "name": "birthdate",
-                  "is_birthdate_approximate": "exact",
-                  "birthdate": "1983-10-23T19:10:42Z"
-                }
-              ]
-            },
-            "account": {
-              "id": 1
-            }
-          }
-        ]
-      },
-      "account": {
-        "id": 1
-      },
-      "created_at": "2017-10-25T11:44:49Z",
-      "updated_at": "2017-10-25T11:44:49Z"
-    }
-  ],
-  "links": {
-    "first": "https:\/\/app.monicahq.com\/api\/activities?page=1",
-    "last": "https:\/\/app.monicahq.com\/api\/activities?page=1",
-    "prev": null,
-    "next": null
-  },
-  "meta": {
-    "current_page": 1,
-    "from": 1,
-    "last_page": 1,
-    "path": "https:\/\/app.monicahq.com\/api\/activities",
-    "per_page": 10,
-    "to": 5,
-    "total": 5
-  }
+	"data": [
+		{
+			"id": 1,
+			"object": "activityType",
+			"name": "společný čas",
+			"location_type": null,
+			"activity_type_category": {
+				"id": 1,
+				"object": "activityTypeCategory",
+				"name": "Simple activities",
+				"account": {
+					"id": 1
+				},
+				"created_at": null,
+				"updated_at": null
+			},
+			"account": {
+				"id": 1
+			},
+			"created_at": null,
+			"updated_at": null
+		},
+		{
+			"id": 2,
+			"object": "activityType",
+			"name": "sledování filmu doma",
+			"location_type": null,
+			"activity_type_category": {
+				"id": 1,
+				"object": "activityTypeCategory",
+				"name": "Simple activities",
+				"account": {
+					"id": 1
+				},
+				"created_at": null,
+				"updated_at": null
+			},
+			"account": {
+				"id": 1
+			},
+			"created_at": null,
+			"updated_at": null
+		},
+		{
+			"id": 3,
+			"object": "activityType",
+			"name": "promluvili jsme si doma",
+			"location_type": null,
+			"activity_type_category": {
+				"id": 1,
+				"object": "activityTypeCategory",
+				"name": "Simple activities",
+				"account": {
+					"id": 1
+				},
+				"created_at": null,
+				"updated_at": null
+			},
+			"account": {
+				"id": 1
+			},
+			"created_at": null,
+			"updated_at": null
+		},
+		{
+			"id": 4,
+			"object": "activityType",
+			"name": "společný sport",
+			"location_type": null,
+			"activity_type_category": {
+				"id": 2,
+				"object": "activityTypeCategory",
+				"name": "Sport",
+				"account": {
+					"id": 1
+				},
+				"created_at": null,
+				"updated_at": null
+			},
+			"account": {
+				"id": 1
+			},
+			"created_at": null,
+			"updated_at": null
+		},
+		{
+			"id": 5,
+			"object": "activityType",
+			"name": "ate at their place",
+			"location_type": null,
+			"activity_type_category": {
+				"id": 3,
+				"object": "activityTypeCategory",
+				"name": "Food",
+				"account": {
+					"id": 1
+				},
+				"created_at": null,
+				"updated_at": null
+			},
+			"account": {
+				"id": 1
+			},
+			"created_at": null,
+			"updated_at": null
+		},
+		{
+			"id": 6,
+			"object": "activityType",
+			"name": "návštěva baru",
+			"location_type": null,
+			"activity_type_category": {
+				"id": 3,
+				"object": "activityTypeCategory",
+				"name": "Food",
+				"account": {
+					"id": 1
+				},
+				"created_at": null,
+				"updated_at": null
+			},
+			"account": {
+				"id": 1
+			},
+			"created_at": null,
+			"updated_at": null
+		},
+		{
+			"id": 7,
+			"object": "activityType",
+			"name": "jídlo doma",
+			"location_type": null,
+			"activity_type_category": {
+				"id": 3,
+				"object": "activityTypeCategory",
+				"name": "Food",
+				"account": {
+					"id": 1
+				},
+				"created_at": null,
+				"updated_at": null
+			},
+			"account": {
+				"id": 1
+			},
+			"created_at": null,
+			"updated_at": null
+		},
+		{
+			"id": 8,
+			"object": "activityType",
+			"name": "piknik",
+			"location_type": null,
+			"activity_type_category": {
+				"id": 3,
+				"object": "activityTypeCategory",
+				"name": "Food",
+				"account": {
+					"id": 1
+				},
+				"created_at": null,
+				"updated_at": null
+			},
+			"account": {
+				"id": 1
+			},
+			"created_at": null,
+			"updated_at": null
+		},
+		{
+			"id": 9,
+			"object": "activityType",
+			"name": "jídlo v restauraci",
+			"location_type": null,
+			"activity_type_category": {
+				"id": 3,
+				"object": "activityTypeCategory",
+				"name": "Food",
+				"account": {
+					"id": 1
+				},
+				"created_at": null,
+				"updated_at": null
+			},
+			"account": {
+				"id": 1
+			},
+			"created_at": null,
+			"updated_at": null
+		},
+		{
+			"id": 10,
+			"object": "activityType",
+			"name": "návštěva divadla",
+			"location_type": null,
+			"activity_type_category": {
+				"id": 4,
+				"object": "activityTypeCategory",
+				"name": "Cultural activities",
+				"account": {
+					"id": 1
+				},
+				"created_at": null,
+				"updated_at": null
+			},
+			"account": {
+				"id": 1
+			},
+			"created_at": null,
+			"updated_at": null
+		},
+		{
+			"id": 11,
+			"object": "activityType",
+			"name": "návštěva koncertu",
+			"location_type": null,
+			"activity_type_category": {
+				"id": 4,
+				"object": "activityTypeCategory",
+				"name": "Cultural activities",
+				"account": {
+					"id": 1
+				},
+				"created_at": null,
+				"updated_at": null
+			},
+			"account": {
+				"id": 1
+			},
+			"created_at": null,
+			"updated_at": null
+		},
+		{
+			"id": 12,
+			"object": "activityType",
+			"name": "návštěva zápasu",
+			"location_type": null,
+			"activity_type_category": {
+				"id": 4,
+				"object": "activityTypeCategory",
+				"name": "Cultural activities",
+				"account": {
+					"id": 1
+				},
+				"created_at": null,
+				"updated_at": null
+			},
+			"account": {
+				"id": 1
+			},
+			"created_at": null,
+			"updated_at": null
+		},
+		{
+			"id": 13,
+			"object": "activityType",
+			"name": "návštěva muzea",
+			"location_type": null,
+			"activity_type_category": {
+				"id": 4,
+				"object": "activityTypeCategory",
+				"name": "Cultural activities",
+				"account": {
+					"id": 1
+				},
+				"created_at": null,
+				"updated_at": null
+			},
+			"account": {
+				"id": 1
+			},
+			"created_at": null,
+			"updated_at": null
+		}
+	],
+	"links": {
+		"first": "http:\/\/monica.test\/api\/activitytypes?page=1",
+		"last": "http:\/\/monica.test\/api\/activitytypes?page=1",
+		"prev": null,
+		"next": null
+	},
+	"meta": {
+		"current_page": 1,
+		"from": 1,
+		"last_page": 1,
+		"path": "http:\/\/monica.test\/api\/activitytypes",
+		"per_page": 15,
+		"to": 13,
+		"total": 13
+	}
 }</code></pre>
 
-<a id="markdown-list-all-the-activities-of-a-specific-contact" name="list-all-the-activities-of-a-specific-contact"></a>
-## List all the activities of a specific contact
+<a id="markdown-get-a-specific-activity-type" name="get-a-specific-activity-type"></a>
+## Get a specific activity type
 
 <span class="url">
-  GET /contacts/:id/activities
+  GET /activitytypes/:id
 </span>
 
 <a id="markdown-response-1" name="response-1"></a>
 ### Response
 
 <pre><code class="json">{
-  "data": [
-    {
-      "id": 2,
-      "object": "activity",
-      "summary": "Lunch with Dwight",
-      "description": "We play handball and it was just awesome. He told me about a new girl he likes Cathy Simms, so he has to be careful.",
-      "date_it_happened": "2016-10-18T13:09:47Z",
-      "activity_type": {
-        "id": 4,
-        "object": "activityType",
-        "type": "did_sport_activities_together",
-        "group": "sport",
-        "location_type": "outside",
-        "created_at": "2017-01-17T17:06:34Z",
-        "updated_at": "2017-01-17T17:06:34Z"
-      },
-      "attendees": {
-        "total": 1,
-        "contacts": [
-          {
-            "id": 8,
-            "object": "contact",
-            "first_name": "Jim",
-            "last_name": "Halpert",
-            "gender": "male",
-            "is_partial": false,
-            "information": {
-              "dates": [
-                {
-                  "name": "birthdate",
-                  "is_birthdate_approximate": "exact",
-                  "birthdate": "1978-10-01T16:20:55Z"
-                }
-              ]
-            },
-            "account": {
-              "id": 1
-            }
-          }
-        ]
-      },
-      "account": {
-        "id": 1
-      },
-      "created_at": "2016-10-18T23:58:18Z",
-      "updated_at": "2017-06-07T13:09:47Z"
-    }
-  ],
-  "links": {
-    "first": "https:\/\/app.monicahq.com\/api\/contacts\/8\/activities?page=1",
-    "last": "https:\/\/app.monicahq.com\/api\/contacts\/8\/activities?page=1",
-    "prev": null,
-    "next": null
-  },
-  "meta": {
-    "current_page": 1,
-    "from": 1,
-    "last_page": 1,
-    "path": "https:\/\/app.monicahq.com\/api\/contacts\/8\/activities",
-    "per_page": 10,
-    "to": 1,
-    "total": 1
-  }
+	"data": {
+		"id": 1,
+		"object": "activityType",
+		"name": "společný čas",
+		"location_type": null,
+		"activity_type_category": {
+			"id": 1,
+			"object": "activityTypeCategory",
+			"name": "Simple activities",
+			"account": {
+				"id": 1
+			},
+			"created_at": null,
+			"updated_at": null
+		},
+		"account": {
+			"id": 1
+		},
+		"created_at": null,
+		"updated_at": null
+	}
 }</code></pre>
 
-<a id="markdown-get-a-specific-activity" name="get-a-specific-activity"></a>
-## Get a specific activity
+<a id="markdown-create-an-activity-type" name="create-an-activity-type"></a>
+## Create an activity type
 
 <span class="url">
-  GET /activities/:id
-</span>
-
-<a id="markdown-response-2" name="response-2"></a>
-### Response
-
-<pre><code class="json">{
-  "data": {
-    "id": 2,
-    "object": "activity",
-    "summary": "Lunch with Dwight",
-    "description": "We play handball and it was just awesome. He told me about a new girl he likes Cathy Simms, so he has to be careful.",
-    "date_it_happened": "2016-10-18T13:09:47Z",
-    "activity_type": {
-      "id": 4,
-      "object": "activityType",
-      "type": "did_sport_activities_together",
-      "group": "sport",
-      "location_type": "outside",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    "attendees": {
-      "total": 1,
-      "contacts": [
-        {
-          "id": 8,
-          "object": "contact",
-          "first_name": "Jim",
-          "last_name": "Halpert",
-          "gender": "male",
-          "is_partial": false,
-          "information": {
-            "dates": [
-              {
-                "name": "birthdate",
-                "is_birthdate_approximate": "exact",
-                "birthdate": "1978-10-01T16:20:55Z"
-              }
-            ]
-          },
-          "account": {
-            "id": 1
-          }
-        }
-      ]
-    },
-    "account": {
-      "id": 1
-    },
-    "created_at": "2016-10-18T23:58:18Z",
-    "updated_at": "2017-06-07T13:09:47Z"
-  }
-}</code></pre>
-
-<a id="markdown-create-an-activity" name="create-an-activity"></a>
-## Create an activity
-
-<span class="url">
-  POST /activities/
+  POST /activitytypes/
 </span>
 
 <a id="markdown-input" name="input"></a>
@@ -452,122 +387,51 @@ By default, each account comes with a set of predefined activity types, like `We
 
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
-| summary | string | <strong>Required</strong>. A short description of the activity. Max 255 characters. |
-| description | string | An optional comment to add more details on what happened. Max 1000000 characters. |
-| date_it_happened | string | <strong>Required</strong>. The date the event happened. Can be in the past or future - the latter being dumb, but well. Format: YYYY-MM-DD. |
-| activity_type_id | integer | The ID of the type of activity that the activity is associated with. |
-| contacts | array | <strong>Required</strong>. The ID of the contact(s) that the call is associated with. |
+| name | string | <strong>Required</strong>. The name of the activity type. Max 255 characters. |
+| activity_type_category_id | integer | <strong>Required</strong>. The ID of the type of activity type category that the activity type is associated with. |
 
 <a id="markdown-example" name="example"></a>
 ### Example
 
 <pre><code class="json">{
-  "summary": "We ate at an awesome restaurant.",
-  "description": "We ate way too much, we had fun and we promised we'd see each other again in a couple of weeks.",
-  "date_it_happened": "2018-02-02",
-  "activity_type_id": 2,
-  "contacts": [1,3,5]
+	"name":"this is a name",
+	"activity_type_category_id":1
 }</code></pre>
 
-<a id="markdown-response-3" name="response-3"></a>
+<a id="markdown-response-2" name="response-2"></a>
 ### Response
 
-The API call returns an Activity object if the call succeeds.
+The API call returns an Activity type object if the call succeeds.
 
 <pre><code class="json">{
-  "data": {
-    "id": 4670,
-    "object": "activity",
-    "summary": "We ate at an awesome restaurant.",
-    "description": "We ate way too much, we had fun and we promised we'd see each other again in a couple of weeks.",
-    "date_it_happened": "2018-02-02T00:00:00Z",
-    "activity_type": {
-      "id": 2,
-      "object": "activityType",
-      "type": "watched_movie_at_home",
-      "group": "simple_activities",
-      "location_type": "my_place",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    "attendees": {
-      "total": 3,
-      "contacts": [
-        {
-          "id": 1,
-          "object": "contact",
-          "first_name": "Henri",
-          "last_name": "Troyat",
-          "gender": "female",
-          "is_partial": false,
-          "information": {
-            "dates": [
-              {
-                "name": "birthdate",
-                "is_birthdate_approximate": "exact",
-                "birthdate": "1983-10-23T19:10:42Z"
-              }
-            ]
-          },
-          "account": {
-            "id": 1
-          }
-        },
-        {
-          "id": 2,
-          "object": "contact",
-          "first_name": "Nicolas",
-          "last_name": "Loriu",
-          "gender": "male",
-          "is_partial": false,
-          "information": {
-            "dates": [
-              {
-                "name": "birthdate",
-                "is_birthdate_approximate": "unknown",
-                "birthdate": null
-              }
-            ]
-          },
-          "account": {
-            "id": 1
-          }
-        },
-        {
-          "id": 7,
-          "object": "contact",
-          "first_name": "Alexandre",
-          "last_name": "Loap",
-          "gender": "male",
-          "is_partial": false,
-          "information": {
-            "dates": [
-              {
-                "name": "birthdate",
-                "is_birthdate_approximate": "unknown",
-                "birthdate": null
-              }
-            ]
-          },
-          "account": {
-            "id": 1
-          }
-        }
-      ]
-    },
-    "account": {
-      "id": 1
-    },
-    "created_at": "2017-10-25T12:46:55Z",
-    "updated_at": "2017-10-25T12:46:55Z"
-  }
+	"data": {
+		"id": 27,
+		"object": "activityType",
+		"name": "this is a name",
+		"location_type": null,
+		"activity_type_category": {
+			"id": 1,
+			"object": "activityTypeCategory",
+			"name": "Simple activities",
+			"account": {
+				"id": 1
+			},
+			"created_at": null,
+			"updated_at": null
+		},
+		"account": {
+			"id": 1
+		},
+		"created_at": "2018-07-13T16:16:16Z",
+		"updated_at": "2018-07-13T16:16:16Z"
+	}
 }</code></pre>
 
-<a id="markdown-update-an-activity" name="update-an-activity"></a>
-## Update an activity
+<a id="markdown-update-an-activity-type" name="update-an-activity-type"></a>
+## Update an activity type
 
 <span class="url">
-  PUT /activities/:id
+  PUT /activitytypes/:id
 </span>
 
 <a id="markdown-input-1" name="input-1"></a>
@@ -575,103 +439,52 @@ The API call returns an Activity object if the call succeeds.
 
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
-| summary | string | <strong>Required</strong>. A short description of the activity. Max 255 characters. |
-| description | string | An optional comment to add more details on what happened. Max 1000000 characters. |
-| date_it_happened | string | <strong>Required</strong>. The date the event happened. Can be in the past or future - the latter being dumb, but well. Format: YYYY-MM-DD. |
-| activity_type_id | integer | The ID of the type of activity that the activity is associated with. |
-| contacts | array | <strong>Required</strong>. The ID of the contact(s) that the call is associated with. |
+| name | string | <strong>Required</strong>. The name of the activity type. Max 255 characters. |
+| activity_type_category_id | integer | <strong>Required</strong>. The ID of the type of activity type category that the activity type is associated with. |
 
 <a id="markdown-example-1" name="example-1"></a>
 ### Example
 
 <pre><code class="json">{
-  "summary": "We ate at an awesome restaurant.",
-  "description": "We ate way too much, we had fun and we promised we'd see each other again in a couple of weeks.",
-  "date_it_happened": "2018-02-02",
-  "activity_type_id": 2,
-  "contacts": [1,3]
+	"name":"For my friend Leslie Knope",
+	"activity_type_category_id":1
 }</code></pre>
 
-<a id="markdown-response-4" name="response-4"></a>
+<a id="markdown-response-3" name="response-3"></a>
 ### Response
 
 <pre><code class="json">{
-  "data": {
-    "id": 4670,
-    "object": "activity",
-    "summary": "We ate at an awesome restaurant.",
-    "description": "We ate way too much, we had fun and we promised we'd see each other again in a couple of weeks.",
-    "date_it_happened": "2018-02-02T00:00:00Z",
-    "activity_type": {
-      "id": 2,
-      "object": "activityType",
-      "type": "watched_movie_at_home",
-      "group": "simple_activities",
-      "location_type": "my_place",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    "attendees": {
-      "total": 2,
-      "contacts": [
-        {
-          "id": 1,
-          "object": "contact",
-          "first_name": "Henri",
-          "last_name": "Troyat",
-          "gender": "female",
-          "is_partial": false,
-          "information": {
-            "dates": [
-              {
-                "name": "birthdate",
-                "is_birthdate_approximate": "exact",
-                "birthdate": "1983-10-23T19:10:42Z"
-              }
-            ]
-          },
-          "account": {
-            "id": 1
-          }
-        },
-        {
-          "id": 3,
-          "object": "contact",
-          "first_name": "David",
-          "last_name": "Calir",
-          "gender": "male",
-          "is_partial": false,
-          "information": {
-            "dates": [
-              {
-                "name": "birthdate",
-                "is_birthdate_approximate": "unknown",
-                "birthdate": null
-              }
-            ]
-          },
-          "account": {
-            "id": 1
-          }
-        }
-      ]
-    },
-    "account": {
-      "id": 1
-    },
-    "created_at": "2017-10-25T12:46:55Z",
-    "updated_at": "2017-10-25T12:46:55Z"
-  }
+	"data": {
+		"id": 27,
+		"object": "activityType",
+		"name": "For my friend Leslie Knope",
+		"location_type": null,
+		"activity_type_category": {
+			"id": 1,
+			"object": "activityTypeCategory",
+			"name": "Simple activities",
+			"account": {
+				"id": 1
+			},
+			"created_at": null,
+			"updated_at": null
+		},
+		"account": {
+			"id": 1
+		},
+		"created_at": "2018-07-13T16:16:16Z",
+		"updated_at": "2018-07-13T16:16:57Z"
+	}
 }</code></pre>
 
-<a id="markdown-delete-an-activity" name="delete-an-activity"></a>
-## Delete an activity
+<a id="markdown-delete-an-activity-type" name="delete-an-activity-type"></a>
+## Delete an activity type
 
 <span class="url">
-  DELETE /activities/:id
+  DELETE /activitytypes/:id
 </span>
 
-<a id="markdown-response-5" name="response-5"></a>
+<a id="markdown-response-4" name="response-4"></a>
 ### Response
 
 The response sends back the id that was just deleted.
@@ -679,142 +492,4 @@ The response sends back the id that was just deleted.
 <pre><code class="json">{
   "deleted": true,
   "id": 31
-}</code></pre>
-
-<a id="markdown-list-of-all-activity-types" name="list-of-all-activity-types"></a>
-## List of all activity types
-
-An activity can optionally be associated with an activity type, like
-"restaurant" or "talked at home". At the moment, it's not possible to create
-custom activity types, but this feature will eventually be implemented. Activity
-types are a bit useless at the moment, but we'll use them to display to a user
-what kind of activities he's doing with his contacts.
-
-<span class="url">
-  GET /activitytypes
-</span>
-
-<a id="markdown-response-6" name="response-6"></a>
-### Response
-
-<pre><code class="json">{
-  "data": [
-    {
-      "id": 1,
-      "object": "activityType",
-      "type": "just_hung_out",
-      "group": "simple_activities",
-      "location_type": "outside",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    {
-      "id": 2,
-      "object": "activityType",
-      "type": "watched_movie_at_home",
-      "group": "simple_activities",
-      "location_type": "my_place",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    {
-      "id": 3,
-      "object": "activityType",
-      "type": "talked_at_home",
-      "group": "simple_activities",
-      "location_type": "my_place",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    {
-      "id": 4,
-      "object": "activityType",
-      "type": "did_sport_activities_together",
-      "group": "sport",
-      "location_type": "outside",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    {
-      "id": 5,
-      "object": "activityType",
-      "type": "ate_at_his_place",
-      "group": "food",
-      "location_type": "his_place",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    {
-      "id": 6,
-      "object": "activityType",
-      "type": "went_bar",
-      "group": "food",
-      "location_type": "outside",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    {
-      "id": 7,
-      "object": "activityType",
-      "type": "ate_at_home",
-      "group": "food",
-      "location_type": "my_place",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    {
-      "id": 8,
-      "object": "activityType",
-      "type": "picknicked",
-      "group": "food",
-      "location_type": "outside",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    {
-      "id": 9,
-      "object": "activityType",
-      "type": "ate_restaurant",
-      "group": "food",
-      "location_type": "outside",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    {
-      "id": 10,
-      "object": "activityType",
-      "type": "went_theater",
-      "group": "cultural_activities",
-      "location_type": "outside",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    {
-      "id": 11,
-      "object": "activityType",
-      "type": "went_concert",
-      "group": "cultural_activities",
-      "location_type": "outside",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    {
-      "id": 12,
-      "object": "activityType",
-      "type": "went_play",
-      "group": "cultural_activities",
-      "location_type": "outside",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    {
-      "id": 13,
-      "object": "activityType",
-      "type": "went_museum",
-      "group": "cultural_activities",
-      "location_type": "outside",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    }
-  ]
 }</code></pre>

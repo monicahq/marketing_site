@@ -20,8 +20,6 @@
     - [Response](#response-4)
 - [Delete an activity](#delete-an-activity)
     - [Response](#response-5)
-- [List of all activity types](#list-of-all-activity-types)
-    - [Response](#response-6)
 
 <!-- /TOC -->
 
@@ -62,14 +60,26 @@ the related contact(s).
       "description": "On a mangé avec papi et mamie au restaurant indien.",
       "date_it_happened": "2016-10-04T07:59:14Z",
       "activity_type": {
-        "id": 9,
-        "object": "activityType",
-        "type": "ate_restaurant",
-        "group": "food",
-        "location_type": "outside",
-        "created_at": "2017-01-17T17:06:34Z",
-        "updated_at": "2017-01-17T17:06:34Z"
-      },
+				"id": 12,
+				"object": "activityType",
+				"name": "návštěva zápasu",
+				"location_type": null,
+				"activity_type_category": {
+					"id": 4,
+					"object": "activityTypeCategory",
+					"name": "Cultural activities",
+					"account": {
+						"id": 1
+					},
+					"created_at": null,
+					"updated_at": null
+				},
+				"account": {
+					"id": 1
+				},
+				"created_at": null,
+				"updated_at": null
+			},
       "attendees": {
         "total": 1,
         "contacts": [
@@ -108,14 +118,26 @@ the related contact(s).
       "description": "We play handball and it was just awesome. He told me about a new girl he likes Cathy Simms, so he has to be careful.",
       "date_it_happened": "2016-10-18T13:09:47Z",
       "activity_type": {
-        "id": 4,
-        "object": "activityType",
-        "type": "did_sport_activities_together",
-        "group": "sport",
-        "location_type": "outside",
-        "created_at": "2017-01-17T17:06:34Z",
-        "updated_at": "2017-01-17T17:06:34Z"
-      },
+				"id": 12,
+				"object": "activityType",
+				"name": "návštěva zápasu",
+				"location_type": null,
+				"activity_type_category": {
+					"id": 4,
+					"object": "activityTypeCategory",
+					"name": "Cultural activities",
+					"account": {
+						"id": 1
+					},
+					"created_at": null,
+					"updated_at": null
+				},
+				"account": {
+					"id": 1
+				},
+				"created_at": null,
+				"updated_at": null
+			},
       "attendees": {
         "total": 1,
         "contacts": [
@@ -154,14 +176,26 @@ the related contact(s).
       "description": null,
       "date_it_happened": "2017-02-18T23:59:47Z",
       "activity_type": {
-        "id": 4,
-        "object": "activityType",
-        "type": "did_sport_activities_together",
-        "group": "sport",
-        "location_type": "outside",
-        "created_at": "2017-01-17T17:06:34Z",
-        "updated_at": "2017-01-17T17:06:34Z"
-      },
+				"id": 12,
+				"object": "activityType",
+				"name": "návštěva zápasu",
+				"location_type": null,
+				"activity_type_category": {
+					"id": 4,
+					"object": "activityTypeCategory",
+					"name": "Cultural activities",
+					"account": {
+						"id": 1
+					},
+					"created_at": null,
+					"updated_at": null
+				},
+				"account": {
+					"id": 1
+				},
+				"created_at": null,
+				"updated_at": null
+			},
       "attendees": {
         "total": 1,
         "contacts": [
@@ -278,14 +312,26 @@ the related contact(s).
       "description": "We ate way too much, we had fun and we promised we'd see each other again in a couple of weeks.",
       "date_it_happened": "2018-02-02T00:00:00Z",
       "activity_type": {
-        "id": 2,
-        "object": "activityType",
-        "type": "watched_movie_at_home",
-        "group": "simple_activities",
-        "location_type": "my_place",
-        "created_at": "2017-01-17T17:06:34Z",
-        "updated_at": "2017-01-17T17:06:34Z"
-      },
+				"id": 12,
+				"object": "activityType",
+				"name": "návštěva zápasu",
+				"location_type": null,
+				"activity_type_category": {
+					"id": 4,
+					"object": "activityTypeCategory",
+					"name": "Cultural activities",
+					"account": {
+						"id": 1
+					},
+					"created_at": null,
+					"updated_at": null
+				},
+				"account": {
+					"id": 1
+				},
+				"created_at": null,
+				"updated_at": null
+			},
       "attendees": {
         "total": 1,
         "contacts": [
@@ -354,14 +400,26 @@ the related contact(s).
       "description": "We play handball and it was just awesome. He told me about a new girl he likes Cathy Simms, so he has to be careful.",
       "date_it_happened": "2016-10-18T13:09:47Z",
       "activity_type": {
-        "id": 4,
-        "object": "activityType",
-        "type": "did_sport_activities_together",
-        "group": "sport",
-        "location_type": "outside",
-        "created_at": "2017-01-17T17:06:34Z",
-        "updated_at": "2017-01-17T17:06:34Z"
-      },
+				"id": 12,
+				"object": "activityType",
+				"name": "návštěva zápasu",
+				"location_type": null,
+				"activity_type_category": {
+					"id": 4,
+					"object": "activityTypeCategory",
+					"name": "Cultural activities",
+					"account": {
+						"id": 1
+					},
+					"created_at": null,
+					"updated_at": null
+				},
+				"account": {
+					"id": 1
+				},
+				"created_at": null,
+				"updated_at": null
+			},
       "attendees": {
         "total": 1,
         "contacts": [
@@ -429,14 +487,26 @@ the related contact(s).
     "description": "We play handball and it was just awesome. He told me about a new girl he likes Cathy Simms, so he has to be careful.",
     "date_it_happened": "2016-10-18T13:09:47Z",
     "activity_type": {
-      "id": 4,
-      "object": "activityType",
-      "type": "did_sport_activities_together",
-      "group": "sport",
-      "location_type": "outside",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
+				"id": 12,
+				"object": "activityType",
+				"name": "návštěva zápasu",
+				"location_type": null,
+				"activity_type_category": {
+					"id": 4,
+					"object": "activityTypeCategory",
+					"name": "Cultural activities",
+					"account": {
+						"id": 1
+					},
+					"created_at": null,
+					"updated_at": null
+				},
+				"account": {
+					"id": 1
+				},
+				"created_at": null,
+				"updated_at": null
+			},
     "attendees": {
       "total": 1,
       "contacts": [
@@ -512,14 +582,26 @@ The API call returns an Activity object if the call succeeds.
     "description": "We ate way too much, we had fun and we promised we'd see each other again in a couple of weeks.",
     "date_it_happened": "2018-02-02T00:00:00Z",
     "activity_type": {
-      "id": 2,
-      "object": "activityType",
-      "type": "watched_movie_at_home",
-      "group": "simple_activities",
-      "location_type": "my_place",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
+				"id": 12,
+				"object": "activityType",
+				"name": "návštěva zápasu",
+				"location_type": null,
+				"activity_type_category": {
+					"id": 4,
+					"object": "activityTypeCategory",
+					"name": "Cultural activities",
+					"account": {
+						"id": 1
+					},
+					"created_at": null,
+					"updated_at": null
+				},
+				"account": {
+					"id": 1
+				},
+				"created_at": null,
+				"updated_at": null
+			},
     "attendees": {
       "total": 3,
       "contacts": [
@@ -633,14 +715,26 @@ The API call returns an Activity object if the call succeeds.
     "description": "We ate way too much, we had fun and we promised we'd see each other again in a couple of weeks.",
     "date_it_happened": "2018-02-02T00:00:00Z",
     "activity_type": {
-      "id": 2,
-      "object": "activityType",
-      "type": "watched_movie_at_home",
-      "group": "simple_activities",
-      "location_type": "my_place",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
+				"id": 12,
+				"object": "activityType",
+				"name": "návštěva zápasu",
+				"location_type": null,
+				"activity_type_category": {
+					"id": 4,
+					"object": "activityTypeCategory",
+					"name": "Cultural activities",
+					"account": {
+						"id": 1
+					},
+					"created_at": null,
+					"updated_at": null
+				},
+				"account": {
+					"id": 1
+				},
+				"created_at": null,
+				"updated_at": null
+			},
     "attendees": {
       "total": 2,
       "contacts": [
@@ -709,142 +803,4 @@ The response sends back the id that was just deleted.
 <pre><code class="json">{
   "deleted": true,
   "id": 31
-}</code></pre>
-
-<a id="markdown-list-of-all-activity-types" name="list-of-all-activity-types"></a>
-## List of all activity types
-
-An activity can optionally be associated with an activity type, like
-"restaurant" or "talked at home". At the moment, it's not possible to create
-custom activity types, but this feature will eventually be implemented. Activity
-types are a bit useless at the moment, but we'll use them to display to a user
-what kind of activities he's doing with his contacts.
-
-<span class="url">
-  GET /activitytypes
-</span>
-
-<a id="markdown-response-6" name="response-6"></a>
-### Response
-
-<pre><code class="json">{
-  "data": [
-    {
-      "id": 1,
-      "object": "activityType",
-      "type": "just_hung_out",
-      "group": "simple_activities",
-      "location_type": "outside",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    {
-      "id": 2,
-      "object": "activityType",
-      "type": "watched_movie_at_home",
-      "group": "simple_activities",
-      "location_type": "my_place",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    {
-      "id": 3,
-      "object": "activityType",
-      "type": "talked_at_home",
-      "group": "simple_activities",
-      "location_type": "my_place",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    {
-      "id": 4,
-      "object": "activityType",
-      "type": "did_sport_activities_together",
-      "group": "sport",
-      "location_type": "outside",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    {
-      "id": 5,
-      "object": "activityType",
-      "type": "ate_at_his_place",
-      "group": "food",
-      "location_type": "his_place",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    {
-      "id": 6,
-      "object": "activityType",
-      "type": "went_bar",
-      "group": "food",
-      "location_type": "outside",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    {
-      "id": 7,
-      "object": "activityType",
-      "type": "ate_at_home",
-      "group": "food",
-      "location_type": "my_place",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    {
-      "id": 8,
-      "object": "activityType",
-      "type": "picknicked",
-      "group": "food",
-      "location_type": "outside",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    {
-      "id": 9,
-      "object": "activityType",
-      "type": "ate_restaurant",
-      "group": "food",
-      "location_type": "outside",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    {
-      "id": 10,
-      "object": "activityType",
-      "type": "went_theater",
-      "group": "cultural_activities",
-      "location_type": "outside",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    {
-      "id": 11,
-      "object": "activityType",
-      "type": "went_concert",
-      "group": "cultural_activities",
-      "location_type": "outside",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    {
-      "id": 12,
-      "object": "activityType",
-      "type": "went_play",
-      "group": "cultural_activities",
-      "location_type": "outside",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    },
-    {
-      "id": 13,
-      "object": "activityType",
-      "type": "went_museum",
-      "group": "cultural_activities",
-      "location_type": "outside",
-      "created_at": "2017-01-17T17:06:34Z",
-      "updated_at": "2017-01-17T17:06:34Z"
-    }
-  ]
 }</code></pre>

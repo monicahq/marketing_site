@@ -23,6 +23,12 @@
           <a class="no-underline" href="{{ secure_url('/api/activities') }}">Activities</a>
         </li>
         <li class="mb3">
+          <a class="no-underline" href="{{ secure_url('/api/activitytypes') }}">Activity types</a>
+        </li>
+        <li class="mb3">
+          <a class="no-underline" href="{{ secure_url('/api/activitytypecategories') }}">Activity type categories</a>
+        </li>
+        <li class="mb3">
           <a class="no-underline" href="{{ secure_url('/api/addresses') }}">Addresses</a>
         </li>
         <li class="mb3">

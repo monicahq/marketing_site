@@ -81,7 +81,7 @@ class ReleaseController extends Controller
         $textToWrite .= PHP_EOL;
 
         if (count($release->notes()->ofCategory('new')->get()) > 0) {
-            $textToWrite .= PHP_EOL.'### Added'.PHP_EOL.PHP_EOL;
+            $textToWrite .= PHP_EOL. '### ✳️ Added'.PHP_EOL.PHP_EOL;
         }
 
         foreach ($release->notes()->ofCategory('new')->get() as $note) {
@@ -89,7 +89,7 @@ class ReleaseController extends Controller
         }
 
         if (count($release->notes()->ofCategory('improvements')->get()) > 0) {
-            $textToWrite .= PHP_EOL.'### Changed'.PHP_EOL.PHP_EOL;
+            $textToWrite .= PHP_EOL. '### ✴️ Changed'.PHP_EOL.PHP_EOL;
         }
 
         foreach ($release->notes()->ofCategory('improvements')->get() as $note) {
@@ -97,7 +97,7 @@ class ReleaseController extends Controller
         }
 
         if (count($release->notes()->ofCategory('fixed')->get()) > 0) {
-            $textToWrite .= PHP_EOL.'### Fixed'.PHP_EOL.PHP_EOL;
+            $textToWrite .= PHP_EOL. '### ⚛ Fixed'.PHP_EOL.PHP_EOL;
         }
 
         foreach ($release->notes()->ofCategory('fixed')->get() as $note) {

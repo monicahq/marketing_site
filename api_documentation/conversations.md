@@ -336,6 +336,335 @@ A conversation is made of one or more messages. The Message object contains the 
     }
 }</code></pre>
 
+## List all the conversations of a contact
+
+<span class="url">
+  GET /contacts/:id/conversations
+</span>
+
+### Response
+
+<pre><code class="json">{
+    "data": [
+        {
+            "id": 1,
+            "object": "conversation",
+            "happened_at": "1977-06-09T02:00:51Z",
+            "messages": [
+                {
+                    "id": 1,
+                    "object": "message",
+                    "content": "The other side of the conversation. Alice replied, so eagerly that the Mouse to tell me who YOU are, first.' 'Why?' said the Hatter. He came in with the Queen merely remarking that a moment's pause.",
+                    "written_at": "1953-04-02T14:28:10Z",
+                    "written_by_me": true,
+                    "account": {
+                        "id": 1
+                    },
+                    "contact": {
+                        "id": 1,
+                        "object": "contact",
+                        "hash_id": "h:Y5LOkAdWNDqgVomKPv",
+                        "first_name": "Soledad",
+                        "last_name": null,
+                        "nickname": null,
+                        "complete_name": "Soledad",
+                        "initials": "S",
+                        "gender": "Rather not say",
+                        "is_partial": false,
+                        "is_dead": false,
+                        "information": {
+                            "birthdate": {
+                                "is_age_based": null,
+                                "is_year_unknown": null,
+                                "date": null
+                            },
+                            "deceased_date": {
+                                "is_age_based": null,
+                                "is_year_unknown": null,
+                                "date": null
+                            },
+                            "avatar": {
+                                "has_avatar": true,
+                                "avatar_url": "https:\/\/randomuser.me\/api\/portraits\/women\/37.jpg",
+                                "default_avatar_color": "#ff9807"
+                            }
+                        },
+                        "account": {
+                            "id": 1
+                        }
+                    },
+                    "conversation": {
+                        "id": 1
+                    },
+                    "created_at": "2018-10-11T01:31:40Z",
+                    "updated_at": "2018-10-11T01:31:40Z"
+                },
+                {
+                    "id": 2,
+                    "object": "message",
+                    "content": "I should think it would like the largest telescope that ever was! Good-bye, feet!' (for when she caught it, and very soon finished it off. * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *.",
+                    "written_at": "1944-07-10T23:50:30Z",
+                    "written_by_me": true,
+                    "account": {
+                        "id": 1
+                    },
+                    "contact": {
+                        "id": 1,
+                        "object": "contact",
+                        "hash_id": "h:Y5LOkAdWNDqgVomKPv",
+                        "first_name": "Soledad",
+                        "last_name": null,
+                        "nickname": null,
+                        "complete_name": "Soledad",
+                        "initials": "S",
+                        "gender": "Rather not say",
+                        "is_partial": false,
+                        "is_dead": false,
+                        "information": {
+                            "birthdate": {
+                                "is_age_based": null,
+                                "is_year_unknown": null,
+                                "date": null
+                            },
+                            "deceased_date": {
+                                "is_age_based": null,
+                                "is_year_unknown": null,
+                                "date": null
+                            },
+                            "avatar": {
+                                "has_avatar": true,
+                                "avatar_url": "https:\/\/randomuser.me\/api\/portraits\/women\/37.jpg",
+                                "default_avatar_color": "#ff9807"
+                            }
+                        },
+                        "account": {
+                            "id": 1
+                        }
+                    },
+                    "conversation": {
+                        "id": 1
+                    },
+                    "created_at": "2018-10-11T01:31:40Z",
+                    "updated_at": "2018-10-11T01:31:40Z"
+                },
+                {
+                    "id": 3,
+                    "object": "message",
+                    "content": "I used to come yet, please your Majesty,' said the Mouse was bristling all over, and both creatures hid their faces in their paws. 'And how many hours a day did you call him Tortoise--' 'Why did you.",
+                    "written_at": "1943-12-31T14:17:43Z",
+                    "written_by_me": false,
+                    "account": {
+                        "id": 1
+                    },
+                    "contact": {
+                        "id": 1,
+                        "object": "contact",
+                        "hash_id": "h:Y5LOkAdWNDqgVomKPv",
+                        "first_name": "Soledad",
+                        "last_name": null,
+                        "nickname": null,
+                        "complete_name": "Soledad",
+                        "initials": "S",
+                        "gender": "Rather not say",
+                        "is_partial": false,
+                        "is_dead": false,
+                        "information": {
+                            "birthdate": {
+                                "is_age_based": null,
+                                "is_year_unknown": null,
+                                "date": null
+                            },
+                            "deceased_date": {
+                                "is_age_based": null,
+                                "is_year_unknown": null,
+                                "date": null
+                            },
+                            "avatar": {
+                                "has_avatar": true,
+                                "avatar_url": "https:\/\/randomuser.me\/api\/portraits\/women\/37.jpg",
+                                "default_avatar_color": "#ff9807"
+                            }
+                        },
+                        "account": {
+                            "id": 1
+                        }
+                    },
+                    "conversation": {
+                        "id": 1
+                    },
+                    "created_at": "2018-10-11T01:31:40Z",
+                    "updated_at": "2018-10-11T01:31:40Z"
+                },
+                {
+                    "id": 4,
+                    "object": "message",
+                    "content": "I can't take more.' 'You mean you can't think! And oh, I wish you could keep it to the little creature down, and was delighted to find that she was coming to, but it had gone. 'Well! I've often seen.",
+                    "written_at": "1961-04-09T17:17:50Z",
+                    "written_by_me": true,
+                    "account": {
+                        "id": 1
+                    },
+                    "contact": {
+                        "id": 1,
+                        "object": "contact",
+                        "hash_id": "h:Y5LOkAdWNDqgVomKPv",
+                        "first_name": "Soledad",
+                        "last_name": null,
+                        "nickname": null,
+                        "complete_name": "Soledad",
+                        "initials": "S",
+                        "gender": "Rather not say",
+                        "is_partial": false,
+                        "is_dead": false,
+                        "information": {
+                            "birthdate": {
+                                "is_age_based": null,
+                                "is_year_unknown": null,
+                                "date": null
+                            },
+                            "deceased_date": {
+                                "is_age_based": null,
+                                "is_year_unknown": null,
+                                "date": null
+                            },
+                            "avatar": {
+                                "has_avatar": true,
+                                "avatar_url": "https:\/\/randomuser.me\/api\/portraits\/women\/37.jpg",
+                                "default_avatar_color": "#ff9807"
+                            }
+                        },
+                        "account": {
+                            "id": 1
+                        }
+                    },
+                    "conversation": {
+                        "id": 1
+                    },
+                    "created_at": "2018-10-11T01:31:40Z",
+                    "updated_at": "2018-10-11T01:31:40Z"
+                },
+                {
+                    "id": 5,
+                    "object": "message",
+                    "content": "I can kick a little!' She drew her foot as far down the little door into that beautiful garden--how IS that to be a queer thing, to be two people! Why, there's hardly enough of it altogether; but.",
+                    "written_at": "1949-11-29T10:56:18Z",
+                    "written_by_me": true,
+                    "account": {
+                        "id": 1
+                    },
+                    "contact": {
+                        "id": 1,
+                        "object": "contact",
+                        "hash_id": "h:Y5LOkAdWNDqgVomKPv",
+                        "first_name": "Soledad",
+                        "last_name": null,
+                        "nickname": null,
+                        "complete_name": "Soledad",
+                        "initials": "S",
+                        "gender": "Rather not say",
+                        "is_partial": false,
+                        "is_dead": false,
+                        "information": {
+                            "birthdate": {
+                                "is_age_based": null,
+                                "is_year_unknown": null,
+                                "date": null
+                            },
+                            "deceased_date": {
+                                "is_age_based": null,
+                                "is_year_unknown": null,
+                                "date": null
+                            },
+                            "avatar": {
+                                "has_avatar": true,
+                                "avatar_url": "https:\/\/randomuser.me\/api\/portraits\/women\/37.jpg",
+                                "default_avatar_color": "#ff9807"
+                            }
+                        },
+                        "account": {
+                            "id": 1
+                        }
+                    },
+                    "conversation": {
+                        "id": 1
+                    },
+                    "created_at": "2018-10-11T01:31:40Z",
+                    "updated_at": "2018-10-11T01:31:40Z"
+                }
+            ],
+            "contact_field_type": {
+                "id": 4,
+                "object": "contactfieldtype",
+                "name": "Twitter",
+                "fontawesome_icon": "fa fa-twitter-square",
+                "protocol": null,
+                "delible": true,
+                "type": null,
+                "account": {
+                    "id": 1
+                },
+                "created_at": "2018-10-11T01:31:37Z",
+                "updated_at": "2018-10-11T01:31:37Z"
+            },
+            "account": {
+                "id": 1
+            },
+            "contact": {
+                "id": 1,
+                "object": "contact",
+                "hash_id": "h:Y5LOkAdWNDqgVomKPv",
+                "first_name": "Soledad",
+                "last_name": null,
+                "nickname": null,
+                "complete_name": "Soledad",
+                "initials": "S",
+                "gender": "Rather not say",
+                "is_partial": false,
+                "is_dead": false,
+                "information": {
+                    "birthdate": {
+                        "is_age_based": null,
+                        "is_year_unknown": null,
+                        "date": null
+                    },
+                    "deceased_date": {
+                        "is_age_based": null,
+                        "is_year_unknown": null,
+                        "date": null
+                    },
+                    "avatar": {
+                        "has_avatar": true,
+                        "avatar_url": "https:\/\/randomuser.me\/api\/portraits\/women\/37.jpg",
+                        "default_avatar_color": "#ff9807"
+                    }
+                },
+                "account": {
+                    "id": 1
+                }
+            },
+            "created_at": "2018-10-11T01:31:40Z",
+            "updated_at": "2018-10-11T01:31:40Z"
+        }
+        ...
+    ],
+    "links": {
+        "first": "http:\/\/monica.test\/api\/conversations?page=1",
+        "last": "http:\/\/monica.test\/api\/conversations?page=22",
+        "prev": null,
+        "next": "http:\/\/monica.test\/api\/conversations?page=2"
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 22,
+        "path": "http:\/\/monica.test\/api\/conversations",
+        "per_page": 15,
+        "to": 15,
+        "total": 317
+    }
+}</code></pre>
+
+
 ## Get a specific conversation
 
 Retrieving a conversation contains all the messages of this conversation.
@@ -657,12 +986,10 @@ The response sends back the id that was just deleted.
 | written_by_me | boolean | <strong>Required</strong>. True if the user has written the message. False if the contact has written the message. |
 | content | text | <strong>Required</strong>. The actual message. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the conversation is associated with. |
-| account_id | integer | <strong>Required</strong>. The ID of the account that the conversation is associated with. |
 
 ### Example
 
 <pre><code class="json">{
-  "account_id": 1,
   "contact_id": 1,
   "written_at": "1998-02-02",
   "written_by_me": true,
@@ -797,12 +1124,10 @@ The API call returns a Conversation object if the call succeeds.
 | written_by_me | boolean | <strong>Required</strong>. True if the user has written the message. False if the contact has written the message. |
 | content | text | <strong>Required</strong>. The actual message. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the conversation is associated with. |
-| account_id | integer | <strong>Required</strong>. The ID of the account that the conversation is associated with. |
 
 ### Example
 
 <pre><code class="json">{
-  "account_id": 1,
   "contact_id": 1,
   "written_at": "1998-02-02",
   "written_by_me": true,

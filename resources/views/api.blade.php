@@ -47,6 +47,9 @@
           <a class="no-underline" href="{{ secure_url('/api/contactfieldtypes') }}">Contact Field Types</a>
         </li>
         <li class="mb3">
+          <a class="no-underline" href="{{ secure_url('/api/conversations') }}">Conversations</a>
+        </li>
+        <li class="mb3">
           <a class="no-underline" href="{{ secure_url('/api/countries') }}">Countries</a>
         </li>
         <li class="mb3">

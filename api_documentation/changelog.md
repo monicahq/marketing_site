@@ -2,6 +2,10 @@
 
 The changelog is a list of changes and sometimes backwards-incompatible updates in the API.
 
+### October 10, 2018
+
+* Add Conversation and Message API documentation
+
 ### July 13, 2018
 
 * Add new Activity type and Activity type categories API documentation

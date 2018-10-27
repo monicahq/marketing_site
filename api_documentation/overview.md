@@ -17,9 +17,6 @@
 
 <!-- /TOC -->
 
-Note: the API is in alpha mode at the moment. It's not considered to be production
-ready and we will stabilize it over the next months.
-
 This document describes how to use Monica's API. This document is heavily
 inspired by [GitHub's](https://developer.github.com/v3) and
 [Stripe's](https://stripe.com/docs/api) API. Please use the API in a nice way

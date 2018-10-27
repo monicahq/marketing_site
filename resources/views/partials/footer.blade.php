@@ -20,7 +20,6 @@
       <p class="fw5 mt0">Community</p>
       <ul class="pl0 list">
         <li class="mb2 f6"><a href="{{ secure_url('/changelog') }}" class="muted-link no-underline">Changelog</a></li>
-        <li class="mb2 f6"><a href="https://github.com/monicahq/monica/projects/1" class="muted-link no-underline">Roadmap</a></li>
         <li class="mb2 f6"><a href="https://github.com/monicahq/monica" class="muted-link no-underline">Source code on GitHub</a></li>
         <li class="mb2 f6"><a href="https://github.com/monicahq/monica/issues" class="muted-link no-underline">Issue tracker</a></li>
         <li class="mb2 f6"><a href="https://www.facebook.com/MonicaPersonalCRM/" class="muted-link no-underline">Facebook</a></li>

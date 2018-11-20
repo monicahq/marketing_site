@@ -2,6 +2,10 @@
 
 The changelog is a list of changes and sometimes backwards-incompatible updates in the API.
 
+### October 27, 2018
+
+* Add Documents API documentation
+
 ### October 10, 2018
 
 * Add Conversation and Message API documentation

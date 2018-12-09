@@ -1,27 +1,6 @@
 # Calls
 
-<!-- TOC -->
-
-- [Overview](#overview)
-- [List all the calls in your account](#list-all-the-calls-in-your-account)
-    - [Parameters](#parameters)
-    - [Response](#response)
-- [List all the calls of a specific contact](#list-all-the-calls-of-a-specific-contact)
-    - [Response](#response-1)
-- [Get a specific call](#get-a-specific-call)
-    - [Response](#response-2)
-- [Create a call](#create-a-call)
-    - [Input](#input)
-    - [Example](#example)
-    - [Response](#response-3)
-- [Update a call](#update-a-call)
-    - [Input](#input-1)
-    - [Example](#example-1)
-    - [Response](#response-4)
-- [Delete a call](#delete-a-call)
-    - [Response](#response-5)
-
-<!-- /TOC -->
+<!-- TOC -->autoauto- [Overview](#overview)auto- [List all the calls in your account](#list-all-the-calls-in-your-account)auto    - [Parameters](#parameters)auto    - [Response](#response)auto- [List all the calls of a specific contact](#list-all-the-calls-of-a-specific-contact)auto    - [Response](#response-1)auto- [Get a specific call](#get-a-specific-call)auto    - [Response](#response-2)auto- [Create a call](#create-a-call)auto    - [Input](#input)auto    - [Example](#example)auto    - [Response](#response-3)auto- [Update a call](#update-a-call)auto    - [Input](#input-1)auto    - [Example](#example-1)auto    - [Response](#response-4)auto- [Delete a call](#delete-a-call)auto    - [Response](#response-5)autoauto<!-- /TOC -->
 
 <a name="overview"></a>
 <a id="markdown-overview" name="overview"></a>
@@ -63,6 +42,7 @@ related contact.
       "object": "call",
       "called_at": "2017-10-07T21:17:45Z",
       "content": "He called, we had fun.",
+      "contact_called: true,
       "account": {
         "id": 5
       },
@@ -94,6 +74,7 @@ related contact.
       "object": "call",
       "called_at": "2017-10-07T22:29:21Z",
       "content": "He called, we had fun and really awesome.",
+      "contact_called: true,
       "account": {
         "id": 5
       },
@@ -125,6 +106,7 @@ related contact.
       "object": "call",
       "called_at": "2017-10-07T21:00:56Z",
       "content": "We talked about nice stuff\r\n* And especially about their wedding",
+      "contact_called: true,
       "account": {
         "id": 5
       },
@@ -156,6 +138,7 @@ related contact.
       "object": "call",
       "called_at": "2017-10-07T21:02:57Z",
       "content": "Just laughed super hard.",
+      "contact_called: true,
       "account": {
         "id": 5
       },
@@ -218,6 +201,7 @@ related contact.
       "object": "call",
       "called_at": "2017-10-07T21:17:45Z",
       "content": "He called, we had fun.",
+      "contact_called: true,
       "account": {
         "id": 5
       },
@@ -249,6 +233,7 @@ related contact.
       "object": "call",
       "called_at": "2017-10-07T21:00:56Z",
       "content": "We talked about nice stuff\r\n* And especially about their wedding",
+      "contact_called: true,
       "account": {
         "id": 5
       },
@@ -310,6 +295,7 @@ related contact.
     "object": "call",
     "called_at": "2017-10-07T21:00:56Z",
     "content": "We talked about nice stuff\r\n* And especially about their wedding",
+    "contact_called: true,
     "account": {
       "id": 5
     },
@@ -351,15 +337,17 @@ related contact.
 
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
-| content | string | <strong>Required</strong>. The description of the call. Max 100000 characters. |
+| content | string | The description of the call. Max 100000 characters. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the call is associated with. |
-| called_at | string | <strong>Required</strong>. The date the call happened. Can be in the past or future - the latter being dumb, but well. Format: YYYY-MM-DD. |
+| called_at | string | <strong>Required</strong>. The date the call happened. Can be in the past or future - the latter b
+| contact_called | boolean | `true` if the contact made the call, false otherwise. |
 
 <a id="markdown-example" name="example"></a>
 ### Example
 
 <pre><code class="json">{
   "content": "He called, we had fun.",
+  "contact_called: true,
   "contact_id": 3,
   "called_at": "2018-02-02"
 }</code></pre>
@@ -375,6 +363,7 @@ The API call returns a Call object if the call succeeds.
     "object": "call",
     "called_at": "2017-10-07T22:29:21Z",
     "content": "He called, we had fun.",
+    "contact_called: true,
     "account": {
       "id": 5
     },
@@ -419,12 +408,14 @@ The API call returns a Call object if the call succeeds.
 | content | string | <strong>Required</strong>. The description of the call. Max 100000 characters. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the call is associated with. |
 | called_at | string | <strong>Required</strong>. The date the called happened. Can be in the past or future - the latter being dumb, but well. Format: YYYY-MM-DD. |
+| contact_called | boolean | `true` if the contact made the call, false otherwise. |
 
 <a id="markdown-example-1" name="example-1"></a>
 ### Example
 
 <pre><code class="json">{
   "content": "He called, we had fun and really awesome.",
+  "contact_called": true,
   "contact_id": 3,
   "called_at": "2018-02-02"
 }</code></pre>
@@ -438,6 +429,7 @@ The API call returns a Call object if the call succeeds.
     "object": "call",
     "called_at": "2017-10-07T22:29:21Z",
     "content": "He called, we had fun and really awesome.",
+    "contact_called": true,
     "account": {
       "id": 5
     },

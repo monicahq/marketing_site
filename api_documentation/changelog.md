@@ -2,6 +2,10 @@
 
 The changelog is a list of changes and sometimes backwards-incompatible updates in the API.
 
+### December 08, 2018
+
+* Update Call API documentation with the new `contact_called` attribute
+
 ### October 27, 2018
 
 * Add Documents API documentation

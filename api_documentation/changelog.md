@@ -4,6 +4,7 @@ The changelog is a list of changes and sometimes backwards-incompatible updates 
 
 ### January 02, 2019
 
+* Remove LinkedIn url attribute form the Contact object
 * Add Occupations API documentation
 * Add Companies API documentation
 

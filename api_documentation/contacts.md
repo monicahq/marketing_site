@@ -775,7 +775,6 @@ If a field is not required, you can send the `null` value as the content of the 
 | job | string | The job title of the contact. Max 255 characters. |
 | company | string | The company which employs the contact. Max 255 characters. |
 | food_preferencies | string | The food preferencies of the contact. Max 100000 characters. |
-| linkedin_profile_url | string | The LinkedIn URL of the contact. Max 255 characters. |
 | first_met_information | string | The information (ie where and how) the user has met the contact. Max 1000000 characters. |
 | first_met_date | string | The date you first met the contact. Format: 'YYYY-MM-DD'. |
 | first_met_date_is_age_based | boolean | <strong>Required</strong>. Indicates whether the first_met_date is age based or not. |
@@ -807,7 +806,6 @@ If a field is not required, you can send the `null` value as the content of the 
   "job":"Animator",
   "company":"Star Wars",
   "food_preferencies":"Fish and fresh potatoes.",
-  "linkedin_profile_url":"https://linkedin.com/johndoe",
   "first_met_information":"we met a bar.",
   "first_met_date":"1981-02-02",
   "first_met_date_is_age_based": false,
@@ -932,7 +930,6 @@ The API call returns a contact object if the call succeeds.
 | job | string | The job title of the contact. Max 255 characters. |
 | company | string | The company which employs the contact. Max 255 characters. |
 | food_preferencies | string | The food preferencies of the contact. Max 100000 characters. |
-| linkedin_profile_url | string | The LinkedIn URL of the contact. Max 255 characters. |
 | first_met_information | string | The information (ie where and how) the user has met the contact. Max 1000000 characters. |
 | first_met_date | string | The date you first met the contact. Format: 'YYYY-MM-DD'. |
 | first_met_date_is_age_based | boolean | <strong>Required</strong>. Indicates whether the first_met_date is age based or not. |
@@ -964,7 +961,6 @@ The API call returns a contact object if the call succeeds.
   "job":"Animator",
   "company":"Star Wars",
   "food_preferencies":"Fish and fresh potatoes.",
-  "linkedin_profile_url":"https://linkedin.com/johndoe",
   "first_met_information":"we met a bar.",
   "first_met_date":"1981-02-02",
   "first_met_date_is_age_based": false,

@@ -2,6 +2,11 @@
 
 The changelog is a list of changes and sometimes backwards-incompatible updates in the API.
 
+### January 02, 2019
+
+* Add Occupations API documentation
+* Add Companies API documentation
+
 ### October 27, 2018
 
 * Add Documents API documentation

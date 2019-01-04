@@ -1,15 +1,30 @@
 # Documents
 
+<!-- TOC -->
+
+- [Overview](#overview)
+- [List all the documents in the account](#list-all-the-documents-in-the-account)
+    - [Response](#response)
+- [List all the documents of a contact](#list-all-the-documents-of-a-contact)
+    - [Response](#response-1)
+- [Get a specific document](#get-a-specific-document)
+    - [Response](#response-2)
+
+<!-- /TOC -->
+
+<a id="markdown-overview" name="overview"></a>
 ## Overview
 
 The Document object represents a document attached to a contact. A contact can have as many documents as necessary. There are two limitations though: the maximum allowed size of the document itself, and the maximum allowed total amount of Mb allowed by the instance.
 
+<a id="markdown-list-all-the-documents-in-the-account" name="list-all-the-documents-in-the-account"></a>
 ## List all the documents in the account
 
 <span class="url">
   GET /documents
 </span>
 
+<a id="markdown-response" name="response"></a>
 ### Response
 
 <pre><code class="json">{
@@ -137,12 +152,14 @@ The Document object represents a document attached to a contact. A contact can h
 	}
 }</code></pre>
 
+<a id="markdown-list-all-the-documents-of-a-contact" name="list-all-the-documents-of-a-contact"></a>
 ## List all the documents of a contact
 
 <span class="url">
   GET /contacts/:id/documents
 </span>
 
+<a id="markdown-response-1" name="response-1"></a>
 ### Response
 
 <pre><code class="json">{
@@ -494,12 +511,14 @@ The Document object represents a document attached to a contact. A contact can h
 	}
 }</code></pre>
 
+<a id="markdown-get-a-specific-document" name="get-a-specific-document"></a>
 ## Get a specific document
 
 <span class="url">
   GET /documents/:id
 </span>
 
+<a id="markdown-response-2" name="response-2"></a>
 ### Response
 
 <pre><code class="json">{

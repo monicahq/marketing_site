@@ -2,6 +2,10 @@
 
 The changelog is a list of changes and sometimes backwards-incompatible updates in the API.
 
+### January 04, 2019
+
+* Add Genders API documentation
+
 ### January 02, 2019
 
 * Remove LinkedIn url attribute form the Contact object

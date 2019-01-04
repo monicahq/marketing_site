@@ -72,8 +72,8 @@ The Company object represents a company a Contact works (or worked) at.
     }
   ],
   "links": {
-    "first": "http:\/\/monica.test\/api\/companies?page=1",
-    "last": "http:\/\/monica.test\/api\/companies?page=1",
+    "first": "https:\/\/app.monicahq.com\/api\/companies?page=1",
+    "last": "https:\/\/app.monicahq.com\/api\/companies?page=1",
     "prev": null,
     "next": null
   },
@@ -81,7 +81,7 @@ The Company object represents a company a Contact works (or worked) at.
     "current_page": 1,
     "from": 1,
     "last_page": 1,
-    "path": "http:\/\/monica.test\/api\/companies",
+    "path": "https:\/\/app.monicahq.com\/api\/companies",
     "per_page": 15,
     "to": 2,
     "total": 2

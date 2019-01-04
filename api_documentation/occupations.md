@@ -170,8 +170,8 @@ The Occupation object represents a job a Contact has (or had). It is linked with
     }
   ],
   "links": {
-    "first": "http:\/\/monica.test\/api\/occupations?page=1",
-    "last": "http:\/\/monica.test\/api\/occupations?page=1",
+    "first": "https:\/\/app.monicahq.com\/api\/occupations?page=1",
+    "last": "https:\/\/app.monicahq.com\/api\/occupations?page=1",
     "prev": null,
     "next": null
   },
@@ -179,7 +179,7 @@ The Occupation object represents a job a Contact has (or had). It is linked with
     "current_page": 1,
     "from": 1,
     "last_page": 1,
-    "path": "http:\/\/monica.test\/api\/occupations",
+    "path": "https:\/\/app.monicahq.com\/api\/occupations",
     "per_page": 15,
     "to": 2,
     "total": 2

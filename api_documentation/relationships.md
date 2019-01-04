@@ -176,8 +176,8 @@ They are named that way so you can read a call more easily: `contact_is` is frie
     }
   ],
   "links": {
-    "first": "http:\/\/monica.test\/api\/relationshiptypegroups?page=1",
-    "last": "http:\/\/monica.test\/api\/relationshiptypegroups?page=1",
+    "first": "https:\/\/app.monicahq.com\/api\/relationshiptypegroups?page=1",
+    "last": "https:\/\/app.monicahq.com\/api\/relationshiptypegroups?page=1",
     "prev": null,
     "next": null
   },
@@ -185,7 +185,7 @@ They are named that way so you can read a call more easily: `contact_is` is frie
     "current_page": 1,
     "from": 1,
     "last_page": 1,
-    "path": "http:\/\/monica.test\/api\/relationshiptypegroups",
+    "path": "https:\/\/app.monicahq.com\/api\/relationshiptypegroups",
     "per_page": 15,
     "to": 4,
     "total": 4

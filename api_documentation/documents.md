@@ -136,8 +136,8 @@ The Document object represents a document attached to a contact. A contact can h
 		}
 	],
 	"links": {
-		"first": "http:\/\/monica.test\/api\/documents?page=1",
-		"last": "http:\/\/monica.test\/api\/documents?page=1",
+		"first": "https:\/\/app.monicahq.com\/api\/documents?page=1",
+		"last": "https:\/\/app.monicahq.com\/api\/documents?page=1",
 		"prev": null,
 		"next": null
 	},
@@ -145,7 +145,7 @@ The Document object represents a document attached to a contact. A contact can h
 		"current_page": 1,
 		"from": 1,
 		"last_page": 1,
-		"path": "http:\/\/monica.test\/api\/documents",
+		"path": "https:\/\/app.monicahq.com\/api\/documents",
 		"per_page": 15,
 		"to": 7,
 		"total": 7
@@ -495,8 +495,8 @@ The Document object represents a document attached to a contact. A contact can h
 		}
 	],
 	"links": {
-		"first": "http:\/\/monica.test\/api\/contacts\/352\/documents?page=1",
-		"last": "http:\/\/monica.test\/api\/contacts\/352\/documents?page=1",
+		"first": "https:\/\/app.monicahq.com\/api\/contacts\/352\/documents?page=1",
+		"last": "https:\/\/app.monicahq.com\/api\/contacts\/352\/documents?page=1",
 		"prev": null,
 		"next": null
 	},
@@ -504,7 +504,7 @@ The Document object represents a document attached to a contact. A contact can h
 		"current_page": 1,
 		"from": 1,
 		"last_page": 1,
-		"path": "http:\/\/monica.test\/api\/contacts\/352\/documents",
+		"path": "https:\/\/app.monicahq.com\/api\/contacts\/352\/documents",
 		"per_page": 15,
 		"to": 7,
 		"total": 7

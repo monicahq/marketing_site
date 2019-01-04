@@ -134,16 +134,16 @@ This is the list of currencies we support.
     }
   ],
   "links": {
-    "first": "http:\/\/monica.test\/api\/currencies?page=1",
-    "last": "http:\/\/monica.test\/api\/currencies?page=11",
+    "first": "https:\/\/app.monicahq.com\/api\/currencies?page=1",
+    "last": "https:\/\/app.monicahq.com\/api\/currencies?page=11",
     "prev": null,
-    "next": "http:\/\/monica.test\/api\/currencies?page=2"
+    "next": "https:\/\/app.monicahq.com\/api\/currencies?page=2"
   },
   "meta": {
     "current_page": 1,
     "from": 1,
     "last_page": 11,
-    "path": "http:\/\/monica.test\/api\/currencies",
+    "path": "https:\/\/app.monicahq.com\/api\/currencies",
     "per_page": 15,
     "to": 15,
     "total": 156

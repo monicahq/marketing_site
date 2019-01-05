@@ -325,8 +325,8 @@ By default, each account comes with a set of predefined activity types, like `We
 		}
 	],
 	"links": {
-		"first": "http:\/\/monica.test\/api\/activitytypes?page=1",
-		"last": "http:\/\/monica.test\/api\/activitytypes?page=1",
+		"first": "https:\/\/app.monicahq.com\/api\/activitytypes?page=1",
+		"last": "https:\/\/app.monicahq.com\/api\/activitytypes?page=1",
 		"prev": null,
 		"next": null
 	},
@@ -334,7 +334,7 @@ By default, each account comes with a set of predefined activity types, like `We
 		"current_page": 1,
 		"from": 1,
 		"last_page": 1,
-		"path": "http:\/\/monica.test\/api\/activitytypes",
+		"path": "https:\/\/app.monicahq.com\/api\/activitytypes",
 		"per_page": 15,
 		"to": 13,
 		"total": 13

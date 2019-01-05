@@ -46,8 +46,8 @@ The Gender object represents a gender associated to a contact. A contact must ha
     }
   ],
   "links": {
-    "first": "http:\/\/monica.test\/api\/genders?page=1",
-    "last": "http:\/\/monica.test\/api\/genders?page=1",
+    "first": "https:\/\/app.monicahq.com\/api\/genders?page=1",
+    "last": "https:\/\/app.monicahq.com\/api\/genders?page=1",
     "prev": null,
     "next": null
   },
@@ -55,7 +55,7 @@ The Gender object represents a gender associated to a contact. A contact must ha
     "current_page": 1,
     "from": 1,
     "last_page": 1,
-    "path": "http:\/\/monica.test\/api\/genders",
+    "path": "https:\/\/app.monicahq.com\/api\/genders",
     "per_page": 15,
     "to": 3,
     "total": 3

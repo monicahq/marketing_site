@@ -61,8 +61,8 @@ Per instance, we keep track of who have accepted the terms, when they've done it
     }
   ],
   "links": {
-    "first": "http:\/\/monica.test\/api\/compliance?page=1",
-    "last": "http:\/\/monica.test\/api\/compliance?page=1",
+    "first": "https:\/\/app.monicahq.com\/api\/compliance?page=1",
+    "last": "https:\/\/app.monicahq.com\/api\/compliance?page=1",
     "prev": null,
     "next": null
   },
@@ -70,7 +70,7 @@ Per instance, we keep track of who have accepted the terms, when they've done it
     "current_page": 1,
     "from": 1,
     "last_page": 1,
-    "path": "http:\/\/monica.test\/api\/compliance",
+    "path": "https:\/\/app.monicahq.com\/api\/compliance",
     "per_page": 15,
     "to": 2,
     "total": 2

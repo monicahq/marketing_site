@@ -320,16 +320,16 @@ A conversation is made of one or more messages. The Message object contains the 
         ...
     ],
     "links": {
-        "first": "http:\/\/monica.test\/api\/conversations?page=1",
-        "last": "http:\/\/monica.test\/api\/conversations?page=22",
+        "first": "https:\/\/app.monicahq.com\/api\/conversations?page=1",
+        "last": "https:\/\/app.monicahq.com\/api\/conversations?page=22",
         "prev": null,
-        "next": "http:\/\/monica.test\/api\/conversations?page=2"
+        "next": "https:\/\/app.monicahq.com\/api\/conversations?page=2"
     },
     "meta": {
         "current_page": 1,
         "from": 1,
         "last_page": 22,
-        "path": "http:\/\/monica.test\/api\/conversations",
+        "path": "https:\/\/app.monicahq.com\/api\/conversations",
         "per_page": 15,
         "to": 15,
         "total": 317
@@ -648,16 +648,16 @@ A conversation is made of one or more messages. The Message object contains the 
         ...
     ],
     "links": {
-        "first": "http:\/\/monica.test\/api\/conversations?page=1",
-        "last": "http:\/\/monica.test\/api\/conversations?page=22",
+        "first": "https:\/\/app.monicahq.com\/api\/conversations?page=1",
+        "last": "https:\/\/app.monicahq.com\/api\/conversations?page=22",
         "prev": null,
-        "next": "http:\/\/monica.test\/api\/conversations?page=2"
+        "next": "https:\/\/app.monicahq.com\/api\/conversations?page=2"
     },
     "meta": {
         "current_page": 1,
         "from": 1,
         "last_page": 22,
-        "path": "http:\/\/monica.test\/api\/conversations",
+        "path": "https:\/\/app.monicahq.com\/api\/conversations",
         "per_page": 15,
         "to": 15,
         "total": 317

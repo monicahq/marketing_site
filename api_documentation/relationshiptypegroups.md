@@ -88,8 +88,8 @@ Here are all the default relationship type groups of each account:
     }
   ],
   "links": {
-    "first": "http:\/\/monica.test\/api\/relationshiptypegroups?page=1",
-    "last": "http:\/\/monica.test\/api\/relationshiptypegroups?page=1",
+    "first": "https:\/\/app.monicahq.com\/api\/relationshiptypegroups?page=1",
+    "last": "https:\/\/app.monicahq.com\/api\/relationshiptypegroups?page=1",
     "prev": null,
     "next": null
   },
@@ -97,7 +97,7 @@ Here are all the default relationship type groups of each account:
     "current_page": 1,
     "from": 1,
     "last_page": 1,
-    "path": "http:\/\/monica.test\/api\/relationshiptypegroups",
+    "path": "https:\/\/app.monicahq.com\/api\/relationshiptypegroups",
     "per_page": 15,
     "to": 4,
     "total": 4

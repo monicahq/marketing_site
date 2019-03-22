@@ -174,7 +174,7 @@ If a field is not required, you can send the `null` value as the content of the 
 ### Example
 
 <pre><code class="json">{
-  "name":"friends"
+  "name": "friends"
 }</code></pre>
 
 <a id="markdown-response-1" name="response-1"></a>
@@ -215,7 +215,7 @@ The API call returns a tag object if the call succeeds.
 ### Example
 
 <pre><code class="json">{
-  "name":"prison"
+  "name": "prison"
 }</code></pre>
 
 <a id="markdown-response-2" name="response-2"></a>

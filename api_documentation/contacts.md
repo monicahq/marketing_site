@@ -20,20 +20,7 @@
     - [Example](#example-1)
     - [Response](#response-2)
 - [Delete a contact](#delete-a-contact)
-    - [Response](#response-3)
-- [Partners](#partners)
-    - [Link a partner with a contact](#link-a-partner-with-a-contact)
-        - [Input](#input-2)
-    - [Unlink a partner and a contact](#unlink-a-partner-and-a-contact)
-        - [Input](#input-3)
-- [Children](#children)
-    - [Link a child to a contact](#link-a-child-to-a-contact)
-        - [Input](#input-4)
-        - [Example](#example-2)
-    - [Unlink a child and a contact](#unlink-a-child-and-a-contact)
-        - [Input](#input-5)
-        - [Example](#example-3)
-- [Search](#search)
+    - [Response](#response-3)- [Search](#search)
         - [Input](#input-6)
         - [Response](#response-4)
 
@@ -49,7 +36,7 @@ to create, delete and update your contacts. You can retrieve individual contacts
 as well as a list of all your contacts.
 
 It's important to understand that all the people in Monica are Contact objects -
-that includes a kid or a significant other (also called partner). However, there
+that includes relationship contacts like kids or significant other. However, there
 are two types of contacts:
 * `real` contacts
 * `partial` contacts.
@@ -223,95 +210,74 @@ Response:
       "stay_in_touch_frequency": 5,
       "stay_in_touch_trigger_date": "2018-04-26T09:25:43Z",
       "information": {
-        "family": {
-          "kids": {
-            "total": 4,
-            "kids": [
+        "relationships": {
+          "love": {
+            "total": 0,
+            "contacts": []
+          },
+          "family": {
+            "total": 1,
+            "contacts": [
               {
-                "id": 2,
-                "object": "contact",
-                "first_name": "Oscar",
-                "last_name": "Tremblay",
-                "nickname": "Rambo",
-                "gender": "male",
-                "is_partial": true,
-                "information": {
-                  "birthdate": {
-                    "is_age_based": false,
-                    "is_year_unknown": true,
-                    "date": "2017-11-29T00:00:00Z"
-                  }
+                "relationship": {
+                  "id": 1,
+                  "name": "son",
                 },
-                "account": {
-                  "id": 1
-                }
-              },
-              {
-                "id": 3,
-                "object": "contact",
-                "first_name": "Makayla",
-                "last_name": null,
-                "nickname": "Rambo",
-                "gender": "female",
-                "is_partial": false,
-                "information": {
-                  "birthdate": {
-                    "is_age_based": false,
-                    "is_year_unknown": true,
-                    "date": "2017-02-27T00:00:00Z"
+                "contact": {
+                  "id": 2,
+                  "object": "contact",
+                  "first_name": "Oscar",
+                  "last_name": "Tremblay",
+                  "nickname": "Rambo",
+                  "gender": "male",
+                  "is_partial": true,
+                  "information": {
+                    "birthdate": {
+                      "is_age_based": false,
+                      "is_year_unknown": true,
+                      "date": "2017-11-29T00:00:00Z"
+                    }
+                  },
+                  "account": {
+                    "id": 1
                   }
-                },
-                "account": {
-                  "id": 1
-                }
-              },
-              {
-                "id": 4,
-                "object": "contact",
-                "first_name": "Johnathon",
-                "last_name": "Stark",
-                "nickname": "Rambo",
-                "gender": "male",
-                "is_partial": true,
-                "information": {
-                  "birthdate": {
-                    "is_age_based": false,
-                    "is_year_unknown": true,
-                    "date": "2017-09-24T00:00:00Z"
-                  }
-                },
-                "account": {
-                  "id": 1
-                }
-              },
-              {
-                "id": 5,
-                "object": "contact",
-                "first_name": "Karianne",
-                "last_name": null,
-                "nickname": "Rambo",
-                "gender": "female",
-                "is_partial": true,
-                "information": {
-                  "birthdate": {
-                    "is_age_based": false,
-                    "is_year_unknown": true,
-                    "date": "2017-09-25T00:00:00Z"
-                  }
-                },
-                "account": {
-                  "id": 1
                 }
               }
             ]
           },
-          "partners": {
-            "total": 0,
-            "partners": []
+          "friend": {
+            "total": 1,
+            "contacts": [
+              {
+                "relationship": {
+                  "id": 1,
+                  "name": "son",
+                },
+                "contact": {
+                  "id": 3,
+                  "object": "contact",
+                  "first_name": "Makayla",
+                  "last_name": null,
+                  "nickname": "Rambo",
+                  "gender": "female",
+                  "is_partial": false,
+                  "information": {
+                    "birthdate": {
+                      "is_age_based": false,
+                      "is_year_unknown": true,
+                      "date": "2017-02-27T00:00:00Z"
+                    }
+                  },
+                  "account": {
+                    "id": 1
+                  }
+                }
+              }
+            ]
           },
-          "progenitors": {
+          "work": {
             "total": 0,
-            "progenitors": []
+            "contacts": []
           }
         },
         "dates": {
@@ -400,37 +366,22 @@ Response:
       "stay_in_touch_frequency": 5,
       "stay_in_touch_trigger_date": "2018-04-26T09:25:43Z",
       "information": {
-        "family": {
-          "kids": {
+        "relationships": {
+          "love": {
             "total": 0,
-            "kids": []
+            "contacts": []
           },
-          "partners": {
+          "family": {
             "total": 0,
-            "partners": []
+            "contacts": []
           },
-          "progenitors": {
-            "total": 1,
-            "progenitors": [
-              {
-                "id": 1,
-                "object": "contact",
-                "first_name": "Justen",
-                "last_name": "Flatley",
-                "nickname": "Rambo",
-                "gender": "male",
-                "information": {
-                  "birthdate": {
-                    "is_age_based": null,
-                    "is_year_unknown": null,
-                    "date": null
-                  }
-                },
-                "account": {
-                  "id": 1
-                }
-              }
-            ]
+          "friend": {
+            "total": 0,
+            "contacts": []
+          },
+          "work": {
+            "total": 0,
+            "contacts": []
           }
         },
         "dates": {
@@ -542,95 +493,22 @@ You can sort this query. Accepted criteria are:
     "stay_in_touch_frequency": 5,
     "stay_in_touch_trigger_date": "2018-04-26T09:25:43Z",
     "information": {
-      "family": {
-        "kids": {
-          "total": 4,
-          "kids": [
-            {
-              "id": 2,
-              "object": "contact",
-              "first_name": "Oscar",
-              "last_name": "Tremblay",
-              "nickname": "Rambo",
-              "gender": "male",
-              "is_partial": true,
-              "information": {
-                "birthdate": {
-                  "is_age_based": false,
-                  "is_year_unknown": true,
-                  "date": "2017-11-29T00:00:00Z"
-                }
-              },
-              "account": {
-                "id": 1
-              }
-            },
-            {
-              "id": 3,
-              "object": "contact",
-              "first_name": "Makayla",
-              "last_name": null,
-              "nickname": "Rambo",
-              "gender": "female",
-              "is_partial": false,
-              "information": {
-                "birthdate": {
-                  "is_age_based": false,
-                  "is_year_unknown": true,
-                  "date": "2017-02-27T00:00:00Z"
-                }
-              },
-              "account": {
-                "id": 1
-              }
-            },
-            {
-              "id": 4,
-              "object": "contact",
-              "first_name": "Johnathon",
-              "last_name": "Stark",
-              "nickname": "Rambo",
-              "gender": "male",
-              "is_partial": true,
-              "information": {
-                "birthdate": {
-                  "is_age_based": false,
-                  "is_year_unknown": true,
-                  "date": "2017-09-24T00:00:00Z"
-                }
-              },
-              "account": {
-                "id": 1
-              }
-            },
-            {
-              "id": 5,
-              "object": "contact",
-              "first_name": "Karianne",
-              "last_name": null,
-              "nickname": "Rambo",
-              "gender": "female",
-              "is_partial": true,
-              "information": {
-                "birthdate": {
-                  "is_age_based": false,
-                  "is_year_unknown": true,
-                  "date": "2017-09-25T00:00:00Z"
-                }
-              },
-              "account": {
-                "id": 1
-              }
-            }
-          ]
-        },
-        "partners": {
+      "relationships": {
+        "love": {
           "total": 0,
-          "partners": []
+          "contacts": []
         },
-        "progenitors": {
+        "family": {
           "total": 0,
-          "progenitors": []
+          "contacts": []
+        },
+        "friend": {
+          "total": 0,
+          "contacts": []
+        },
+        "work": {
+          "total": 0,
+          "contacts": []
         }
       },
       "dates": {
@@ -710,7 +588,7 @@ You can sort this query. Accepted criteria are:
 <a id="markdown-get-a-partial-contact" name="get-a-partial-contact"></a>
 ### Get a `partial` contact
 
-Partial contacts are partners or children.
+Partial contacts are relationship contacts.
 
 <span class="url">
   GET /contacts/:id
@@ -767,7 +645,7 @@ If a field is not required, you can send the `null` value as the content of the 
 | first_name | string | <strong>Required</strong>. The first name of the contact. Max 50 characters. |
 | last_name | string | Last name of the contact. Max 100 characters. |
 | nickname | string | Nickname of the contact. Max 100 characters. |
-| gender | string | <strong>Required</strong>. The gender of the contact. Can be `male`, `female` or `unknown`. |
+| gender_id | integer | <strong>Required</strong>. The Gender ID of the contact. Gender IDs are retrieved through the <a href="gender.md">Gender's API</a>. |
 | birthdate | string | The birthdate of the contact. Format: 'YYYY-MM-DD'. |
 | birthdate_is_age_based | boolean | <strong>Required</strong>. Indicates whether the birthdate is age based or not. |
 | birthdate_is_year_unknown | boolean | <strong>Required</strong>. Indicates whether we know the year or not. |
@@ -793,28 +671,28 @@ If a field is not required, you can send the `null` value as the content of the 
 ### Example
 
 <pre><code class="json">{
-  "first_name":"henri",
-  "last_name":"troyat",
+  "first_name": "henri",
+  "last_name": "troyat",
   "nickname": "Rambo",
-  "gender":"male",
+  "gender_id": 12,
   "birthdate": null,
   "birthdate_is_age_based": true,
   "birthdate_is_year_unknown": false,
   "birthdate_age": 29,
-  "is_birthdate_approximate":"approximate",
-  "age":30,
-  "job":"Animator",
-  "company":"Star Wars",
-  "food_preferencies":"Fish and fresh potatoes.",
-  "first_met_information":"we met a bar.",
-  "first_met_date":"1981-02-02",
+  "is_birthdate_approximate": "approximate",
+  "age": 30,
+  "job": "Animator",
+  "company": "Star Wars",
+  "food_preferencies": "Fish and fresh potatoes.",
+  "first_met_information": "we met a bar.",
+  "first_met_date": "1981-02-02",
   "first_met_date_is_age_based": false,
   "first_met_date_is_year_unknown": false,
   "first_met_date_age": null,
-  "first_met_through_contact_id":2,
-  "is_partial":0,
+  "first_met_through_contact_id": 2,
+  "is_partial": 0,
   "is_dead": 1,
-  "deceased_date":"2017-02-02",
+  "deceased_date": "2017-02-02",
   "deceased_date_is_age_based": false,
   "deceased_date_is_year_unknown": true,
   "deceased_date_age": null,
@@ -841,18 +719,22 @@ The API call returns a contact object if the call succeeds.
     "stay_in_touch_frequency": 5,
     "stay_in_touch_trigger_date": "2018-04-26T09:25:43Z",
     "information": {
-      "family": {
-        "kids": {
+      "relationships": {
+        "love": {
           "total": 0,
-          "kids": []
+          "contacts": []
         },
-        "partners": {
+        "family": {
           "total": 0,
-          "partners": []
+          "contacts": []
         },
-        "progenitors": {
+        "friend": {
           "total": 0,
-          "progenitors": []
+          "contacts": []
+        },
+        "work": {
+          "total": 0,
+          "contacts": []
         }
       },
       "dates": {
@@ -922,7 +804,7 @@ The API call returns a contact object if the call succeeds.
 | first_name | string | <strong>Required</strong>. The first name of the contact. Max 50 characters. |
 | last_name | string | Last name of the contact. Max 100 characters. |
 | nickname | string | Nickname of the contact. Max 100 characters. |
-| gender | string | <strong>Required</strong>. The gender of the contact. Can be `male`, `female` or `unknown`. |
+| gender_id | integer | <strong>Required</strong>. The Gender ID of the contact. Gender IDs are retrieved through the <a href="gender.md">Gender's API</a>. |
 | birthdate | string | The birthdate of the contact. Format: 'YYYY-MM-DD'. |
 | birthdate_is_age_based | boolean | <strong>Required</strong>. Indicates whether the birthdate is age based or not. |
 | birthdate_is_year_unknown | boolean | <strong>Required</strong>. Indicates whether we know the year or not. |
@@ -948,28 +830,28 @@ The API call returns a contact object if the call succeeds.
 ### Example
 
 <pre><code class="json">{
-  "first_name":"henri",
-  "last_name":"troyat",
+  "first_name": "henri",
+  "last_name": "troyat",
   "nickname": "Rambo",
-  "gender":"male",
+  "gender_id": 12,
   "birthdate": null,
   "birthdate_is_age_based": true,
   "birthdate_is_year_unknown": false,
   "birthdate_age": 29,
-  "is_birthdate_approximate":"approximate",
-  "age":30,
-  "job":"Animator",
-  "company":"Star Wars",
-  "food_preferencies":"Fish and fresh potatoes.",
-  "first_met_information":"we met a bar.",
-  "first_met_date":"1981-02-02",
+  "is_birthdate_approximate": "approximate",
+  "age": 30,
+  "job": "Animator",
+  "company": "Star Wars",
+  "food_preferencies": "Fish and fresh potatoes.",
+  "first_met_information": "we met a bar.",
+  "first_met_date": "1981-02-02",
   "first_met_date_is_age_based": false,
   "first_met_date_is_year_unknown": false,
   "first_met_date_age": null,
-  "first_met_through_contact_id":2,
-  "is_partial":0,
+  "first_met_through_contact_id": 2,
+  "is_partial": 0,
   "is_dead": 1,
-  "deceased_date":null,
+  "deceased_date": null,
   "deceased_date_is_age_based": true,
   "deceased_date_is_year_unknown": false,
   "deceased_date_age": 98,
@@ -994,18 +876,22 @@ The API call returns a contact object if the call succeeds.
     "stay_in_touch_frequency": 5,
     "stay_in_touch_trigger_date": "2018-04-26T09:25:43Z",
     "information": {
-      "family": {
-        "kids": {
+      "relationships": {
+        "love": {
           "total": 0,
-          "kids": []
+          "contacts": []
         },
-        "partners": {
+        "family": {
           "total": 0,
-          "partners": []
+          "contacts": []
         },
-        "progenitors": {
+        "friend": {
           "total": 0,
-          "progenitors": []
+          "contacts": []
+        },
+        "work": {
+          "total": 0,
+          "contacts": []
         }
       },
       "dates": {
@@ -1077,119 +963,6 @@ The response sends back the id that was just deleted.
   "id": 93135
 }</code></pre>
 
-<a name="partners"></a>
-<a id="partners"></a>
-<a id="markdown-partners" name="partners"></a>
-## Partners
-
-Each contact can have one or multiple partners (even if polygamy is somewhat
-forbidden in some countries, well...). A partner can be either a `real` contact
-or a `partial` contact. Before being able to associate two contacts together,
-both contacts need to exist in the database. In practice, you don't need to
-worry about the concept of  when you do create the relationship.
-
-When you define a relationship, only one call is necessary to link the two
-contacts together.
-
-<a id="markdown-link-a-partner-with-a-contact" name="link-a-partner-with-a-contact"></a>
-### Link a partner with a contact
-
-<span class="url">
-  POST /contacts/:id/partners
-</span>
-
-<a id="markdown-input-2" name="input-2"></a>
-#### Input
-
-| Name | Type | Description |
-| ---- | ----------- | ----------- |
-| partner_id | integer | <strong>Required</strong>. The ID of the contact ID that will be set as the partner of the given contact. |
-
-<pre><code class="json">{
-  "partner_id":2
-}</code></pre>
-
-This call returns a standard Contact object.
-
-<a id="markdown-unlink-a-partner-and-a-contact" name="unlink-a-partner-and-a-contact"></a>
-### Unlink a partner and a contact
-
-<span class="url">
-  POST /contacts/:id/partners/unset
-</span>
-
-<a id="markdown-input-3" name="input-3"></a>
-#### Input
-
-| Name | Type | Description |
-| ---- | ----------- | ----------- |
-| partner_id | integer | <strong>Required</strong>. The ID of the contact ID that needs to be unset. |
-
-<pre><code class="json">{
-  "partner_id":2
-}</code></pre>
-
-This call returns a standard Contact object.
-
-<a name="children"></a>
-<a id="children"></a>
-<a id="markdown-children" name="children"></a>
-## Children
-
-Each contact can have one or multiple children. A child can be either a `real` contact
-or a `partial` contact. Before being able to associate two contacts together,
-both contacts need to exist in the database. In practice, you don't need to
-worry about the concept of  when you do create the relationship.
-
-When you define a relationship, only one call is necessary to link the two
-contacts together.
-
-<a id="markdown-link-a-child-to-a-contact" name="link-a-child-to-a-contact"></a>
-### Link a child to a contact
-
-<span class="url">
-  POST /contacts/:id/kids
-</span>
-
-<a id="markdown-input-4" name="input-4"></a>
-#### Input
-
-| Name | Type | Description |
-| ---- | ----------- | ----------- |
-| child_id | integer | <strong>Required</strong>. The ID of the contact ID that will be set as the partner of the given contact. |
-
-<a id="markdown-example-2" name="example-2"></a>
-#### Example
-
-<pre><code class="json">{
-  "child_id":2
-}</code></pre>
-
-This call returns a standard Contact object.
-
-<a id="markdown-unlink-a-child-and-a-contact" name="unlink-a-child-and-a-contact"></a>
-### Unlink a child and a contact
-
-<span class="url">
-  POST /contacts/:id/kids/unset
-</span>
-
-<a id="markdown-input-5" name="input-5"></a>
-#### Input
-
-| Name | Type | Description |
-| ---- | ----------- | ----------- |
-| child_id | integer | <strong>Required</strong>. The ID of the contact ID that needs to be unset. |
-
-<a id="markdown-example-3" name="example-3"></a>
-#### Example
-
-<pre><code class="json">{
-  "child_id":2
-}</code></pre>
-
-This call returns a standard Contact object.
-
 <a name="search"></a>
 <a id="search"></a>
 <a id="markdown-search" name="search"></a>
@@ -1234,192 +1007,23 @@ This call returns a collection of contacts. Note that `body.meta.query` contains
             "stay_in_touch_frequency": 5,
             "stay_in_touch_trigger_date": "2018-04-26T09:25:43Z",
             "information": {
-                "family": {
-                    "kids": {
-                        "total": 6,
-                        "kids": [
-                            {
-                                "id": 118,
-                                "object": "contact",
-                                "first_name": "Reilly",
-                                "last_name": "Lang",
-                                "nickname": "Rambo",
-                                "gender": "Rather not say",
-                                "is_partial": true,
-                                "information": {
-                                    "birthdate": {
-                                        "is_age_based": false,
-                                        "is_year_unknown": false,
-                                        "date": "1960-02-09T00:00:00Z"
-                                    }
-                                },
-                                "account": {
-                                    "id": 1
-                                }
-                            },
-                            {
-                                "id": 119,
-                                "object": "contact",
-                                "first_name": "Tate",
-                                "last_name": null,
-                                "nickname": "Rambo",
-                                "gender": "Woman",
-                                "is_partial": false,
-                                "information": {
-                                    "birthdate": {
-                                        "is_age_based": false,
-                                        "is_year_unknown": true,
-                                        "date": "2018-11-09T00:00:00Z"
-                                    }
-                                },
-                                "account": {
-                                    "id": 1
-                                }
-                            },
-                            {
-                                "id": 120,
-                                "object": "contact",
-                                "first_name": "Lori",
-                                "last_name": "Witting",
-                                "nickname": "Rambo",
-                                "gender": "Rather not say",
-                                "is_partial": true,
-                                "information": {
-                                    "birthdate": {
-                                        "is_age_based": false,
-                                        "is_year_unknown": false,
-                                        "date": "1945-01-23T00:00:00Z"
-                                    }
-                                },
-                                "account": {
-                                    "id": 1
-                                }
-                            },
-                            {
-                                "id": 121,
-                                "object": "contact",
-                                "first_name": "Pink",
-                                "last_name": null,
-                                "nickname": "Rambo",
-                                "gender": "Rather not say",
-                                "is_partial": false,
-                                "information": {
-                                    "birthdate": {
-                                        "is_age_based": false,
-                                        "is_year_unknown": false,
-                                        "date": "1955-07-13T00:00:00Z"
-                                    }
-                                },
-                                "account": {
-                                    "id": 1
-                                }
-                            },
-                            {
-                                "id": 122,
-                                "object": "contact",
-                                "first_name": "Colby",
-                                "last_name": null,
-                                "nickname": "Rambo",
-                                "gender": "Man",
-                                "is_partial": false,
-                                "information": {
-                                    "birthdate": {
-                                        "is_age_based": false,
-                                        "is_year_unknown": false,
-                                        "date": "1963-08-29T00:00:00Z"
-                                    }
-                                },
-                                "account": {
-                                    "id": 1
-                                }
-                            },
-                            {
-                                "id": 123,
-                                "object": "contact",
-                                "first_name": "Abbie",
-                                "last_name": "Dare",
-                                "nickname": "Rambo",
-                                "gender": "Woman",
-                                "is_partial": false,
-                                "information": {
-                                    "birthdate": {
-                                        "is_age_based": false,
-                                        "is_year_unknown": false,
-                                        "date": "1953-12-17T00:00:00Z"
-                                    }
-                                },
-                                "account": {
-                                    "id": 1
-                                }
-                            }
-                        ]
-                    },
-                    "partners": {
-                        "total": 3,
-                        "partners": [
-                            {
-                                "id": 124,
-                                "object": "contact",
-                                "first_name": "Kristoffer",
-                                "last_name": null,
-                                "nickname": "Rambo",
-                                "gender": "Woman",
-                                "is_partial": true,
-                                "information": {
-                                    "birthdate": {
-                                        "is_age_based": false,
-                                        "is_year_unknown": true,
-                                        "date": "2018-07-27T00:00:00Z"
-                                    }
-                                },
-                                "account": {
-                                    "id": 1
-                                }
-                            },
-                            {
-                                "id": 125,
-                                "object": "contact",
-                                "first_name": "Anjali",
-                                "last_name": null,
-                                "nickname": "Rambo",
-                                "gender": "Man",
-                                "is_partial": true,
-                                "information": {
-                                    "birthdate": {
-                                        "is_age_based": false,
-                                        "is_year_unknown": false,
-                                        "date": "1929-02-21T00:00:00Z"
-                                    }
-                                },
-                                "account": {
-                                    "id": 1
-                                }
-                            },
-                            {
-                                "id": 126,
-                                "object": "contact",
-                                "first_name": "Edmund",
-                                "last_name": "Weissnat",
-                                "nickname": "Rambo",
-                                "gender": "Woman",
-                                "is_partial": true,
-                                "information": {
-                                    "birthdate": {
-                                        "is_age_based": false,
-                                        "is_year_unknown": false,
-                                        "date": "1994-03-29T00:00:00Z"
-                                    }
-                                },
-                                "account": {
-                                    "id": 1
-                                }
-                            }
-                        ]
-                    },
-                    "progenitors": {
-                        "total": 0,
-                        "progenitors": []
-                    }
+                "relationships": {
+                  "love": {
+                    "total": 0,
+                    "contacts": []
+                  },
+                  "family": {
+                    "total": 0,
+                    "contacts": []
+                  },
+                  "friend": {
+                    "total": 0,
+                    "contacts": []
+                  },
+                  "work": {
+                    "total": 0,
+                    "contacts": []
+                  }
                 },
                 "dates": {
                     "birthdate": {

@@ -798,7 +798,7 @@ Creating a conversation only creates the conversation itself. You will have to a
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
 | happened_at | date | <strong>Required</strong>. The date the conversation happened. Format: YYYY-MM-DD. |
-| contact_field_type_id | integer | <strong>Required</strong>. The type of the contact field. Has to be a valid, existing contact field type ID. You can retrieve the list of all the contact field types of an account <a href="{{ "/api/contactfieldtypes" | prepend: site.baseurl | prepend: site.url }}">via the API</a>. |
+| contact_field_type_id | integer | <strong>Required</strong>. The type of the contact field. Has to be a valid, existing contact field type ID. You can retrieve the list of all the contact field types of an account <a href="contactfieldtypes.md">via the API</a>. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the conversation field is associated with. |
 
 ### Example

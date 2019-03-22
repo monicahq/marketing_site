@@ -361,7 +361,7 @@ When retrieving a contact field, we always also return some basic information ab
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
 | data | string | <strong>Required</strong>. The actual content of the contact field. Max 255 characters. |
-| contact_field_type_id | integer | <strong>Required</strong>. The type of the contact field. Has to be a valid, existing contact field type ID. You can retrieve the list of all the contact field types of an account <a href="{{ "/api/countries" | prepend: site.baseurl | prepend: site.url }}">via the API</a>. |
+| contact_field_type_id | integer | <strong>Required</strong>. The type of the contact field. Has to be a valid, existing contact field type ID. You can retrieve the list of all the contact field types of an account <a href="contactfieldtypes.md">via the API</a>. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the content field is associated with. |
 
 <a id="markdown-example" name="example"></a>
@@ -439,7 +439,7 @@ The API call returns a Contact Field object if the call succeeds.
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
 | data | string | <strong>Required</strong>. The actual content of the contact field. Max 255 characters. |
-| contact_field_type_id | integer | <strong>Required</strong>. The type of the contact field. Has to be a valid, existing contact field type ID. You can retrieve the list of all the contact field types of an account <a href="{{ "/api/countries" | prepend: site.baseurl | prepend: site.url }}">via the API</a>. |
+| contact_field_type_id | integer | <strong>Required</strong>. The type of the contact field. Has to be a valid, existing contact field type ID. You can retrieve the list of all the contact field types of an account <a href="contactfieldtypes.md">via the API</a>. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the content field is associated with. |
 
 <a id="markdown-example-1" name="example-1"></a>

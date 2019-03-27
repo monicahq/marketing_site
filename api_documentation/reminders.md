@@ -31,7 +31,7 @@ The Reminder object allows to add reminders about your contacts.
 
 A reminder is a complex object in Monica. There are two types of reminders:
 * unique reminder (`frequency_type` == `one_time`),
-* recurring reminder (`frequency_type` == `day` | `month` | `year`).
+* recurring reminder (`frequency_type` == `week` | `month` | `year`).
 
 When a reminder is recurrent, the `frequency_number` indicates the number of
 days|months|years between each occurence.
@@ -567,7 +567,7 @@ related contact.
 | title | string | <strong>Required</strong>. The title of the reminder. Max 100000 characters. |
 | description | string | A description about what the reminder is. Max 1000000 characters. |
 | next_expected_date | string | <strong>Required</strong>. The date, in the future, when we should warn the user about this reminder. Format: YYYY-MM-DD. |
-| frequency_type | string | <strong>Required</strong>. The frequency type indicates if the reminder is recurring and if so, what it is. Possible values: `one_time`, `day`, `month`, `year`. |
+| frequency_type | string | <strong>Required</strong>. The frequency type indicates if the reminder is recurring and if so, what it is. Possible values: `one_time`, `week`, `month`, `year`. |
 | frequency_number | integer | The frequency of which the event should occur. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the call is associated with. |
 
@@ -642,7 +642,7 @@ The API call returns a Reminder object if the call succeeds.
 | title | string | <strong>Required</strong>. The title of the reminder. Max 100000 characters. |
 | description | string | A description about what the reminder is. Max 1000000 characters. |
 | next_expected_date | string | <strong>Required</strong>. The date, in the future, when we should warn the user about this reminder. Format: YYYY-MM-DD. |
-| frequency_type | string | <strong>Required</strong>. The frequency type indicates if the reminder is recurring and if so, what it is. Possible values: `one_time`, `day`, `month`, `year`. |
+| frequency_type | string | <strong>Required</strong>. The frequency type indicates if the reminder is recurring and if so, what it is. Possible values: `one_time`, `week`, `month`, `year`. |
 | frequency_number | integer | The frequency of which the event should occur. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the call is associated with. |
 

@@ -220,7 +220,7 @@ the related contact(s).
 | city | string | The city the contact lives in. Max 255 characters. |
 | province | string | The province the contact is in. Max 255 characters. |
 | postal_code | string | The postal code of the city the contact lives in. Max 255 characters. |
-| country_id | integer | The country ID of the country the contact lives in. Country IDs are retrieved through the <a href="{{ "/api/countries" | prepend: site.baseurl | prepend: site.url }}">Country's API</a>. |
+| country_id | integer | The country ID of the country the contact lives in. Country IDs are retrieved through the <a href="countries.md">Country's API</a>. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the address is associated with. |
 
 <a id="markdown-example" name="example"></a>

@@ -26,7 +26,7 @@ They are named that way so you can read a call more easily: `contact_is` is frie
 ## List a specific relationship
 
 <span class="url">
-  GET /relationships/{id}
+  GET /relationships/:id
 </span>
 
 ### Response
@@ -123,7 +123,7 @@ They are named that way so you can read a call more easily: `contact_is` is frie
 ## List all the relationships of a contact
 
 <span class="url">
-  GET /contacts/{contact}/relationships/
+  GET /contacts/:id/relationships/
 </span>
 
 ### Response
@@ -312,7 +312,7 @@ The API returns a Relationship object if the call succeeds.
 Updating a relationship will only update the relationship type.
 
 <span class="url">
-  PUT /relationships/{id}
+  PUT /relationships/:id
 </span>
 
 ### Input
@@ -423,7 +423,7 @@ The API returns a Relationship object if the call succeeds.
 ## Delete a relationship
 
 <span class="url">
-  DELETE /relationships/{id}
+  DELETE /relationships/:id
 </span>
 
 ### Response

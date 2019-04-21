@@ -118,7 +118,7 @@ There are several ways to authenticate to the API. All requests to the API requi
 ### OAuth 2 Token (sent in a header)
 
 <span class="url">
-  curl -H "Authorization: Bearer OAUTH-TOKEN" https://monicahq.com/api
+  curl -H "Authorization: Bearer OAUTH-TOKEN" https://app.monicahq.com/api
 </span>
 
 <a id="markdown-oauth2-keysecret" name="oauth2-keysecret"></a>

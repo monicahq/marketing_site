@@ -645,25 +645,27 @@ If a field is not required, you can send the `null` value as the content of the 
 | first_name | string | <strong>Required</strong>. The first name of the contact. Max 50 characters. |
 | last_name | string | Last name of the contact. Max 100 characters. |
 | nickname | string | Nickname of the contact. Max 100 characters. |
-| gender_id | integer | <strong>Required</strong>. The Gender ID of the contact. Gender IDs are retrieved through the <a href="gender.md">Gender's API</a>. |
+| gender_id | integer | The Gender ID of the contact. Gender IDs are retrieved through the <a href="gender.md">Gender's API</a>. |
 | birthdate | string | The birthdate of the contact. Format: 'YYYY-MM-DD'. |
-| birthdate_is_age_based | boolean | <strong>Required</strong>. Indicates whether the birthdate is age based or not. |
-| birthdate_is_year_unknown | boolean | <strong>Required</strong>. Indicates whether we know the year or not. |
+| birthdate_is_age_based | boolean | Indicates whether the birthdate is age based or not. |
+| birthdate_is_year_unknown | boolean | Indicates whether we know the year or not. |
+| is_birthdate_known | boolean | <strong>Required</strong>. |
 | birthdate_age | integer | The number of years between the birthdate and the current year. |
 | job | string | The job title of the contact. Max 255 characters. |
 | company | string | The company which employs the contact. Max 255 characters. |
 | food_preferencies | string | The food preferencies of the contact. Max 100000 characters. |
 | first_met_information | string | The information (ie where and how) the user has met the contact. Max 1000000 characters. |
 | first_met_date | string | The date you first met the contact. Format: 'YYYY-MM-DD'. |
-| first_met_date_is_age_based | boolean | <strong>Required</strong>. Indicates whether the first_met_date is age based or not. |
-| first_met_date_is_year_unknown | boolean | <strong>Required</strong>. Indicates whether we know the year or not. |
+| first_met_date_is_age_based | boolean | Indicates whether the first_met_date is age based or not. |
+| first_met_date_is_year_unknown | boolean | Indicates whether we know the year or not. |
 | first_met_date_age | integer | The number of years between the first_met_date and the current year. |
 | first_met_through_contact_id | integer | The contact whose made the introduction to this person. |
-| is_partial | integer | <strong>Required</strong>. Indicates whether a contact is `real` or `partial`. Can be `0` (false) or `1` (true). |
-| is_dead | integer | <strong>Required</strong>. Indicates whether a contact is deceased. Can be `0` (false) or `1` (true). |
+| is_partial | integer | Indicates whether a contact is `real` or `partial`. Can be `0` (false) or `1` (true). |
+| is_deceased | integer | <strong>Required</strong>. Indicates whether a contact is deceased. Can be `0` (false) or `1` (true). |
+| is_deceased_date_known | boolean | <strong>Required</strong>. |
 | deceased_date | string | The date you first met the contact. Format: 'YYYY-MM-DD'. |
-| deceased_date_is_age_based | boolean | <strong>Required</strong>. Indicates whether the deceased_date is age based or not. |
-| deceased_date_is_year_unknown | boolean | <strong>Required</strong>. Indicates whether we know the year or not. |
+| deceased_date_is_age_based | boolean | Indicates whether the deceased_date is age based or not. |
+| deceased_date_is_year_unknown | boolean | Indicates whether we know the year or not. |
 | deceased_date_age | integer | The number of years between the deceased_date and the current year. |
 | avatar_url | string | The URL of an external image that would serve as the avatar of the contact. Max 400 characters. |
 
@@ -674,8 +676,9 @@ If a field is not required, you can send the `null` value as the content of the 
   "first_name": "henri",
   "last_name": "troyat",
   "nickname": "Rambo",
-  "gender_id": 12,
+  "gender_id": 1,
   "birthdate": null,
+  "is_birthdate_known": false,
   "birthdate_is_age_based": true,
   "birthdate_is_year_unknown": false,
   "birthdate_age": 29,
@@ -691,10 +694,11 @@ If a field is not required, you can send the `null` value as the content of the 
   "first_met_date_age": null,
   "first_met_through_contact_id": 2,
   "is_partial": 0,
-  "is_dead": 1,
+  "is_deceased": 1,
   "deceased_date": "2017-02-02",
   "deceased_date_is_age_based": false,
   "deceased_date_is_year_unknown": true,
+  "is_deceased_date_known": true,
   "deceased_date_age": null,
   "avatar_url": "https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-1/p160x160/23561695_738743569647668_3975953680386408_n.jpg?oh=c32aa5f5c6c8d2ca927cbd2fcaa3&oe=5AA2632F"
 }</code></pre>

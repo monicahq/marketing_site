@@ -12,6 +12,7 @@
         <a class="f6 fw4 dn dib-ns pv2 ph3" href="{{ secure_url('/pricing') }}" >Pricing</a>
         <a class="f6 fw4 dn dib-l pv2 ph3" href="{{ secure_url('/api') }}" >API documentation</a>
         <a class="f6 fw4 dn dib-l pv2 ph3" href="{{ secure_url('/blog') }}" >Blog</a>
+        <a class="f6 fw4 dib ml2 pv2 ph3 secondary-button br3" href="https://app.monicahq.com/login" >Login</a>
         <a class="f6 fw4 dib ml2 pv2 ph3 secondary-button br3" href="https://app.monicahq.com/register" >Sign Up</a>
       </div>
     </nav>

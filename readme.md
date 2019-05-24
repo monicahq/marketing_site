@@ -21,6 +21,6 @@ Monica use a lot of open source projects and we thank them with all our hearts. 
 
 ## License
 
-Copyright (c) 2016-2018 Regis Freyd
+Copyright (c) 2016-2019 Regis Freyd
 
 Licensed under the AGPL License. [View license](/LICENSE).

@@ -51,7 +51,7 @@
             </svg>
           </div>
           <div class="">
-            <h2 class="mb0 normal mt3">110,403</h2>
+            <h2 class="mb0 normal mt3">202,000</h2>
             <p class="mt1 f6-ns f7 black-60">contacts managed</p>
           </div>
         </div>

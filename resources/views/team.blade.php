@@ -5,7 +5,7 @@
 <div class="mw8 center ph3 mt4">
   <div class="cf">
     <div class="fl w-100 tc mb5">
-      <h1 class="f2 normal lh-copy">Monica is a team of 1. With hundreds of contributors.</h1>
+      <h1 class="f2 normal lh-copy">Monica is a team of 2. With hundreds of contributors.</h1>
       <div class="flex-ns ba b--gray-monica">
         <div class="w-20-ns w-100 b--gray-monica br">
           <h3 class="f3 mb0 mt3 normal">2016</h3>
@@ -16,15 +16,15 @@
           <p class="f6 mt2">Headquarters</p>
         </div>
         <div class="w-20-ns w-100 b--gray-monica br">
-          <h3 class="f3 mb0 mt3 normal">1</h3>
-          <p class="f6 mt2">Employee</p>
+          <h3 class="f3 mb0 mt3 normal">2</h3>
+          <p class="f6 mt2">Members</p>
         </div>
         <div class="w-20-ns w-100 b--gray-monica br">
-          <h3 class="f3 mb0 mt3 normal">100</h3>
+          <h3 class="f3 mb0 mt3 normal">160</h3>
           <p class="f6 mt2">Open source contributors</p>
         </div>
         <div class="w-20-ns w-100">
-          <h3 class="f3 mb0 mt3 normal">110,403</h3>
+          <h3 class="f3 mb0 mt3 normal">202,000</h3>
           <p class="f6 mt2">Contacts managed</p>
         </div>
       </div>

@@ -5,7 +5,7 @@
 <div class="mw8 center ph3 mt4">
   <div class="cf">
     <div class="fl w-100 tc mb5">
-      <h1 class="f2 normal lh-copy">Monica is a team of 1. With hundreds of contributors.</h1>
+      <h1 class="f2 normal lh-copy">Monica is a team of 2. With hundreds of contributors.</h1>
       <div class="flex-ns ba b--gray-monica">
         <div class="w-20-ns w-100 b--gray-monica br">
           <h3 class="f3 mb0 mt3 normal">2016</h3>
@@ -16,15 +16,15 @@
           <p class="f6 mt2">Headquarters</p>
         </div>
         <div class="w-20-ns w-100 b--gray-monica br">
-          <h3 class="f3 mb0 mt3 normal">1</h3>
-          <p class="f6 mt2">Employee</p>
+          <h3 class="f3 mb0 mt3 normal">2</h3>
+          <p class="f6 mt2">Official members</p>
         </div>
         <div class="w-20-ns w-100 b--gray-monica br">
-          <h3 class="f3 mb0 mt3 normal">100</h3>
+          <h3 class="f3 mb0 mt3 normal">150</h3>
           <p class="f6 mt2">Open source contributors</p>
         </div>
         <div class="w-20-ns w-100">
-          <h3 class="f3 mb0 mt3 normal">110,403</h3>
+          <h3 class="f3 mb0 mt3 normal">210,403</h3>
           <p class="f6 mt2">Contacts managed</p>
         </div>
       </div>
@@ -40,7 +40,7 @@
       <p class="measure lh-copy center-ns">Monica is born out of a personal need to keep track of what friends living in other countries were doing with their lives. After having built the first version of the tool, I decided to open sourced it, promote it on Hacker News and the rest is history.</p>
       <p class="measure lh-copy center-ns">Monica is now an healthy open source project. We've been fortunate enough to have a great community, with dozens of contributors and hundreds of code contributions. It also generates a bit of money - every dollar we make on this project is reinvested in the project, to pay the bills and help further development.</p>
       <p class="measure lh-copy center-ns">Thanks for checking out the project.</p>
-      <p class="measure lh-copy center-ns">Regis Freyd</p>
+      <p class="measure lh-copy center-ns">Regis Freyd and Alexis Saetller</p>
     </div>
   </div>
 </div>

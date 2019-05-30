@@ -6,7 +6,7 @@
   <div class="cf">
     <div class="fl w-100 tc mb2">
       <h1 class=" normal mb2">Our privacy policy</h1>
-      <p class="normal lh-copy measure center">Last update: April 12, 2018</p>
+      <p class="normal lh-copy measure center">Last update: May 30, 2019</p>
     </div>
   </div>
 </div>
@@ -18,7 +18,7 @@
       <p class="measure lh-copy">Monica comes in two flavors: you can either use our hosted version, or download it and run it yourself. In the latter case, we do not track anything at all. We don't know that you've even downloaded the product. Do whatever you want with it (but respect your local laws).</p>
       <p class="measure lh-copy">When you create your account on our hosted version, you are giving the site information about yourself that we collect. This includes your name, your email address and your password, that is encrypted before being stored. We do not store any other personal information.</p>
       <p class="measure lh-copy">When you login to the service, we are using cookies to remember your login credentials. This is the only use we do with the cookies.</p>
-      <p class="measure lh-copy">Monica runs on Linode and we are the only ones, apart from Linode's employees, who have access to those servers.</p>\
+      <p class="measure lh-copy">Monica runs on Linode and we are the only ones, apart from Linode's employees, who have access to those servers.</p>
       <p class="measure lh-copy">We do hourly backups of the database.</p>
       <p class="measure lh-copy">Your password is encrypted with bcrypt, a password hashing algorithm that is highly secure. You can also activate two factor authentication on your account if you need an extra layer of security. Apart from those encryption mechanisms, your data is not encrypted in the database. If someone gets access to the database, they will be able to read your data. We do our best to make sure that this will never happen, but it can happen.</p>
       <p class="measure lh-copy">If a data breach happens, we will contact the users who are affected to warn them about the breach.</p>
@@ -31,7 +31,7 @@
       <p class="measure lh-copy">We use Stripe to collect payments made to access the paid version. We do not store credit card information or anything concerning the transactions themselves on our servers. However, as per the open source library we use to process the payments (Laravel Cashier), we store the last 4 digits of the credit card, the brand name (VISA or MasterCard). As a user, you are identified on Stripe by a random number that they generate and use.</p>
       <p class="measure lh-copy">Regarding the payments, you can downgrade to the free plan whenever you like. When you do, Stripe is automatically updated and we have no way to charge you again, even if we would like to. The less we deal with payment information, the happier we are.</p>
       <p class="measure lh-copy">You can export your data at any time. You can also use the API to export all your data if you know how to do it. You can also request that we process this ourselves and send it to you. Your data will be exported in the SQL format.</p>
-      <p class="measure lh-copy">When you close your account, we immediately destroy all your personal information and don't keep any backup. While you have control over this, we can delete an account for you if you ask us.</p>
+      <p class="measure lh-copy">When you close your account, we immediately destroy all your personal information from the production database, but your information is kept in the backups that we keep for 30 days. After 30 days, your information will be completely destroyed. While you have control over this, we can delete an account for you if you ask us.</p>
       <p class="measure lh-copy">In certain situations, we may be required to disclose personal data in response to lawful requests by public authorities, including to met national security or law enforcements requirements. We just hope that this never happens.</p>
       <p class="measure lh-copy">If you violate the terms of use we will terminate your account and notify you about it. However if you follow the "don't be a dick" policy, nothing should ever happen to you and we'll all be happy.</p>
       <p class="measure lh-copy">Monica uses only open-source projects that are mainly hosted on Github.</p>

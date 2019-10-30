@@ -15,8 +15,8 @@
   <div class="flex justify-center mb3">
     <div class="ba mw7 tc pa3 br3 bw2 b--dark-blue ph5">
       <a href="https://app.monicahq.com/register" class="no-underline" style="color: #293C45;">
-        <h2 class="normal f2 mt2 mb2">Just $5/month</h2>
-        <p class="f6 i">Or, pay $45/year and save 25%.</p>
+        <h2 class="normal f2 mt2 mb2">Just $9/month</h2>
+        <p class="f6 i">Or, pay $90/year.</p>
         <p class="lh-copy"><span class="sketch-underline">Flat pricing • No per-contacts fees</span> • Unlimited contacts • Unlimited reminders</p>
       </a>
     </div>

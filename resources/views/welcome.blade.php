@@ -33,7 +33,7 @@
             </svg>
           </div>
           <div class="">
-            <h2 class="mb0 normal mt3">30,329</h2>
+            <h2 class="mb0 normal mt3">44,123</h2>
             <p class="mt1 f6-ns f7 black-60">users registered</p>
           </div>
         </div>
@@ -51,7 +51,7 @@
             </svg>
           </div>
           <div class="">
-            <h2 class="mb0 normal mt3">210,273</h2>
+            <h2 class="mb0 normal mt3">340,273</h2>
             <p class="mt1 f6-ns f7 black-60">contacts managed</p>
           </div>
         </div>
@@ -69,7 +69,7 @@
             </svg>
           </div>
           <div class="">
-            <h2 class="mb0 normal mt3">12,045</h2>
+            <h2 class="mb0 normal mt3">28,321</h2>
             <p class="mt1 f6-ns f7 black-60">activities logged</p>
           </div>
         </div>
@@ -87,7 +87,7 @@
             </svg>
           </div>
           <div class="">
-            <h2 class="mb0 normal mt3">19,929</h2>
+            <h2 class="mb0 normal mt3">89,918</h2>
             <p class="mt1 f6-ns f7 black-60">reminders set</p>
           </div>
         </div>

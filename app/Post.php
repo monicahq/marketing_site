@@ -15,9 +15,6 @@ class Post extends Model implements Feedable
         'updated_at',
     ];
 
-    /**
-     * Get the category of this post.
-     */
     public function category()
     {
         return $this->belongsTo('App\Category');

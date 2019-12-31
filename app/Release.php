@@ -14,9 +14,6 @@ class Release extends Model
         'released_on',
     ];
 
-    /**
-     * Get the category of this post.
-     */
     public function category()
     {
         return $this->belongsTo('App\Category');
@@ -25,10 +22,5 @@ class Release extends Model
     public function notes()
     {
         return $this->hasMany('App\Note');
-    }
-
-    public function getPostAttribute($value)
-    {
-        return Markdown::convertToHtml($value);
     }
 }

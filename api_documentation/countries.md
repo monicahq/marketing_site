@@ -22,7 +22,7 @@ address and need to indicate a country, use the Country object to retrieve the
 <a id="markdown-list-all-the-countries" name="list-all-the-countries"></a>
 ## List all the countries
 
-Countries are order alphabetically by their name.
+Countries are order alphabetically by their name regarding the user's locale.
 
 <span class="url">
   GET /countries/
@@ -45,13 +45,13 @@ Countries are order alphabetically by their name.
       "name": "Akrotiri",
       "iso": "WSB"
     },
-    "ALA": {
-      "id": "AX",
+    ...
+    "ZMB": {
+      "id": "ZM",
       "object": "country",
-      "name": "Åland Islands",
-      "iso": "AX"
+      "name": "Zambia",
+      "iso": "ZM"
     },
-    ...,
     "ZWE": {
       "id": "ZW",
       "object": "country",

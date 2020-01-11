@@ -1,12 +1,12 @@
-# Currencies
+# Currencies <!-- omit in toc -->
 
 <!-- TOC -->
 
 - [Overview](#overview)
 - [List all the currencies](#list-all-the-currencies)
-    - [Response](#response)
+  - [Response](#response)
 - [Get a specific currency](#get-a-specific-currency)
-    - [Response](#response-1)
+  - [Response](#response-1)
 
 <!-- /TOC -->
 

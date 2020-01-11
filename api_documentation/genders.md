@@ -1,4 +1,24 @@
-# Genders
+# Genders <!-- omit in toc -->
+
+<!-- TOC -->
+
+- [Overview](#overview)
+- [List all the genders in the account](#list-all-the-genders-in-the-account)
+  - [Response](#response)
+- [Get a specific gender](#get-a-specific-gender)
+  - [Response](#response-1)
+- [Create a gender](#create-a-gender)
+  - [Input](#input)
+  - [Example](#example)
+  - [Response](#response-2)
+- [Update a gender](#update-a-gender)
+  - [Input](#input-1)
+  - [Example](#example-1)
+  - [Response](#response-3)
+- [Delete a gender](#delete-a-gender)
+  - [Response](#response-4)
+
+<!-- /TOC -->
 
 ## Overview
 

@@ -1,23 +1,23 @@
-# Journal
+# Journal <!-- omit in toc -->
 
 <!-- TOC -->
 
 - [Overview](#overview)
 - [List all the entries in your journal](#list-all-the-entries-in-your-journal)
-    - [Parameters](#parameters)
-    - [Response](#response)
+  - [Parameters](#parameters)
+  - [Response](#response)
 - [Get a specific journal entry](#get-a-specific-journal-entry)
-    - [Response](#response-1)
+  - [Response](#response-1)
 - [Create a journal entry](#create-a-journal-entry)
-    - [Input](#input)
-    - [Example](#example)
-    - [Response](#response-2)
+  - [Input](#input)
+  - [Example](#example)
+  - [Response](#response-2)
 - [Update a journal entry](#update-a-journal-entry)
-    - [Input](#input-1)
-    - [Example](#example-1)
-    - [Response](#response-3)
+  - [Input](#input-1)
+  - [Example](#example-1)
+  - [Response](#response-3)
 - [Delete a journal entry](#delete-a-journal-entry)
-    - [Response](#response-4)
+  - [Response](#response-4)
 
 <!-- /TOC -->
 

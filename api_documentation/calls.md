@@ -1,25 +1,25 @@
-# Calls
+# Calls <!-- omit in toc -->
 
 <!-- TOC -->
 
 - [Overview](#overview)
 - [List all the calls in your account](#list-all-the-calls-in-your-account)
-    - [Parameters](#parameters)
-    - [Response](#response)
+  - [Parameters](#parameters)
+  - [Response](#response)
 - [List all the calls of a specific contact](#list-all-the-calls-of-a-specific-contact)
-    - [Response](#response-1)
+  - [Response](#response-1)
 - [Get a specific call](#get-a-specific-call)
-    - [Response](#response-2)
+  - [Response](#response-2)
 - [Create a call](#create-a-call)
-    - [Input](#input)
-    - [Example](#example)
-    - [Response](#response-3)
+  - [Input](#input)
+  - [Example](#example)
+  - [Response](#response-3)
 - [Update a call](#update-a-call)
-    - [Input](#input-1)
-    - [Example](#example-1)
-    - [Response](#response-4)
+  - [Input](#input-1)
+  - [Example](#example-1)
+  - [Response](#response-4)
 - [Delete a call](#delete-a-call)
-    - [Response](#response-5)
+  - [Response](#response-5)
 
 <!-- /TOC -->
 

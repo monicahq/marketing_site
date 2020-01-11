@@ -1,25 +1,25 @@
-# Activities
+# Activities <!-- omit in toc -->
 
 <!-- TOC -->
 
 - [Overview](#overview)
 - [List all the activities in your account](#list-all-the-activities-in-your-account)
-    - [Parameters](#parameters)
-    - [Response](#response)
+  - [Parameters](#parameters)
+  - [Response](#response)
 - [List all the activities of a specific contact](#list-all-the-activities-of-a-specific-contact)
-    - [Response](#response-1)
+  - [Response](#response-1)
 - [Get a specific activity](#get-a-specific-activity)
-    - [Response](#response-2)
+  - [Response](#response-2)
 - [Create an activity](#create-an-activity)
-    - [Input](#input)
-    - [Example](#example)
-    - [Response](#response-3)
+  - [Input](#input)
+  - [Example](#example)
+  - [Response](#response-3)
 - [Update an activity](#update-an-activity)
-    - [Input](#input-1)
-    - [Example](#example-1)
-    - [Response](#response-4)
+  - [Input](#input-1)
+  - [Example](#example-1)
+  - [Response](#response-4)
 - [Delete an activity](#delete-an-activity)
-    - [Response](#response-5)
+  - [Response](#response-5)
 
 <!-- /TOC -->
 
@@ -58,7 +58,7 @@ the related contact(s).
       "object": "activity",
       "summary": "",
       "description": "On a mangé avec papi et mamie au restaurant indien.",
-      "date_it_happened": "2016-10-04T07:59:14Z",
+      "happened_at": "2016-10-04",
       "activity_type": {
 				"id": 12,
 				"object": "activityType",
@@ -86,10 +86,17 @@ the related contact(s).
           {
             "id": 1,
             "object": "contact",
+            "hash_id": "h:X5LOkAdWNDqgVomKPv",
             "first_name": "Henri",
             "last_name": "Troyat",
-            "gender": "female",
+            "nickname": "",
+            "complete_name": "Henri Troyat",
+            "initials": "HT",
+            "gender": "Female",
+            "gender_type": "F",
             "is_partial": false,
+            "is_dead": false,
+            "is_me": false,
             "information": {
               "dates": [
                 {
@@ -116,7 +123,7 @@ the related contact(s).
       "object": "activity",
       "summary": "Lunch with Dwight",
       "description": "We play handball and it was just awesome. He told me about a new girl he likes Cathy Simms, so he has to be careful.",
-      "date_it_happened": "2016-10-18T13:09:47Z",
+      "happened_at": "2016-10-18",
       "activity_type": {
 				"id": 12,
 				"object": "activityType",
@@ -144,10 +151,17 @@ the related contact(s).
           {
             "id": 8,
             "object": "contact",
+            "hash_id": "h:AlKmTUoPDqgVomKPv",
             "first_name": "Jim",
             "last_name": "Halpert",
-            "gender": "male",
+            "nickname": "",
+            "complete_name": "Jim Halpert",
+            "initials": "JH",
+            "gender": "Male",
+            "gender_type": "M",
             "is_partial": false,
+            "is_dead": false,
+            "is_me": false,
             "information": {
               "dates": [
                 {
@@ -174,7 +188,7 @@ the related contact(s).
       "object": "activity",
       "summary": "",
       "description": null,
-      "date_it_happened": "2017-02-18T23:59:47Z",
+      "happened_at": "2017-02-18",
       "activity_type": {
 				"id": 12,
 				"object": "activityType",
@@ -202,10 +216,17 @@ the related contact(s).
           {
             "id": 1,
             "object": "contact",
+            "hash_id": "h:X5LOkAdWNDqgVomKPv",
             "first_name": "Henri",
             "last_name": "Troyat",
-            "gender": "female",
+            "nickname": "",
+            "complete_name": "Henri Troyat",
+            "initials": "HT",
+            "gender": "Female",
+            "gender_type": "F",
             "is_partial": false,
+            "is_dead": false,
+            "is_me": false,
             "information": {
               "dates": [
                 {
@@ -232,7 +253,7 @@ the related contact(s).
       "object": "activity",
       "summary": "Theater",
       "description": "We had such an incredible time doing all this.",
-      "date_it_happened": "2017-10-25T00:00:00Z",
+      "happened_at": "2017-10-25",
       "activity_type": null,
       "attendees": {
         "total": 3,
@@ -240,10 +261,17 @@ the related contact(s).
           {
             "id": 7,
             "object": "contact",
+            "hash_id": "h:Vlu8z3PDqgVomKPv",
             "first_name": "Alexandre",
             "last_name": "Trioi",
-            "gender": "male",
+            "nickname": "",
+            "complete_name": "Alexandre Trioi",
+            "initials": "AT",
+            "gender": "Male",
+            "gender_type": "M",
             "is_partial": false,
+            "is_dead": false,
+            "is_me": false,
             "information": {
               "dates": [
                 {
@@ -260,10 +288,17 @@ the related contact(s).
           {
             "id": 1,
             "object": "contact",
+            "hash_id": "h:X5LOkAdWNDqgVomKPv",
             "first_name": "Henri",
             "last_name": "Troyat",
-            "gender": "female",
+            "nickname": "",
+            "complete_name": "Henri Troyat",
+            "initials": "HT",
+            "gender": "Female",
+            "gender_type": "F",
             "is_partial": false,
+            "is_dead": false,
+            "is_me": false,
             "information": {
               "dates": [
                 {
@@ -310,7 +345,7 @@ the related contact(s).
       "object": "activity",
       "summary": "We ate at an awesome restaurant.",
       "description": "We ate way too much, we had fun and we promised we'd see each other again in a couple of weeks.",
-      "date_it_happened": "2018-02-02T00:00:00Z",
+      "happened_at": "2018-02-02",
       "activity_type": {
 				"id": 12,
 				"object": "activityType",
@@ -338,10 +373,17 @@ the related contact(s).
           {
             "id": 1,
             "object": "contact",
+            "hash_id": "h:X5LOkAdWNDqgVomKPv",
             "first_name": "Henri",
             "last_name": "Troyat",
-            "gender": "female",
+            "nickname": "",
+            "complete_name": "Henri Troyat",
+            "initials": "HT",
+            "gender": "Female",
+            "gender_type": "F",
             "is_partial": false,
+            "is_dead": false,
+            "is_me": false,
             "information": {
               "dates": [
                 {
@@ -398,7 +440,7 @@ the related contact(s).
       "object": "activity",
       "summary": "Lunch with Dwight",
       "description": "We play handball and it was just awesome. He told me about a new girl he likes Cathy Simms, so he has to be careful.",
-      "date_it_happened": "2016-10-18T13:09:47Z",
+      "happened_at": "2016-10-18",
       "activity_type": {
 				"id": 12,
 				"object": "activityType",
@@ -426,10 +468,17 @@ the related contact(s).
           {
             "id": 8,
             "object": "contact",
+            "hash_id": "h:AlKmTUoPDqgVomKPv",
             "first_name": "Jim",
             "last_name": "Halpert",
-            "gender": "male",
+            "nickname": "",
+            "complete_name": "Jim Halpert",
+            "initials": "JH",
+            "gender": "Male",
+            "gender_type": "M",
             "is_partial": false,
+            "is_dead": false,
+            "is_me": false,
             "information": {
               "dates": [
                 {
@@ -485,7 +534,7 @@ the related contact(s).
     "object": "activity",
     "summary": "Lunch with Dwight",
     "description": "We play handball and it was just awesome. He told me about a new girl he likes Cathy Simms, so he has to be careful.",
-    "date_it_happened": "2016-10-18T13:09:47Z",
+    "happened_at": "2016-10-18",
     "activity_type": {
 				"id": 12,
 				"object": "activityType",
@@ -513,10 +562,17 @@ the related contact(s).
         {
           "id": 8,
           "object": "contact",
+          "hash_id": "h:AlKmTUoPDqgVomKPv",
           "first_name": "Jim",
           "last_name": "Halpert",
-          "gender": "male",
+          "nickname": "",
+          "complete_name": "Jim Halpert",
+          "initials": "JH",
+          "gender": "Male",
+          "gender_type": "M",
           "is_partial": false,
+          "is_dead": false,
+          "is_me": false,
           "information": {
             "dates": [
               {
@@ -552,20 +608,21 @@ the related contact(s).
 
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
+| activity_type_id | integer | <strong>Required</strong>. The ID of the type of activity that the activity is associated with. |
 | summary | string | <strong>Required</strong>. A short description of the activity. Max 255 characters. |
 | description | string | An optional comment to add more details on what happened. Max 1000000 characters. |
-| date_it_happened | string | <strong>Required</strong>. The date the event happened. Can be in the past or future - the latter being dumb, but well. Format: YYYY-MM-DD. |
-| activity_type_id | integer | The ID of the type of activity that the activity is associated with. |
-| contacts | array | <strong>Required</strong>. The ID of the contact(s) that the call is associated with. |
+| happened_at | string | <strong>Required</strong>. The date the event happened. Can be in the past or future - the latter being dumb, but well. Format: YYYY-MM-DD. |
+| contacts | array | <strong>Required</strong>. The ID of contacts the activity is associated with. |
+| emotions | array | The ID of emotions the activity is associated with. |
 
 <a id="markdown-example" name="example"></a>
 ### Example
 
 <pre><code class="json">{
+  "activity_type_id": 2,
   "summary": "We ate at an awesome restaurant.",
   "description": "We ate way too much, we had fun and we promised we'd see each other again in a couple of weeks.",
-  "date_it_happened": "2018-02-02",
-  "activity_type_id": 2,
+  "happened_at": "2018-02-02",
   "contacts": [1,3,5]
 }</code></pre>
 
@@ -580,7 +637,7 @@ The API call returns an Activity object if the call succeeds.
     "object": "activity",
     "summary": "We ate at an awesome restaurant.",
     "description": "We ate way too much, we had fun and we promised we'd see each other again in a couple of weeks.",
-    "date_it_happened": "2018-02-02T00:00:00Z",
+    "happened_at": "2018-02-02",
     "activity_type": {
 				"id": 12,
 				"object": "activityType",
@@ -608,10 +665,17 @@ The API call returns an Activity object if the call succeeds.
         {
           "id": 1,
           "object": "contact",
+          "hash_id": "h:X5LOkAdWNDqgVomKPv",
           "first_name": "Henri",
           "last_name": "Troyat",
-          "gender": "female",
+          "nickname": "",
+          "complete_name": "Henri Troyat",
+          "initials": "HT",
+          "gender": "Female",
+          "gender_type": "F",
           "is_partial": false,
+          "is_dead": false,
+          "is_me": false,
           "information": {
             "dates": [
               {
@@ -687,20 +751,21 @@ The API call returns an Activity object if the call succeeds.
 
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
+| activity_type_id | integer | <strong>Required</strong>. The ID of the type of activity that the activity is associated with. |
 | summary | string | <strong>Required</strong>. A short description of the activity. Max 255 characters. |
 | description | string | An optional comment to add more details on what happened. Max 1000000 characters. |
-| date_it_happened | string | <strong>Required</strong>. The date the event happened. Can be in the past or future - the latter being dumb, but well. Format: YYYY-MM-DD. |
-| activity_type_id | integer | The ID of the type of activity that the activity is associated with. |
-| contacts | array | <strong>Required</strong>. The ID of the contact(s) that the call is associated with. |
+| happened_at | string | <strong>Required</strong>. The date the event happened. Can be in the past or future - the latter being dumb, but well. Format: YYYY-MM-DD. |
+| contacts | array | <strong>Required</strong>. The ID of contacts the activity is associated with. |
+| emotions | array | The ID of emotions the activity is associated with. |
 
 <a id="markdown-example-1" name="example-1"></a>
 ### Example
 
 <pre><code class="json">{
+  "activity_type_id": 2,
   "summary": "We ate at an awesome restaurant.",
   "description": "We ate way too much, we had fun and we promised we'd see each other again in a couple of weeks.",
-  "date_it_happened": "2018-02-02",
-  "activity_type_id": 2,
+  "happened_at": "2018-02-02",
   "contacts": [1,3]
 }</code></pre>
 
@@ -713,7 +778,7 @@ The API call returns an Activity object if the call succeeds.
     "object": "activity",
     "summary": "We ate at an awesome restaurant.",
     "description": "We ate way too much, we had fun and we promised we'd see each other again in a couple of weeks.",
-    "date_it_happened": "2018-02-02T00:00:00Z",
+    "happened_at": "2018-02-02",
     "activity_type": {
 				"id": 12,
 				"object": "activityType",
@@ -741,10 +806,17 @@ The API call returns an Activity object if the call succeeds.
         {
           "id": 1,
           "object": "contact",
+          "hash_id": "h:X5LOkAdWNDqgVomKPv",
           "first_name": "Henri",
           "last_name": "Troyat",
-          "gender": "female",
+          "nickname": "",
+          "complete_name": "Henri Troyat",
+          "initials": "HT",
+          "gender": "Female",
+          "gender_type": "F",
           "is_partial": false,
+          "is_dead": false,
+          "is_me": false,
           "information": {
             "dates": [
               {

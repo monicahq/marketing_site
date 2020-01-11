@@ -38,7 +38,7 @@ class CreatePost extends Command
      */
     public function handle()
     {
-        $path = base_path().'/public/img/social/posts/'.\Carbon\Carbon::now()->format('Y-m-d');
+        $path = base_path().'/public/img/social/posts/'.now()->format('Y-m-d');
         $result = File::makeDirectory($path);
 
         if ($result == false) {

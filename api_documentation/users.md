@@ -1,10 +1,10 @@
-# User
+# User <!-- omit in toc -->
 
 <!-- TOC -->
 
 - [Overview](#overview)
 - [Get yourself](#get-yourself)
-    - [Response](#response)
+  - [Response](#response)
 
 <!-- /TOC -->
 

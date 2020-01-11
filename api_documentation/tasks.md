@@ -1,26 +1,26 @@
-# Tasks
+# Tasks <!-- omit in toc -->
 
 <!-- TOC -->
 
 - [Overview](#overview)
 - [List all the tasks in your account](#list-all-the-tasks-in-your-account)
-    - [Parameters](#parameters)
-    - [Response](#response)
-    - [Sorting](#sorting)
+  - [Parameters](#parameters)
+  - [Response](#response)
+  - [Sorting](#sorting)
 - [List all the tasks of a specific contact](#list-all-the-tasks-of-a-specific-contact)
-    - [Response](#response-1)
+  - [Response](#response-1)
 - [Get a specific task](#get-a-specific-task)
-    - [Response](#response-2)
+  - [Response](#response-2)
 - [Create a task](#create-a-task)
-    - [Input](#input)
-    - [Example](#example)
-    - [Response](#response-3)
+  - [Input](#input)
+  - [Example](#example)
+  - [Response](#response-3)
 - [Update a task](#update-a-task)
-    - [Input](#input-1)
-    - [Example](#example-1)
-    - [Response](#response-4)
+  - [Input](#input-1)
+  - [Example](#example-1)
+  - [Response](#response-4)
 - [Delete a task](#delete-a-task)
-    - [Response](#response-5)
+  - [Response](#response-5)
 
 <!-- /TOC -->
 

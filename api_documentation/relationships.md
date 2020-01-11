@@ -1,13 +1,22 @@
-# Relationships
+# Relationships <!-- omit in toc -->
 
 <!-- TOC -->
 
 - [Overview](#overview)
-    - [All available relationship type groups](#all-available-relationship-type-groups)
-- [List all the relationship type groups in an account](#list-all-the-relationship-type-groups-in-an-account)
-    - [Response](#response)
-- [Get a specific relationship type group](#get-a-specific-relationship-type-group)
-    - [Response](#response-1)
+- [List a specific relationship](#list-a-specific-relationship)
+  - [Response](#response)
+- [List all the relationships of a contact](#list-all-the-relationships-of-a-contact)
+  - [Response](#response-1)
+- [Create a relationship](#create-a-relationship)
+  - [Input](#input)
+  - [Example](#example)
+  - [Response](#response-2)
+- [Update a relationship](#update-a-relationship)
+  - [Input](#input-1)
+  - [Example](#example-1)
+  - [Response](#response-3)
+- [Delete a relationship](#delete-a-relationship)
+  - [Response](#response-4)
 
 <!-- /TOC -->
 
@@ -15,7 +24,7 @@
 
 A contact can be linked to other contacts. This link is called a relationship. For instance, a contact can have an uncle, a lover, a protégé.
 
-Each relationship has a <a href="/api/relationshiptypes">relationship type</a>. A contact can have as many relationships as necessary.
+Each relationship has a <a href="relationshiptypes">relationship type</a>. A contact can have as many relationships as necessary.
 
 A relationship is between two contacts. Let's say John has an uncle called Peter. In this case:
 - the primary contact is John. In the API calls below, John is called `contact_is`.
@@ -23,12 +32,14 @@ A relationship is between two contacts. Let's say John has an uncle called Peter
 
 They are named that way so you can read a call more easily: `contact_is` is friend `of_contact`.
 
+<a name="list-a-specific-relationship"></a>
 ## List a specific relationship
 
 <span class="url">
   GET /relationships/:id
 </span>
 
+<a name="response"></a>
 ### Response
 
 <pre><code class="json">{
@@ -120,12 +131,14 @@ They are named that way so you can read a call more easily: `contact_is` is frie
   }
 }</code></pre>
 
+<a name="list-all-the-relationships-of-a-contact"></a>
 ## List all the relationships of a contact
 
 <span class="url">
   GET /contacts/:id/relationships/
 </span>
 
+<a name="response-1"></a>
 ### Response
 
 <pre><code class="json">{
@@ -192,12 +205,14 @@ They are named that way so you can read a call more easily: `contact_is` is frie
   }
 }</code></pre>
 
+<a name="create-a-relationship"></a>
 ## Create a relationship
 
 <span class="url">
   POST /relationships/
 </span>
 
+<a name="input"></a>
 ### Input
 
 | Name | Type | Description |
@@ -206,6 +221,7 @@ They are named that way so you can read a call more easily: `contact_is` is frie
 | relationship_type_id | integer | <strong>Required</strong>. The nature of the relationship between the two contacts. |
 | of_contact | integer | <strong>Required</strong>. The ID of the contact the relationship is made with. |
 
+<a name="example"></a>
 ### Example
 
 <pre><code class="json">{
@@ -214,6 +230,7 @@ They are named that way so you can read a call more easily: `contact_is` is frie
   "of_contact": 3
 }</code></pre>
 
+<a name="response-2"></a>
 ### Response
 
 The API returns a Relationship object if the call succeeds.
@@ -307,6 +324,7 @@ The API returns a Relationship object if the call succeeds.
   }
 }</code></pre>
 
+<a name="update-a-relationship"></a>
 ## Update a relationship
 
 Updating a relationship will only update the relationship type.
@@ -315,18 +333,21 @@ Updating a relationship will only update the relationship type.
   PUT /relationships/:id
 </span>
 
+<a name="input-1"></a>
 ### Input
 
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
 | relationship_type_id | integer | <strong>Required</strong>. The nature of the relationship between the two contacts. |
 
+<a name="example-1"></a>
 ### Example
 
 <pre><code class="json">{
   "relationship_type_id": 1
 }</code></pre>
 
+<a name="reponse-3"></a>
 ### Response
 
 The API returns a Relationship object if the call succeeds.
@@ -420,12 +441,14 @@ The API returns a Relationship object if the call succeeds.
   }
 }</code></pre>
 
+<a name="delete-a-relationship"></a>
 ## Delete a relationship
 
 <span class="url">
   DELETE /relationships/:id
 </span>
 
+<a name="response-4"></a>
 ### Response
 
 The response sends back the id that was just deleted.

@@ -1,25 +1,25 @@
-# Reminders
+# Reminders <!-- omit in toc -->
 
 <!-- TOC -->
 
 - [Overview](#overview)
 - [List all the reminders in your account](#list-all-the-reminders-in-your-account)
-    - [Parameters](#parameters)
-    - [Response](#response)
+  - [Parameters](#parameters)
+  - [Response](#response)
 - [List all the reminders of a specific contact](#list-all-the-reminders-of-a-specific-contact)
-    - [Response](#response-1)
+  - [Response](#response-1)
 - [Get a specific reminder](#get-a-specific-reminder)
-    - [Response](#response-2)
+  - [Response](#response-2)
 - [Create a reminder](#create-a-reminder)
-    - [Input](#input)
-    - [Example](#example)
-    - [Response](#response-3)
+  - [Input](#input)
+  - [Example](#example)
+  - [Response](#response-3)
 - [Update a reminder](#update-a-reminder)
-    - [Input](#input-1)
-    - [Example](#example-1)
-    - [Response](#response-4)
+  - [Input](#input-1)
+  - [Example](#example-1)
+  - [Response](#response-4)
 - [Delete a reminder](#delete-a-reminder)
-    - [Response](#response-5)
+  - [Response](#response-5)
 
 <!-- /TOC -->
 

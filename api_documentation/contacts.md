@@ -1,28 +1,33 @@
-# Contacts
+# Contacts <!-- omit in toc -->
 
 <!-- TOC -->
 
 - [Overview](#overview)
-    - [Special dates](#special-dates)
+  - [Special dates](#special-dates)
 - [List all your contacts](#list-all-your-contacts)
-    - [Parameters](#parameters)
-    - [Response](#response)
-    - [Sorting](#sorting)
+  - [Parameters](#parameters)
+  - [Response](#response)
+  - [Sorting](#sorting)
 - [Get a specific contact](#get-a-specific-contact)
-    - [Get a `real` contact](#get-a-real-contact)
-    - [Get a `partial` contact](#get-a-partial-contact)
+  - [Get a `real` contact](#get-a-real-contact)
+  - [Get a `partial` contact](#get-a-partial-contact)
 - [Create a contact](#create-a-contact)
-    - [Input](#input)
-    - [Example](#example)
-    - [Response](#response-1)
+  - [Input](#input)
+  - [Example](#example)
+  - [Response](#response-1)
 - [Update a contact](#update-a-contact)
-    - [Input](#input-1)
-    - [Example](#example-1)
-    - [Response](#response-2)
+  - [Input](#input-1)
+  - [Example](#example-1)
+  - [Response](#response-2)
+- [Update a contact career](#update-a-contact-career)
+  - [Input](#input-2)
+  - [Example](#example-2)
+  - [Response](#response-3)
 - [Delete a contact](#delete-a-contact)
-    - [Response](#response-3)- [Search](#search)
-        - [Input](#input-6)
-        - [Response](#response-4)
+  - [Response](#response-4)
+- [Search](#search)
+    - [Input](#input-3)
+    - [Response](#response-5)
 
 <!-- /TOC -->
 
@@ -645,7 +650,7 @@ If a field is not required, you can send the `null` value as the content of the 
 | first_name | string | <strong>Required</strong>. The first name of the contact. Max 50 characters. |
 | last_name | string | Last name of the contact. Max 100 characters. |
 | nickname | string | Nickname of the contact. Max 100 characters. |
-| gender_id | integer | <strong>Required</strong>. The Gender ID of the contact. Gender IDs are retrieved through the <a href="gender.md">Gender's API</a>. |
+| gender_id | integer | <strong>Required</strong>. The Gender ID of the contact. Gender IDs are retrieved through the <a href="gender">Gender's API</a>. |
 | birthdate_day | integer | Birthdate day of the contact. Required when is_birthdate_known is true and birthdate_is_age_based is false. |
 | birthdate_month | integer | Birthdate month of the contact. Required when is_birthdate_known is true and birthdate_is_age_based is false. |
 | birthdate_year | integer | Birthdate year of the contact. |
@@ -791,7 +796,7 @@ The API call returns a contact object if the call succeeds.
 | first_name | string | <strong>Required</strong>. The first name of the contact. Max 50 characters. |
 | last_name | string | Last name of the contact. Max 100 characters. |
 | nickname | string | Nickname of the contact. Max 100 characters. |
-| gender_id | integer | <strong>Required</strong>. The Gender ID of the contact. Gender IDs are retrieved through the <a href="gender.md">Gender's API</a>. |
+| gender_id | integer | <strong>Required</strong>. The Gender ID of the contact. Gender IDs are retrieved through the <a href="gender">Gender's API</a>. |
 | birthdate_day | integer | Birthdate day of the contact. Required when is_birthdate_known is true and birthdate_is_age_based is false. |
 | birthdate_month | integer | Birthdate month of the contact. Required when is_birthdate_known is true and birthdate_is_age_based is false. |
 | birthdate_year | integer | Birthdate year of the contact. |
@@ -913,6 +918,118 @@ The API call returns a contact object if the call succeeds.
     },
     "created_at": "2017-12-12T11:13:12Z",
     "updated_at": "2017-12-12T11:18:40Z"
+  }
+}</code></pre>
+
+
+<a name="update-a-contact-career"></a>
+<a id="update-a-contact-career"></a>
+<a id="markdown-update-a-contact-career" name="update-a-contact-career"></a>
+## Update a contact career
+
+<span class="url">
+  PUT /contacts/:id/career
+</span>
+
+<a id="markdown-input-1" name="input-1"></a>
+### Input
+
+| Name | Type | Description |
+| ---- | ----------- | ----------- |
+| job | string | The job title. Max 255 characters. |
+| company | string | The company name. Max 255 characters. |
+
+<a id="markdown-example-1" name="example-1"></a>
+### Example
+
+<pre><code class="json">{
+  "job": "Big boss",
+  "company": "Monicahq"
+}</code></pre>
+
+<a id="markdown-response-2" name="response-2"></a>
+### Response
+
+<pre><code class="json">{
+  "data": {
+    "id": 388,
+    "object": "contact",
+    "first_name": "henri",
+    "last_name": "troyat",
+    "nickname": "Rambo",
+    "gender": "male",
+    "is_partial": false,
+    "is_dead": true,
+    "last_called": null,
+    "last_activity_together": null,
+    "stay_in_touch_frequency": 5,
+    "stay_in_touch_trigger_date": "2018-04-26T09:25:43Z",
+    "information": {
+      "relationships": {
+        "love": {
+          "total": 0,
+          "contacts": []
+        },
+        "family": {
+          "total": 0,
+          "contacts": []
+        },
+        "friend": {
+          "total": 0,
+          "contacts": []
+        },
+        "work": {
+          "total": 0,
+          "contacts": []
+        }
+      },
+      "dates": {
+        "birthdate": {
+          "is_age_based": true,
+          "is_year_unknown": false,
+          "date": "1978-01-01T00:00:00Z"
+        },
+        "deceased_date": {
+          "is_age_based": false,
+          "is_year_unknown": true,
+          "date": "2017-02-02T00:00:00Z"
+        }
+      },
+      "career": {
+        "job": "Big boss",
+        "company": "Monicahq"
+      },
+      "avatar": {
+        "url": "https:\/\/scontent-yyz1-1.xx.fbcdn.net\/v\/t1.0-1\/p160x160\/23561695_738743569647668_3975953680386408_n.jpg?oh=c32aa5f5c6c8d2ca927cbd2fcaa3&oe=5AA2632F",
+        "source": "external"
+      },
+      "food_preferencies": "Fish and fresh potatoes.",
+      "how_you_met": {
+        "general_information": "we met a bar.",
+        "first_met_date": {
+          "is_age_based": false,
+          "is_year_unknown": false,
+          "date": "1981-02-02T00:00:00Z"
+        },
+        "first_met_through_contact": null
+      }
+    },
+    "addresses": [],
+    "tags": [],
+    "statistics": {
+      "number_of_calls": 0,
+      "number_of_notes": 0,
+      "number_of_activities": 0,
+      "number_of_reminders": 1,
+      "number_of_tasks": 0,
+      "number_of_gifts": 0,
+      "number_of_debts": 0
+    },
+    "account": {
+      "id": 1
+    },
+    "created_at": "2017-12-12T11:13:12Z",
+    "updated_at": "2019-12-11T11:18:40Z"
   }
 }</code></pre>
 

@@ -1,17 +1,17 @@
-# Overview
+# Overview <!-- omit in toc -->
 
 <!-- TOC -->
 
 - [Current version](#current-version)
 - [Schema](#schema)
-    - [Summary Representations](#summary-representations)
+  - [Summary Representations](#summary-representations)
 - [HTTP verbs](#http-verbs)
 - [Client errors](#client-errors)
-    - [Invalid JSON](#invalid-json)
-    - [All custom errors](#all-custom-errors)
+  - [Invalid JSON](#invalid-json)
+  - [All custom errors](#all-custom-errors)
 - [Authentication](#authentication)
-    - [OAuth 2 Token (sent in a header)](#oauth-2-token-sent-in-a-header)
-    - [OAuth2 Key/Secret](#oauth2-keysecret)
+  - [OAuth 2 Token (sent in a header)](#oauth-2-token-sent-in-a-header)
+  - [OAuth2 Key/Secret](#oauth2-keysecret)
 - [Pagination](#pagination)
 - [Rate limiting](#rate-limiting)
 

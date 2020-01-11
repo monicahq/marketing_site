@@ -1,22 +1,22 @@
-# Contact field types
+# Contact field types <!-- omit in toc -->
 
 <!-- TOC -->
 
 - [Overview](#overview)
 - [List all the contact field types in an account](#list-all-the-contact-field-types-in-an-account)
-    - [Response](#response)
+  - [Response](#response)
 - [Get a specific contact type field](#get-a-specific-contact-type-field)
-    - [Response](#response-1)
+  - [Response](#response-1)
 - [Create a contact field type](#create-a-contact-field-type)
-    - [Input](#input)
-    - [Example](#example)
-    - [Response](#response-2)
+  - [Input](#input)
+  - [Example](#example)
+  - [Response](#response-2)
 - [Update a contact field type](#update-a-contact-field-type)
-    - [Input](#input-1)
-    - [Example](#example-1)
-    - [Response](#response-3)
+  - [Input](#input-1)
+  - [Example](#example-1)
+  - [Response](#response-3)
 - [Delete a contact field type](#delete-a-contact-field-type)
-    - [Response](#response-4)
+  - [Response](#response-4)
 
 <!-- /TOC -->
 
@@ -24,7 +24,7 @@
 <a id="markdown-overview" name="overview"></a>
 ## Overview
 
-A contact can have as many <a href="/api/contactfields">contact fields</a>
+A contact can have as many <a href="contactfields">contact fields</a>
  as possible. Each contact field has a type: a phone number, email address,
  Twitter profile, Telegram nickname, etc... Each one of these means of
  communication is called a Contact Field Type. A contact can have as many

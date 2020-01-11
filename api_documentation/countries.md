@@ -1,10 +1,10 @@
-# Countries
+# Countries <!-- omit in toc -->
 
 <!-- TOC -->
 
 - [Overview](#overview)
 - [List all the countries](#list-all-the-countries)
-    - [Response](#response)
+  - [Response](#response)
 
 <!-- /TOC -->
 
@@ -22,7 +22,7 @@ address and need to indicate a country, use the Country object to retrieve the
 <a id="markdown-list-all-the-countries" name="list-all-the-countries"></a>
 ## List all the countries
 
-Countries are order alphabetically.
+Countries are order alphabetically by their name.
 
 <span class="url">
   GET /countries/
@@ -32,31 +32,31 @@ Countries are order alphabetically.
 ### Response
 
 <pre><code class="json">{
-  "data": [
-    {
-      "id": 63,
+  "data": {
+    "AFG": {
+      "id": "AF",
       "object": "country",
       "name": "Afghanistan",
-      "iso": "af"
+      "iso": "AF"
     },
-    {
-      "id": 126,
+    "WSB": {
+      "id": "WSB",
       "object": "country",
-      "name": "Aland Islands",
-      "iso": "ax"
+      "name": "Akrotiri",
+      "iso": "WSB"
     },
-    {
-      "id": 124,
+    "ALA": {
+      "id": "AX",
       "object": "country",
-      "name": "Albania",
-      "iso": "al"
+      "name": "Åland Islands",
+      "iso": "AX"
     },
     ...,
-    {
-      "id": 62,
+    "ZWE": {
+      "id": "ZW",
       "object": "country",
       "name": "Zimbabwe",
-      "iso": "zw"
+      "iso": "ZW"
     }
-  ]
+  }
 }</code></pre>

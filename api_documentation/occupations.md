@@ -1,23 +1,23 @@
-# occupations
+# Occupations <!-- omit in toc -->
 
 <!-- TOC -->
 
 - [Overview](#overview)
 - [List all the occupations in your account](#list-all-the-occupations-in-your-account)
-    - [Parameters](#parameters)
-    - [Response](#response)
+  - [Parameters](#parameters)
+  - [Response](#response)
 - [Get a specific occupation](#get-a-specific-occupation)
-    - [Response](#response-1)
+  - [Response](#response-1)
 - [Create an occupation](#create-an-occupation)
-    - [Input](#input)
-    - [Example](#example)
-    - [Response](#response-2)
+  - [Input](#input)
+  - [Example](#example)
+  - [Response](#response-2)
 - [Update an occupation](#update-an-occupation)
-    - [Input](#input-1)
-    - [Example](#example-1)
-    - [Response](#response-3)
+  - [Input](#input-1)
+  - [Example](#example-1)
+  - [Response](#response-3)
 - [Delete an occupation](#delete-an-occupation)
-    - [Response](#response-4)
+  - [Response](#response-4)
 
 <!-- /TOC -->
 

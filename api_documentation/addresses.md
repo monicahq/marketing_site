@@ -1,22 +1,22 @@
-# Addresses
+# Addresses <!-- omit in toc -->
 
 <!-- TOC -->
 
 - [Overview](#overview)
 - [List all the addresses of a specific contact](#list-all-the-addresses-of-a-specific-contact)
-    - [Response](#response)
+  - [Response](#response)
 - [Get a specific address](#get-a-specific-address)
-    - [Response](#response-1)
+  - [Response](#response-1)
 - [Create an address](#create-an-address)
-    - [Input](#input)
-    - [Example](#example)
-    - [Response](#response-2)
+  - [Input](#input)
+  - [Example](#example)
+  - [Response](#response-2)
 - [Update an address](#update-an-address)
-    - [Input](#input-1)
-    - [Example](#example-1)
-    - [Response](#response-3)
+  - [Input](#input-1)
+  - [Example](#example-1)
+  - [Response](#response-3)
 - [Delete an address](#delete-an-address)
-    - [Response](#response-4)
+  - [Response](#response-4)
 
 <!-- /TOC -->
 
@@ -220,7 +220,7 @@ the related contact(s).
 | city | string | The city the contact lives in. Max 255 characters. |
 | province | string | The province the contact is in. Max 255 characters. |
 | postal_code | string | The postal code of the city the contact lives in. Max 255 characters. |
-| country_id | integer | The country ID of the country the contact lives in. Country IDs are retrieved through the <a href="countries.md">Country's API</a>. |
+| country_id | integer | The country ID of the country the contact lives in. Country IDs are retrieved through the <a href="countries">Country's API</a>. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the address is associated with. |
 
 <a id="markdown-example" name="example"></a>
@@ -304,7 +304,7 @@ The API call returns an address object if the call succeeds.
 | city | string | The city the contact lives in. Max 255 characters. |
 | province | string | The province the contact is in. Max 255 characters. |
 | postal_code | string | The postal code of the city the contact lives in. Max 255 characters. |
-| country_id | integer | The country ID of the country the contact lives in. Country IDs are retrieved through the <a href="{{ "/api/countries" | prepend: site.baseurl | prepend: site.url }}">Country's API</a>. |
+| country_id | integer | The country ID of the country the contact lives in. Country IDs are retrieved through the <a href="countries">Country's API</a>. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the address is associated with. |
 
 <a id="markdown-example-1" name="example-1"></a>

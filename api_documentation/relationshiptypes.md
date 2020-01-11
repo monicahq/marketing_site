@@ -1,20 +1,20 @@
-# Relationship Types
+# Relationship Types <!-- omit in toc -->
 
 <!-- TOC -->
 
 - [Overview](#overview)
-    - [All available relationship types](#all-available-relationship-types)
+  - [All available relationship types](#all-available-relationship-types)
 - [List all the relationship types in an account](#list-all-the-relationship-types-in-an-account)
-    - [Response](#response)
+  - [Response](#response)
 - [Get a specific relationship type](#get-a-specific-relationship-type)
-    - [Response](#response-1)
+  - [Response](#response-1)
 
 <!-- /TOC -->
 
 <a id="markdown-overview" name="overview"></a>
 ## Overview
 
-A contact can have multiple relationships, like a father, brother or lover. We call this a relationship type. Each relationship type belongs to a category, called <a href="/api/relationshiptypegroups">relationship type group</a>. For instance, `father` belongs to the `family` category, `lover` belongs to the `love` category, etc...
+A contact can have multiple relationships, like a father, brother or lover. We call this a relationship type. Each relationship type belongs to a category, called <a href="relationshiptypegroups">relationship type group</a>. For instance, `father` belongs to the `family` category, `lover` belongs to the `love` category, etc...
 
 Relationship types are account wide. At the moment, relationship types are in read-only mode. You can't create, edit or delete them.
 

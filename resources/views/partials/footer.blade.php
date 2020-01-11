@@ -37,7 +37,7 @@
     </div>
     <div class="fl w-20-ns w-100 tc tl-ns">
       <img src="{{ secure_url('/img/logo_vertical.png') }}" class="mw-none" style="width: 130px;">
-      <p class="mt2 f6">© 2019</p>
+      <p class="mt2 f6">© {{ now()->format('Y') }}</p>
     </div>
   </div>
 </div>

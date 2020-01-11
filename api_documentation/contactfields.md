@@ -1,22 +1,22 @@
-# Contact fields
+# Contact fields <!-- omit in toc -->
 
 <!-- TOC -->
 
 - [Overview](#overview)
 - [List all the contact fields of a specific contact](#list-all-the-contact-fields-of-a-specific-contact)
-    - [Response](#response)
+  - [Response](#response)
 - [Get a specific contact field](#get-a-specific-contact-field)
-    - [Response](#response-1)
+  - [Response](#response-1)
 - [Create a contact field](#create-a-contact-field)
-    - [Input](#input)
-    - [Example](#example)
-    - [Response](#response-2)
+  - [Input](#input)
+  - [Example](#example)
+  - [Response](#response-2)
 - [Update a contact field](#update-a-contact-field)
-    - [Input](#input-1)
-    - [Example](#example-1)
-    - [Response](#response-3)
+  - [Input](#input-1)
+  - [Example](#example-1)
+  - [Response](#response-3)
 - [Delete a contact field](#delete-a-contact-field)
-    - [Response](#response-4)
+  - [Response](#response-4)
 
 <!-- /TOC -->
 
@@ -361,7 +361,7 @@ When retrieving a contact field, we always also return some basic information ab
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
 | data | string | <strong>Required</strong>. The actual content of the contact field. Max 255 characters. |
-| contact_field_type_id | integer | <strong>Required</strong>. The type of the contact field. Has to be a valid, existing contact field type ID. You can retrieve the list of all the contact field types of an account <a href="contactfieldtypes.md">via the API</a>. |
+| contact_field_type_id | integer | <strong>Required</strong>. The type of the contact field. Has to be a valid, existing contact field type ID. You can retrieve the list of all the contact field types of an account <a href="contactfieldtypes">via the API</a>. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the content field is associated with. |
 
 <a id="markdown-example" name="example"></a>
@@ -439,7 +439,7 @@ The API call returns a Contact Field object if the call succeeds.
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
 | data | string | <strong>Required</strong>. The actual content of the contact field. Max 255 characters. |
-| contact_field_type_id | integer | <strong>Required</strong>. The type of the contact field. Has to be a valid, existing contact field type ID. You can retrieve the list of all the contact field types of an account <a href="contactfieldtypes.md">via the API</a>. |
+| contact_field_type_id | integer | <strong>Required</strong>. The type of the contact field. Has to be a valid, existing contact field type ID. You can retrieve the list of all the contact field types of an account <a href="contactfieldtypes">via the API</a>. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the content field is associated with. |
 
 <a id="markdown-example-1" name="example-1"></a>

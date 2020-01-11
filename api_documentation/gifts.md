@@ -1,25 +1,28 @@
-# Gifts
+# Gifts <!-- omit in toc -->
 
 <!-- TOC -->
 
 - [Overview](#overview)
 - [List all the gifts in your account](#list-all-the-gifts-in-your-account)
-    - [Parameters](#parameters)
-    - [Response](#response)
+  - [Parameters](#parameters)
+  - [Response](#response)
 - [List all the gifts of a specific contact](#list-all-the-gifts-of-a-specific-contact)
-    - [Response](#response-1)
+  - [Response](#response-1)
 - [Get a specific gift](#get-a-specific-gift)
-    - [Response](#response-2)
+  - [Response](#response-2)
 - [Create a gift](#create-a-gift)
-    - [Input](#input)
-    - [Example](#example)
-    - [Response](#response-3)
+  - [Input](#input)
+  - [Example](#example)
+  - [Response](#response-3)
 - [Update a gift](#update-a-gift)
-    - [Input](#input-1)
-    - [Example](#example-1)
-    - [Response](#response-4)
+  - [Input](#input-1)
+  - [Example](#example-1)
+  - [Response](#response-4)
 - [Delete a gift](#delete-a-gift)
-    - [Response](#response-5)
+  - [Response](#response-5)
+- [Associate a photo to a gift](#associate-a-photo-to-a-gift)
+  - [Input](#input-2)
+  - [Response](#response-6)
 
 <!-- /TOC -->
 
@@ -61,17 +64,15 @@ related contact.
     {
       "id": 1,
       "object": "gift",
-      "is_for": null,
       "name": "Nice gift for Dwight",
       "comment": "I'm sure he'll love it",
       "url": "https:\/\/www.amazon.ca\/Culturenik-815-640-AMA-Office-Worlds-Television\/dp\/B00PCVCW80\/ref=sr_1_1?ie=UTF8&qid=1508272830&sr=8-1&keywords=dunder+mifflin+mug",
-      "value": "123",
-      "is_an_idea": true,
-      "has_been_offered": false,
-      "date_offered": null,
-      "account": {
-        "id": 5
-      },
+      "amount": "123",
+      "amount_with_currency": "$123.00",
+      "status": "idea",
+      "date": null,
+      "recipient": null,
+      "photos": [],
       "contact": {
         "id": 1,
         "object": "contact",
@@ -92,23 +93,24 @@ related contact.
           "id": 5
         }
       },
+      "account": {
+        "id": 5
+      },
       "created_at": "2017-10-17T16:40:38Z",
       "updated_at": "2017-10-17T16:40:38Z"
     },
     {
       "id": 2,
       "object": "gift",
-      "is_for": null,
       "name": "For my friend Ron Swanson",
       "comment": "",
       "url": "https:\/\/www.amazon.ca\/Culturenik-182-390-Recreation-Swanson-Pyramid\/dp\/B00UTPTOHG\/ref=sr_1_1?ie=UTF8&qid=1508272877&sr=8-1&keywords=ron+swanson",
-      "value": "43",
-      "is_an_idea": false,
-      "has_been_offered": true,
-      "date_offered": null,
-      "account": {
-        "id": 5
-      },
+      "amount": "43",
+      "amount_with_currency": "$43.00",
+      "status": "idea",
+      "date": null,
+      "recipient": null,
+      "photos": [],
       "contact": {
         "id": 3,
         "object": "contact",
@@ -129,13 +131,23 @@ related contact.
           "id": 5
         }
       },
+      "account": {
+        "id": 5
+      },
       "created_at": "2017-10-17T16:41:27Z",
       "updated_at": "2017-10-17T16:41:27Z"
     },
     {
       "id": 3,
       "object": "gift",
-      "is_for": {
+      "name": "A giant cup of tea",
+      "comment": "",
+      "url": "",
+      "amount": "21",
+      "amount_with_currency": "$21.00",
+      "status": "offered",
+      "date": null,
+      "recipient": {
         "id": 4,
         "object": "contact",
         "first_name": "Ben",
@@ -155,16 +167,7 @@ related contact.
           "id": 5
         }
       },
-      "name": "A giant cup of tea",
-      "comment": "",
-      "url": "",
-      "value": "21",
-      "is_an_idea": false,
-      "has_been_offered": true,
-      "date_offered": null,
-      "account": {
-        "id": 5
-      },
+      "photos": [],
       "contact": {
         "id": 3,
         "object": "contact",
@@ -184,6 +187,9 @@ related contact.
         "account": {
           "id": 5
         }
+      },
+      "account": {
+        "id": 5
       },
       "created_at": "2017-10-17T16:42:25Z",
       "updated_at": "2017-10-17T16:42:25Z"
@@ -222,17 +228,15 @@ related contact.
     {
       "id": 2,
       "object": "gift",
-      "is_for": null,
       "name": "For my friend Ron Swanson",
       "comment": "",
       "url": "https:\/\/www.amazon.ca\/Culturenik-182-390-Recreation-Swanson-Pyramid\/dp\/B00UTPTOHG\/ref=sr_1_1?ie=UTF8&qid=1508272877&sr=8-1&keywords=ron+swanson",
-      "value": "43",
-      "is_an_idea": false,
-      "has_been_offered": true,
-      "date_offered": null,
-      "account": {
-        "id": 5
-      },
+      "amount": "43",
+      "amount_with_currency": "$43.00",
+      "status": "offered",
+      "date": null,
+      "recipient": null,
+      "photos": [],
       "contact": {
         "id": 3,
         "object": "contact",
@@ -253,13 +257,23 @@ related contact.
           "id": 5
         }
       },
+      "account": {
+        "id": 5
+      },
       "created_at": "2017-10-17T16:41:27Z",
       "updated_at": "2017-10-17T16:41:27Z"
     },
     {
       "id": 3,
       "object": "gift",
-      "is_for": {
+      "name": "A giant cup of tea",
+      "comment": "",
+      "url": "",
+      "amount": "21",
+      "amount_with_currency": "$21.00",
+      "status": "offered",
+      "date": null,
+      "recipient": {
         "id": 4,
         "object": "contact",
         "first_name": "Ben",
@@ -279,16 +293,42 @@ related contact.
           "id": 5
         }
       },
-      "name": "A giant cup of tea",
-      "comment": "",
-      "url": "",
-      "value": "21",
-      "is_an_idea": false,
-      "has_been_offered": true,
-      "date_offered": null,
-      "account": {
-        "id": 5
-      },
+      "photos": [
+        {
+          "id": 44,
+          "object": "photo",
+          "original_filename": "EBeVa4qXsAIMnaC.jpeg",
+          "new_filename": "photos\/POWVMVuauZ2xPsG9ZNoZdE0jLaMRz1FGZtCUrjDH.jpeg",
+          "filesize": 484289,
+          "mime_type": "image\/jpeg",
+          "link": "https:\/\/app.monicahq.com\/storage\/photos\/POWVMVuauZ2xPsG9ZNoZdE0jLaMRz1FGZtCUrjDH.jpeg",
+          "contact": {
+            "id": 3,
+            "object": "contact",
+            "first_name": "Leslie",
+            "last_name": "Knope",
+            "gender": "none",
+            "is_partial": false,
+            "information": {
+              "dates": [
+                {
+                  "name": "birthdate",
+                  "is_birthdate_approximate": "unknown",
+                  "birthdate": null
+                }
+              ]
+            },
+            "account": {
+              "id": 5
+            }
+          },
+          "account":{
+            "id": 5
+          },
+          "created_at": "2017-10-17T16:42:25Z",
+          "updated_at": "2017-10-17T16:42:25Z",
+        }
+      ]
       "contact": {
         "id": 3,
         "object": "contact",
@@ -308,6 +348,9 @@ related contact.
         "account": {
           "id": 5
         }
+      },
+      "account": {
+        "id": 5
       },
       "created_at": "2017-10-17T16:42:25Z",
       "updated_at": "2017-10-17T16:42:25Z"
@@ -345,17 +388,15 @@ related contact.
   "data": {
     "id": 2,
     "object": "gift",
-    "is_for": null,
     "name": "For my friend Ron Swanson",
     "comment": "",
     "url": "https:\/\/www.amazon.ca\/Culturenik-182-390-Recreation-Swanson-Pyramid\/dp\/B00UTPTOHG\/ref=sr_1_1?ie=UTF8&qid=1508272877&sr=8-1&keywords=ron+swanson",
-    "value": "43",
-    "is_an_idea": false,
-    "has_been_offered": true,
-    "date_offered": null,
-    "account": {
-      "id": 5
-    },
+    "amount": "43",
+    "amount_with_currency": "$43.00",
+    "status": "offered",
+    "date": null,
+    "recipient": null,
+    "photos": [],
     "contact": {
       "id": 3,
       "object": "contact",
@@ -376,6 +417,9 @@ related contact.
         "id": 5
       }
     },
+    "account": {
+      "id": 5
+    },
     "created_at": "2017-10-17T16:41:27Z",
     "updated_at": "2017-10-17T16:41:27Z"
   }
@@ -395,28 +439,26 @@ related contact.
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the gift is associated with. |
-| is_for | integer | The ID of the contact the gift is for. It is either one of the partner or a child of the contact. |
+| recipient_id | integer | The ID of the contact the gift is for. It is either one of the partner or a child of the contact. |
 | name | string | <strong>Required</strong>. The description of the gift. Max 255 characters. |
-| comment | string | <strong>Required</strong>. More details about the gift. Max 1000000 characters. |
+| comment | string | More details about the gift. Max 1000000 characters. |
 | url | string | The URL where the gift can be find (for instance, on Amazon). Max 1000000 characters. |
-| value | string | The value (in the currency of the user) of the gift. Max 255 characters. |
-| is_an_idea | boolean | Indicates whether the gift is an idea or not (ie not yet bought). Value: 0 (false) or 1 (true). |
-| has_been_offered | boolean | Indicates whether the gift has been offered or not. Value: 0 (false) or 1 (true). |
-| date_offered | string | The date the gift has been offered. Can be in the past or future - the latter being dumb, but well. Format: YYYY-MM-DD. |
+| amount | number | The amount (in the currency of the user) of the gift. |
+| status | string | <strong>Required</strong>. Status of the gift. Could be one of: <em>idea</em>: if the gift is an idea, <em>offered</em>: if the gift has been offered, <em>received</em>: if it's a gift from the contact. |
+| date | string | The date the gift has been offered. Can be in the past or future - the latter being dumb, but well. Format: YYYY-MM-DD. |
 
 <a id="markdown-example" name="example"></a>
 ### Example
 
 <pre><code class="json">{
-  "is_for": 1,
   "name":"For my friend Ron Swanson",
   "comment":"This is going to be so awesome",
   "url":"https://www.amazon.ca/Culturenik-182-390-Recreation-Swanson-Pyramid/dp/B00UTPTOHG/ref=sr_1_1?ie=UTF8&qid=1508272877&sr=8-1&keywords=ron+swanson",
-  "value":"291",
-  "is_an_idea":0,
-  "has_been_offered":1,
-  "date_offered":"2015-02-24",
-  "contact_id": 3
+  "amount":291,
+  "status":"offered",
+  "date":"2015-02-24",
+  "contact_id": 3,
+  "recipient_id": 1
 }</code></pre>
 
 <a id="markdown-response-3" name="response-3"></a>
@@ -428,7 +470,14 @@ The API returns a gift object if the gift succeeds.
   "data": {
     "id": 676,
     "object": "gift",
-    "is_for": {
+    "name": "For my friend Ron Swanson",
+    "comment": "This is going to be so awesome",
+    "url": "https:\/\/www.amazon.ca\/Culturenik-182-390-Recreation-Swanson-Pyramid\/dp\/B00UTPTOHG\/ref=sr_1_1?ie=UTF8&qid=1508272877&sr=8-1&keywords=ron+swanson",
+    "amount": "291",
+    "amount_with_currency": "$291.00",
+    "status": "offered",
+    "date": "2015-02-24T00:00:00Z",
+    "recipient": {
       "id": 1,
       "object": "contact",
       "first_name": "Henri",
@@ -448,20 +497,7 @@ The API returns a gift object if the gift succeeds.
         "id": 1
       }
     },
-    "name": "For my friend Ron Swanson",
-    "comment": "This is going to be so awesome",
-    "url": "https:\/\/www.amazon.ca\/Culturenik-182-390-Recreation-Swanson-Pyramid\/dp\/B00UTPTOHG\/ref=sr_1_1?ie=UTF8&qid=1508272877&sr=8-1&keywords=ron+swanson",
-    "value": "291",
-    "is_an_idea": false,
-    "has_been_offered": true,
-    "date_offered": {
-      "date": "2015-02-24 00:00:00.000000",
-      "timezone_type": 3,
-      "timezone": "US\/Eastern"
-    },
-    "account": {
-      "id": 1
-    },
+    "photos": [],
     "contact": {
       "id": 3,
       "object": "contact",
@@ -481,6 +517,9 @@ The API returns a gift object if the gift succeeds.
       "account": {
         "id": 1
       }
+    },
+    "account": {
+      "id": 1
     },
     "created_at": "2017-10-19T21:51:15Z",
     "updated_at": "2017-10-19T21:51:15Z"
@@ -501,28 +540,26 @@ The API returns a gift object if the gift succeeds.
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the gift is associated with. |
-| is_for | integer | The ID of the contact the gift is for. It is either one of the partner or a child of the contact. |
+| recipient_id | integer | The ID of the contact the gift is for. It is either one of the partner or a child of the contact. |
 | name | string | <strong>Required</strong>. The description of the gift. Max 255 characters. |
-| comment | string | <strong>Required</strong>. More details about the gift. Max 1000000 characters. |
+| comment | string | More details about the gift. Max 1000000 characters. |
 | url | string | The URL where the gift can be find (for instance, on Amazon). Max 1000000 characters. |
-| value | string | The value (in the currency of the user) of the gift. Max 255 characters. |
-| is_an_idea | boolean | Indicates whether the gift is an idea or not (ie not yet bought). Value: 0 (false) or 1 (true). |
-| has_been_offered | boolean | Indicates whether the gift has been offered or not. Value: 0 (false) or 1 (true). |
-| date_offered | string | The date the gift has been offered. Can be in the past or future - the latter being dumb, but well. Format: YYYY-MM-DD. |
+| amount | number | The amount (in the currency of the user) of the gift. |
+| status | string | <strong>Required</strong>. Status of the gift. Could be one of: <em>idea</em>: if the gift is an idea, <em>offered</em>: if the gift has been offered, <em>received</em>: if it's a gift from the contact. |
+| date | string | The date the gift has been offered. Can be in the past or future - the latter being dumb, but well. Format: YYYY-MM-DD. |
 
 <a id="markdown-example-1" name="example-1"></a>
 ### Example
 
 <pre><code class="json">{
-  "is_for": null,
   "name":"For my friend Ron Swanson",
   "comment":"This is going to be so awesome",
   "url":"https://www.amazon.ca/Culturenik-182-390-Recreation-Swanson-Pyramid/dp/B00UTPTOHG/ref=sr_1_1?ie=UTF8&qid=1508272877&sr=8-1&keywords=ron+swanson",
-  "value":"293",
-  "is_an_idea":0,
-  "has_been_offered":1,
-  "date_offered":"2015-02-24",
-  "contact_id": 3
+  "amount":"293",
+  "status":"offered",
+  "date":"2015-02-24",
+  "contact_id": 3,
+  "recipient_id": null
 }</code></pre>
 
 <a id="markdown-response-4" name="response-4"></a>
@@ -532,21 +569,15 @@ The API returns a gift object if the gift succeeds.
   "data": {
     "id": 678,
     "object": "gift",
-    "is_for": null,
     "name": "For my friend Ron Swanson",
     "comment": "This is going to be so awesome",
     "url": "https:\/\/www.amazon.ca\/Culturenik-182-390-Recreation-Swanson-Pyramid\/dp\/B00UTPTOHG\/ref=sr_1_1?ie=UTF8&qid=1508272877&sr=8-1&keywords=ron+swanson",
-    "value": "293",
-    "is_an_idea": false,
-    "has_been_offered": true,
-    "date_offered": {
-      "date": "2015-02-24 00:00:00.000000",
-      "timezone_type": 3,
-      "timezone": "US\/Eastern"
-    },
-    "account": {
-      "id": 1
-    },
+    "amount": "293",
+    "amount_with_currency": "$293.00",
+    "status": "offered",
+    "date": "2015-02-24T00:00:00Z",
+    "recipient": null,
+    "photos": [],
     "contact": {
       "id": 3,
       "object": "contact",
@@ -566,6 +597,9 @@ The API returns a gift object if the gift succeeds.
       "account": {
         "id": 1
       }
+    },
+    "account": {
+      "id": 1
     },
     "created_at": "2017-10-19T21:52:53Z",
     "updated_at": "2017-10-19T21:52:53Z"
@@ -589,3 +623,98 @@ The response sends back the id that was just deleted.
   "deleted": true,
   "id": 31
 }</code></pre>
+
+
+<a name="associate-a-photo-to-a-gift"></a>
+## Associate a photo to a gift
+
+<span class="url">
+  PUT /gifts/:id/photo/:photoId
+</span>
+
+A [photo](photos) can be associated to a gift. You will have to [create a photo](photos#create-a-photo) first, associate with the contact, and then associate it.
+
+<a id="markdown-input-2" name="input-2"></a>
+### Input
+
+No input needed.
+
+<a id="markdown-response-6" name="response-6"></a>
+### Response
+
+<pre><code class="json">{
+  "data": {
+    "id": 678,
+    "object": "gift",
+    "name": "For my friend Ron Swanson",
+    "comment": "This is going to be so awesome",
+    "url": "https:\/\/www.amazon.ca\/Culturenik-182-390-Recreation-Swanson-Pyramid\/dp\/B00UTPTOHG\/ref=sr_1_1?ie=UTF8&qid=1508272877&sr=8-1&keywords=ron+swanson",
+    "amount": "293",
+    "amount_with_currency": "$293.00",
+    "status": "offered",
+    "date": "2015-02-24T00:00:00Z",
+    "recipient": null,
+    "photos": [
+      {
+        "id": 44,
+        "object": "photo",
+        "original_filename": "EBeVa4qXsAIMnaC.jpeg",
+        "new_filename": "photos\/POWVMVuauZ2xPsG9ZNoZdE0jLaMRz1FGZtCUrjDH.jpeg",
+        "filesize": 484289,
+        "mime_type": "image\/jpeg",
+        "link": "https:\/\/app.monicahq.com\/storage\/photos\/POWVMVuauZ2xPsG9ZNoZdE0jLaMRz1FGZtCUrjDH.jpeg",
+        "contact": {
+          "id": 3,
+          "object": "contact",
+          "first_name": "David",
+          "last_name": "Olsdwaer",
+          "gender": "male",
+          "is_partial": false,
+          "information": {
+            "dates": [
+              {
+                "name": "birthdate",
+                "is_birthdate_approximate": "unknown",
+                "birthdate": null
+              }
+            ]
+          },
+          "account":{
+            "id": 1
+          },
+        },
+        "account":{
+          "id": 1
+        },
+        "created_at": "2017-10-17T16:42:25Z",
+        "updated_at": "2017-10-17T16:42:25Z",
+      }
+    ],
+    "contact": {
+      "id": 3,
+      "object": "contact",
+      "first_name": "David",
+      "last_name": "Olsdwaer",
+      "gender": "male",
+      "is_partial": false,
+      "information": {
+        "dates": [
+          {
+            "name": "birthdate",
+            "is_birthdate_approximate": "unknown",
+            "birthdate": null
+          }
+        ]
+      },
+      "account": {
+        "id": 1
+      }
+    },
+    "account": {
+      "id": 1
+    },
+    "created_at": "2017-10-19T21:52:53Z",
+    "updated_at": "2017-10-19T21:52:53Z"
+  }
+}</code></pre>
+

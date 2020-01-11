@@ -80,6 +80,9 @@
           <a class="no-underline" href="{{ secure_url('/api/occupations') }}">Occupations</a>
         </li>
         <li class="mb3">
+          <a class="no-underline" href="{{ secure_url('/api/photos') }}">Photos</a>
+        </li>
+        <li class="mb3">
           <a class="no-underline" href="{{ secure_url('/api/relationships') }}">Relationships</a>
         </li>
         <li class="mb3">

@@ -1,22 +1,22 @@
-# Debts
+# Debts <!-- omit in toc -->
 
 <!-- TOC -->
 
 - [Overview](#overview)
 - [List all your debts](#list-all-your-debts)
-    - [Parameters](#parameters)
-    - [Response](#response)
+  - [Parameters](#parameters)
+  - [Response](#response)
 - [Get a specific debt](#get-a-specific-debt)
 - [Create a debt](#create-a-debt)
-    - [Input](#input)
-    - [Example](#example)
-    - [Response](#response-1)
+  - [Input](#input)
+  - [Example](#example)
+  - [Response](#response-1)
 - [Update a debt](#update-a-debt)
-    - [Input](#input-1)
-    - [Example](#example-1)
-    - [Response](#response-2)
+  - [Input](#input-1)
+  - [Example](#example-1)
+  - [Response](#response-2)
 - [Delete a debt](#delete-a-debt)
-    - [Response](#response-3)
+  - [Response](#response-3)
 
 <!-- /TOC -->
 

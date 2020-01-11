@@ -1,25 +1,25 @@
-# Notes
+# Notes <!-- omit in toc -->
 
 <!-- TOC -->
 
 - [Overview](#overview)
 - [List all the notes in your account](#list-all-the-notes-in-your-account)
-    - [Parameters](#parameters)
-    - [Response](#response)
+  - [Parameters](#parameters)
+  - [Response](#response)
 - [List all the notes of a specific contact](#list-all-the-notes-of-a-specific-contact)
-    - [Response](#response-1)
+  - [Response](#response-1)
 - [Get a specific note](#get-a-specific-note)
-    - [Response](#response-2)
+  - [Response](#response-2)
 - [Create a note](#create-a-note)
-    - [Input](#input)
-    - [Example](#example)
-    - [Response](#response-3)
+  - [Input](#input)
+  - [Example](#example)
+  - [Response](#response-3)
 - [Update a note](#update-a-note)
-    - [Input](#input-1)
-    - [Example](#example-1)
-    - [Response](#response-4)
+  - [Input](#input-1)
+  - [Example](#example-1)
+  - [Response](#response-4)
 - [Delete a note](#delete-a-note)
-    - [Response](#response-5)
+  - [Response](#response-5)
 
 <!-- /TOC -->
 

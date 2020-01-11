@@ -1,20 +1,20 @@
-# Compliance
+# Compliance <!-- omit in toc -->
 
 <!-- TOC -->
 
 - [Overview](#overview)
 - [List all the terms and privacy policies ever used in Monica](#list-all-the-terms-and-privacy-policies-ever-used-in-monica)
-    - [Response](#response)
+  - [Response](#response)
 - [Get a specific term and privacy policy](#get-a-specific-term-and-privacy-policy)
-    - [Response](#response-1)
+  - [Response](#response-1)
 - [Get the status of all policies signed by a given user](#get-the-status-of-all-policies-signed-by-a-given-user)
-    - [Response](#response-2)
+  - [Response](#response-2)
 - [Get the status of a specific policy of a given user](#get-the-status-of-a-specific-policy-of-a-given-user)
-    - [Response](#response-3)
+  - [Response](#response-3)
 - [Sign the latest compliance policy for the authenticated user](#sign-the-latest-compliance-policy-for-the-authenticated-user)
-    - [Input](#input)
-    - [Example](#example)
-    - [Response](#response-4)
+  - [Input](#input)
+  - [Example](#example)
+  - [Response](#response-4)
 
 <!-- /TOC -->
 

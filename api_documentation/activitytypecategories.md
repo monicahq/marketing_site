@@ -1,22 +1,22 @@
-# Activities
+# Activity Type Categories <!-- omit in toc -->
 
 <!-- TOC -->
 
-- [Overview](#overview)
-- [List all the activity type categories in your account](#list-all-the-activity-type-categories-in-your-account)
+  - [Overview](#overview)
+  - [List all the activity type categories in your account](#list-all-the-activity-type-categories-in-your-account)
     - [Parameters](#parameters)
     - [Response](#response)
-- [Get a specific activity type category](#get-a-specific-activity-type-category)
+  - [Get a specific activity type category](#get-a-specific-activity-type-category)
     - [Response](#response-1)
-- [Create an activity type category](#create-an-activity-type-category)
+  - [Create an activity type category](#create-an-activity-type-category)
     - [Input](#input)
     - [Example](#example)
     - [Response](#response-2)
-- [Update an activity type category](#update-an-activity-type-category)
+  - [Update an activity type category](#update-an-activity-type-category)
     - [Input](#input-1)
     - [Example](#example-1)
     - [Response](#response-3)
-- [Delete an activity type category](#delete-an-activity-type-category)
+  - [Delete an activity type category](#delete-an-activity-type-category)
     - [Response](#response-4)
 
 <!-- /TOC -->
@@ -49,63 +49,63 @@ By default, each account comes with a set of predefined activity type categories
 ### Response
 
 <pre><code class="json">{
-	"data": [
-		{
-			"id": 1,
-			"object": "activityTypeCategory",
-			"name": "Simple activities",
-			"account": {
-				"id": 1
-			},
-			"created_at": null,
-			"updated_at": null
-		},
-		{
-			"id": 2,
-			"object": "activityTypeCategory",
-			"name": "Sport",
-			"account": {
-				"id": 1
-			},
-			"created_at": null,
-			"updated_at": null
-		},
-		{
-			"id": 3,
-			"object": "activityTypeCategory",
-			"name": "Food",
-			"account": {
-				"id": 1
-			},
-			"created_at": null,
-			"updated_at": null
-		},
-		{
-			"id": 4,
-			"object": "activityTypeCategory",
-			"name": "Cultural activities",
-			"account": {
-				"id": 1
-			},
-			"created_at": null,
-			"updated_at": null
-		}
-	],
-	"links": {
-		"first": "https:\/\/app.monicahq.com\/api\/activitytypecategories?page=1",
-		"last": "https:\/\/app.monicahq.com\/api\/activitytypecategories?page=1",
-		"prev": null,
-		"next": null
-	},
-	"meta": {
-		"current_page": 1,
-		"from": 1,
-		"last_page": 1,
-		"path": "https:\/\/app.monicahq.com\/api\/activitytypecategories",
-		"per_page": 15,
-		"to": 4,
-		"total": 4
-	}
+  "data": [
+    {
+      "id": 1,
+      "object": "activityTypeCategory",
+      "name": "Simple activities",
+      "account": {
+        "id": 1
+      },
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": 2,
+      "object": "activityTypeCategory",
+      "name": "Sport",
+      "account": {
+        "id": 1
+      },
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": 3,
+      "object": "activityTypeCategory",
+      "name": "Food",
+      "account": {
+        "id": 1
+      },
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": 4,
+      "object": "activityTypeCategory",
+      "name": "Cultural activities",
+      "account": {
+        "id": 1
+      },
+      "created_at": null,
+      "updated_at": null
+    }
+  ],
+  "links": {
+    "first": "https:\/\/app.monicahq.com\/api\/activitytypecategories?page=1",
+    "last": "https:\/\/app.monicahq.com\/api\/activitytypecategories?page=1",
+    "prev": null,
+    "next": null
+  },
+  "meta": {
+    "current_page": 1,
+    "from": 1,
+    "last_page": 1,
+    "path": "https:\/\/app.monicahq.com\/api\/activitytypecategories",
+    "per_page": 15,
+    "to": 4,
+    "total": 4
+  }
 }</code></pre>
 
 <a id="markdown-get-a-specific-activity-type-category" name="get-a-specific-activity-type-category"></a>
@@ -119,16 +119,16 @@ By default, each account comes with a set of predefined activity type categories
 ### Response
 
 <pre><code class="json">{
-	"data": {
-		"id": 1,
-		"object": "activityTypeCategory",
-		"name": "Simple activities",
-		"account": {
-			"id": 1
-		},
-		"created_at": null,
-		"updated_at": null
-	}
+  "data": {
+    "id": 1,
+    "object": "activityTypeCategory",
+    "name": "Simple activities",
+    "account": {
+      "id": 1
+    },
+    "created_at": null,
+    "updated_at": null
+  }
 }</code></pre>
 
 <a id="markdown-create-an-activity-type-category" name="create-an-activity-type-category"></a>
@@ -149,7 +149,7 @@ By default, each account comes with a set of predefined activity type categories
 ### Example
 
 <pre><code class="json">{
-	"name":"this is a name"
+  "name":"this is a name"
 }</code></pre>
 
 <a id="markdown-response-2" name="response-2"></a>
@@ -158,16 +158,16 @@ By default, each account comes with a set of predefined activity type categories
 The API call returns an Activity type category object if the call succeeds.
 
 <pre><code class="json">{
-	"data": {
-		"id": 9,
-		"object": "activityTypeCategory",
-		"name": "This is a name",
-		"account": {
-			"id": 1
-		},
-		"created_at": "2018-07-13T16:30:37Z",
-		"updated_at": "2018-07-13T16:30:37Z"
-	}
+  "data": {
+    "id": 9,
+    "object": "activityTypeCategory",
+    "name": "This is a name",
+    "account": {
+      "id": 1
+    },
+    "created_at": "2018-07-13T16:30:37Z",
+    "updated_at": "2018-07-13T16:30:37Z"
+  }
 }</code></pre>
 
 <a id="markdown-update-an-activity-type-category" name="update-an-activity-type-category"></a>
@@ -188,23 +188,23 @@ The API call returns an Activity type category object if the call succeeds.
 ### Example
 
 <pre><code class="json">{
-	"name":"For my friend Leslie Knope"
+  "name":"For my friend Leslie Knope"
 }</code></pre>
 
 <a id="markdown-response-3" name="response-3"></a>
 ### Response
 
 <pre><code class="json">{
-	"data": {
-		"id": 9,
-		"object": "activityTypeCategory",
-		"name": "This is a name",
-		"account": {
-			"id": 1
-		},
-		"created_at": "2018-07-13T16:30:37Z",
-		"updated_at": "2018-07-13T16:30:37Z"
-	}
+  "data": {
+    "id": 9,
+    "object": "activityTypeCategory",
+    "name": "This is a name",
+    "account": {
+      "id": 1
+    },
+    "created_at": "2018-07-13T16:30:37Z",
+    "updated_at": "2018-07-13T16:30:37Z"
+  }
 }</code></pre>
 
 <a id="markdown-delete-an-activity-type-category" name="delete-an-activity-type-category"></a>

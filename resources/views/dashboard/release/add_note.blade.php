@@ -11,7 +11,7 @@
 @endif
 
 <form method="POST" action="{{ secure_url('/release/'.$release->id.'/notes/store') }}">
-    {{ csrf_field() }}
+    @csrf
 
     <p>Release number: {{ $release->release_number }}</p>
 

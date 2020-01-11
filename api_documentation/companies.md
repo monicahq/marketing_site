@@ -1,23 +1,23 @@
-# Companies
+# Companies <!-- omit in toc -->
 
 <!-- TOC -->
 
 - [Overview](#overview)
 - [List all the companies in your account](#list-all-the-companies-in-your-account)
-    - [Parameters](#parameters)
-    - [Response](#response)
+  - [Parameters](#parameters)
+  - [Response](#response)
 - [Get a specific company](#get-a-specific-company)
-    - [Response](#response-1)
+  - [Response](#response-1)
 - [Create a company](#create-a-company)
-    - [Input](#input)
-    - [Example](#example)
-    - [Response](#response-2)
+  - [Input](#input)
+  - [Example](#example)
+  - [Response](#response-2)
 - [Update a company](#update-a-company)
-    - [Input](#input-1)
-    - [Example](#example-1)
-    - [Response](#response-3)
+  - [Input](#input-1)
+  - [Example](#example-1)
+  - [Response](#response-3)
 - [Delete a call](#delete-a-call)
-    - [Response](#response-4)
+  - [Response](#response-4)
 
 <!-- /TOC -->
 

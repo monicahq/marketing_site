@@ -53,10 +53,10 @@ the related contact(s).
       "province": null,
       "postal_code": null,
       "country": {
-        "id": 1,
+        "id": "US",
         "object": "country",
         "name": "United States",
-        "iso": "us"
+        "iso": "US"
       },
       "account": {
         "id": 1
@@ -95,10 +95,10 @@ the related contact(s).
       "province": "PA",
       "postal_code": null,
       "country": {
-        "id": 1,
+        "id": "US",
         "object": "country",
         "name": "United States",
-        "iso": "us"
+        "iso": "US"
       },
       "account": {
         "id": 1
@@ -167,10 +167,10 @@ the related contact(s).
     "province": "PA",
     "postal_code": null,
     "country": {
-      "id": 1,
+      "id": "US",
       "object": "country",
       "name": "United States",
-      "iso": "us"
+      "iso": "US"
     },
     "account": {
       "id": 1
@@ -220,7 +220,7 @@ the related contact(s).
 | city | string | The city the contact lives in. Max 255 characters. |
 | province | string | The province the contact is in. Max 255 characters. |
 | postal_code | string | The postal code of the city the contact lives in. Max 255 characters. |
-| country_id | integer | The country ID of the country the contact lives in. Country IDs are retrieved through the <a href="countries">Country's API</a>. |
+| country | string | The country ID of the country the contact lives in. Country IDs are retrieved through the <a href="countries">Country's API</a>. Max 3 characters. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the address is associated with. |
 
 <a id="markdown-example" name="example"></a>
@@ -232,7 +232,7 @@ the related contact(s).
   "city": "Scranton",
   "province": "PA",
   "postal_code": null,
-  "country_id": 1,
+  "country": "US",
   "contact_id": 8
 }</code></pre>
 
@@ -251,10 +251,10 @@ The API call returns an address object if the call succeeds.
     "province": "PA",
     "postal_code": null,
     "country": {
-      "id": 1,
+      "id": "US,
       "object": "country",
       "name": "United States",
-      "iso": "us"
+      "iso": "US"
     },
     "account": {
       "id": 1
@@ -304,7 +304,7 @@ The API call returns an address object if the call succeeds.
 | city | string | The city the contact lives in. Max 255 characters. |
 | province | string | The province the contact is in. Max 255 characters. |
 | postal_code | string | The postal code of the city the contact lives in. Max 255 characters. |
-| country_id | integer | The country ID of the country the contact lives in. Country IDs are retrieved through the <a href="countries">Country's API</a>. |
+| country | string | The country ID of the country the contact lives in. Country IDs are retrieved through the <a href="countries">Country's API</a>. Max 3 characters. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the address is associated with. |
 
 <a id="markdown-example-1" name="example-1"></a>
@@ -316,7 +316,7 @@ The API call returns an address object if the call succeeds.
   "city": "Scranton",
   "province": "PA",
   "postal_code": null,
-  "country_id": 1,
+  "country": "US",
   "contact_id": 8
 }</code></pre>
 
@@ -333,7 +333,7 @@ The API call returns an address object if the call succeeds.
     "province": "PA",
     "postal_code": null,
     "country": {
-      "id": 1,
+      "id": "US",
       "object": "country",
       "name": "United States",
       "iso": "us"

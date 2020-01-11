@@ -19,7 +19,19 @@ return [
              */
             'url' => '/feed',
 
-            'title' => 'All the articles on Monica',
+            'title' => 'Monica\'s Blog',
+            'description' => 'All the articles on Monica.',
+            'language' => 'en-US',
+
+            /*
+             * The view that will render the feed.
+             */
+            'view' => 'feed::atom',
+
+            /*
+             * The type to be used in the <link> tag
+             */
+            'type' => 'application/atom+xml',
         ],
     ],
 

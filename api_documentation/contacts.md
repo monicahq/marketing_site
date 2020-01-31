@@ -1015,6 +1015,106 @@ The contact fields are added at the bottom of the JSON file that is returned.
         "updated_at": "2020-01-31T22:08:09Z"
       }
     ],
+     "notes": [
+      {
+        "id": 115,
+        "object": "note",
+        "body": "This is an awesome note",
+        "is_favorited": false,
+        "favorited_at": null,
+        "url": "https:\/\/monica.test\/api\/notes\/115",
+        "account": {
+          "id": 1
+        },
+        "contact": {
+          "id": 1,
+          "object": "contact",
+          "hash_id": "h:Y5LOkAdWNDqgVomKPv",
+          "first_name": "Frieda",
+          "last_name": "Mayer",
+          "nickname": "Prof. Shawna Kunze",
+          "complete_name": "Frieda Mayer (Prof. Shawna Kunze)",
+          "initials": "FMSK",
+          "gender": "Woman",
+          "gender_type": "F",
+          "is_partial": false,
+          "is_dead": false,
+          "is_me": false,
+          "information": {
+            "birthdate": {
+              "is_age_based": true,
+              "is_year_unknown": false,
+              "date": "2003-01-01T00:00:00Z"
+            },
+            "deceased_date": {
+              "is_age_based": null,
+              "is_year_unknown": null,
+              "date": null
+            },
+            "avatar": {
+              "url": "https:\/\/monica.test\/storage\/avatars\/f7cd73b9-5027-4f66-ab8d-1d578b7a2274.jpg?1579446377",
+              "source": "default",
+              "default_avatar_color": "#ff9807"
+            }
+          },
+          "url": "https:\/\/monica.test\/api\/contacts\/1",
+          "account": {
+            "id": 1
+          }
+        },
+        "created_at": "2020-01-31T22:30:38Z",
+        "updated_at": "2020-01-31T22:30:38Z"
+      },
+      {
+        "id": 114,
+        "object": "note",
+        "body": "This is another awesome note",
+        "is_favorited": false,
+        "favorited_at": null,
+        "url": "https:\/\/monica.test\/api\/notes\/114",
+        "account": {
+          "id": 1
+        },
+        "contact": {
+          "id": 1,
+          "object": "contact",
+          "hash_id": "h:Y5LOkAdWNDqgVomKPv",
+          "first_name": "Frieda",
+          "last_name": "Mayer",
+          "nickname": "Prof. Shawna Kunze",
+          "complete_name": "Frieda Mayer (Prof. Shawna Kunze)",
+          "initials": "FMSK",
+          "gender": "Woman",
+          "gender_type": "F",
+          "is_partial": false,
+          "is_dead": false,
+          "is_me": false,
+          "information": {
+            "birthdate": {
+              "is_age_based": true,
+              "is_year_unknown": false,
+              "date": "2003-01-01T00:00:00Z"
+            },
+            "deceased_date": {
+              "is_age_based": null,
+              "is_year_unknown": null,
+              "date": null
+            },
+            "avatar": {
+              "url": "https:\/\/monica.test\/storage\/avatars\/f7cd73b9-5027-4f66-ab8d-1d578b7a2274.jpg?1579446377",
+              "source": "default",
+              "default_avatar_color": "#ff9807"
+            }
+          },
+          "url": "https:\/\/monica.test\/api\/contacts\/1",
+          "account": {
+            "id": 1
+          }
+        },
+        "created_at": "2020-01-31T22:30:36Z",
+        "updated_at": "2020-01-31T22:30:36Z"
+      }
+    ],
     "url": "https:\/\/monica.test\/api\/contacts\/1",
     "account": {
       "id": 1

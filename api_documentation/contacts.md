@@ -1,33 +1,32 @@
-# Contacts <!-- omit in toc -->
-
 <!-- TOC -->
 
 - [Overview](#overview)
-  - [Special dates](#special-dates)
+    - [Special dates](#special-dates)
 - [List all your contacts](#list-all-your-contacts)
-  - [Parameters](#parameters)
-  - [Response](#response)
-  - [Sorting](#sorting)
+    - [Parameters](#parameters)
+    - [Response](#response)
+    - [Sorting](#sorting)
 - [Get a specific contact](#get-a-specific-contact)
-  - [Get a `real` contact](#get-a-real-contact)
-  - [Get a `partial` contact](#get-a-partial-contact)
+    - [Get a `real` contact](#get-a-real-contact)
+    - [Get a `partial` contact](#get-a-partial-contact)
+    - [Get a contact with contact fields information](#get-a-contact-with-contact-fields-information)
 - [Create a contact](#create-a-contact)
-  - [Input](#input)
-  - [Example](#example)
-  - [Response](#response-1)
+    - [Input](#input)
+    - [Example](#example)
+    - [Response](#response-1)
 - [Update a contact](#update-a-contact)
-  - [Input](#input-1)
-  - [Example](#example-1)
-  - [Response](#response-2)
+    - [Input](#input-1)
+    - [Example](#example-1)
+    - [Response](#response-2)
 - [Update a contact career](#update-a-contact-career)
-  - [Input](#input-2)
-  - [Example](#example-2)
-  - [Response](#response-3)
+    - [Input](#input-2)
+    - [Example](#example-2)
+    - [Response](#response-3)
 - [Delete a contact](#delete-a-contact)
-  - [Response](#response-4)
+    - [Response](#response-4)
 - [Search](#search)
-    - [Input](#input-3)
-    - [Response](#response-5)
+        - [Input](#input-3)
+        - [Response](#response-5)
 
 <!-- /TOC -->
 
@@ -631,8 +630,400 @@ Partial contacts are relationship contacts.
   }
 }</code></pre>
 
-<a name="create-a-contact"></a>
-<a id="create-a-contact"></a>
+<a id="markdown-get-a-contact-with-contact-fields-information" name="get-a-contact-with-contact-fields-information"></a>
+### Get a contact with contact fields information
+
+Sometimes you need to have more information about a specific contact. This is especially useful in the context of the mobile application, where you need to reduce the amount of calls as much as possible.
+
+The contact fields are added at the bottom of the JSON file that is returned.
+
+<span class="url">
+  GET /contacts/:id?with=contactfields
+</span>
+
+<pre><code class="json">{
+  "data": {
+    "id": 1,
+    "object": "contact",
+    "hash_id": "h:Y5LOkAdWNDqgVomKPv",
+    "first_name": "Frieda",
+    "last_name": "Mayer",
+    "nickname": "Prof. Shawna Kunze",
+    "gender": "Woman",
+    "gender_type": "F",
+    "is_starred": false,
+    "is_partial": false,
+    "is_active": true,
+    "is_dead": false,
+    "is_me": false,
+    "last_called": null,
+    "last_activity_together": "2019-05-19T00:00:00.000000Z",
+    "stay_in_touch_frequency": null,
+    "stay_in_touch_trigger_date": null,
+    "information": {
+      "relationships": {
+        "love": {
+          "total": 0,
+          "contacts": []
+        },
+        "family": {
+          "total": 0,
+          "contacts": []
+        },
+        "friend": {
+          "total": 0,
+          "contacts": []
+        },
+        "work": {
+          "total": 0,
+          "contacts": []
+        }
+      },
+      "dates": {
+        "birthdate": {
+          "is_age_based": true,
+          "is_year_unknown": false,
+          "date": "2003-01-01T00:00:00Z"
+        },
+        "deceased_date": {
+          "is_age_based": null,
+          "is_year_unknown": null,
+          "date": null
+        }
+      },
+      "career": {
+        "job": null,
+        "company": null
+      },
+      "avatar": {
+        "url": "https:\/\/monica.test\/storage\/avatars\/f7cd73b9-5027-4f66-ab8d-1d578b7a2274.jpg?1579446377",
+        "source": "default",
+        "default_avatar_color": "#ff9807"
+      },
+      "food_preferences": "First, she tried the roots of trees, and I've tried to get dry very soon. 'Ahem!' said the Cat. 'I don't think--' 'Then you shouldn't talk,' said the Mock Turtle, capering wildly about. 'Change.",
+      "how_you_met": {
+        "general_information": null,
+        "first_met_date": {
+          "is_age_based": null,
+          "is_year_unknown": null,
+          "date": null
+        },
+        "first_met_through_contact": null
+      }
+    },
+    "addresses": [
+      {
+        "id": 1,
+        "object": "address",
+        "name": "qui",
+        "street": null,
+        "city": "East Mabelleburgh",
+        "province": null,
+        "postal_code": "61454-4639",
+        "latitude": null,
+        "longitude": null,
+        "country": {
+          "id": "SZ",
+          "object": "country",
+          "name": "Eswatini",
+          "iso": "SZ"
+        },
+        "url": "https:\/\/monica.test\/api\/addresses\/1",
+        "account": {
+          "id": 1
+        },
+        "contact": {
+          "id": 1,
+          "object": "contact",
+          "hash_id": "h:Y5LOkAdWNDqgVomKPv",
+          "first_name": "Frieda",
+          "last_name": "Mayer",
+          "nickname": "Prof. Shawna Kunze",
+          "complete_name": "Frieda Mayer (Prof. Shawna Kunze)",
+          "initials": "FMSK",
+          "gender": "Woman",
+          "gender_type": "F",
+          "is_partial": false,
+          "is_dead": false,
+          "is_me": false,
+          "information": {
+            "birthdate": {
+              "is_age_based": true,
+              "is_year_unknown": false,
+              "date": "2003-01-01T00:00:00Z"
+            },
+            "deceased_date": {
+              "is_age_based": null,
+              "is_year_unknown": null,
+              "date": null
+            },
+            "avatar": {
+              "url": "https:\/\/monica.test\/storage\/avatars\/f7cd73b9-5027-4f66-ab8d-1d578b7a2274.jpg?1579446377",
+              "source": "default",
+              "default_avatar_color": "#ff9807"
+            }
+          },
+          "url": "https:\/\/monica.test\/api\/contacts\/1",
+          "account": {
+            "id": 1
+          }
+        },
+        "created_at": "2020-01-19T15:06:17Z",
+        "updated_at": "2020-01-19T15:06:17Z"
+      }
+    ],
+    "tags": [
+      {
+        "id": 1,
+        "object": "tag",
+        "name": "qui",
+        "name_slug": "qui",
+        "account": {
+          "id": 1
+        },
+        "created_at": "2020-01-19T15:06:17Z",
+        "updated_at": "2020-01-19T15:06:17Z"
+      },
+      {
+        "id": 2,
+        "object": "tag",
+        "name": "debitis",
+        "name_slug": "debitis",
+        "account": {
+          "id": 1
+        },
+        "created_at": "2020-01-19T15:06:17Z",
+        "updated_at": "2020-01-19T15:06:17Z"
+      },
+      {
+        "id": 3,
+        "object": "tag",
+        "name": "placeat",
+        "name_slug": "placeat",
+        "account": {
+          "id": 1
+        },
+        "created_at": "2020-01-19T15:06:17Z",
+        "updated_at": "2020-01-19T15:06:17Z"
+      },
+      {
+        "id": 4,
+        "object": "tag",
+        "name": "dolor",
+        "name_slug": "dolor",
+        "account": {
+          "id": 1
+        },
+        "created_at": "2020-01-19T15:06:17Z",
+        "updated_at": "2020-01-19T15:06:17Z"
+      },
+      {
+        "id": 5,
+        "object": "tag",
+        "name": "officiis",
+        "name_slug": "officiis",
+        "account": {
+          "id": 1
+        },
+        "created_at": "2020-01-19T15:06:17Z",
+        "updated_at": "2020-01-19T15:06:17Z"
+      },
+      {
+        "id": 6,
+        "object": "tag",
+        "name": "ad",
+        "name_slug": "ad",
+        "account": {
+          "id": 1
+        },
+        "created_at": "2020-01-19T15:06:17Z",
+        "updated_at": "2020-01-19T15:06:17Z"
+      },
+      {
+        "id": 7,
+        "object": "tag",
+        "name": "eligendi",
+        "name_slug": "eligendi",
+        "account": {
+          "id": 1
+        },
+        "created_at": "2020-01-19T15:06:17Z",
+        "updated_at": "2020-01-19T15:06:17Z"
+      },
+      {
+        "id": 8,
+        "object": "tag",
+        "name": "soluta",
+        "name_slug": "soluta",
+        "account": {
+          "id": 1
+        },
+        "created_at": "2020-01-19T15:06:17Z",
+        "updated_at": "2020-01-19T15:06:17Z"
+      },
+      {
+        "id": 9,
+        "object": "tag",
+        "name": "nihil",
+        "name_slug": "nihil",
+        "account": {
+          "id": 1
+        },
+        "created_at": "2020-01-19T15:06:17Z",
+        "updated_at": "2020-01-19T15:06:17Z"
+      },
+      {
+        "id": 10,
+        "object": "tag",
+        "name": "sit",
+        "name_slug": "sit",
+        "account": {
+          "id": 1
+        },
+        "created_at": "2020-01-19T15:06:17Z",
+        "updated_at": "2020-01-19T15:06:17Z"
+      }
+    ],
+    "statistics": {
+      "number_of_calls": 0,
+      "number_of_notes": 0,
+      "number_of_activities": 2,
+      "number_of_reminders": 0,
+      "number_of_tasks": 0,
+      "number_of_gifts": 7,
+      "number_of_debts": 0
+    },
+    "contactFields": [
+      {
+        "id": 69,
+        "object": "contactfield",
+        "content": "asdfas",
+        "contact_field_type": {
+          "id": 1,
+          "object": "contactfieldtype",
+          "name": "Email",
+          "fontawesome_icon": "fa fa-envelope-open-o",
+          "protocol": "mailto:",
+          "delible": false,
+          "type": "email",
+          "account": {
+            "id": 1
+          },
+          "created_at": "2020-01-19T15:06:17Z",
+          "updated_at": "2020-01-19T15:06:17Z"
+        },
+        "account": {
+          "id": 1
+        },
+        "contact": {
+          "id": 1,
+          "object": "contact",
+          "hash_id": "h:Y5LOkAdWNDqgVomKPv",
+          "first_name": "Frieda",
+          "last_name": "Mayer",
+          "nickname": "Prof. Shawna Kunze",
+          "complete_name": "Frieda Mayer (Prof. Shawna Kunze)",
+          "initials": "FMSK",
+          "gender": "Woman",
+          "gender_type": "F",
+          "is_partial": false,
+          "is_dead": false,
+          "is_me": false,
+          "information": {
+            "birthdate": {
+              "is_age_based": true,
+              "is_year_unknown": false,
+              "date": "2003-01-01T00:00:00Z"
+            },
+            "deceased_date": {
+              "is_age_based": null,
+              "is_year_unknown": null,
+              "date": null
+            },
+            "avatar": {
+              "url": "https:\/\/monica.test\/storage\/avatars\/f7cd73b9-5027-4f66-ab8d-1d578b7a2274.jpg?1579446377",
+              "source": "default",
+              "default_avatar_color": "#ff9807"
+            }
+          },
+          "url": "https:\/\/monica.test\/api\/contacts\/1",
+          "account": {
+            "id": 1
+          }
+        },
+        "created_at": "2020-01-31T22:08:03Z",
+        "updated_at": "2020-01-31T22:08:03Z"
+      },
+      {
+        "id": 70,
+        "object": "contactfield",
+        "content": "sdasdfa",
+        "contact_field_type": {
+          "id": 3,
+          "object": "contactfieldtype",
+          "name": "Facebook",
+          "fontawesome_icon": "fa fa-facebook-official",
+          "protocol": "https:\/\/facebook.com\/",
+          "delible": true,
+          "type": null,
+          "account": {
+            "id": 1
+          },
+          "created_at": "2020-01-19T15:06:17Z",
+          "updated_at": "2020-01-19T15:06:17Z"
+        },
+        "account": {
+          "id": 1
+        },
+        "contact": {
+          "id": 1,
+          "object": "contact",
+          "hash_id": "h:Y5LOkAdWNDqgVomKPv",
+          "first_name": "Frieda",
+          "last_name": "Mayer",
+          "nickname": "Prof. Shawna Kunze",
+          "complete_name": "Frieda Mayer (Prof. Shawna Kunze)",
+          "initials": "FMSK",
+          "gender": "Woman",
+          "gender_type": "F",
+          "is_partial": false,
+          "is_dead": false,
+          "is_me": false,
+          "information": {
+            "birthdate": {
+              "is_age_based": true,
+              "is_year_unknown": false,
+              "date": "2003-01-01T00:00:00Z"
+            },
+            "deceased_date": {
+              "is_age_based": null,
+              "is_year_unknown": null,
+              "date": null
+            },
+            "avatar": {
+              "url": "https:\/\/monica.test\/storage\/avatars\/f7cd73b9-5027-4f66-ab8d-1d578b7a2274.jpg?1579446377",
+              "source": "default",
+              "default_avatar_color": "#ff9807"
+            }
+          },
+          "url": "https:\/\/monica.test\/api\/contacts\/1",
+          "account": {
+            "id": 1
+          }
+        },
+        "created_at": "2020-01-31T22:08:09Z",
+        "updated_at": "2020-01-31T22:08:09Z"
+      }
+    ],
+    "url": "https:\/\/monica.test\/api\/contacts\/1",
+    "account": {
+      "id": 1
+    },
+    "created_at": "2020-01-19T15:06:17Z",
+    "updated_at": "2020-01-31T22:08:09Z"
+  }
+}</code></pre>
+
 <a id="markdown-create-a-contact" name="create-a-contact"></a>
 ## Create a contact
 
@@ -931,7 +1322,7 @@ The API call returns a contact object if the call succeeds.
   PUT /contacts/:id/career
 </span>
 
-<a id="markdown-input-1" name="input-1"></a>
+<a id="markdown-input-2" name="input-2"></a>
 ### Input
 
 | Name | Type | Description |
@@ -939,7 +1330,7 @@ The API call returns a contact object if the call succeeds.
 | job | string | The job title. Max 255 characters. |
 | company | string | The company name. Max 255 characters. |
 
-<a id="markdown-example-1" name="example-1"></a>
+<a id="markdown-example-2" name="example-2"></a>
 ### Example
 
 <pre><code class="json">{
@@ -947,7 +1338,7 @@ The API call returns a contact object if the call succeeds.
   "company": "Monicahq"
 }</code></pre>
 
-<a id="markdown-response-2" name="response-2"></a>
+<a id="markdown-response-3" name="response-3"></a>
 ### Response
 
 <pre><code class="json">{
@@ -1042,7 +1433,7 @@ The API call returns a contact object if the call succeeds.
   DELETE /contacts/:id
 </span>
 
-<a id="markdown-response-3" name="response-3"></a>
+<a id="markdown-response-4" name="response-4"></a>
 ### Response
 
 The response sends back the id that was just deleted.
@@ -1068,14 +1459,14 @@ You can search specific contacts. Here are the fields that search takes into acc
   GET /contacts?query=regis
 </span>
 
-<a id="markdown-input-6" name="input-6"></a>
+<a id="markdown-input-3" name="input-3"></a>
 #### Input
 
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
 | query | string | <strong>Required</strong>. The string you'd like to search. |
 
-<a id="markdown-response-4" name="response-4"></a>
+<a id="markdown-response-5" name="response-5"></a>
 #### Response
 
 This call returns a collection of contacts. Note that `body.meta.query` contains the query you wanted to search.

@@ -635,7 +635,7 @@ Partial contacts are relationship contacts.
 
 Sometimes you need to have more information about a specific contact. This is especially useful in the context of the mobile application, where you need to reduce the amount of calls as much as possible.
 
-The contact fields are added at the bottom of the JSON file that is returned.
+The contact fields are added at the bottom of the JSON file that is returned. When doing this call, we also return the latest 3 notes that the user has written about the current contact.
 
 <span class="url">
   GET /contacts/:id?with=contactfields

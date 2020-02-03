@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8cb58c18fa3b3acfcaa39c5be7e2060e",
+    "content-hash": "23da23ae875f16ce8ab40008de81392d",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -2190,16 +2190,16 @@
         },
         {
             "name": "scrivo/highlight.php",
-            "version": "v9.18.0.0",
+            "version": "v9.18.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/scrivo/highlight.php.git",
-                "reference": "0e7860058231b5bc843d1f5ac5c091be6b15b2d1"
+                "reference": "a57c858cb753f543965a1e17af386a648012ed8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scrivo/highlight.php/zipball/0e7860058231b5bc843d1f5ac5c091be6b15b2d1",
-                "reference": "0e7860058231b5bc843d1f5ac5c091be6b15b2d1",
+                "url": "https://api.github.com/repos/scrivo/highlight.php/zipball/a57c858cb753f543965a1e17af386a648012ed8f",
+                "reference": "a57c858cb753f543965a1e17af386a648012ed8f",
                 "shasum": ""
             },
             "require": {
@@ -2254,7 +2254,7 @@
                 "highlight.php",
                 "syntax"
             ],
-            "time": "2020-01-29T15:18:09+00:00"
+            "time": "2020-02-03T02:19:36+00:00"
         },
         {
             "name": "spatie/browsershot",

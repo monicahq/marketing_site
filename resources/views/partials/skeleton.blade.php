@@ -7,7 +7,6 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>{{ $pageTitle }}</title>
 
-  <link rel="canonical" href="{{ secure_url('/') }}">
   <link rel="stylesheet" href="{{ mix('css/app.css') }}">
   <link rel="alternate" type="application/atom+xml" title="{{ trans('marketing.xml_feed_description') }}" href="{{ route("feeds.main") }}">
   <meta name="description" content="{{ trans('marketing.description') }}">

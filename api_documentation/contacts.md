@@ -1,3 +1,5 @@
+# Contacts
+
 <!-- TOC -->
 
 - [Overview](#overview)
@@ -13,6 +15,8 @@
     - [Get a `real` contact](#get-a-real-contact)
     - [Get a `partial` contact](#get-a-partial-contact)
     - [Get a contact with contact fields information](#get-a-contact-with-contact-fields-information)
+    - [Get the audit logs for the contact](#get-the-audit-logs-for-the-contact)
+        - [Parameters](#parameters-2)
 - [Create a contact](#create-a-contact)
     - [Input](#input)
     - [Example](#example)
@@ -33,8 +37,6 @@
 
 <!-- /TOC -->
 
-<a name="overview"></a>
-<a id="overview"></a>
 <a id="markdown-overview" name="overview"></a>
 ## Overview
 
@@ -175,8 +177,6 @@ Response:
   "date": "1994-03-21T00:00:00Z"
 }</code></pre>
 
-<a name="list-all-your-contacts"></a>
-<a id="list-all-your-contacts"></a>
 <a id="markdown-list-all-your-contacts" name="list-all-your-contacts"></a>
 ## List all your contacts
 
@@ -469,7 +469,6 @@ You can sort this query. Accepted criteria are:
 | `updated_at` | Will add `order by updated_at asc` to the query |
 | `-updated_at` | Will add `order by updated_at desc` to the query |
 
-<a name="list-all-contacts-for-given-tag"></a>
 <a id="markdown-list-all-the-contacts-for-a-given-tag" name="list-all-the-contacts-for-a-given-tag"></a>
 ## List all the contacts for a given tag
 
@@ -750,8 +749,6 @@ This method lists all the contacts for a given tag.
 }</code></pre>
 
 
-<a name="get-a-specific-contact"></a>
-<a id="get-a-specific-contact"></a>
 <a id="markdown-get-a-specific-contact" name="get-a-specific-contact"></a>
 ## Get a specific contact
 
@@ -1408,6 +1405,59 @@ The contact fields are added at the bottom of the JSON file that is returned. Wh
   }
 }</code></pre>
 
+<a id="markdown-get-the-audit-logs-for-the-contact" name="get-the-audit-logs-for-the-contact"></a>
+### Get the audit logs for the contact
+
+Audit logs can be filtered by contact.
+
+<span class="url">
+  GET /contacts/:id/logs
+</span>
+
+<a id="markdown-parameters-2" name="parameters-2"></a>
+#### Parameters
+
+| Name | Type | Description |
+| ---- | ----------- | ----------- |
+| limit | integer | Indicates the page size. |
+| page | integer | Indicates the page to return. |
+
+<pre><code class="json">{
+  "data": [
+    {
+      "id": 1,
+      "object": "auditlog",
+      "author": {
+        "id": 1,
+        "name": null
+      },
+      "action": "contact_created",
+      "objects": {
+        "contact_name": "Celine Skiles",
+        "contact_id": 1
+      },
+      "audited_at": "2020-02-05T22:02:44Z",
+      "created_at": "2020-02-05T22:02:44Z",
+      "updated_at": "2020-02-05T22:02:44Z"
+    }
+  ],
+  "links": {
+    "first": "https:\/\/monica.test\/api\/contacts\/1\/logs?page=1",
+    "last": "https:\/\/monica.test\/api\/contacts\/1\/logs?page=1",
+    "prev": null,
+    "next": null
+  },
+  "meta": {
+    "current_page": 1,
+    "from": 1,
+    "last_page": 1,
+    "path": "https:\/\/monica.test\/api\/contacts\/1\/logs",
+    "per_page": 15,
+    "to": 1,
+    "total": 1
+  }
+}</code></pre>
+
 <a id="markdown-create-a-contact" name="create-a-contact"></a>
 ## Create a contact
 
@@ -1562,8 +1612,6 @@ The API call returns a contact object if the call succeeds.
   }
 }</code></pre>
 
-<a name="update-a-contact"></a>
-<a id="update-a-contact"></a>
 <a id="markdown-update-a-contact" name="update-a-contact"></a>
 ## Update a contact
 
@@ -1885,8 +1933,6 @@ The API call returns a contact object if the call succeeds.
 }</code></pre>
 
 
-<a name="update-a-contact-career"></a>
-<a id="update-a-contact-career"></a>
 <a id="markdown-update-a-contact-career" name="update-a-contact-career"></a>
 ## Update a contact career
 
@@ -2176,8 +2222,6 @@ The API call returns a contact object if the call succeeds.
   }
 }</code></pre>
 
-<a name="delete-a-contact"></a>
-<a id="delete-a-contact"></a>
 <a id="markdown-delete-a-contact" name="delete-a-contact"></a>
 ## Delete a contact
 
@@ -2195,8 +2239,6 @@ The response sends back the id that was just deleted.
   "id": 93135
 }</code></pre>
 
-<a name="search"></a>
-<a id="search"></a>
 <a id="markdown-search" name="search"></a>
 ## Search
 

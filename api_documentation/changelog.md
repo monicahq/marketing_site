@@ -2,6 +2,10 @@
 
 The changelog is a list of changes and sometimes backwards-incompatible updates in the API.
 
+### February 07, 2020
+
+* Add Audit Logs API documentation
+
 ### January 11, 2020
 
 * Add Photos API documentation

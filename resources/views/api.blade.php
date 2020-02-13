@@ -32,6 +32,9 @@
           <a class="no-underline" href="{{ secure_url('/api/addresses') }}">Addresses</a>
         </li>
         <li class="mb3">
+          <a class="no-underline" href="{{ secure_url('/api/auditlogs') }}">Audit logs</a>
+        </li>
+        <li class="mb3">
           <a class="no-underline" href="{{ secure_url('/api/calls') }}">Calls</a>
         </li>
         <li class="mb3">

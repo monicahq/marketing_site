@@ -74,6 +74,9 @@
           <a class="no-underline" href="{{ secure_url('/api/gifts') }}">Gifts</a>
         </li>
         <li class="mb3">
+          <a class="no-underline" href="{{ secure_url('/api/groups') }}">Groups</a>
+        </li>
+        <li class="mb3">
           <a class="no-underline" href="{{ secure_url('/api/journal') }}">Journal entries</a>
         </li>
         <li class="mb3">

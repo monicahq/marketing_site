@@ -1,5 +1,30 @@
 # Groups <!-- omit in toc -->
 
+<!-- TOC -->
+
+- [Overview](#overview)
+- [List all your groups](#list-all-your-groups)
+    - [Parameters](#parameters)
+    - [Response](#response)
+- [Get a specific group](#get-a-specific-group)
+- [Create a group](#create-a-group)
+    - [Input](#input)
+    - [Example](#example)
+    - [Response](#response-1)
+- [Update a group](#update-a-group)
+    - [Input](#input-1)
+    - [Example](#example-1)
+    - [Response](#response-2)
+- [Delete a group](#delete-a-group)
+    - [Response](#response-3)
+- [Attach contact(s) to a group](#attach-contacts-to-a-group)
+    - [Input](#input-2)
+    - [Example](#example-2)
+    - [Response](#response-4)
+
+<!-- /TOC -->
+
+<a id="markdown-overview" name="overview"></a>
 ## Overview
 
 The Group object represents a group of contacts. A group is generic on purpose, it’s up to the user to decide who should be in a group.
@@ -8,12 +33,14 @@ A group can have no contacts, up to an unlimited number of contacts.
 
 A group can only contain real contacts. That means partial contacts are not supported in a group.
 
+<a id="markdown-list-all-your-groups" name="list-all-your-groups"></a>
 ## List all your groups
 
 <span class="url">
   GET /groups/
 </span>
 
+<a id="markdown-parameters" name="parameters"></a>
 ### Parameters
 
 | Name | Type | Description |
@@ -21,6 +48,7 @@ A group can only contain real contacts. That means partial contacts are not supp
 | limit | integer | Indicates the page size. |
 | page | integer | Indicates the page to return. |
 
+<a id="markdown-response" name="response"></a>
 ### Response
 
 <pre><code class="json">{
@@ -1012,6 +1040,7 @@ A group can only contain real contacts. That means partial contacts are not supp
   }
 }</code></pre>
 
+<a id="markdown-get-a-specific-group" name="get-a-specific-group"></a>
 ## Get a specific group
 
 <span class="url">
@@ -1979,12 +2008,14 @@ A group can only contain real contacts. That means partial contacts are not supp
   }
 }</code></pre>
 
+<a id="markdown-create-a-group" name="create-a-group"></a>
 ## Create a group
 
 <span class="url">
   POST /groups/
 </span>
 
+<a id="markdown-input" name="input"></a>
 ### Input
 
 If a field is not required, you can send the `null` value as the content of the field.
@@ -1993,12 +2024,14 @@ If a field is not required, you can send the `null` value as the content of the 
 | ---- | ----------- | ----------- |
 | name | string | <strong>Required</strong>. The name of the group. |
 
+<a id="markdown-example" name="example"></a>
 ### Example
 
 <pre><code class="json">{
   "name": "best friends bff"
 }</code></pre>
 
+<a id="markdown-response-1" name="response-1"></a>
 ### Response
 
 The API call returns a group object if the call succeeds.
@@ -2017,24 +2050,28 @@ The API call returns a group object if the call succeeds.
   }
 }</code></pre>
 
+<a id="markdown-update-a-group" name="update-a-group"></a>
 ## Update a group
 
 <span class="url">
   PUT /groups/:id
 </span>
 
+<a id="markdown-input-1" name="input-1"></a>
 ### Input
 
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
 | name | string | <strong>Required</strong>. The name of the group. |
 
+<a id="markdown-example-1" name="example-1"></a>
 ### Example
 
 <pre><code class="json">{
   "name":"loving friends"
 }</code></pre>
 
+<a id="markdown-response-2" name="response-2"></a>
 ### Response
 
 <pre><code class="json">{
@@ -2051,12 +2088,14 @@ The API call returns a group object if the call succeeds.
   }
 }</code></pre>
 
+<a id="markdown-delete-a-group" name="delete-a-group"></a>
 ## Delete a group
 
 <span class="url">
   DELETE /groups/:id
 </span>
 
+<a id="markdown-response-3" name="response-3"></a>
 ### Response
 
 The response sends back the id that was just deleted.
@@ -2066,24 +2105,28 @@ The response sends back the id that was just deleted.
   "id": 31
 }</code></pre>
 
+<a id="markdown-attach-contacts-to-a-group" name="attach-contacts-to-a-group"></a>
 ## Attach contact(s) to a group
 
 <span class="url">
   POST /groups/:id/attach
 </span>
 
+<a id="markdown-input-2" name="input-2"></a>
 ### Input
 
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
 | contacts | array | <strong>Required</strong>. The ids (as integer) of the contacts to add. |
 
+<a id="markdown-example-2" name="example-2"></a>
 ### Example
 
 <pre><code class="json">{
   "contacts": [1,2,3]
 }</code></pre>
 
+<a id="markdown-response-4" name="response-4"></a>
 ### Response
 
 <pre><code class="json">{

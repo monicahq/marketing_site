@@ -2476,26 +2476,25 @@
         },
         {
             "name": "spatie/laravel-feed",
-            "version": "2.6.0",
+            "version": "2.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-feed.git",
-                "reference": "b8a824fc4452a0b901db2dd4f94c48f7826597b8"
+                "reference": "1d405afaa1411f8f9916cddcceea8ad85cd553d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-feed/zipball/b8a824fc4452a0b901db2dd4f94c48f7826597b8",
-                "reference": "b8a824fc4452a0b901db2dd4f94c48f7826597b8",
+                "url": "https://api.github.com/repos/spatie/laravel-feed/zipball/1d405afaa1411f8f9916cddcceea8ad85cd553d7",
+                "reference": "1d405afaa1411f8f9916cddcceea8ad85cd553d7",
                 "shasum": ""
             },
             "require": {
-                "illuminate/contracts": "~5.8.0|^6.0",
-                "illuminate/http": "~5.8.0|^6.0",
-                "illuminate/support": "~5.8.0|^6.0",
+                "illuminate/contracts": "~5.8.0|^6.0|^7.0",
+                "illuminate/http": "~5.8.0|^6.0|^7.0",
+                "illuminate/support": "~5.8.0|^6.0|^7.0",
                 "php": "^7.2"
             },
             "require-dev": {
-                "orchestra/testbench": "~3.8.0|^4.0",
                 "phpunit/phpunit": "^8.0",
                 "spatie/phpunit-snapshot-assertions": "^2.0"
             },
@@ -2544,7 +2543,7 @@
                 "rss",
                 "spatie"
             ],
-            "time": "2019-11-08T15:10:51+00:00"
+            "time": "2020-03-02T17:01:46+00:00"
         },
         {
             "name": "spatie/laravel-sitemap",

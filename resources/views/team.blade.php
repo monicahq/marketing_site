@@ -40,7 +40,7 @@
       <p class="measure lh-copy center-ns">Monica is born out of a personal need to keep track of what friends living in other countries were doing with their lives. After having built the first version of the tool, I decided to open sourced it, promote it on Hacker News and the rest is history.</p>
       <p class="measure lh-copy center-ns">Monica is now an healthy open source project. We've been fortunate enough to have a great community, with dozens of contributors and hundreds of code contributions. It also generates a bit of money - every dollar we make on this project is reinvested in the project, to pay the bills and help further development.</p>
       <p class="measure lh-copy center-ns">Thanks for checking out the project.</p>
-      <p class="measure lh-copy center-ns">Regis Freyd and Alexis Saetller</p>
+      <p class="measure lh-copy center-ns">Regis Freyd and Alexis Saettler</p>
     </div>
   </div>
 </div>

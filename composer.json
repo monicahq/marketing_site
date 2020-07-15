@@ -8,7 +8,7 @@
         "php": ">=7.1.3",
         "erusev/parsedown": "^1.6",
         "fideloper/proxy": "~4.0",
-        "graham-campbell/markdown": "^11.1",
+        "graham-campbell/markdown": "^13.0",
         "ixudra/curl": "^6.16",
         "laravel/framework": "^6.0",
         "laravel/helpers": "^1.1",

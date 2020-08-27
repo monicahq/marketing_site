@@ -13,7 +13,7 @@
         "laravel/framework": "^6.0",
         "laravel/helpers": "^1.1",
         "laravel/tinker": "~2.0",
-        "scrivo/highlight.php": "v9.18.0.0",
+        "scrivo/highlight.php": "v9.18.1.2",
         "spatie/laravel-feed": "^2.0",
         "spatie/laravel-sitemap": "5.*"
     },

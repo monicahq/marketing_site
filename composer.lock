@@ -709,16 +709,16 @@
         },
         {
             "name": "ixudra/curl",
-            "version": "6.18.1",
+            "version": "6.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ixudra/curl.git",
-                "reference": "ff1b23dba264272a7b3a8fef01f73eec23c8fbe7"
+                "reference": "796bd307ca35c66a3f6a47b559f8ccad9f06e93f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ixudra/curl/zipball/ff1b23dba264272a7b3a8fef01f73eec23c8fbe7",
-                "reference": "ff1b23dba264272a7b3a8fef01f73eec23c8fbe7",
+                "url": "https://api.github.com/repos/ixudra/curl/zipball/796bd307ca35c66a3f6a47b559f8ccad9f06e93f",
+                "reference": "796bd307ca35c66a3f6a47b559f8ccad9f06e93f",
                 "shasum": ""
             },
             "require": {
@@ -752,14 +752,14 @@
                     "email": "jan.oris@ixudra.be"
                 }
             ],
-            "description": "Custom PHP Curl library for the Laravel 5 framework - developed by Ixudra",
+            "description": "Custom PHP Curl library for the Laravel framework - developed by Ixudra",
             "homepage": "http://ixudra.be",
             "keywords": [
                 "Ixudra",
                 "curl",
                 "laravel"
             ],
-            "time": "2019-11-02T09:48:26+00:00"
+            "time": "2020-09-22T12:50:01+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -801,6 +801,7 @@
                     "email": "jakub.onderka@gmail.com"
                 }
             ],
+            "abandoned": "php-parallel-lint/php-console-color",
             "time": "2018-09-29T17:23:10+00:00"
         },
         {
@@ -847,6 +848,7 @@
                 }
             ],
             "description": "Highlight PHP code in terminal",
+            "abandoned": "php-parallel-lint/php-console-highlighter",
             "time": "2018-09-29T18:48:56+00:00"
         },
         {
@@ -1246,6 +1248,7 @@
                 "markdown",
                 "table"
             ],
+            "abandoned": "league/commonmark",
             "time": "2019-09-26T13:28:33+00:00"
         },
         {
@@ -4194,12 +4197,12 @@
             "version": "v6.12.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/tightenco/collect.git",
+                "url": "https://github.com/tighten/collect.git",
                 "reference": "b0263d1e2931a272dcf091f1481291ea8ec3ec14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tightenco/collect/zipball/b0263d1e2931a272dcf091f1481291ea8ec3ec14",
+                "url": "https://api.github.com/repos/tighten/collect/zipball/b0263d1e2931a272dcf091f1481291ea8ec3ec14",
                 "reference": "b0263d1e2931a272dcf091f1481291ea8ec3ec14",
                 "shasum": ""
             },
@@ -5241,6 +5244,7 @@
             "keywords": [
                 "tokenizer"
             ],
+            "abandoned": true,
             "time": "2019-09-17T06:23:10+00:00"
         },
         {
@@ -6038,5 +6042,6 @@
     "platform": {
         "php": ">=7.1.3"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }

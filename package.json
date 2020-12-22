@@ -17,7 +17,7 @@
         "vue-template-compiler": "^2.6.11"
     },
     "dependencies": {
-        "axios": "^0.19",
+        "axios": "^0.21",
         "highlight.js": "^9.18.0",
         "lodash": "^4.17.14",
         "sass": "^1.24.4",

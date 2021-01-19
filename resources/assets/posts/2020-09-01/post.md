@@ -10,6 +10,20 @@ The efforts paid off, as we now have our very own official Docker image.
 
 ### How to use the new image
 
+To run the monica image, it needs a mysql database:
+```sh
+mysqlCid="$(docker run -d \
+ -e MYSQL_RANDOM_ROOT_PASSWORD=true \
+ -e MYSQL_DATABASE=monica \
+ -e MYSQL_USER=homestead \
+ -e MYSQL_PASSWORD=secret \
+ "mysql:5.7")"
+docker run -d \
+ --link "$mysqlCid":mysql \
+ -e DB_HOST=mysql \
+ -p 8080:80 \
+ monica
+
 Below is an easy guide to upgrade your current Docker image to the new image.
 
 1. Backup your data before the migration

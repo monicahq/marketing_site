@@ -77,7 +77,7 @@ jobs:
           path: |
             public/mix-manifest.json
             public/js
-            public/css assets/
+            public/css
             public/fonts
 
 
@@ -101,6 +101,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: assets
+          path: public
 
       - name: Configure Git
         run: |

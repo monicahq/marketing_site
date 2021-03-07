@@ -1,0 +1,8 @@
+version: 2
+
+pre: rm -rf vendor
+
+composer:
+    no-dev: true
+
+post: php artisan migrate --force -vvv

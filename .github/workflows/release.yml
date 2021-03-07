@@ -112,7 +112,7 @@ jobs:
 
       - name: Commit everything
         run: |
-          git checkout master
+          rm .gitignore
           git add -A
           git commit -m "Build $($CURRENT_DATE_TIME)"
         env:

@@ -92,6 +92,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          depth: 0
 
       - uses: webfactory/ssh-agent@v0.5.0
         with:

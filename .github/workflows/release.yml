@@ -15,8 +15,6 @@ jobs:
     steps:
       - name: Checkout sources
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
 
       - name: Setup PHP ${{ env.php-version }}
         uses: shivammathur/setup-php@v2
@@ -93,7 +91,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
-          depth: 0
+          fetch-depth: 0
 
       - uses: webfactory/ssh-agent@v0.5.0
         with:

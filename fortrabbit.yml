@@ -1,0 +1,8 @@
+version: 2
+
+pre: tests/CleanVendor.php
+
+composer:
+    no-dev: true
+
+post: artisan migrate --force -vvv

@@ -1,8 +1,8 @@
 version: 2
 
-pre: rm -rf vendor
+pre: tests/CleanVendor.php
 
 composer:
     no-dev: true
 
-post: php artisan migrate --force -vvv
+post: artisan migrate --force -vvv

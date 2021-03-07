@@ -1,0 +1,127 @@
+name: Release
+
+on:
+  workflow_dispatch:
+
+env:
+  php-version: 7.4
+  node-version: 14
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build Assets
+
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup PHP ${{ env.php-version }}
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ env.php-version }}
+          extensions: imagick, redis
+          coverage: none
+      - name: Check PHP Version
+        run: php -v
+      - name: Check Composer Version
+        run: composer -V
+      - name: Check PHP Extensions
+        run: php -m
+
+    # Composer
+      - name: Validate composer.json and composer.lock
+        run: composer validate
+
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: echo "::set-output name=dir::$(composer config cache-files-dir)"
+      - name: Cache composer files
+        uses: actions/cache@v2.1.4
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ env.php-version }}-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-${{ env.php-version }}-${{ hashFiles('**/composer.lock') }}
+            ${{ runner.os }}-composer-${{ env.php-version }}
+            ${{ runner.os }}-composer-
+
+      - name: Install composer dependencies
+        run: composer install --no-progress --no-interaction --prefer-dist --optimize-autoloader
+
+    # npm
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.node-version }}
+      - name: Cache npm files
+        uses: actions/cache@v2.1.4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+            ${{ runner.os }}-node-
+
+      - name: Install npm dependencies
+        run: npm install
+      - name: Build assets
+        run: npm run production
+
+      - name: Store assets
+        uses: actions/upload-artifact@v2
+        with:
+          name: assets
+          path: |
+            public/mix-manifest.json
+            public/js
+            public/css assets/
+            public/fonts
+
+
+  release:
+    runs-on: ubuntu-latest
+    name: Release
+    needs: build
+    if: github.event_name != 'pull_request'
+
+    environment: fortrabbit
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - uses: webfactory/ssh-agent@v0.1.1
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Download assets
+        uses: actions/download-artifact@v2
+        with:
+          name: assets
+
+      - name: Configure Git
+        run: |
+          git config user.email $GIT_EMAIL
+          git config user.name $GIT_USERNAME
+        env:
+          GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
+          GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
+
+      - name: Commit everything
+        run: |
+          git checkout master
+          git add -A
+          git commit -m "Build $($CURRENT_DATE_TIME)"
+        env:
+          CURRENT_DATE_TIME: "date +%Y-%m-%d:%H-%M"
+
+      - name: Deploy
+        run: |
+          git push --force $REPO_URL
+        env:
+          # This avoids a failure when the client does not know the SSH Host already
+          GIT_SSH_COMMAND: "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+          REPO_URL: ${{ secrets.REPO_URL }}

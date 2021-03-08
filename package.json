@@ -18,7 +18,7 @@
     },
     "dependencies": {
         "axios": "^0.21",
-        "highlight.js": "^9.18.0",
+        "highlight.js": "^10.6.0",
         "lodash": "^4.17.14",
         "sass": "^1.27.0",
         "tachyons": "^4.12.0",

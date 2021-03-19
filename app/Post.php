@@ -2,11 +2,11 @@
 
 namespace App;
 
-use Spatie\Feed\Feedable;
-use Spatie\Feed\FeedItem;
-use League\CommonMark\Converter;
 use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Database\Eloquent\Model;
+use League\CommonMark\Converter;
+use Spatie\Feed\Feedable;
+use Spatie\Feed\FeedItem;
 
 class Post extends Model implements Feedable
 {
@@ -30,7 +30,7 @@ class Post extends Model implements Feedable
         return secure_url('blog/category/'.$this->category->slug);
     }
 
-    public function toFeedItem()
+    public function toFeedItem(): FeedItem
     {
         return FeedItem::create()
             ->id($this->id)
@@ -43,6 +43,6 @@ class Post extends Model implements Feedable
 
     public static function getFeedItems()
     {
-       return Post::all();
+        return self::all();
     }
 }

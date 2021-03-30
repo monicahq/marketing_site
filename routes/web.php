@@ -1,5 +1,13 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ChangelogController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ApiController;
+use App\Http\Controllers\Admin\ReleaseController;
+use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\DashboardController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,10 +18,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-if (App::environment('production')) {
-    URL::forceScheme('https');
-}
 
 Route::feeds();
 
@@ -53,23 +57,20 @@ Route::get('/terms', function () {
     return view('terms');
 });
 
-Route::get('/changelog', 'ChangelogController@index');
+Route::get('/changelog', [ChangelogController::class, 'index']);
 
-Route::get('/blog', 'BlogController@index');
-Route::get('/blog/{slug}', 'BlogController@post');
-Route::get('/blog/category/{slug}', 'BlogController@category');
+Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/{slug}', [BlogController::class, 'post'])->name('blog.show');
+Route::get('/blog/category/{slug}', [BlogController::class, 'category']);
 
-Route::get('/api', 'ApiController@index');
-Route::get('/api/{category}', 'ApiController@category');
-
-Auth::routes();
+Route::get('/api', [ApiController::class, 'index']);
+Route::get('/api/{category}', [ApiController::class, 'category']);
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/dashboard', 'DashboardController@index');
-    Route::get('/release/add', 'ReleaseController@add');
-    Route::post('/release/store', 'ReleaseController@store');
-    Route::get('/release/{release}/notes', 'ReleaseController@notes');
-    Route::get('/release/{release}/generate', 'ReleaseController@generate');
-    Route::get('/release/{release}/notes/add', 'ReleaseController@addNote');
-    Route::post('/release/{release}/notes/store', 'ReleaseController@storeNote');
+    Route::get('/dashboard', [DashboardController::class, 'index']);
+});
+
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+    Route::resource('releases', ReleaseController::class);
+    Route::resource('posts', PostController::class);
 });

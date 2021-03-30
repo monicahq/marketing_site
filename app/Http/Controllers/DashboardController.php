@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Release;
+use App\Models\Release;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller

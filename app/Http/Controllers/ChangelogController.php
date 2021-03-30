@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Note;
-use App\Release;
-use Illuminate\Http\Request;
+use App\Models\Release;
 
 class ChangelogController extends Controller
 {

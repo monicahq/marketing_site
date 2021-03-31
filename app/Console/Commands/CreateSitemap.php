@@ -17,7 +17,7 @@ class CreateSitemap extends Command
     /**
      * The console command description.
      *
-     * @var string
+     * @var string|null
      */
     protected $description = 'Generates the sitemap.';
 

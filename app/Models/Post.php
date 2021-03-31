@@ -52,7 +52,7 @@ class Post extends Model implements Feedable
     public function toFeedItem(): FeedItem
     {
         return FeedItem::create()
-            ->id($this->id)
+            ->id((string) $this->id)
             ->title($this->title)
             ->summary($this->post)
             ->updated($this->created_at)

@@ -24,7 +24,7 @@ class PostController extends Controller
         return Jetstream::inertia()->render($request, 'Posts', [
             'posts' => Post::orderBy('id', 'desc')->get(),
             'categories' => Category::get(),
-            'defaultCategory' => Category::get()->first()->id,
+            'defaultCategory' => Category::first()->id,
         ]);
     }
 

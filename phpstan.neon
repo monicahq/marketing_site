@@ -1,0 +1,15 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+    - ./vendor/phpstan/phpstan-deprecation-rules/rules.neon
+    - ./vendor/thecodingmachine/phpstan-safe-rule/phpstan-safe-rule.neon
+
+parameters:
+    paths:
+        - app
+        - tests
+    excludePaths:
+    inferPrivatePropertyTypeFromConstructor: true
+    checkMissingIterableValueType: false
+    level: 5
+    ignoreErrors:
+        - '#Call to an undefined method Illuminate\\View\\View::with[a-zA-Z0-9\\_]+\(\)\.#'

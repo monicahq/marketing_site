@@ -84,7 +84,7 @@
         <!-- Release note -->
         <div class="col-span-6">
           <jet-label for="notes" value="Release note" />
-          <jet-textarea id="notes" v-model="createReleaseForm.notes" type="date" class="mt-1 block w-full" autofocus />
+          <jet-textarea id="notes" v-model="createReleaseForm.notes" class="mt-1 block w-full" autofocus />
           <jet-input-error :message="createReleaseForm.errors.notes" class="mt-2" />
         </div>
       </template>
@@ -124,7 +124,7 @@
         <!-- Release note -->
         <div class="col-span-6">
           <jet-label for="notes" value="Release note" />
-          <jet-textarea id="notes" v-model="updateReleaseForm.notes" type="date" class="mt-1 block w-full" autofocus />
+          <jet-textarea id="notes" v-model="updateReleaseForm.notes" class="mt-1 block w-full" autofocus />
           <jet-input-error :message="updateReleaseForm.errors.notes" class="mt-2" />
         </div>
       </template>
@@ -238,7 +238,7 @@ export default {
     openUpdateRelease (release) {
 
       this.updateReleaseForm.version = release.release_number;
-      this.updateReleaseForm.released_on = release.released_on;
+      this.updateReleaseForm.released_on = this.formatDate(release.released_on);
       this.updateReleaseForm.notes = release.description;
       this.updatingRelease = release.id;
 
@@ -279,7 +279,7 @@ export default {
     },
 
     formatDate(value) {
-      return moment(value).format('YYYY-MM-DD');
+      return value !== undefined ? moment(value).format('YYYY-MM-DD') : '';
     },
   },
 };

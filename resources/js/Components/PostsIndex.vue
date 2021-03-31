@@ -19,7 +19,7 @@
     <div v-if="posts.length > 0">
       <jet-section-border />
 
-      <!-- Manage API Tokens -->
+      <!-- Manage Posts -->
       <div class="mt-10 sm:mt-0">
         <jet-action-section>
           <template #title>
@@ -30,7 +30,7 @@
             List of posts.
           </template>
 
-          <!-- API Token List -->
+          <!-- Posts List -->
           <template #content>
             <div class="space-y-6">
               <div v-for="post in posts" :key="post.id" class="flex items-center justify-between">
@@ -38,11 +38,11 @@
                   <a :href="route('blog.show', post.slug)" target="_blank">{{ post.title }}</a>
                 </div>
 
-                <div class="text-sm text-gray-400">
-                  {{ formatDate(post.updated_at) }}
-                </div>
-
                 <div class="flex items-center">
+                  <div class="text-sm text-gray-400">
+                    {{ formatDate(post) }}
+                  </div>
+
                   <button class="cursor-pointer ml-6 text-sm text-gray-400 underline"
                           @click="openUpdatePost(post)"
                   >
@@ -324,8 +324,9 @@ export default {
 
     },
 
-    formatDate(value) {
-      return moment(value).format('YYYY-MM-DD');
+    formatDate(post) {
+      let date = post.updated_at !== undefined && post.updated_at !== null ? post.updated_at : post.created_at;
+      return date != undefined ? moment(date).format('YYYY-MM-DD') : '';
     },
   },
 };

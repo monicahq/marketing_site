@@ -4,9 +4,9 @@ namespace App\Models;
 
 use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Database\Eloquent\Model;
-use League\CommonMark\Converter;
 use Spatie\Feed\Feedable;
 use Spatie\Feed\FeedItem;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Post extends Model implements Feedable
 {
@@ -28,6 +28,9 @@ class Post extends Model implements Feedable
         'updated_at',
     ];
 
+    /**
+     * @return BelongsTo
+     */
     public function category()
     {
         return $this->belongsTo(Category::class);
@@ -43,6 +46,9 @@ class Post extends Model implements Feedable
         return secure_url('blog/category/'.$this->category->slug);
     }
 
+    /**
+     * @return FeedItem
+     */
     public function toFeedItem(): FeedItem
     {
         return FeedItem::create()

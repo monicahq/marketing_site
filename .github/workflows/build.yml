@@ -72,7 +72,7 @@ jobs:
           mkdir -p public/js public/css
           {\
             echo "{"; \
-            for f in app.js app.css; do \
+            for f in app.js app.css app2.js app2.css; do \
               [[ $first == 1 ]] && echo -n "," || first=1; \
               k=${f##*.}/$f; \
               echo "\"/$k\": \"/$k\""; \

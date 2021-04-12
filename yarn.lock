@@ -1149,17 +1149,6 @@
     estree-walker "^2.0.1"
     source-map "^0.6.1"
 
-"@vue/compiler-core@3.0.9":
-  version "3.0.9"
-  resolved "https://registry.yarnpkg.com/@vue/compiler-core/-/compiler-core-3.0.9.tgz#ec7efa676889aee006fc43739ee4a67a952ac623"
-  integrity sha512-bHAPwfVoLhGx8d6KV/OfGf/3gwpymVirgfmSyhgv5YuXDybLa6BwjSLvhNMAyDP+4q4pp0p6g248LuoOy5W6OA==
-  dependencies:
-    "@babel/parser" "^7.12.0"
-    "@babel/types" "^7.12.0"
-    "@vue/shared" "3.0.9"
-    estree-walker "^2.0.1"
-    source-map "^0.6.1"
-
 "@vue/compiler-dom@3.0.11":
   version "3.0.11"
   resolved "https://registry.yarnpkg.com/@vue/compiler-dom/-/compiler-dom-3.0.11.tgz#b15fc1c909371fd671746020ba55b5dab4a730ee"
@@ -1167,14 +1156,6 @@
   dependencies:
     "@vue/compiler-core" "3.0.11"
     "@vue/shared" "3.0.11"
-
-"@vue/compiler-dom@3.0.9":
-  version "3.0.9"
-  resolved "https://registry.yarnpkg.com/@vue/compiler-dom/-/compiler-dom-3.0.9.tgz#1fd554097d9ab36eca73bc6d0d9607fecf94e71c"
-  integrity sha512-tkq6umPSELaghvOExWfGNwrCRc7FTul3RLykKzBZWhb87sSESq0XxiKELfBOfEbzdhWg6BJ1WXKDeq+al/viEQ==
-  dependencies:
-    "@vue/compiler-core" "3.0.9"
-    "@vue/shared" "3.0.9"
 
 "@vue/compiler-sfc@^3.0.5":
   version "3.0.11"
@@ -1234,11 +1215,6 @@
   version "3.0.11"
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.0.11.tgz#20d22dd0da7d358bb21c17f9bde8628152642c77"
   integrity sha512-b+zB8A2so8eCE0JsxjL24J7vdGl8rzPQ09hZNhystm+KqSbKcAej1A+Hbva1rCMmTTqA+hFnUSDc5kouEo0JzA==
-
-"@vue/shared@3.0.9":
-  version "3.0.9"
-  resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.0.9.tgz#09882d745ded52b07e4481d036659d733edd2a9a"
-  integrity sha512-lv20q1O5dybwro+V+vnxHCmSIxi9mvTORSgAbGrANGYK8zF4K1S9TOankIvdkcvfZ88IR95O2pTI2Pb3c3BaNg==
 
 "@webassemblyjs/ast@1.11.0":
   version "1.11.0"
@@ -3127,9 +3103,9 @@ eslint-visitor-keys@^2.0.0:
   integrity sha512-QudtT6av5WXels9WjIM7qz1XD1cWGvX4gGXvp/zBn9nXG02D0utdU3Em2m/QjTnrsk6bBjmCygl3rmj118msQQ==
 
 eslint@^7.22.0:
-  version "7.23.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.23.0.tgz#8d029d252f6e8cf45894b4bee08f5493f8e94325"
-  integrity sha512-kqvNVbdkjzpFy0XOszNwjkKzZ+6TcwCQ/h+ozlcIWwaimBBuhlQ4nN6kbiM2L+OjDcznkTJxzYfRFH92sx4a0Q==
+  version "7.24.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.24.0.tgz#2e44fa62d93892bfdb100521f17345ba54b8513a"
+  integrity sha512-k9gaHeHiFmGCDQ2rEfvULlSLruz6tgfA8DEn+rY9/oYPFFTlz55mM/Q/Rij1b2Y42jwZiK3lXvNTw6w6TXzcKQ==
   dependencies:
     "@babel/code-frame" "7.12.11"
     "@eslint/eslintrc" "^0.4.0"

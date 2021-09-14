@@ -6,7 +6,6 @@ includes:
 parameters:
     paths:
         - app
-        - tests
     excludePaths:
     inferPrivatePropertyTypeFromConstructor: true
     checkMissingIterableValueType: false

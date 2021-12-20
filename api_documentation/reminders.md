@@ -8,6 +8,8 @@
   - [Response](#response)
 - [List all the reminders of a specific contact](#list-all-the-reminders-of-a-specific-contact)
   - [Response](#response-1)
+- [List all the upcoming reminders in your account](#list-all-the-upcoming-reminders-in-your-account)
+  - [Response](#response-6)
 - [Get a specific reminder](#get-a-specific-reminder)
   - [Response](#response-2)
 - [Create a reminder](#create-a-reminder)
@@ -500,6 +502,57 @@ related contact.
     "to": 1,
     "total": 1
   }
+}</code></pre>
+
+<a name="list-all-the-upcoming-reminders-in-your-account"></a>
+<a id="markdown-list-all-the-upcoming-reminders-in-your-account" name="list-all-the-upcoming-reminders-in-your-account"></a>
+## List all the upcoming reminders in your account
+
+<span class="url">
+  GET /reminders/upcoming/:month
+</span>
+
+<a id="markdown-response-6" name="response-6"></a>
+### Response
+
+<pre><code class="json">{
+  "data": [
+    {
+      "id": 2,
+      "object": "reminder",
+      "title": "Wish happy birthday to Jean",
+      "description": null,
+      "frequency_type": "year",
+      "frequency_number": 1,
+      "last_triggered_date": null,
+      "next_expected_date": "2017-10-23T00:00:18Z",
+      "account": {
+        "id": 1
+      },
+      "contact": {
+        "id": 1,
+        "object": "contact",
+        "first_name": "Jean",
+        "last_name": "Valjean",
+        "gender": "female",
+        "is_partial": false,
+        "information": {
+          "dates": [
+            {
+              "name": "birthdate",
+              "is_birthdate_approximate": "exact",
+              "birthdate": "1983-10-23T19:10:42Z"
+            }
+          ]
+        },
+        "account": {
+          "id": 1
+        }
+      },
+      "created_at": "2016-10-07T11:53:43Z",
+      "updated_at": "2017-06-16T19:04:54Z"
+    }
+  ]
 }</code></pre>
 
 <a name="get-a-specific-reminder"></a>

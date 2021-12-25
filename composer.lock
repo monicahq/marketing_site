@@ -709,16 +709,16 @@
         },
         {
             "name": "graham-campbell/markdown",
-            "version": "v13.1.1",
+            "version": "v13.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Markdown.git",
-                "reference": "d25b873e5c5870edc4de7d980808f1a8e092a9c7"
+                "reference": "275f96e5b1a2f86f3239eb2c2c5262790725f4ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Markdown/zipball/d25b873e5c5870edc4de7d980808f1a8e092a9c7",
-                "reference": "d25b873e5c5870edc4de7d980808f1a8e092a9c7",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Markdown/zipball/275f96e5b1a2f86f3239eb2c2c5262790725f4ba",
+                "reference": "275f96e5b1a2f86f3239eb2c2c5262790725f4ba",
                 "shasum": ""
             },
             "require": {
@@ -731,7 +731,7 @@
             },
             "require-dev": {
                 "graham-campbell/analyzer": "^3.0",
-                "graham-campbell/testbench": "^5.4",
+                "graham-campbell/testbench": "^5.6",
                 "mockery/mockery": "^1.3.1",
                 "phpunit/phpunit": "^8.5.8 || ^9.3.7"
             },
@@ -755,7 +755,8 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@alt-three.com"
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
                 }
             ],
             "description": "Markdown Is A CommonMark Wrapper For Laravel",
@@ -772,7 +773,7 @@
             ],
             "support": {
                 "issues": "https://github.com/GrahamCampbell/Laravel-Markdown/issues",
-                "source": "https://github.com/GrahamCampbell/Laravel-Markdown/tree/v13.1.1"
+                "source": "https://github.com/GrahamCampbell/Laravel-Markdown/tree/v13.1.2"
             },
             "funding": [
                 {
@@ -784,7 +785,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-08-22T14:18:21+00:00"
+            "time": "2021-11-21T15:23:56+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -1978,6 +1979,65 @@
                 "source": "https://github.com/laravel/sanctum"
             },
             "time": "2021-12-14T17:49:47+00:00"
+        },
+        {
+            "name": "laravel/serializable-closure",
+            "version": "v1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/serializable-closure.git",
+                "reference": "25de3be1bca1b17d52ff0dc02b646c667ac7266c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/25de3be1bca1b17d52ff0dc02b646c667ac7266c",
+                "reference": "25de3be1bca1b17d52ff0dc02b646c667ac7266c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "pestphp/pest": "^1.18",
+                "phpstan/phpstan": "^0.12.98",
+                "symfony/var-dumper": "^5.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\SerializableClosure\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                },
+                {
+                    "name": "Nuno Maduro",
+                    "email": "nuno@laravel.com"
+                }
+            ],
+            "description": "Laravel Serializable Closure provides an easy and secure way to serialize closures in PHP.",
+            "keywords": [
+                "closure",
+                "laravel",
+                "serializable"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/serializable-closure/issues",
+                "source": "https://github.com/laravel/serializable-closure"
+            },
+            "time": "2021-11-30T15:53:04+00:00"
         },
         {
             "name": "laravel/serializable-closure",

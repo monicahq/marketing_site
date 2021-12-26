@@ -8,7 +8,7 @@
   <title>{{ $pageTitle }}</title>
 
   <link rel="stylesheet" href="{{ asset(mix('css/app.css')) }}">
-  <link rel="alternate" type="application/atom+xml" title="{{ trans('marketing.xml_feed_description') }}" href="{{ route("feeds.main") }}">
+  @include('feed::links')
   <meta name="description" content="{{ trans('marketing.description') }}">
   <link rel="author" href="https://twitter.com/djaiss">
   <link rel="shortcut icon" href="{{ secure_url('/img/favicon.png') }}">

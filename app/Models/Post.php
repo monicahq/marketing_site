@@ -56,7 +56,7 @@ class Post extends Model implements Feedable
             ->title($this->title)
             ->summary($this->post)
             ->updated($this->created_at)
-            ->author('Regis Freyd')
+            ->authorName('Regis Freyd')
             ->link($this->getUrl());
     }
 

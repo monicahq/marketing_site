@@ -41,6 +41,12 @@ return [
             'ignore_exceptions' => false,
         ],
 
+        'stacksentry' => [
+            'driver' => 'stack',
+            'channels' => ['single', 'sentry'],
+            'ignore_exceptions' => false,
+        ],
+
         'single' => [
             'driver' => 'single',
             'path' => storage_path('logs/laravel.log'),
@@ -70,6 +76,12 @@ return [
                 'host' => env('PAPERTRAIL_URL'),
                 'port' => env('PAPERTRAIL_PORT'),
             ],
+        ],
+
+        'sentry' => [
+            'driver' => 'sentry',
+            'level'  => 'debug',
+            'bubble' => true,
         ],
 
         'stderr' => [

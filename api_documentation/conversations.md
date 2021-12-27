@@ -32,6 +32,7 @@
 
 <!-- /TOC -->
 
+<a id="markdown-overview" name="overview"></a>
 ## Overview
 
 The Conversation object represents a conversation made with a contact. A contact can have as many conversations as necessary.
@@ -40,12 +41,14 @@ A conversation happens somewhere - on the phone, on a social network or a SMS ap
 
 A conversation is made of one or more messages. The Message object contains the body of the conversation in itself. A Message can't be orphan and belongs to a Conversation.
 
+<a id="markdown-list-all-the-conversations-in-the-account" name="list-all-the-conversations-in-the-account"></a>
 ## List all the conversations in the account
 
 <span class="url">
   GET /conversations
 </span>
 
+<a id="markdown-response" name="response"></a>
 ### Response
 
 <pre><code class="json">{
@@ -368,12 +371,14 @@ A conversation is made of one or more messages. The Message object contains the 
   }
 }</code></pre>
 
+<a id="markdown-list-all-the-conversations-of-a-contact" name="list-all-the-conversations-of-a-contact"></a>
 ## List all the conversations of a contact
 
 <span class="url">
   GET /contacts/:id/conversations
 </span>
 
+<a id="markdown-response-1" name="response-1"></a>
 ### Response
 
 <pre><code class="json">{
@@ -696,7 +701,7 @@ A conversation is made of one or more messages. The Message object contains the 
   }
 }</code></pre>
 
-
+<a id="markdown-get-a-specific-conversation" name="get-a-specific-conversation"></a>
 ## Get a specific conversation
 
 Retrieving a conversation contains all the messages of this conversation.
@@ -705,6 +710,7 @@ Retrieving a conversation contains all the messages of this conversation.
   GET /conversations/:id
 </span>
 
+<a id="markdown-response-2" name="response-2"></a>
 ### Response
 
 <pre><code class="json">{
@@ -817,6 +823,7 @@ Retrieving a conversation contains all the messages of this conversation.
   }
 }</code></pre>
 
+<a id="markdown-create-a-conversation" name="create-a-conversation"></a>
 ## Create a conversation
 
 Creating a conversation only creates the conversation itself. You will have to add messages one by one to populate it with actual content.
@@ -825,6 +832,7 @@ Creating a conversation only creates the conversation itself. You will have to a
   POST /conversations/
 </span>
 
+<a id="markdown-input" name="input"></a>
 ### Input
 
 | Name | Type | Description |
@@ -833,6 +841,7 @@ Creating a conversation only creates the conversation itself. You will have to a
 | contact_field_type_id | integer | <strong>Required</strong>. The type of the contact field. Has to be a valid, existing contact field type ID. You can retrieve the list of all the contact field types of an account <a href="contactfieldtypes">via the API</a>. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the conversation field is associated with. |
 
+<a id="markdown-example" name="example"></a>
 ### Example
 
 <pre><code class="json">{
@@ -841,6 +850,7 @@ Creating a conversation only creates the conversation itself. You will have to a
   "contact_field_type_id": 1
 }</code></pre>
 
+<a id="markdown-response-3" name="response-3"></a>
 ### Response
 
 The API call returns a Conversation object if the call succeeds.
@@ -906,6 +916,7 @@ The API call returns a Conversation object if the call succeeds.
   }
 }</code></pre>
 
+<a id="markdown-update-a-conversation" name="update-a-conversation"></a>
 ## Update a conversation
 
 This only updates the conversation object itself - not the messages in the conversation.
@@ -914,18 +925,21 @@ This only updates the conversation object itself - not the messages in the conve
   PUT /conversations/:id
 </span>
 
+<a id="markdown-input-1" name="input-1"></a>
 ### Input
 
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
 | happened_at | date | <strong>Required</strong>. The date the conversation happened. Format: YYYY-MM-DD. |
 
+<a id="markdown-example-1" name="example-1"></a>
 ### Example
 
 <pre><code class="json">{
   "happened_at": "2019-10-29"
 }</code></pre>
 
+<a id="markdown-response-4" name="response-4"></a>
 ### Response
 
 <pre><code class="json">{
@@ -989,12 +1003,14 @@ This only updates the conversation object itself - not the messages in the conve
   }
 }</code></pre>
 
+<a id="markdown-delete-a-conversation" name="delete-a-conversation"></a>
 ## Delete a conversation
 
 <span class="url">
   DELETE /conversations/:id
 </span>
 
+<a id="markdown-response-5" name="response-5"></a>
 ### Response
 
 The response sends back the id that was just deleted.
@@ -1004,12 +1020,14 @@ The response sends back the id that was just deleted.
   "id": 31
 }</code></pre>
 
+<a id="markdown-add-a-message-to-a-conversation" name="add-a-message-to-a-conversation"></a>
 ## Add a message to a conversation
 
 <span class="url">
   POST /conversations/:id/messages
 </span>
 
+<a id="markdown-input-2" name="input-2"></a>
 ### Input
 
 | Name | Type | Description |
@@ -1019,6 +1037,7 @@ The response sends back the id that was just deleted.
 | content | text | <strong>Required</strong>. The actual message. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the conversation is associated with. |
 
+<a id="markdown-example-2" name="example-2"></a>
 ### Example
 
 <pre><code class="json">{
@@ -1028,6 +1047,7 @@ The response sends back the id that was just deleted.
   "content": "this is a message"
 }</code></pre>
 
+<a id="markdown-response-6" name="response-6"></a>
 ### Response
 
 The API call returns a Conversation object if the call succeeds.
@@ -1142,12 +1162,14 @@ The API call returns a Conversation object if the call succeeds.
   }
 }</code></pre>
 
+<a id="markdown-update-a-message-in-a-conversation" name="update-a-message-in-a-conversation"></a>
 ## Update a message in a conversation
 
 <span class="url">
   PUT /conversations/:id/messages/:id
 </span>
 
+<a id="markdown-input-3" name="input-3"></a>
 ### Input
 
 | Name | Type | Description |
@@ -1157,6 +1179,7 @@ The API call returns a Conversation object if the call succeeds.
 | content | text | <strong>Required</strong>. The actual message. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the conversation is associated with. |
 
+<a id="markdown-example-3" name="example-3"></a>
 ### Example
 
 <pre><code class="json">{
@@ -1166,6 +1189,7 @@ The API call returns a Conversation object if the call succeeds.
   "content": "this is a message"
 }</code></pre>
 
+<a id="markdown-response-7" name="response-7"></a>
 ### Response
 
 The API call returns a Conversation object if the call succeeds.
@@ -1280,12 +1304,14 @@ The API call returns a Conversation object if the call succeeds.
   }
 }</code></pre>
 
+<a id="markdown-delete-a-message" name="delete-a-message"></a>
 ## Delete a message
 
 <span class="url">
   DELETE /conversations/:id/messages/:id
 </span>
 
+<a id="markdown-response-8" name="response-8"></a>
 ### Response
 
 The response sends back the id that was just deleted.

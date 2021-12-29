@@ -1,10 +1,12 @@
-name: Release
+name: Deploy
 
 on:
-#  push:
-#    branches: [master]
+ push:
+   branches: [master]
   pull_request:
     types: [opened, synchronize, reopened]
+  release:
+    types: [created]
 
   workflow_dispatch:
 
@@ -19,6 +21,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     name: Build assets
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      release: ${{ steps.version.outputs.release }}
 
     strategy:
       fail-fast: false
@@ -82,9 +87,8 @@ jobs:
       - name: Install yarn dependencies
         run: yarn install
       - name: Lint files
-        run: yarn run lint
-      - name: Build assets
-        run: yarn run production
+        run: yarn run lint:fix
+
 
       - name: Check if there is any file update needed
         id: check
@@ -98,6 +102,16 @@ jobs:
             exit -1
           fi
 
+      - name: Get version
+        id: version
+        run: |
+          echo "::set-output name=version::$(git describe --abbrev=0 --tags | sed 's/^v//')"
+          echo "::set-output name=release::$(git describe --abbrev=0 --tags --exact-match $GITHUB_SHA 2>/dev/null || git log --pretty="%h" -n1 $GITHUB_SHA)"
+
+
+      - name: Build assets
+        run: yarn run production
+
       - name: Store assets
         uses: actions/upload-artifact@v2
         with:
@@ -107,6 +121,13 @@ jobs:
             public/js
             public/css
             public/fonts
+
+      - name: Store source maps
+        uses: actions/upload-artifact@v2
+        with:
+          name: sourcemaps
+          path: |
+            public/**/*.map
 
 
   ######################
@@ -146,7 +167,8 @@ jobs:
 
       - name: Create release files
         run: |
-          echo $GITHUB_SHA | cut -c-8 > config/release
+          echo ${{ needs.build.outputs.version }} > config/version
+          echo ${{ needs.build.outputs.release }} > config/release
           echo $GITHUB_SHA > config/commit
 
       - name: Commit everything
@@ -163,28 +185,3 @@ jobs:
           # This avoids a failure when the client does not know the SSH Host already
           GIT_SSH_COMMAND: "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
           REPO_URL: ${{ secrets.REPO_URL }}
-
-
-  ############################
-  # Create a release on sentry
-  ############################
-  # sentry:
-  #   runs-on: ubuntu-latest
-  #   name: Sentry release
-  #   needs: deploy
-  #   if: github.event_name != 'pull_request'
-
-  #   environment: fortrabbit-sentry
-
-  #   steps:
-  #     - name: Checkout repository
-  #       uses: actions/checkout@v2
-
-  #     - name: Create Sentry release
-  #       uses: getsentry/action-release@v1
-  #       env:
-  #         SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-  #         SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
-  #         SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
-  #       with:
-  #         environment: ${{ secrets.SENTRY_ENVIRONMENT }}

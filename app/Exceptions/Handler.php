@@ -16,16 +16,6 @@ class Handler extends ExceptionHandler
         //
     ];
 
-    /**
-     * A list of the inputs that are never flashed for validation exceptions.
-     *
-     * @var string[]
-     */
-    protected $dontFlash = [
-        'password',
-        'password_confirmation',
-    ];
-
     public function register()
     {
         $this->reportable(function (Throwable $e) {

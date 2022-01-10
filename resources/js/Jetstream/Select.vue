@@ -53,7 +53,7 @@ export default {
     filterExclude: function (options) {
       var me = this;
       return options.filter(function (option) {
-        return option.id != me.excludedId;
+        return option.id !== me.excludedId;
       });
     },
 

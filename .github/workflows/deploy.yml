@@ -171,6 +171,9 @@ jobs:
           echo ${{ needs.build.outputs.release }} > config/release
           echo $GITHUB_SHA > config/commit
 
+      - name: Update .htaccess
+        run: cp -f resources/.htaccess_production public/.htaccess
+
       - name: Commit everything
         run: |
           git add -A --force public config

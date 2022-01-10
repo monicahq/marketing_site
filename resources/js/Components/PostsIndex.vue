@@ -326,7 +326,7 @@ export default {
 
     formatDate(post) {
       let date = post.updated_at !== undefined && post.updated_at !== null ? post.updated_at : post.created_at;
-      return date != undefined ? moment(date).format('YYYY-MM-DD') : '';
+      return date !== undefined ? moment(date).format('YYYY-MM-DD') : '';
     },
   },
 };

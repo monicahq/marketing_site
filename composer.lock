@@ -64,16 +64,16 @@
         },
         {
             "name": "bacon/bacon-qr-code",
-            "version": "2.0.4",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Bacon/BaconQrCode.git",
-                "reference": "f73543ac4e1def05f1a70bcd1525c8a157a1ad09"
+                "reference": "7190fc6c20370e0e93da6717b182b8249d5b8e71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Bacon/BaconQrCode/zipball/f73543ac4e1def05f1a70bcd1525c8a157a1ad09",
-                "reference": "f73543ac4e1def05f1a70bcd1525c8a157a1ad09",
+                "url": "https://api.github.com/repos/Bacon/BaconQrCode/zipball/7190fc6c20370e0e93da6717b182b8249d5b8e71",
+                "reference": "7190fc6c20370e0e93da6717b182b8249d5b8e71",
                 "shasum": ""
             },
             "require": {
@@ -82,8 +82,9 @@
                 "php": "^7.1 || ^8.0"
             },
             "require-dev": {
-                "phly/keep-a-changelog": "^1.4",
+                "phly/keep-a-changelog": "^2.1",
                 "phpunit/phpunit": "^7 | ^8 | ^9",
+                "spatie/phpunit-snapshot-assertions": "^4.2.9",
                 "squizlabs/php_codesniffer": "^3.4"
             },
             "suggest": {
@@ -111,9 +112,9 @@
             "homepage": "https://github.com/Bacon/BaconQrCode",
             "support": {
                 "issues": "https://github.com/Bacon/BaconQrCode/issues",
-                "source": "https://github.com/Bacon/BaconQrCode/tree/2.0.4"
+                "source": "https://github.com/Bacon/BaconQrCode/tree/2.0.5"
             },
-            "time": "2021-06-18T13:26:35+00:00"
+            "time": "2022-01-31T00:43:09+00:00"
         },
         {
             "name": "brick/math",
@@ -1697,28 +1698,28 @@
         },
         {
             "name": "laravel/fortify",
-            "version": "v1.8.6",
+            "version": "v1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/fortify.git",
-                "reference": "fb2b7884bb28fb04fafbea7440933ef5877714df"
+                "reference": "d6b990f4b72ee8ef1654a408316ba9feb9530ac7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/fortify/zipball/fb2b7884bb28fb04fafbea7440933ef5877714df",
-                "reference": "fb2b7884bb28fb04fafbea7440933ef5877714df",
+                "url": "https://api.github.com/repos/laravel/fortify/zipball/d6b990f4b72ee8ef1654a408316ba9feb9530ac7",
+                "reference": "d6b990f4b72ee8ef1654a408316ba9feb9530ac7",
                 "shasum": ""
             },
             "require": {
                 "bacon/bacon-qr-code": "^2.0",
                 "ext-json": "*",
-                "illuminate/support": "^8.0",
+                "illuminate/support": "^8.0|^9.0",
                 "php": "^7.3|^8.0",
                 "pragmarx/google2fa": "^7.0|^8.0"
             },
             "require-dev": {
                 "mockery/mockery": "^1.0",
-                "orchestra/testbench": "^6.0",
+                "orchestra/testbench": "^6.0|^7.0",
                 "phpunit/phpunit": "^9.3"
             },
             "type": "library",
@@ -1756,7 +1757,7 @@
                 "issues": "https://github.com/laravel/fortify/issues",
                 "source": "https://github.com/laravel/fortify"
             },
-            "time": "2021-12-22T10:03:31+00:00"
+            "time": "2022-01-25T19:43:53+00:00"
         },
         {
             "name": "laravel/framework",
@@ -1989,30 +1990,30 @@
         },
         {
             "name": "laravel/jetstream",
-            "version": "v2.5.1",
+            "version": "v2.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/jetstream.git",
-                "reference": "190441d4a3553687f09fe33a74bfe203e6cae2c2"
+                "reference": "098b8c60f88bc09c27dfe67266eca33998b35184"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/jetstream/zipball/190441d4a3553687f09fe33a74bfe203e6cae2c2",
-                "reference": "190441d4a3553687f09fe33a74bfe203e6cae2c2",
+                "url": "https://api.github.com/repos/laravel/jetstream/zipball/098b8c60f88bc09c27dfe67266eca33998b35184",
+                "reference": "098b8c60f88bc09c27dfe67266eca33998b35184",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "illuminate/support": "^8.0",
+                "illuminate/support": "^8.0|^9.0",
                 "jenssegers/agent": "^2.6",
-                "laravel/fortify": "^1.6.1",
+                "laravel/fortify": "^1.9",
                 "php": "^7.3|^8.0"
             },
             "require-dev": {
-                "inertiajs/inertia-laravel": "^0.3",
-                "laravel/sanctum": "^2.6",
+                "inertiajs/inertia-laravel": "^0.5.2",
+                "laravel/sanctum": "^2.7",
                 "mockery/mockery": "^1.0",
-                "orchestra/testbench": "^6.0",
+                "orchestra/testbench": "^6.0|^7.0",
                 "phpunit/phpunit": "^9.3"
             },
             "type": "library",
@@ -2051,7 +2052,7 @@
                 "issues": "https://github.com/laravel/jetstream/issues",
                 "source": "https://github.com/laravel/jetstream"
             },
-            "time": "2021-12-30T20:37:45+00:00"
+            "time": "2022-01-25T19:51:52+00:00"
         },
         {
             "name": "laravel/sanctum",
@@ -3072,16 +3073,16 @@
         },
         {
             "name": "paragonie/constant_time_encoding",
-            "version": "v2.4.0",
+            "version": "v2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/constant_time_encoding.git",
-                "reference": "f34c2b11eb9d2c9318e13540a1dbc2a3afbd939c"
+                "reference": "9229e15f2e6ba772f0c55dd6986c563b937170a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/constant_time_encoding/zipball/f34c2b11eb9d2c9318e13540a1dbc2a3afbd939c",
-                "reference": "f34c2b11eb9d2c9318e13540a1dbc2a3afbd939c",
+                "url": "https://api.github.com/repos/paragonie/constant_time_encoding/zipball/9229e15f2e6ba772f0c55dd6986c563b937170a8",
+                "reference": "9229e15f2e6ba772f0c55dd6986c563b937170a8",
                 "shasum": ""
             },
             "require": {
@@ -3135,7 +3136,7 @@
                 "issues": "https://github.com/paragonie/constant_time_encoding/issues",
                 "source": "https://github.com/paragonie/constant_time_encoding"
             },
-            "time": "2020-12-06T15:14:20+00:00"
+            "time": "2022-01-17T05:32:27+00:00"
         },
         {
             "name": "php-http/client-common",

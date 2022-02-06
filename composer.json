@@ -36,7 +36,7 @@
         "phpstan/phpstan-deprecation-rules": "^0.12.6",
         "phpunit/phpunit": "^9.0",
         "psalm/plugin-laravel": "^1.4",
-        "roave/security-advisories": "dev-latest",
+        "roave/security-advisories": "dev-master",
         "thecodingmachine/phpstan-safe-rule": "^1.0",
         "vimeo/psalm": "^4.6"
     },

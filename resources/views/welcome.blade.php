@@ -12,7 +12,7 @@
 
     <div class="fl w-100 tc mb5">
       <a href="https://app.monicahq.com/register" class="primary-button br3 pv3 ph4 mb2 dib fw5">Signup for free</a>
-      <p class="f6">No credit card required. Or <a href="https://github.com/monicahq/monica/blob/master/docs/installation/readme.md">install it</a> on your own server.</p>
+      <p class="f6">No credit card required. Or <a href="https://github.com/monicahq/monica/blob/main/docs/installation/readme.md">install it</a> on your own server.</p>
     </div>
   </div>
 </div>

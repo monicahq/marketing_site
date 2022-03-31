@@ -31,13 +31,14 @@
       <ul class="pl0 list">
         <li class="mb2 f6"><a href="{{ secure_url('/terms') }}" class="muted-link no-underline">Terms</a></li>
         <li class="mb2 f6"><a href="{{ secure_url('/privacy') }}" class="muted-link no-underline">Privacy</a></li>
+        <li class="mb2 f6"><a href="{{ secure_url('/refund') }}" class="muted-link no-underline">Refund policy</a></li>
         <li class="mb2 f6">
           <a href="javascript:location='mailto:\u0072\u0065\u0067\u0069\u0073\u0040\u006d\u006f\u006e\u0069\u0063\u0061\u0068\u0071\u002e\u0063\u006f\u006d';void 0" class="muted-link no-underline">Contact</a></li>
       </ul>
     </div>
     <div class="fl w-20-ns w-100 tc tl-ns">
       <img src="{{ secure_url('/img/logo_vertical.png') }}" class="mw-none" style="width: 130px;">
-      <p class="mt2 f6">© {{ now()->format('Y') }}</p>
+      <p class="mt2 f6">© 2018 - {{ now()->format('Y') }}</p>
     </div>
   </div>
 </div>

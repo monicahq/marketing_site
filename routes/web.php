@@ -57,6 +57,10 @@ Route::get('/terms', function () {
     return view('terms');
 });
 
+Route::get('/refund', function () {
+    return view('refund');
+});
+
 Route::get('/changelog', [ChangelogController::class, 'index']);
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');

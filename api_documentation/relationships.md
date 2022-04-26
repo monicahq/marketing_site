@@ -55,6 +55,7 @@ They are named that way so you can read a call more easily: `contact_is` is frie
       "complete_name": "Bailey Rolfson",
       "initials": "BR",
       "gender": "Man",
+      "pronouns": null,
       "is_partial": false,
       "is_dead": false,
       "information": {
@@ -100,6 +101,7 @@ They are named that way so you can read a call more easily: `contact_is` is frie
       "complete_name": "Yoshiko Ziemann",
       "initials": "YZ",
       "gender": "Woman",
+      "pronouns": "she/her",
       "is_partial": false,
       "is_dead": false,
       "information": {
@@ -248,6 +250,7 @@ The API returns a Relationship object if the call succeeds.
       "complete_name": "Bailey Rolfson",
       "initials": "BR",
       "gender": "Man",
+      "pronouns": null,
       "is_partial": false,
       "is_dead": false,
       "information": {
@@ -293,6 +296,7 @@ The API returns a Relationship object if the call succeeds.
       "complete_name": "Yoshiko Ziemann",
       "initials": "YZ",
       "gender": "Woman",
+      "pronouns": "she/her",
       "is_partial": false,
       "is_dead": false,
       "information": {
@@ -365,6 +369,7 @@ The API returns a Relationship object if the call succeeds.
       "complete_name": "Bailey Rolfson",
       "initials": "BR",
       "gender": "Man",
+      "pronouns": null,
       "is_partial": false,
       "is_dead": false,
       "information": {
@@ -410,6 +415,7 @@ The API returns a Relationship object if the call succeeds.
       "complete_name": "Yoshiko Ziemann",
       "initials": "YZ",
       "gender": "Woman",
+      "pronouns": null,
       "is_partial": false,
       "is_dead": false,
       "information": {

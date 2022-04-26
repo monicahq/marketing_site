@@ -206,6 +206,7 @@ Response:
       "last_name": "Flatley",
       "nickname": "Rambo",
       "gender": "male",
+      "pronouns": "he/his",
       "is_partial": false,
       "is_dead": false,
       "last_called": null,
@@ -500,6 +501,7 @@ This method lists all the contacts for a given tag.
       "nickname": null,
       "gender": "Rather not say",
       "gender_type": "O",
+      "pronouns": null,
       "is_starred": false,
       "is_partial": false,
       "is_active": true,
@@ -767,6 +769,7 @@ This method lists all the contacts for a given tag.
     "last_name": "Flatley",
     "nickname": "Rambo",
     "gender": "male",
+    "pronouns": "they/their",
     "is_partial": false,
     "is_dead": false,
     "last_called": null,
@@ -887,6 +890,7 @@ Partial contacts are relationship contacts.
     "last_name": null,
     "nickname": "Rambo",
     "gender": "female",
+    "pronouns": "she/her"
     "is_partial": true,
     "is_dead": false,
     "information": {
@@ -932,6 +936,7 @@ The contact fields are added at the bottom of the JSON file that is returned. Wh
     "nickname": "Prof. Shawna Kunze",
     "gender": "Woman",
     "gender_type": "F",
+    "pronouns": null,
     "is_starred": false,
     "is_partial": false,
     "is_active": true,
@@ -1476,6 +1481,7 @@ If a field is not required, you can send the `null` value as the content of the 
 | last_name | string | Last name of the contact. Max 100 characters. |
 | nickname | string | Nickname of the contact. Max 100 characters. |
 | gender_id | integer | <strong>Required</strong>. The Gender ID of the contact. Gender IDs are retrieved through the <a href="genders">Gender's API</a>. |
+| pronouns|string| Pronouns of contact. Max 50 characters. |
 | birthdate_day | integer | Birthdate day of the contact. Required when is_birthdate_known is true and birthdate_is_age_based is false. |
 | birthdate_month | integer | Birthdate month of the contact. Required when is_birthdate_known is true and birthdate_is_age_based is false. |
 | birthdate_year | integer | Birthdate year of the contact. |
@@ -1499,6 +1505,7 @@ If a field is not required, you can send the `null` value as the content of the 
   "last_name": "troyat",
   "nickname": "Rambo",
   "gender_id": 1,
+  "pronouns": "he/his"
   "birthdate_day": null,
   "birthdate_month": null,
   "birthdate_year": null,
@@ -1532,6 +1539,7 @@ The API call returns a contact object if the call succeeds.
     "description": null,
     "gender": "Man",
     "gender_type": "M",
+    "pronouns": "he/his"
     "is_starred": false,
     "is_partial": false,
     "is_active": true,
@@ -1628,6 +1636,7 @@ The API call returns a contact object if the call succeeds.
 | last_name | string | Last name of the contact. Max 100 characters. |
 | nickname | string | Nickname of the contact. Max 100 characters. |
 | gender_id | integer | <strong>Required</strong>. The Gender ID of the contact. Gender IDs are retrieved through the <a href="genders">Gender's API</a>. |
+| pronouns | string | Pronouns of contact. Max 50 characters.|
 | birthdate_day | integer | Birthdate day of the contact. Required when is_birthdate_known is true and birthdate_is_age_based is false. |
 | birthdate_month | integer | Birthdate month of the contact. Required when is_birthdate_known is true and birthdate_is_age_based is false. |
 | birthdate_year | integer | Birthdate year of the contact. |
@@ -1651,6 +1660,7 @@ The API call returns a contact object if the call succeeds.
     "last_name": "troyat",
     "nickname": "Rambo",
     "gender_id": 1,
+    "pronouns": "he/his",
     "birthdate_day": null,
     "birthdate_month": null,
     "birthdate_year": null,
@@ -1681,6 +1691,7 @@ The API call returns a contact object if the call succeeds.
     "description": "kjlkjkl",
     "gender": "Man",
     "gender_type": "M",
+    "pronouns": "he/his",
     "is_starred": false,
     "is_partial": false,
     "is_active": true,
@@ -1971,6 +1982,7 @@ The API call returns a contact object if the call succeeds.
     "description": "kjlkjkl",
     "gender": "Man",
     "gender_type": "M",
+    "pronouns": null,
     "is_starred": false,
     "is_partial": false,
     "is_active": true,
@@ -2274,6 +2286,7 @@ This call returns a collection of contacts. Note that `body.meta.query` contains
             "last_name": "Moen",
             "nickname": "Rambo",
             "gender": "Man",
+            "pronouns": null,
             "is_partial": false,
             "is_dead": false,
             "last_called": null,

@@ -23,7 +23,7 @@ class Setup extends Command
     /**
      * The console command description.
      *
-     * @var string|null
+     * @var string
      */
     protected $description = 'Install or update the application, and run migrations after a new release';
 

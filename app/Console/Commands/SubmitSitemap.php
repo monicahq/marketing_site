@@ -17,7 +17,7 @@ class SubmitSitemap extends Command
     /**
      * The console command description.
      *
-     * @var string|null
+     * @var string
      */
     protected $description = 'Submits the sitemap to the big 3.';
 

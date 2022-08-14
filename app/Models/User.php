@@ -31,7 +31,7 @@ class User extends Authenticatable
     /**
      * The attributes that should be hidden for arrays.
      *
-     * @var mixed[]
+     * @var array<int, string>
      */
     protected $hidden = [
         'password',

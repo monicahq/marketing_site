@@ -34,11 +34,11 @@ class Setup extends Command
     {
         if ($this->confirmToProceed()) {
             // Clear or rebuild all cache
-            if (config('cache.default') != 'database' || Schema::hasTable(config('cache.stores.database.table'))) {
+            if (config('cache.default') !== 'database' || Schema::hasTable(config('cache.stores.database.table'))) {
                 $this->artisan('✓ Resetting application cache', 'cache:clear');
             }
 
-            if ($this->getLaravel()->environment() == 'production') {
+            if ($this->getLaravel()->environment('production') === true) {
                 // @codeCoverageIgnoreStart
                 $this->artisan('✓ Clear config cache', 'config:clear');
                 $this->artisan('✓ Resetting route cache', 'route:cache');
@@ -51,7 +51,7 @@ class Setup extends Command
             }
 
             if ($this->option('skip-storage-link') !== true
-                && $this->getLaravel()->environment() != 'testing'
+                && $this->getLaravel()->environment('testing') === false
                 && ! file_exists(public_path('storage'))) {
                 $this->artisan('✓ Symlink the storage folder', 'storage:link'); // @codeCoverageIgnore
             }
@@ -59,12 +59,12 @@ class Setup extends Command
             $this->artisan('✓ Performing migrations', 'migrate', ['--force' => true]);
 
             // Cache config
-            if ($this->getLaravel()->environment() == 'production'
-                && (config('cache.default') != 'database' || Schema::hasTable(config('cache.stores.database.table')))) {
+            if ($this->getLaravel()->environment('production') === true
+                && (config('cache.default') !== 'database' || Schema::hasTable(config('cache.stores.database.table')))) {
                 $this->artisan('✓ Cache configuraton', 'config:cache'); // @codeCoverageIgnore
             }
 
-            if (config('trustedproxy.cloudflare')) {
+            if ((bool) config('laravelcloudflare.enabled')) {
                 $this->artisan('✓ Reload cloudflare cache', 'cloudflare:reload'); // @codeCoverageIgnore
             }
         }

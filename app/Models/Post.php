@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use GrahamCampbell\Markdown\Facades\Markdown;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Feed\Feedable;
 use Spatie\Feed\FeedItem;
@@ -13,7 +13,7 @@ class Post extends Model implements Feedable
     /**
      * The attributes that are mass assignable.
      *
-     * @var string[]
+     * @var array<string>
      */
     protected $fillable = [
         'title',
@@ -38,7 +38,7 @@ class Post extends Model implements Feedable
 
     public function getPostAttribute($value)
     {
-        return Markdown::convertToHtml($value);
+        return Str::markdown($value);
     }
 
     public function getURL()

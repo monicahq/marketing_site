@@ -9,7 +9,7 @@ on:
     types: [created]
 
 env:
-  default-php-version: '8.0'
+  default-php-version: '8.1'
   coverage-with: 'sqlite'
 
 
@@ -24,13 +24,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php-version: ['8.0']
+        php-version: ['8.1']
         connection: [sqlite, mysql]
         coverage: [true]
 
     steps:
       - name: Checkout sources
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup PHP ${{ matrix.php-version }}
         uses: shivammathur/setup-php@v2
@@ -53,7 +53,7 @@ jobs:
         id: composer-cache
         run: echo "::set-output name=dir::$(composer config cache-files-dir)"
       - name: Cache composer files
-        uses: actions/cache@v2.1.7
+        uses: actions/cache@v3
         with:
           path: ${{ steps.composer-cache.outputs.dir }}
           key: ${{ runner.os }}-composer-${{ matrix.php-version }}-${{ hashFiles('**/composer.lock') }}
@@ -117,7 +117,7 @@ jobs:
 
       - name: Store results
         if: matrix.php-version == env.default-php-version
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: results
           path: results
@@ -134,12 +134,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
 
       - name: Download results
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: results
           path: results

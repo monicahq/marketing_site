@@ -13,7 +13,7 @@ It also contains
 
 ## Contact
 
-If you need to talk, you can contact me at regis AT monicahq DOT com. You can also reach me [on Twitter](https://twitter.com/djaiss).
+If you need to talk, you can contact us at support AT monicahq DOT com.
 
 ## Thank you, open source
 
@@ -21,6 +21,6 @@ Monica use a lot of open source projects and we thank them with all our hearts. 
 
 ## License
 
-Copyright (c) 2016-2018 Regis Freyd
+Copyright (c) 2016-2022 Monica
 
 Licensed under the AGPL License. [View license](/LICENSE).

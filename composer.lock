@@ -1947,16 +1947,16 @@
         },
         {
             "name": "laravel/jetstream",
-            "version": "v2.11.1",
+            "version": "v2.11.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/jetstream.git",
-                "reference": "448c3e009f597467b6e4b5245f85c598a2322b4e"
+                "reference": "2371d0143aff42bafc3bbe8334f722028ac8484d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/jetstream/zipball/448c3e009f597467b6e4b5245f85c598a2322b4e",
-                "reference": "448c3e009f597467b6e4b5245f85c598a2322b4e",
+                "url": "https://api.github.com/repos/laravel/jetstream/zipball/2371d0143aff42bafc3bbe8334f722028ac8484d",
+                "reference": "2371d0143aff42bafc3bbe8334f722028ac8484d",
                 "shasum": ""
             },
             "require": {
@@ -2013,7 +2013,7 @@
                 "issues": "https://github.com/laravel/jetstream/issues",
                 "source": "https://github.com/laravel/jetstream"
             },
-            "time": "2022-08-16T14:32:33+00:00"
+            "time": "2022-08-21T16:29:35+00:00"
         },
         {
             "name": "laravel/sanctum",
@@ -2904,16 +2904,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.61.0",
+            "version": "2.62.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "bdf4f4fe3a3eac4de84dbec0738082a862c68ba6"
+                "reference": "7507aec3d626797ce2123cf6c6556683be22b5f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/bdf4f4fe3a3eac4de84dbec0738082a862c68ba6",
-                "reference": "bdf4f4fe3a3eac4de84dbec0738082a862c68ba6",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/7507aec3d626797ce2123cf6c6556683be22b5f8",
+                "reference": "7507aec3d626797ce2123cf6c6556683be22b5f8",
                 "shasum": ""
             },
             "require": {
@@ -3002,7 +3002,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-08-06T12:41:24+00:00"
+            "time": "2022-08-28T19:48:05+00:00"
         },
         {
             "name": "nette/schema",

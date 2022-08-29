@@ -920,16 +920,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.4.5",
+            "version": "7.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "1dd98b0564cb3f6bd16ce683cb755f94c10fbd82"
+                "reference": "b50a2a1251152e43f6a37f0fa053e730a67d25ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/1dd98b0564cb3f6bd16ce683cb755f94c10fbd82",
-                "reference": "1dd98b0564cb3f6bd16ce683cb755f94c10fbd82",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/b50a2a1251152e43f6a37f0fa053e730a67d25ba",
+                "reference": "b50a2a1251152e43f6a37f0fa053e730a67d25ba",
                 "shasum": ""
             },
             "require": {
@@ -944,10 +944,10 @@
                 "psr/http-client-implementation": "1.0"
             },
             "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.4.1",
+                "bamarni/composer-bin-plugin": "^1.8.1",
                 "ext-curl": "*",
                 "php-http/client-integration-tests": "^3.0",
-                "phpunit/phpunit": "^8.5.5 || ^9.3.5",
+                "phpunit/phpunit": "^8.5.29 || ^9.5.23",
                 "psr/log": "^1.1 || ^2.0 || ^3.0"
             },
             "suggest": {
@@ -957,8 +957,12 @@
             },
             "type": "library",
             "extra": {
+                "bamarni-bin": {
+                    "bin-links": true,
+                    "forward-command": false
+                },
                 "branch-alias": {
-                    "dev-master": "7.4-dev"
+                    "dev-master": "7.5-dev"
                 }
             },
             "autoload": {
@@ -1024,7 +1028,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.4.5"
+                "source": "https://github.com/guzzle/guzzle/tree/7.5.0"
             },
             "funding": [
                 {
@@ -1040,20 +1044,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-06-20T22:16:13+00:00"
+            "time": "2022-08-28T15:39:27+00:00"
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "1.5.1",
+            "version": "1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "fe752aedc9fd8fcca3fe7ad05d419d32998a06da"
+                "reference": "b94b2807d85443f9719887892882d0329d1e2598"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/fe752aedc9fd8fcca3fe7ad05d419d32998a06da",
-                "reference": "fe752aedc9fd8fcca3fe7ad05d419d32998a06da",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/b94b2807d85443f9719887892882d0329d1e2598",
+                "reference": "b94b2807d85443f9719887892882d0329d1e2598",
                 "shasum": ""
             },
             "require": {
@@ -1108,7 +1112,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/promises/issues",
-                "source": "https://github.com/guzzle/promises/tree/1.5.1"
+                "source": "https://github.com/guzzle/promises/tree/1.5.2"
             },
             "funding": [
                 {
@@ -1124,20 +1128,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-10-22T20:56:57+00:00"
+            "time": "2022-08-28T14:55:35+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.4.0",
+            "version": "2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "13388f00956b1503577598873fffb5ae994b5737"
+                "reference": "69568e4293f4fa993f3b0e51c9723e1e17c41379"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/13388f00956b1503577598873fffb5ae994b5737",
-                "reference": "13388f00956b1503577598873fffb5ae994b5737",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/69568e4293f4fa993f3b0e51c9723e1e17c41379",
+                "reference": "69568e4293f4fa993f3b0e51c9723e1e17c41379",
                 "shasum": ""
             },
             "require": {
@@ -1151,15 +1155,19 @@
                 "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.4.1",
+                "bamarni/composer-bin-plugin": "^1.8.1",
                 "http-interop/http-factory-tests": "^0.9",
-                "phpunit/phpunit": "^8.5.8 || ^9.3.10"
+                "phpunit/phpunit": "^8.5.29 || ^9.5.23"
             },
             "suggest": {
                 "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
             },
             "type": "library",
             "extra": {
+                "bamarni-bin": {
+                    "bin-links": true,
+                    "forward-command": false
+                },
                 "branch-alias": {
                     "dev-master": "2.4-dev"
                 }
@@ -1223,7 +1231,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.4.0"
+                "source": "https://github.com/guzzle/psr7/tree/2.4.1"
             },
             "funding": [
                 {
@@ -1239,7 +1247,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-06-20T21:43:11+00:00"
+            "time": "2022-08-28T14:45:39+00:00"
         },
         {
             "name": "http-interop/http-factory-guzzle",
@@ -2601,16 +2609,16 @@
         },
         {
             "name": "masterminds/html5",
-            "version": "2.7.5",
+            "version": "2.7.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Masterminds/html5-php.git",
-                "reference": "f640ac1bdddff06ea333a920c95bbad8872429ab"
+                "reference": "897eb517a343a2281f11bc5556d6548db7d93947"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/f640ac1bdddff06ea333a920c95bbad8872429ab",
-                "reference": "f640ac1bdddff06ea333a920c95bbad8872429ab",
+                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/897eb517a343a2281f11bc5556d6548db7d93947",
+                "reference": "897eb517a343a2281f11bc5556d6548db7d93947",
                 "shasum": ""
             },
             "require": {
@@ -2664,9 +2672,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Masterminds/html5-php/issues",
-                "source": "https://github.com/Masterminds/html5-php/tree/2.7.5"
+                "source": "https://github.com/Masterminds/html5-php/tree/2.7.6"
             },
-            "time": "2021-07-01T14:25:37+00:00"
+            "time": "2022-08-18T16:18:26+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -2904,16 +2912,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.61.0",
+            "version": "2.62.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "bdf4f4fe3a3eac4de84dbec0738082a862c68ba6"
+                "reference": "7507aec3d626797ce2123cf6c6556683be22b5f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/bdf4f4fe3a3eac4de84dbec0738082a862c68ba6",
-                "reference": "bdf4f4fe3a3eac4de84dbec0738082a862c68ba6",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/7507aec3d626797ce2123cf6c6556683be22b5f8",
+                "reference": "7507aec3d626797ce2123cf6c6556683be22b5f8",
                 "shasum": ""
             },
             "require": {
@@ -3002,7 +3010,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-08-06T12:41:24+00:00"
+            "time": "2022-08-28T19:48:05+00:00"
         },
         {
             "name": "nette/schema",
@@ -4778,16 +4786,16 @@
         },
         {
             "name": "spatie/browsershot",
-            "version": "3.57.1",
+            "version": "3.57.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/browsershot.git",
-                "reference": "f430a81b1b8e07f089046984ae0f53c9161b1477"
+                "reference": "7125719979b7de1257bbf699ff1d3bff3125b228"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/browsershot/zipball/f430a81b1b8e07f089046984ae0f53c9161b1477",
-                "reference": "f430a81b1b8e07f089046984ae0f53c9161b1477",
+                "url": "https://api.github.com/repos/spatie/browsershot/zipball/7125719979b7de1257bbf699ff1d3bff3125b228",
+                "reference": "7125719979b7de1257bbf699ff1d3bff3125b228",
                 "shasum": ""
             },
             "require": {
@@ -4832,7 +4840,7 @@
                 "webpage"
             ],
             "support": {
-                "source": "https://github.com/spatie/browsershot/tree/3.57.1"
+                "source": "https://github.com/spatie/browsershot/tree/3.57.2"
             },
             "funding": [
                 {
@@ -4840,7 +4848,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-08-03T11:26:45+00:00"
+            "time": "2022-08-19T16:43:07+00:00"
         },
         {
             "name": "spatie/crawler",
@@ -5185,16 +5193,16 @@
         },
         {
             "name": "spatie/laravel-sitemap",
-            "version": "6.2.0",
+            "version": "6.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-sitemap.git",
-                "reference": "0da6e85eda6e044ed67132d3232c9bbf2f2eb73d"
+                "reference": "72af4b688705dfabdc5f24ed00d79325cff57d0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-sitemap/zipball/0da6e85eda6e044ed67132d3232c9bbf2f2eb73d",
-                "reference": "0da6e85eda6e044ed67132d3232c9bbf2f2eb73d",
+                "url": "https://api.github.com/repos/spatie/laravel-sitemap/zipball/72af4b688705dfabdc5f24ed00d79325cff57d0c",
+                "reference": "72af4b688705dfabdc5f24ed00d79325cff57d0c",
                 "shasum": ""
             },
             "require": {
@@ -5245,8 +5253,7 @@
                 "spatie"
             ],
             "support": {
-                "issues": "https://github.com/spatie/laravel-sitemap/issues",
-                "source": "https://github.com/spatie/laravel-sitemap/tree/6.2.0"
+                "source": "https://github.com/spatie/laravel-sitemap/tree/6.2.1"
             },
             "funding": [
                 {
@@ -5254,7 +5261,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2022-06-13T09:54:14+00:00"
+            "time": "2022-08-23T12:41:34+00:00"
         },
         {
             "name": "spatie/robots-txt",
@@ -5319,16 +5326,16 @@
         },
         {
             "name": "spatie/temporary-directory",
-            "version": "2.1.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/temporary-directory.git",
-                "reference": "79f138f2b81adae583d04d3727a4538dd394023f"
+                "reference": "e2818d871783d520b319c2d38dc37c10ecdcde20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/temporary-directory/zipball/79f138f2b81adae583d04d3727a4538dd394023f",
-                "reference": "79f138f2b81adae583d04d3727a4538dd394023f",
+                "url": "https://api.github.com/repos/spatie/temporary-directory/zipball/e2818d871783d520b319c2d38dc37c10ecdcde20",
+                "reference": "e2818d871783d520b319c2d38dc37c10ecdcde20",
                 "shasum": ""
             },
             "require": {
@@ -5364,7 +5371,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/temporary-directory/issues",
-                "source": "https://github.com/spatie/temporary-directory/tree/2.1.0"
+                "source": "https://github.com/spatie/temporary-directory/tree/2.1.1"
             },
             "funding": [
                 {
@@ -5376,7 +5383,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-11T08:16:01+00:00"
+            "time": "2022-08-23T07:15:15+00:00"
         },
         {
             "name": "symfony/console",
@@ -5608,16 +5615,16 @@
         },
         {
             "name": "symfony/dom-crawler",
-            "version": "v6.1.3",
+            "version": "v6.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dom-crawler.git",
-                "reference": "58eb9858d8752ac3586fffb37421441fc18f793c"
+                "reference": "8cb4c6e6c8d30c26f70529ed5e50d79a09576c0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/58eb9858d8752ac3586fffb37421441fc18f793c",
-                "reference": "58eb9858d8752ac3586fffb37421441fc18f793c",
+                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/8cb4c6e6c8d30c26f70529ed5e50d79a09576c0c",
+                "reference": "8cb4c6e6c8d30c26f70529ed5e50d79a09576c0c",
                 "shasum": ""
             },
             "require": {
@@ -5658,7 +5665,7 @@
             "description": "Eases DOM navigation for HTML and XML documents",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/dom-crawler/tree/v6.1.3"
+                "source": "https://github.com/symfony/dom-crawler/tree/v6.1.4"
             },
             "funding": [
                 {
@@ -5674,7 +5681,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-06-27T17:24:16+00:00"
+            "time": "2022-08-04T19:19:00+00:00"
         },
         {
             "name": "symfony/error-handler",

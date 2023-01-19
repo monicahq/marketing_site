@@ -1,0 +1,13 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+    - ./vendor/phpstan/phpstan-deprecation-rules/rules.neon
+    - ./vendor/thecodingmachine/phpstan-safe-rule/phpstan-safe-rule.neon
+
+parameters:
+    paths:
+        - app
+    excludePaths:
+    inferPrivatePropertyTypeFromConstructor: true
+    checkMissingIterableValueType: false
+    level: 5
+    ignoreErrors:

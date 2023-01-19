@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use DB;
-use App\Post;
-use App\Category;
+use App\Models\Post;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -13,7 +12,6 @@ class BlogController extends Controller
      * Display a listing of the resource.
      *
      * @param Request $request
-     * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
     {

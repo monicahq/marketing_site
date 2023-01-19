@@ -7,8 +7,8 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>{{ $pageTitle }}</title>
 
-  <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-  <link rel="alternate" type="application/atom+xml" title="{{ trans('marketing.xml_feed_description') }}" href="{{ route("feeds.main") }}">
+  <link rel="stylesheet" href="{{ asset(mix('css/app.css')) }}">
+  @include('feed::links')
   <meta name="description" content="{{ trans('marketing.description') }}">
   <link rel="author" href="https://twitter.com/djaiss">
   <link rel="shortcut icon" href="{{ secure_url('/img/favicon.png') }}">
@@ -36,6 +36,9 @@
   <meta name="twitter:description" content="{{ trans('marketing.description') }}">
   <meta name="twitter:image" content="{{ secure_url('/img/social/site/twitter.png') }}">
 
+  <!-- Scripts -->
+  <script src="{{ asset(mix('js/app.js')) }}" defer></script>
+
 </head>
 
 <body class="sans-serif">
@@ -45,7 +48,6 @@
 
   @include ('partials.footer')
 
-  <script src="{{ mix('js/app.js') }}"></script>
   <!-- Fathom - simple website analytics - https://usefathom.com -->
   <script>
     (function(f, a, t, h, o, m) {

@@ -2,8 +2,8 @@
 
 namespace App\Console\Commands;
 
-use Ixudra\Curl\Facades\Curl;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Http;
 
 class SubmitSitemap extends Command
 {
@@ -22,16 +22,6 @@ class SubmitSitemap extends Command
     protected $description = 'Submits the sitemap to the big 3.';
 
     /**
-     * Create a new command instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
-    /**
      * Execute the console command.
      *
      * @return mixed
@@ -41,14 +31,14 @@ class SubmitSitemap extends Command
         $sitemapUrl = "https://www.monicahq.com/sitemap/sitemap.xml";
 
         $url = "http://www.google.com/webmasters/sitemaps/ping?sitemap=".$sitemapUrl;
-        $response = Curl::to($url)->get();
+        Http::get($url);
 
         //Bing / MSN
         $url = "http://www.bing.com/webmaster/ping.aspx?siteMap=".$sitemapUrl;
-        $response = Curl::to($url)->get();
+        Http::get($url);
 
         //ASK
         $url = "http://submissions.ask.com/ping?sitemap=".$sitemapUrl;
-        $response = Curl::to($url)->get();
+        Http::get($url);
     }
 }

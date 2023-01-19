@@ -151,7 +151,7 @@ X-RateLimit-Remaining: 58</code></pre>
 
 | Header name | Description |
 | ----------- | ----------- |
-| X-RateLimit-Limit | The maximum number of requests you're permitted to make per hour. |
+| X-RateLimit-Limit | The maximum number of requests you're permitted to make per minute. |
 | X-RateLimit-Remaining | The number of requests remaining in the current rate limit window. |
 
 If you exceed the rate limit, an `429` error response returns with a JSON:

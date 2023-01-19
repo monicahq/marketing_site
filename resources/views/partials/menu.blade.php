@@ -1,3 +1,7 @@
+<div class="tc center pv3 banner-officelife">
+  <span class="mr1">🤗</span> Announcing <a href="https://officelife.io">OfficeLife</a>, our new open source product – the all-in-one tool to manage a company.
+</div>
+
 <div class="mw8 center ph3">
   <div class="cf">
     <nav class="dt w-100 mw9 center">

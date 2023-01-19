@@ -7,9 +7,8 @@ It also contains
 ### Deployment
 
 * The site is hosted on Fortrabbit. DNS is on Cloudflare and Hover.
-* To push new code in production: `git push fortrabbit master`.
+* To push new code in production, we have an action called Deploy.yml that pushes new commits to the main branch automatically.
 * To update the sitemap: `php artisan sitemap:generate`. Then commit it and push to production.
-* To ping Google and co about the new sitemap: `php artisan sitemap:submit`.
 
 ## Contact
 

@@ -21,6 +21,6 @@ Monica use a lot of open source projects and we thank them with all our hearts. 
 
 ## License
 
-Copyright (c) 2016-2022 Monica
+Copyright (c) 2016-2023 Monica
 
 Licensed under the AGPL License. [View license](/LICENSE).

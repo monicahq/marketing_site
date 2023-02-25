@@ -19,7 +19,7 @@ class SubmitSitemap extends Command
      *
      * @var string
      */
-    protected $description = 'Submits the sitemap to the big 3.';
+    protected $description = 'Submits the sitemap to search engines.';
 
     /**
      * Execute the console command.
@@ -30,15 +30,7 @@ class SubmitSitemap extends Command
     {
         $sitemapUrl = "https://www.monicahq.com/sitemap/sitemap.xml";
 
-        $url = "http://www.google.com/webmasters/sitemaps/ping?sitemap=".$sitemapUrl;
-        Http::get($url);
-
-        //Bing / MSN
-        $url = "http://www.bing.com/webmaster/ping.aspx?siteMap=".$sitemapUrl;
-        Http::get($url);
-
-        //ASK
-        $url = "http://submissions.ask.com/ping?sitemap=".$sitemapUrl;
+        $urls = "https://www.google.com/webmasters/sitemaps/ping?sitemap=$sitemapUrl";
         Http::get($url);
     }
 }

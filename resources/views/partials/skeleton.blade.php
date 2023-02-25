@@ -38,9 +38,6 @@
 
   <!-- Scripts -->
   <script src="{{ asset(mix('js/app.js')) }}" defer></script>
-
-  <!-- analytics -->
-  <script defer type="text/javascript" src="https://api.pirsch.io/pirsch.js" id="pirschjs" data-code="lTlFdjRHJTDy7p3P9NQRj6prkSbz83tk"></script>
 </head>
 
 <body class="sans-serif">

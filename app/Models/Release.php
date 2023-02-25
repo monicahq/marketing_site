@@ -23,10 +23,10 @@ class Release extends Model
         'github_release_url',
     ];
 
-    protected $dates = [
-        'created_at',
-        'updated_at',
-        'released_on',
+    protected $casts = [
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'released_on' => 'datetime',
     ];
 
     /**

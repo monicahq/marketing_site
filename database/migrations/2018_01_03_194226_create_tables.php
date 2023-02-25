@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTables extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -60,4 +60,4 @@ class CreateTables extends Migration
         DB::table('categories')->insert(['name' => 'New features', 'slug' => 'new-feature']);
         DB::table('categories')->insert(['name' => 'Growing a company', 'slug' => 'growing']);
     }
-}
+};

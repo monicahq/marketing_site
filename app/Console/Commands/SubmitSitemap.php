@@ -30,7 +30,7 @@ class SubmitSitemap extends Command
     {
         $sitemapUrl = "https://www.monicahq.com/sitemap/sitemap.xml";
 
-        $urls = "https://www.google.com/webmasters/sitemaps/ping?sitemap=$sitemapUrl";
+        $url = "https://www.google.com/webmasters/sitemaps/ping?sitemap=$sitemapUrl";
         Http::get($url);
     }
 }

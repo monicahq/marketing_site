@@ -11,7 +11,7 @@ class Kernel extends HttpKernel
      *
      * These middleware are run during every request to your application.
      *
-     * @var array
+     * @var array<int,string>
      */
     protected $middleware = [
         \Monicahq\Cloudflare\Http\Middleware\TrustProxies::class,
@@ -25,7 +25,7 @@ class Kernel extends HttpKernel
     /**
      * The application's route middleware groups.
      *
-     * @var array
+     * @var array<string,array<int,string>>
      */
     protected $middlewareGroups = [
         'web' => [

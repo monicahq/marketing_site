@@ -67,6 +67,9 @@ class Setup extends Command
             if ((bool) config('laravelcloudflare.enabled')) {
                 $this->artisan('✓ Reload cloudflare cache', 'cloudflare:reload'); // @codeCoverageIgnore
             }
+
+            $this->artisan('✓ Generate sitemap', 'sitemap:generate');
+            $this->artisan('✓ Submit sitemap', 'sitemap:submit');
         }
     }
 

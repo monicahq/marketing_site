@@ -10,11 +10,12 @@
   <link rel="stylesheet" href="{{ mix('css/app.css') }}">
   <link rel="alternate" type="application/rss+xml" title="{{ trans('marketing.xml_feed_description') }}" href="{{ url("/feed.xml") }}">
   <meta name="description" content="{{ trans('marketing.description') }}">
-  <link rel="author" href="https://twitter.com/djaiss">
+  <link rel="me" href="https://phpc.social/@monica">
+  <link rel="author" href="https://phpc.social/@regis">
   <link rel="shortcut icon" href="{{ secure_url('/img/favicon.png') }}">
   <link rel="alternate" type="application/atom+xml" title="News" href="/feed">
 
-  <!-- Facebook -->
+  <!-- Open Graph -->
 
   <!-- Between 60 and 80 char. Cut at 88. -->
   <meta property="og:title" content="{{ $post->title }}" />
@@ -28,16 +29,6 @@
   <meta property="og:image:height" content="630" />
   <meta property="article:published_time" content="{{ $post->created_at->format('Y-m-d') }}" />
   <meta property="og:image" content="{{ secure_url('/img/social/posts/'.$post->created_at->format('Y-m-d').'/facebook.png') }}" />
-  <meta property=”fb:admins content="regis.freyd" />
-
-  <!-- META SPECIFIC TO TWITTER -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@MonicaHQ_app">
-  <meta name="twitter:creator" content="@djaiss">
-  <meta name="twitter:title" content="{{ $post->title }}">
-  <meta name="twitter:description" content="{{ $post->social_media_description }}">
-  <meta property="og:image" content="{{ secure_url('/img/social/posts/'.$post->created_at->format('Y-m-d').'/twitter.png') }}" />
-
 </head>
 
 <body class="sans-serif">
@@ -46,24 +37,6 @@
   @yield('content')
 
   @include ('partials.footer')
-
-  <!-- Fathom - simple website analytics - https://usefathom.com -->
-  <script>
-    (function(f, a, t, h, o, m) {
-      a[h] = a[h] || function() {
-        (a[h].q = a[h].q || []).push(arguments)
-      };
-      o = f.createElement('script'),
-        m = f.getElementsByTagName('script')[0];
-      o.async = 1;
-      o.src = t;
-      o.id = 'fathom-script';
-      m.parentNode.insertBefore(o, m)
-    })(document, window, 'https://cdn.usefathom.com/tracker.js', 'fathom');
-    fathom('set', 'siteId', 'TZPOGJXQ');
-    fathom('trackPageview');
-  </script>
-  <!-- / Fathom -->
 </body>
 
 </html>

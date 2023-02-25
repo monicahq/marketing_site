@@ -18,7 +18,6 @@
         Header always set X-Download-Options "noopen"
         Header always set X-Frame-Options "SAMEORIGIN"
         Header always set X-Permitted-Cross-Domain-Policies "none"
-        Header always set X-Robots-Tag "none"
         Header always set X-XSS-Protection "1; mode=block"
 
         # Assets expire after 1 month

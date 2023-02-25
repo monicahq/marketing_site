@@ -23,9 +23,9 @@ class Post extends Model implements Feedable
         'social_media_description',
     ];
 
-    protected $dates = [
-        'created_at',
-        'updated_at',
+    protected $casts = [
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
     ];
 
     /**

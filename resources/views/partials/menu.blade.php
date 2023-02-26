@@ -17,10 +17,10 @@
         <a class="f6 fw4 dn dib-l pv2 ph3" href="{{ secure_url('/api') }}">API documentation</a>
         <a class="f6 fw4 dn dib-l pv2 ph3" href="{{ secure_url('/blog') }}">Blog</a>
         <a class="f6 fw4 dib ml2 pv2 ph3 secondary-button br3" href="https://app.monicahq.com/login">Login</a>
-        <form action="{{ route('monica.register') }}" method="POST">
+        <form id="form" action="{{ route('monica.register') }}" method="POST" class="inline-block" style="display: inline">
           @csrf
-          <a class="f6 fw4 dib ml2 pv2 ph3 secondary-button br3" href="https://app.monicahq.com/register"
-            @click.prevent="form.submit()"
+          <a class="f6 fw4 dib ml2 pv2 ph3 secondary-button br3 inline" href="https://app.monicahq.com/register"
+            onclick="event.preventDefault(); this.parentElement.submit(); return false;"
           >
             Sign Up
           </a>

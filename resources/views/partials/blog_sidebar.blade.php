@@ -13,7 +13,7 @@
     <form action="{{ route('monica.register') }}" method="POST">
       @csrf
       <a class="secondary-button br3 pv2 ph3 dib fw5" href="https://app.monicahq.com/register"
-        @click.prevent="form.submit()"
+        onclick="event.preventDefault(); this.parentElement.submit(); return false;"
       >
         Sign Up
       </a>

@@ -1,5 +1,6 @@
 <?php
 
+use Pirsch\Facades\Pirsch;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChangelogController;
 use App\Http\Controllers\BlogController;
@@ -78,3 +79,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::resource('releases', ReleaseController::class);
     Route::resource('posts', PostController::class);
 });
+
+Route::post('/monica/register', function () {
+    Pirsch::track('Action', [
+        'Label' => 'Monica register',
+    ]);
+    return redirect('https://app.monicahq.com/register');
+})->name('monica.register');

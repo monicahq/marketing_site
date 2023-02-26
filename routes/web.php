@@ -87,5 +87,5 @@ Route::post('/monica/register', function () {
             'Label' => 'Monica register',
         ],
     );
-    return Route::redirect('https://app.monicahq.com/register');
+    return redirect('https://app.monicahq.com/register');
 })->name('monica.register');

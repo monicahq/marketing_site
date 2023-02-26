@@ -22,7 +22,7 @@
         <li class="mb2 f6"><a href="{{ secure_url('/changelog') }}" class="muted-link no-underline">Changelog</a></li>
         <li class="mb2 f6"><a href="https://github.com/monicahq/monica" class="muted-link no-underline">Source code on GitHub</a></li>
         <li class="mb2 f6"><a href="https://github.com/monicahq/monica/issues" class="muted-link no-underline">Issue tracker</a></li>
-        <li class="mb2 f6"><a href="https://www.facebook.com/MonicaPersonalCRM/" class="muted-link no-underline">Facebook</a></li>
+        <li class="mb2 f6"><a href="https://phpc.social/@monica" rel="me" class="muted-link no-underline">Mastodon</a></li>
         <li class="mb2 f6"><a href="https://twitter.com/MonicaHQ_app" class="muted-link no-underline">Twitter</a></li>
       </ul>
     </div>
@@ -38,7 +38,7 @@
     </div>
     <div class="fl w-20-ns w-100 tc tl-ns">
       <img src="{{ secure_url('/img/logo_vertical.png') }}" class="mw-none" style="width: 130px;">
-      <p class="mt2 f6">© 2018 - {{ now()->format('Y') }}</p>
+      <p class="mt2 f6">© 2018 — {{ now()->format('Y') }}</p>
     </div>
   </div>
 </div>

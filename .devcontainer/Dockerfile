@@ -41,6 +41,8 @@ RUN set -ex; \
     docker-php-ext-configure intl; \
     docker-php-ext-install -j$(nproc) \
         intl \
+        exif \
+        fileinfo \
         zip \
         pdo_sqlite \
     ; \

@@ -35,7 +35,7 @@ composer_install() {
 
 yarn_install() {
     yarn install --frozen-lockfile
-    yarn run build
+    yarn run production
 }
 
 setup() {

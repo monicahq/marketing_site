@@ -10,7 +10,7 @@ on:
 
 jobs:
   tests:
-    uses: monicahq/workflows/.github/workflows/laravel.yml@fix-results
+    uses: monicahq/workflows/.github/workflows/laravel.yml@main
     with:
       php-version: ${{ matrix.php-version }}
       connection: ${{ matrix.connection }}
@@ -25,7 +25,7 @@ jobs:
         connection: [sqlite, mysql]
 
   reporting:
-    uses: monicahq/workflows/.github/workflows/reporting.yml@fix-results
+    uses: monicahq/workflows/.github/workflows/reporting.yml@main
     with:
       project: monicahq_marketing_site
     secrets:

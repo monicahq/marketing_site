@@ -16,6 +16,7 @@ jobs:
       connection: ${{ matrix.connection }}
       coverage: ${{ matrix.connection == 'sqlite' && matrix.php-version == '8.2' }}
       database_name: version
+      vite: false
 
     strategy:
       fail-fast: false

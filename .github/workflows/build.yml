@@ -27,9 +27,7 @@ jobs:
   reporting:
     uses: monicahq/workflows/.github/workflows/reporting.yml@init
     with:
-      project: asbiin_laravel-adorable
-      organization: asbiin-github
-      sources: src
+      project: monicahq_marketing_site
     secrets:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
     needs: tests

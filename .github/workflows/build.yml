@@ -18,5 +18,7 @@ jobs:
       default-php-version: '8.2'
       default-connection: sqlite
       project: monicahq_marketing_site
+      database_name: version
+      vite: false
     secrets:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

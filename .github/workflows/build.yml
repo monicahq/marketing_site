@@ -10,24 +10,15 @@ on:
 
 jobs:
   tests:
+    name: Run tests
     uses: monicahq/workflows/.github/workflows/laravel.yml@main
     with:
-      php-version: ${{ matrix.php-version }}
-      connection: ${{ matrix.connection }}
-      coverage: ${{ matrix.connection == 'sqlite' && matrix.php-version == '8.2' }}
+      php-versions: "['8.1', '8.2']"
+      connections: "['sqlite', 'mysql']"
+      default-php-version: '8.2'
+      default-connection: sqlite
+      project: monicahq_marketing_site
       database_name: version
       vite: false
-
-    strategy:
-      fail-fast: false
-      matrix:
-        php-version: [8.1, 8.2]
-        connection: [sqlite, mysql]
-
-  reporting:
-    uses: monicahq/workflows/.github/workflows/reporting.yml@main
-    with:
-      project: monicahq_marketing_site
     secrets:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-    needs: tests

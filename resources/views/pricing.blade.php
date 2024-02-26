@@ -6,7 +6,7 @@
   <div class="cf">
     <div class="fl w-100 tc mb5">
       <h1 class="f2 normal lh-copy">How much does Monica cost?</h1>
-      <h2 class="normal lh-copy measure center">Nothing if you <a href="https://github.com/monicahq/monica#get-started">host it yourself</a>. Otherwise, Monica is the single best investment you can make to have better relationships.</h2>
+      <h2 class="normal lh-copy measure center">Nothing if you <a href="https://github.com/monicahq/monica/tree/4.x#get-started">host it yourself</a>. Otherwise, Monica is the single best investment you can make to have better relationships.</h2>
     </div>
   </div>
 </div>

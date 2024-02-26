@@ -19,7 +19,7 @@
           Signup for free
         </a>
       </form>
-      <p class="f6">No credit card required. Or <a href="https://github.com/monicahq/monica/blob/main/docs/installation/readme.md">install it</a> on your own server.</p>
+      <p class="f6">No credit card required. Or <a href="https://github.com/monicahq/monica/blob/4.x/docs/installation/readme.md">install it</a> on your own server.</p>
     </div>
   </div>
 </div>

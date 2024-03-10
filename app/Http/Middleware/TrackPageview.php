@@ -47,9 +47,8 @@ class TrackPageview
             Log::info('Pirsch '.($name === null ? 'hit' : 'event'), [
                 'url' => request()->fullUrl(),
                 'ip' => request()->ip(),
-                'REMOTE_ADDR' => request()->server('REMOTE_ADDR'),
-                'X_FORWARDED_FOR' => request()->header('X-Forwarded-For'),
-                'headers' => request()->headers->all()
+                'server' => request()->server->all(),
+                'headers' => request()->headers->all(),
             ]);
 
             try {

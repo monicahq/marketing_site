@@ -3,6 +3,9 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Http\Client\ConnectionException;
+use Illuminate\Http\Client\HttpClientException;
+use Illuminate\Http\Client\RequestException;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -42,10 +45,11 @@ class TrackPageview
         app()->terminating(function () use ($name, $meta) {
 
             Log::info('Pirsch '.($name === null ? 'hit' : 'event'), [
-                'name' => $name,
-                'meta' => $meta,
                 'url' => request()->fullUrl(),
                 'ip' => request()->ip(),
+                'REMOTE_ADDR' => request()->server('REMOTE_ADDR'),
+                'X_FORWARDED_FOR' => request()->header('X-Forwarded-For'),
+                'headers' => request()->headers->all()
             ]);
 
             try {
@@ -78,8 +82,10 @@ class TrackPageview
                         ],
                     )
                     ->throw();
-            } catch (\Illuminate\Http\Client\RequestException $e) {
+            } catch (RequestException $e) {
                 Log::error($e->getMessage(), ['response' => $e->response->json()]);
+            } catch (HttpClientException $e) {
+                Log::error($e->getMessage());
             }
         });
     }

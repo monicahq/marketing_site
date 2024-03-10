@@ -81,8 +81,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 });
 
 Route::post('/monica/register', function () {
-    Pirsch::track('Action', [
-        'Label' => 'Monica register',
-    ]);
+    Pirsch::track('register');
     return redirect('https://app.monicahq.com/register');
 })->name('monica.register');

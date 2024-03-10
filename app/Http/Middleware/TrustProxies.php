@@ -22,7 +22,7 @@ class TrustProxies extends Middleware
     {
         if (($ip = $request->header('Cf-Connecting-Ip')) !== null) {
             Log::debug('Current ip: '.$request->ip());
-            $request->headers->set('REMOTE_ADDR', $ip);
+            $request->server->set('REMOTE_ADDR', $ip);
             Log::debug('New ip: '.$request->ip());
         }
 

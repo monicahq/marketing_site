@@ -17,7 +17,7 @@
         "laravel/jetstream": "^2.7",
         "laravel/sanctum": "^3.2",
         "laravel/ui": "^4.0",
-        "monicahq/laravel-cloudflare": "^3.5",
+        "monicahq/laravel-cloudflare": "3.7",
         "pirsch-analytics/laravel-pirsch": "^0",
         "sentry/sentry-laravel": "^3.2",
         "spatie/laravel-feed": "^4.0",

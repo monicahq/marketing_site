@@ -43,14 +43,6 @@ class TrackPageview
         }
 
         app()->terminating(function () use ($name, $meta) {
-
-            Log::info('Pirsch '.($name === null ? 'hit' : 'event'), [
-                'url' => request()->fullUrl(),
-                'ip' => request()->ip(),
-                'server' => request()->server->all(),
-                'headers' => request()->headers->all(),
-            ]);
-
             try {
                 Http::withToken(config('pirsch.token'))
                     ->timeout(5)

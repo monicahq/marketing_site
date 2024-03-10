@@ -2905,33 +2905,32 @@
         },
         {
             "name": "monicahq/laravel-cloudflare",
-            "version": "3.5.0",
+            "version": "3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/monicahq/laravel-cloudflare.git",
-                "reference": "156f49fa823fbdec4c26691cb83844c9283f14dc"
+                "reference": "e01f2d3963f83f5228f0cf487b625b6bfa48515f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/monicahq/laravel-cloudflare/zipball/156f49fa823fbdec4c26691cb83844c9283f14dc",
-                "reference": "156f49fa823fbdec4c26691cb83844c9283f14dc",
+                "url": "https://api.github.com/repos/monicahq/laravel-cloudflare/zipball/e01f2d3963f83f5228f0cf487b625b6bfa48515f",
+                "reference": "e01f2d3963f83f5228f0cf487b625b6bfa48515f",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "^8.0 || ^9.0 || ^10.0",
+                "illuminate/support": "^8.0 || ^9.0 || ^10.0 || ^11.0",
                 "php": "^7.4 || ^8.0"
             },
             "require-dev": {
                 "guzzlehttp/guzzle": "^6.3 || ^7.0",
+                "larastan/larastan": "^1.0 || ^2.4",
                 "mockery/mockery": "^1.4",
-                "nunomaduro/larastan": "^1.0 || ^2.4",
                 "ocramius/package-versions": "^1.5 || ^2.1",
-                "orchestra/testbench": "^6.0 || ^7.0 || ^8.0",
+                "orchestra/testbench": "^6.0 || ^7.0 || ^8.0 || ^9.0",
                 "phpstan/phpstan-deprecation-rules": "^1.0",
                 "phpstan/phpstan-phpunit": "^1.0",
                 "phpstan/phpstan-strict-rules": "^1.0",
-                "phpunit/phpunit": "^8.0 || ^9.0",
-                "thecodingmachine/phpstan-safe-rule": "^1.0",
+                "phpunit/phpunit": "^9.5 || ^10.0 || ^11.0",
                 "vimeo/psalm": "^4.0 || ^5.6"
             },
             "suggest": {
@@ -2977,7 +2976,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-02-07T18:14:12+00:00"
+            "time": "2024-03-01T23:16:09+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -15412,5 +15411,5 @@
         "ext-fileinfo": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }

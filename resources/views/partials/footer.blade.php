@@ -13,7 +13,6 @@
       <ul class="pl0 list">
         <li class="mb2 f6"><a href="{{ secure_url('/team') }}" class="muted-link no-underline">Team</a></li>
         <li class="mb2 f6"><a href="{{ secure_url('/blog') }}" class="muted-link no-underline">Blog</a></li>
-        <li class="mb2 f6"><a href="https://tinyletter.com/monicahq" class="muted-link no-underline">Newsletter</a></li>
       </ul>
     </div>
     <div class="fl w-20-ns w-100">
